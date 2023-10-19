@@ -7,6 +7,10 @@ public class player {
      private int x;
      private int y;
 
+     public player(){
+
+     }
+
      // Constructor
     public player(String name, char symbol) {
         this.name = name;
