@@ -5,33 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f7514b7-15a1-4481-a5b4-ad28f471f4e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/TeckSpikes/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/TeckSpikes/Readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/pom.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/com/example/guiexample/Gui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/com/example/guiexample/Scene1.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/com/example/guiexample/Scene2.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/com/example/guiexample/Scene3.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/com/example/guiexample/Scene4.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/module-info.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/images/1.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/images/2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/images/image1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/images/image2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/scene1.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/scene2.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/scene3.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/scene4.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/test.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +68,7 @@
       <updated>1697820530107</updated>
       <workItem from="1697820531171" duration="121000" />
       <workItem from="1697820714887" duration="657000" />
-      <workItem from="1698425997508" duration="975000" />
+      <workItem from="1698425997508" duration="1417000" />
     </task>
     <servers />
   </component>

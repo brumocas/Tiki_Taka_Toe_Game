@@ -1,5 +1,6 @@
 # TechSpikes
-Tech Spikes used to test the tools and protocols available for the project 
+Tech Spikes used to test the tools and protocols available for the project <br>
+The main goal with tech spikes is to reduce the risk of selecting an incorrect technical approach 
 
 # GUi
 Simple Gui created to test Java fx and scene builder features. <br> 
