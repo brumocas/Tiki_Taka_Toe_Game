@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.guiexample.Scene2">
+   <children>
+      <ImageView fitHeight="488.0" fitWidth="778.0" layoutX="-14.0" layoutY="-20.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@images/image2.jpg" />
+         </image>
+      </ImageView>
+      <Button layoutX="268.0" layoutY="250.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="196.0" styleClass="button-primary" stylesheets="@test.css" text="GameInfo" />
+      <Button layoutX="268.0" layoutY="320.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="196.0" styleClass="button-primary" stylesheets="@test.css" text="Webinfo" />
+      <Button fx:id="newGameButton" layoutX="268.0" layoutY="102.0" mnemonicParsing="false" onAction="#setScene3" prefHeight="51.0" prefWidth="196.0" styleClass="button-primary" stylesheets="@test.css" text="New Game" />
+      <Button layoutX="268.0" layoutY="386.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="196.0" styleClass="button-primary" stylesheets="@test.css" text="Quit" />
+      <Button layoutX="268.0" layoutY="173.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="196.0" styleClass="button-primary" stylesheets="@test.css" text="Database" />
+      <Label layoutX="118.0" layoutY="27.0" prefHeight="63.0" prefWidth="588.0" styleClass="special-label" stylesheets="@test.css" text="Prepare to a new level Tic Tac Toe football game" textFill="WHITE">
+         <font>
+            <Font size="28.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

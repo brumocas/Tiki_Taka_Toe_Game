@@ -1,0 +1,48 @@
+/* Apply styles to buttons with the 'button' class */
+.button {
+    -fx-background-color: #4CAF50; /* Set background color */
+    -fx-text-fill: white; /* Set text color */
+    -fx-padding: 10px 20px; /* Set padding */
+    -fx-background-radius: 5px; /* Add rounded corners */
+    -fx-cursor: hand; /* Add a pointer cursor on hover */
+    -fx-font-size: 16px; /* Set font size */
+}
+
+/* Style a specific class of buttons */
+.button-primary {
+    -fx-background-color: #3f3939;;
+}
+
+.button-secondary {
+    -fx-background-color: #605e55;
+}
+
+/* Add hover effects */
+.button:hover {
+    -fx-background-color: #6a706a;
+}
+
+/* Style for a basic label */
+.label {
+    -fx-font-size: 25px; /* Font size */
+    -fx-text-fill: #ffffff; /* Text color */
+    -fx-padding: 5px 0; /* Padding around the label */
+}
+
+/* Style for a label with a specific class */
+.special-label {
+    -fx-font-weight: bold; /* Make the text bold */
+    -fx-text-fill: #f1eae9; /* Change text color */
+}
+
+/* Add additional styles and effects as needed */
+
+
+/* Style for cell at row 1, column 2 */
+.grid-cell {
+    -fx-background-color: #139315; /* Background color */
+    -fx-text-fill: white; /* Text color */
+    -fx-padding: 10px 20px; /* Padding inside the cell */
+    -fx-font-size: 16px; /* Font size */
+}
+
