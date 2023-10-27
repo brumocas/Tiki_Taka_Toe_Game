@@ -5,44 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3f7514b7-15a1-4481-a5b4-ad28f471f4e0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Client/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Client/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/a01_1.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/Client.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Client/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/communication/communication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/database/database.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/database/footballer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/gui/board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/gui/gui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/.idea/Client.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/client.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/communication/communication.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/database/database.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/database/footballer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/gui/board.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/gui/gui.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/player/player.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/out/production/Client/test/game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/player/player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Client/test/game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/TeckSpikes/Readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/com/example/guiexample/Gui.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/com/example/guiexample/Scene1.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/com/example/guiexample/Scene2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/com/example/guiexample/Scene3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/com/example/guiexample/Scene4.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/java/module-info.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/images/1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/images/2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/images/image1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/images/image2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/scene1.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/scene2.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/scene3.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/scene4.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TeckSpikes/src/main/resources/com/example/guiexample/test.css" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +49,9 @@
   &quot;associatedIndex&quot;: 2
 }</component>
   <component name="ProjectId" id="2X2I17kO49R2vFG4p5LG5GqRyhj" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -71,11 +63,12 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "devel",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/JavaFx/Client",
+    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/TeckSpikes/Gui",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "project.structure.last.edited": "Libraries",
     "project.structure.proportion": "0.0",
     "project.structure.side.proportion": "0.0",
@@ -86,6 +79,9 @@
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\TeckSpikes" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -98,6 +94,7 @@
       <updated>1697820530107</updated>
       <workItem from="1697820531171" duration="121000" />
       <workItem from="1697820714887" duration="657000" />
+      <workItem from="1698425997508" duration="975000" />
     </task>
     <servers />
   </component>
