@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3f7514b7-15a1-4481-a5b4-ad28f471f4e0" name="Changes" comment="Tech Spikes">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TechSpikes/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/TechSpikes/Readme.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +38,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "devel",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client",
+    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -70,6 +71,7 @@
       <workItem from="1697820714887" duration="657000" />
       <workItem from="1698425997508" duration="1468000" />
       <workItem from="1698427519484" duration="29000" />
+      <workItem from="1698491330102" duration="199000" />
     </task>
     <task id="LOCAL-00001" summary="Tech Spikes">
       <option name="closed" value="true" />
