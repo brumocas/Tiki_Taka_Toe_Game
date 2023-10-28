@@ -2,20 +2,30 @@ package com.client;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
 
 public class Gui extends Application {
+
     @Override
     public void start(Stage stage) throws IOException {
-        FXMLLoader fxmlLoader = new FXMLLoader(Gui.class.getResource("menu.fxml"));
-        Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Hello!");
-        stage.setMaximized(true);
-        stage.setScene(scene);
-        stage.show();
+        try{
+            Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
+            Scene scene = new Scene(root);
+            Icon.setIcon(stage);
+            stage.setResizable(true);
+            stage.setTitle("TIKI TAKA TOE");
+            stage.setMaximized(true);
+            stage.setScene(scene);
+            stage.show();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+
     }
 
     public static void main(String[] args) {

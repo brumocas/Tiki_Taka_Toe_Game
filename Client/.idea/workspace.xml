@@ -5,53 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd5ad994-0a10-4a20-a01d-436618bc7815" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Client2_0/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/Client.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/Gui.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/communication/communication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/database/database.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/database/footballer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/gui/Menu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/logic/board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/logic/game.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/player/player.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/module-info.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/background.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/ballondor.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/champions.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/chelsea.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/portugal.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/realmadrid.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/shirt.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/shirtx.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/united.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/menu.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/menu.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/newgame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/Client.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/Gui.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/communication/communication.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/database/database.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/database/footballer.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/gui/Scene1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/gui/Newgame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/logic/board.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/logic/game.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/player/player.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/client/Scene1.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Menu.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/newgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/newgame.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,8 +19,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="FxmlFile" />
-        <option value="Class" />
         <option value="CSS File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -96,25 +53,29 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "devel",
     "last_directory_selection": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/java/com/client",
-    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/resources/com/client",
+    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/JavaFx/stages",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.15332031",
+    "project.structure.side.proportion": "0.2",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\java" />
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\java\com\client" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources" />
-      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\java\com\client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\images" />
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main" />
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\java" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
@@ -142,7 +103,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1698481274720</updated>
-      <workItem from="1698481275855" duration="2489000" />
+      <workItem from="1698481275855" duration="5448000" />
     </task>
     <servers />
   </component>

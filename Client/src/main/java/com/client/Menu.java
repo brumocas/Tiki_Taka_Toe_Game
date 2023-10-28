@@ -29,7 +29,6 @@ public class Menu {
     private Stage stage;
     private Parent root;
 
-
     @FXML public void setNewGameScene(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("newgame.fxml")));
         stage = (Stage)((Node)event.getSource()).getScene().getWindow();
