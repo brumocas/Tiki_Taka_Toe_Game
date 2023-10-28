@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="3f7514b7-15a1-4481-a5b4-ad28f471f4e0" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/TeckSpikes/Readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/TeckSpikes/Readme.md" afterDir="false" />
+    <list default="true" id="3f7514b7-15a1-4481-a5b4-ad28f471f4e0" name="Changes" comment="Tech Spikes">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,7 +37,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "devel",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/TeckSpikes/Gui",
+    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -68,11 +68,25 @@
       <updated>1697820530107</updated>
       <workItem from="1697820531171" duration="121000" />
       <workItem from="1697820714887" duration="657000" />
-      <workItem from="1698425997508" duration="1417000" />
+      <workItem from="1698425997508" duration="1468000" />
+      <workItem from="1698427519484" duration="29000" />
     </task>
+    <task id="LOCAL-00001" summary="Tech Spikes">
+      <option name="closed" value="true" />
+      <created>1698427456634</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698427456635</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Tech Spikes" />
+    <option name="LAST_COMMIT_MESSAGE" value="Tech Spikes" />
   </component>
 </project>

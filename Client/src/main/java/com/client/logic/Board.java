@@ -1,8 +1,8 @@
-package com.example.client.logic;
+package com.client.logic;
 
 import java.util.Vector;
 
-public class board {
+public class Board {
     private final int rows = 3;
     private final int columns = 3;
     private Vector<String> upparams = new Vector<>(rows);
@@ -11,7 +11,7 @@ public class board {
     private char[][] board_char = new char[rows][columns];
 
     //Constructor
-    public board() {
+    public Board() {
 
     }
 

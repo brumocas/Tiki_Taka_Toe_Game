@@ -1,25 +1,25 @@
-package com.example.client.database;
+package com.client.database;
 
 import java.text.SimpleDateFormat;
 import java.util.Objects;
 import java.util.Vector;
 
-public class database {
-    private Vector<footballer> db = new Vector<footballer>();
+public class Database {
+    private Vector<Footballer> db = new Vector<Footballer>();
 
     // Constructor
-    public database() {
+    public Database() {
 
     }
 
     // add footballer
-    public void addFootballer(footballer player) {
+    public void addFootballer(Footballer player) {
         db.add(player);
     }
 
     // search footballer
-    public footballer searchFootballer(String name) {
-        for (footballer i : db) {
+    public Footballer searchFootballer(String name) {
+        for (Footballer i : db) {
             if (Objects.equals(i.getName(), name)) {
                 return i;
             }
@@ -39,7 +39,7 @@ public class database {
     }*/
 
     // search if parameter exists TODO:
-    public footballer searchParams(String team) {
+    public Footballer searchParams(String team) {
         return null;
     }
 
@@ -58,7 +58,7 @@ public class database {
         System.out.print("careerTeams\t");
         System.out.println();
 
-        for (footballer i : db) {
+        for (Footballer i : db) {
             SimpleDateFormat sdf = new SimpleDateFormat("yyyy");
             System.out.print(i.getName() + "\t");
             System.out.print(i.getSurname() + "\t");

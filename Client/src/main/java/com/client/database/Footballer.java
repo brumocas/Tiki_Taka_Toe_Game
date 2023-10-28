@@ -1,9 +1,9 @@
-package com.example.client.database;
+package com.client.database;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Vector;
 
-public class footballer {
+public class Footballer {
     private final String name ;
     private final String surname;
     private final Date birthdate;
@@ -15,7 +15,7 @@ public class footballer {
     private final boolean europeanWinner;
 
     // Constructor
-    public footballer(String name, String surname, Date birthdate, String nationality, Vector<String> careerTeams,
+    public Footballer(String name, String surname, Date birthdate, String nationality, Vector<String> careerTeams,
                       boolean worldCupWinner, boolean championsLeagueWinner, boolean ballondorWinner, boolean europeanWinner){
         this.name = name;
         this.surname = surname;

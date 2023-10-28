@@ -1,0 +1,37 @@
+.anchor {
+    -fx-background-image:url("images/background.jpg");
+    -fx-background-size: cover; /* Ensures the image covers the entire container */
+    -fx-background-position: center; /* Centers the image horizontally and vertically */
+}
+
+/* Define a CSS class for the title label */
+.title-label {
+    -fx-text-fill: #B3AE83; /* Same text color as the button */
+    -fx-font-size: 200; /* Adjust the font size as needed */
+    /* Center the label horizontally */
+    -fx-alignment: center;
+    -fx-font-family: "Verdana";
+}
+
+/* Define a CSS class for the title label */
+.subtitle-label {
+    -fx-text-fill: #B3AE83; /* Same text color as the button */
+    -fx-font-size: 50; /* Adjust the font size as needed */
+    /* Center the label horizontally */
+    -fx-alignment: center;
+    -fx-font-family: "Verdana";
+}
+
+/* Define a CSS class for buttons with custom border color */
+.box {
+    -fx-background-color: #434848; /* Background color (adjust to your preference) */
+    -fx-background-radius: 60px;
+    -fx-border-color: #B3AE83; /* Border color (red in this example) */
+    -fx-border-width: 2px; /* Border width (adjust as needed) */
+    -fx-border-radius: 60px; /* Border radius (rounded corners, adjust as needed) */
+    -fx-text-fill: #B3AE83; /* Text color (adjust to your preference) */
+    -fx-background-insets: 2; /* Adjust to control the distance between the border and the button content */
+    -fx-font-size: 25;
+    -fx-opacity: 0.9;
+    -fx-alignment: center; /* Center the text horizontally */
+}

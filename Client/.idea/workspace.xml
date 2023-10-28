@@ -4,15 +4,68 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adc8693e-81cd-4fd9-9c60-3f586f805b8f" name="Changes" comment="">
+    <list default="true" id="cd5ad994-0a10-4a20-a01d-436618bc7815" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Client2_0/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/mvnw" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/mvnw.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/Client.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/Gui.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/communication/communication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/database/database.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/database/footballer.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/gui/Menu.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/logic/board.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/logic/game.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/player/player.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/module-info.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/background.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/ballondor.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/champions.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/chelsea.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/portugal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/realmadrid.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/shirt.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/shirtx.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/images/noBack/united.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/menu.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/menu.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Client2_0/src/main/resources/com/example/client/newgame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/gui/GuiController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/client/gui/Scene1.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/client/Scene1.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/example/client/Scene1.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/Client.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/Gui.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/communication/communication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/database/database.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/database/footballer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/gui/Scene1.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Client2_0/src/main/java/com/example/client/gui/Newgame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/logic/board.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/logic/game.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/client/player/player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/example/client/Scene1.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="CSS File" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
@@ -24,44 +77,57 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 5
-}</component>
-  <component name="ProjectId" id="2X2JM73BqRizfnbN6dzQps6vJrp" />
+  <component name="ProjectColorInfo"><![CDATA[{
+  "customColor": "",
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="2XNtHBqo6BARZLLJEEPNroz8AzG" />
   <component name="ProjectLevelVcsManager">
-    <ConfirmationsSetting value="2" id="Add" />
+    <ConfirmationsSetting value="1" id="Add" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;devel&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Libraries&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.15332031&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "git-widget-placeholder": "devel",
+    "last_directory_selection": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/java/com/client",
+    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/resources/com/client",
+    "list.type.of.created.stylesheet": "CSS",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client" />
-      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src" />
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client" />
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources" />
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\java\com\client" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="com.client" />
+    </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.client.player" />
+      <recent name="com.client.database" />
     </key>
   </component>
   <component name="RunManager">
     <configuration name="Client" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.example.client.Client" />
+      <option name="MAIN_CLASS_NAME" value="com.client.Client" />
       <module name="Client" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -71,21 +137,16 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="adc8693e-81cd-4fd9-9c60-3f586f805b8f" name="Changes" comment="" />
-      <created>1697821190905</created>
+      <changelist id="cd5ad994-0a10-4a20-a01d-436618bc7815" name="Changes" comment="" />
+      <created>1698481274720</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1697821190905</updated>
-      <workItem from="1697821192206" duration="215000" />
-      <workItem from="1697886653797" duration="3790000" />
-      <workItem from="1697985629441" duration="2305000" />
+      <updated>1698481274720</updated>
+      <workItem from="1698481275855" duration="2489000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

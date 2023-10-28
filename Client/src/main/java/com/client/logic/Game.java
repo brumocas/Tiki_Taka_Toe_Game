@@ -1,19 +1,19 @@
-package com.example.client.logic;
+package com.client.logic;
 
-import com.example.client.database.database;
-import com.example.client.database.footballer;
-import com.example.client.player.player;
+import com.client.database.Database;
+import com.client.database.Footballer;
+import com.client.player.player;
 
 import java.util.Date;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class game {
+public class Game {
     player p1 = new player();
     player p2 = new player();
     player winner = new player();
-    board board = new board();
-    database db = new database();
+    Board board = new Board();
+    Database db = new Database();
 
 
     public boolean run() {
@@ -21,7 +21,7 @@ public class game {
         teams.add("Porto");
         teams.add("Chelsea");
         teams.add("Inter");
-        footballer f1 = new footballer("Cris", "Ronaldo", new Date(85, 6, 15),
+        Footballer f1 = new Footballer("Cris", "Ronaldo", new Date(85, 6, 15),
                 "Portugal", teams, false, true, true, true);
 
         db.addFootballer(f1);
@@ -79,7 +79,7 @@ public class game {
     public boolean checkAnswer(player p) {
         // Check if the player is in the database
         if (db.searchFootballer(p.getGuess()) != null) {
-            footballer footballer = db.searchFootballer(p.getGuess());
+            Footballer footballer = db.searchFootballer(p.getGuess());
             String paramUp = board.getUpparams(p.getX());
             String paramLeft = board.getLeftparams(p.getY());
             //Check if the team is the same as the params teams

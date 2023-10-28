@@ -1,4 +1,4 @@
-package com.example.client.player;
+package com.client.player;
 
 public class player {
      private String name;
