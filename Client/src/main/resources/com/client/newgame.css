@@ -31,7 +31,7 @@
     -fx-border-radius: 60px; /* Border radius (rounded corners, adjust as needed) */
     -fx-text-fill: #B3AE83; /* Text color (adjust to your preference) */
     -fx-background-insets: 2; /* Adjust to control the distance between the border and the button content */
-    -fx-font-size: 25;
     -fx-opacity: 0.9;
-    -fx-alignment: center; /* Center the text horizontally */
+    -fx-font-size: 40;
+    -fx-font-weight: bold;
 }

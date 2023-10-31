@@ -7,7 +7,7 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@menu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.Menu">
    <children>
-      <Button fx:id="newGameButton" layoutX="769.0" layoutY="480.0" mnemonicParsing="false"  prefHeight="58.0" prefWidth="394.0" styleClass="box" stylesheets="@newgame.css" text="Newgame" />
+      <Button fx:id="newGameButton" layoutX="732.0" layoutY="483.0" mnemonicParsing="false" prefHeight="339.0" prefWidth="558.0" styleClass="box" stylesheets="@newgame.css" text="Newgame" textAlignment="CENTER" />
       <Label layoutX="58.0" layoutY="100.0" prefHeight="292.0" prefWidth="1887.0" styleClass="title-label" stylesheets="@menu.css" text="Tiki Taka Toe" textFill="WHITE">
          <font>
             <Font size="96.0" />
