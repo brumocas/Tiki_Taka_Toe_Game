@@ -19,6 +19,7 @@
     /* Center the label horizontally */
     -fx-alignment: center;
     -fx-font-family: "Verdana";
+    -fx-font-weight: bold
 }
 
 
@@ -33,6 +34,7 @@
     -fx-background-insets: 2; /* Adjust to control the distance between the border and the button content */
     -fx-font-size: 25;
     -fx-opacity: 0.9;
+    -fx-font-weight: bold;
 }
 
 .main-button:hover {

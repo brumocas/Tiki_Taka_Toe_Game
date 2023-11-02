@@ -14,7 +14,7 @@
             <String fx:value="main-button" />
          </styleClass>
       </Button>
-      <Button fx:id="newGameButton" layoutX="769.0" layoutY="480.0" mnemonicParsing="false" onAction="#setNewGameScene" prefHeight="58.0" prefWidth="394.0" text="Newgame">
+      <Button fx:id="newGameButton" layoutX="769.0" layoutY="480.0" mnemonicParsing="false" onAction="#setNewGameScene" prefHeight="58.0" prefWidth="394.0" text="NewGame">
          <styleClass>
             <String fx:value="custom-button" />
             <String fx:value="main-button" />
@@ -32,7 +32,7 @@
             <String fx:value="main-button" />
          </styleClass>
       </Button>
-      <Button layoutX="769.0" layoutY="880.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="394.0" stylesheets="@menu.css" text="QuitGame">
+      <Button fx:id="quitGameButton" layoutX="769.0" layoutY="880.0" mnemonicParsing="false" onAction="#exitMenuScene" prefHeight="58.0" prefWidth="394.0" stylesheets="@menu.css" text="QuitGame">
          <styleClass>
             <String fx:value="custom-button" />
             <String fx:value="main-button" />
@@ -43,6 +43,6 @@
             <Font size="96.0" />
          </font>
       </Label>
-      <Label layoutX="529.0" layoutY="355.0" prefHeight="17.0" prefWidth="964.0" styleClass="subtitle-label" text="The ultimate tic toc toe football game" textFill="#f2eded" />
+      <Label layoutX="451.0" layoutY="354.0" prefHeight="65.0" prefWidth="1082.0" styleClass="subtitle-label" text="The ultimate tic tac toe football game" textFill="#f2eded" />
    </children>
 </AnchorPane>
