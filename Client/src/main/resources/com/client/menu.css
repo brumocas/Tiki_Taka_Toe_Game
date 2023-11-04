@@ -3,6 +3,7 @@
     -fx-background-size: cover; /* Ensures the image covers the entire container */
     -fx-background-position: center; /* Centers the image horizontally and vertically */
 }
+
 /* Define a CSS class for the title label */
 .title-label {
     -fx-text-fill: #B3AE83; /* Same text color as the button */
@@ -22,7 +23,6 @@
     -fx-font-weight: bold
 }
 
-
 /* Define a CSS class for buttons with custom border color */
 .main-button {
     -fx-background-color: #434848; /* Background color (adjust to your preference) */
@@ -36,7 +36,6 @@
     -fx-opacity: 0.9;
     -fx-font-weight: bold;
 }
-
 .main-button:hover {
     -fx-background-color: #B3AE83; /* Background color on hover */
     -fx-text-fill: #434848; /* Text color on hover */

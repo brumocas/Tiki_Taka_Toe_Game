@@ -8,7 +8,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@menu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.Newgame">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@menu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.Joingame">
    <children>
       <Button fx:id="startGameButton" layoutX="769.0" layoutY="850.0" mnemonicParsing="false" onAction="#setWaitingRoomScene" prefHeight="58.0" prefWidth="394.0" stylesheets="@menu.css" text="StartGame">
          <styleClass>
@@ -24,16 +24,22 @@
       </Label>
       <Label layoutX="451.0" layoutY="354.0" prefHeight="65.0" prefWidth="1082.0" styleClass="subtitle-label" text="The ultimate tic tac toe football game" textFill="#f2eded" />
       <Button fx:id="goBackButton" alignment="CENTER" contentDisplay="CENTER" layoutX="871.0" layoutY="928.0" mnemonicParsing="false" onAction="#setMenuScene" prefHeight="64.0" prefWidth="154.0" styleClass="goBackButton" stylesheets="@style.css" textAlignment="CENTER" textFill="#41454500" />
-      <Label alignment="CENTER" layoutX="-2.0" layoutY="519.0" prefHeight="38.0" prefWidth="1929.0" stylesheets="@style.css" text="New Game">
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="519.0" prefHeight="38.0" prefWidth="1929.0" stylesheets="@style.css" text="Join Game">
          <styleClass>
             <String fx:value="subtext" />
             <String fx:value="text" />
          </styleClass></Label>
-      <Text fill="#b3ae83" layoutX="650.0" layoutY="685.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nickname :" wrappingWidth="175.469970703125">
+      <Text fill="#b3ae83" layoutX="650.0" layoutY="633.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nickname :" wrappingWidth="151.469970703125">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <TextField fx:id="nickName" layoutX="824.0" layoutY="650.0" prefHeight="49.0" prefWidth="303.0" stylesheets="@style.css" />
+      <TextField fx:id="nickName" layoutX="821.0" layoutY="598.0" prefHeight="49.0" prefWidth="303.0" stylesheets="@style.css" />
+      <Text fill="#b3ae83" layoutX="738.0" layoutY="733.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pin :" wrappingWidth="60.80328369140625">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nickName1" layoutX="821.0" layoutY="702.0" prefHeight="49.0" prefWidth="303.0" stylesheets="@style.css" />
    </children>
 </AnchorPane>

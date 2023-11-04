@@ -13,7 +13,7 @@ import javafx.stage.Stage;
 import java.io.IOException;
 import java.util.Objects;
 
-public class Newgame {
+public class Joingame {
     @FXML
     private Button goBackButton;
 

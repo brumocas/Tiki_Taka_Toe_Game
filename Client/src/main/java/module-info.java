@@ -4,6 +4,7 @@ module com.client {
 
     requires org.controlsfx.controls;
     requires org.kordamp.bootstrapfx.core;
+    requires java.desktop;
 
     opens com.client to javafx.fxml;
     exports com.client;

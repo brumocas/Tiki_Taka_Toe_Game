@@ -8,7 +8,7 @@
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@menu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.Menu">
    <children>
-      <Button layoutX="769.0" layoutY="580.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="394.0" text="JoinGame">
+      <Button fx:id="joinGameButton" layoutX="769.0" layoutY="580.0" mnemonicParsing="false" onAction="#setJoinGameScene" prefHeight="58.0" prefWidth="394.0" text="JoinGame">
          <styleClass>
             <String fx:value="custom-button" />
             <String fx:value="main-button" />
@@ -20,13 +20,13 @@
             <String fx:value="main-button" />
          </styleClass>
       </Button>
-      <Button layoutX="769.0" layoutY="680.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="394.0" text="Instructions">
+      <Button fx:id="instructionsButton" layoutX="769.0" layoutY="680.0" mnemonicParsing="false" onAction="#setInstructionsScene" prefHeight="58.0" prefWidth="394.0" text="Instructions">
          <styleClass>
             <String fx:value="custom-button" />
             <String fx:value="main-button" />
          </styleClass>
       </Button>
-      <Button layoutX="769.0" layoutY="780.0" mnemonicParsing="false" prefHeight="58.0" prefWidth="394.0" text="About us">
+      <Button fx:id="aboutUsButton" layoutX="769.0" layoutY="780.0" mnemonicParsing="false" onAction="#setAboutUsScene" prefHeight="58.0" prefWidth="394.0" text="About us">
          <styleClass>
             <String fx:value="custom-button" />
             <String fx:value="main-button" />

@@ -5,14 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd5ad994-0a10-4a20-a01d-436618bc7815" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Newgame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Newgame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/menu.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/newgame.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/newgame.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/newgame.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/newgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/newgame.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/waitingroom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/waitingroom.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,6 +67,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15332031",
     "project.structure.side.proportion": "0.2",
+    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -87,6 +89,7 @@
       <recent name="com.client" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.client" />
       <recent name="com.client.player" />
       <recent name="com.client.database" />
     </key>
@@ -114,6 +117,8 @@
       <workItem from="1698512434422" duration="213000" />
       <workItem from="1698918861259" duration="266000" />
       <workItem from="1698943049980" duration="10581000" />
+      <workItem from="1699025022998" duration="2393000" />
+      <workItem from="1699085530171" duration="4876000" />
     </task>
     <servers />
   </component>
