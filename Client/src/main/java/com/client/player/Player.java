@@ -1,18 +1,18 @@
 package com.client.player;
 
-public class player {
+public class Player {
      private String name;
      private String guess;
      private char symbol;
      private int x;
      private int y;
 
-     public player(){
+     public Player(){
 
      }
 
      // Constructor
-    public player(String name, char symbol) {
+    public Player(String name, char symbol) {
         this.name = name;
     }
 

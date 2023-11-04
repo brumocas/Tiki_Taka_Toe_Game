@@ -11,6 +11,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import org.w3c.dom.Text;
 
 import java.io.IOException;
 import java.net.URL;
@@ -49,9 +50,10 @@ public class Newgame implements Initializable {
 
     @FXML
     void setWaitingRoomScene(ActionEvent event) throws IOException{
-        System.out.println(nickName.getText());
 
         String playerName = nickName.getText();
+        // TODO: Receive new game pin from server
+        String pin = "1234";
 
         if (playerName != null && !playerName.isEmpty()) {
             // You can pass the playerName to the waiting room scene or start the game here.
@@ -59,7 +61,7 @@ public class Newgame implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("waitingroom.fxml"));
             Parent root = loader.load();
             WaitingRoom waitingRoomController = loader.getController();
-            waitingRoomController.setPlayerName(playerName);
+            waitingRoomController.setNickname1(playerName, pin);
 
             Scene waitingRoomScene = new Scene(root);
             waitingRoomScene.setUserData(playerName);

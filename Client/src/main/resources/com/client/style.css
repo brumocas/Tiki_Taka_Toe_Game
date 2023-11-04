@@ -71,6 +71,7 @@
     -fx-font-size: 20px; /* You can adjust the font size to your preference */
     -fx-font-weight: bold;
     -fx-font-family: "Verdana";
+    -fx-alignment: center;
 }
 
 /* Define the hyperlink style */

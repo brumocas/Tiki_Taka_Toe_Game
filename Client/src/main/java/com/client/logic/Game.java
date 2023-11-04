@@ -2,16 +2,16 @@ package com.client.logic;
 
 import com.client.database.Database;
 import com.client.database.Footballer;
-import com.client.player.player;
+import com.client.player.Player;
 
 import java.util.Date;
 import java.util.Scanner;
 import java.util.Vector;
 
 public class Game {
-    player p1 = new player();
-    player p2 = new player();
-    player winner = new player();
+    Player p1 = new Player();
+    Player p2 = new Player();
+    Player winner = new Player();
     Board board = new Board();
     Database db = new Database();
 
@@ -76,7 +76,7 @@ public class Game {
         }
     }
 
-    public boolean checkAnswer(player p) {
+    public boolean checkAnswer(Player p) {
         // Check if the player is in the database
         if (db.searchFootballer(p.getGuess()) != null) {
             Footballer footballer = db.searchFootballer(p.getGuess());
@@ -97,7 +97,7 @@ public class Game {
         return false;
     }
 
-    public boolean checkWinner(player p) {
+    public boolean checkWinner(Player p) {
         char symbol = p.getSymbol();
         return checkRows(symbol) || checkColumns(symbol) || checkDiagonals(symbol);
 

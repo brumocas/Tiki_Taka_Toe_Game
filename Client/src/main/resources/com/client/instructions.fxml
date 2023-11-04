@@ -28,6 +28,6 @@
             <Font size="30.0" />
          </font>
       </Text>
-      <Hyperlink fx:id="hyperlink" layoutX="782.0" layoutY="645.0" onAction="#hyperlink" stylesheets="@style.css" text="intructions.pdf" />
+      <Hyperlink fx:id="hyperlink" layoutX="782.0" layoutY="645.0" onAction="#hyperlink" stylesheets="@style.css" text="instructions.pdf" />
    </children>
 </AnchorPane>

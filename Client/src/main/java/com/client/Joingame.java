@@ -45,13 +45,17 @@ public class Joingame implements Initializable {
     @FXML
     private TextField nickName;
     @FXML
+    private TextField pinGame;
+    @FXML
     private Button startGameButton;
 
     @FXML
     void setWaitingRoomScene(ActionEvent event) throws IOException{
-        System.out.println(nickName.getText());
 
         String playerName = nickName.getText();
+        String pin = pinGame.getText();
+
+        // TODO: Verify if the pin is correct
 
         if (playerName != null && !playerName.isEmpty()) {
             // You can pass the playerName to the waiting room scene or start the game here.
@@ -59,7 +63,7 @@ public class Joingame implements Initializable {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("waitingroom.fxml"));
             Parent root = loader.load();
             WaitingRoom waitingRoomController = loader.getController();
-            waitingRoomController.setPlayerName(playerName);
+            waitingRoomController.setNickname2(playerName, pin);
 
             Scene waitingRoomScene = new Scene(root);
             waitingRoomScene.setUserData(playerName);
