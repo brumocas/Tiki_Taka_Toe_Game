@@ -27,17 +27,17 @@
             <Font size="30.0" />
          </font>
       </Text>
-      <Text fill="#b3ae83" layoutX="567.0" layoutY="706.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Play, enjoy and share with your friends" textAlignment="CENTER" wrappingWidth="825.469970703125">
+      <Text fill="#b3ae83" layoutX="562.0" layoutY="693.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Play, enjoy and share with your friends" textAlignment="CENTER" wrappingWidth="825.469970703125">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <Text fill="#b3ae83" layoutX="550.0" layoutY="764.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Best regards," textAlignment="CENTER" wrappingWidth="825.469970703125">
+      <Text fill="#b3ae83" layoutX="550.0" layoutY="767.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Best regards," textAlignment="CENTER" wrappingWidth="825.469970703125">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
-      <Text fill="#b3ae83" layoutX="552.0" layoutY="808.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The developing team" textAlignment="CENTER" wrappingWidth="825.469970703125">
+      <Text fill="#b3ae83" layoutX="550.0" layoutY="807.0" strokeType="OUTSIDE" strokeWidth="0.0" text="The developing team" textAlignment="CENTER" wrappingWidth="825.469970703125">
          <font>
             <Font size="30.0" />
          </font>

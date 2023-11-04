@@ -6,14 +6,16 @@
   <component name="ChangeListManager">
     <list default="true" id="cd5ad994-0a10-4a20-a01d-436618bc7815" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/AboutUs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/AboutUs.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Gui.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Icon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/gui/defs/Icon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Instructions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Instructions.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Joingame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Joingame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Menu.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Newgame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Newgame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/WaitingRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/WaitingRoom.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/menu.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/menu.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/menu.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/menu.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/newgame.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/newgame.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/newgame.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/waitingroom.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/waitingroom.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/aboutus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/aboutus.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,7 +60,7 @@
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "devel",
     "last_directory_selection": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/java/com/client",
-    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/resources/com/client",
+    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -73,13 +75,14 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\images" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources" />
-      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\images" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\java" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\java\com\client" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\java\com\client" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\images" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\java" />
@@ -118,7 +121,7 @@
       <workItem from="1698918861259" duration="266000" />
       <workItem from="1698943049980" duration="10581000" />
       <workItem from="1699025022998" duration="2393000" />
-      <workItem from="1699085530171" duration="4876000" />
+      <workItem from="1699085530171" duration="9455000" />
     </task>
     <servers />
   </component>

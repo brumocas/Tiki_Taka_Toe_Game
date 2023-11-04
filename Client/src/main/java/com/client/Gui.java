@@ -1,10 +1,12 @@
 package com.client;
 
+
+import com.client.gui.defs.Cursor;
+import com.client.gui.defs.Icon;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.image.Image;
 import javafx.stage.Stage;
 
 import java.io.IOException;
@@ -16,6 +18,7 @@ public class Gui extends Application {
         try{
             Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
             Scene scene = new Scene(root);
+            Cursor.setCursor(scene);
             Icon.setIcon(stage);
             stage.setResizable(true);
             stage.setTitle("TIKI TAKA TOE");

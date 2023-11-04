@@ -1,8 +1,10 @@
 package com.client;
 
+import com.client.gui.defs.Cursor;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -10,9 +12,17 @@ import javafx.scene.control.Button;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
-public class AboutUs {
+public class AboutUs implements Initializable {
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+    }
+
     @FXML
     private Button goBackButton;
 
@@ -25,6 +35,7 @@ public class AboutUs {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menu.fxml")));
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
         scene = new Scene(root);
+        Cursor.setCursor(scene);
         stage.setScene(scene);
         stage.show();
     }

@@ -1,4 +1,4 @@
-package com.client;
+package com.client.gui.defs;
 
 import javafx.scene.image.Image;
 import javafx.stage.Stage;
