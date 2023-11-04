@@ -6,16 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="cd5ad994-0a10-4a20-a01d-436618bc7815" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/AboutUs.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/AboutUs.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Gui.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Gui.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Icon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/gui/defs/Icon.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Instructions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Instructions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Joingame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Joingame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Menu.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Menu.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Newgame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Newgame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/WaitingRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/WaitingRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/aboutus.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/aboutus.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -69,7 +59,7 @@
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15332031",
     "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.repository.indices",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -121,7 +111,7 @@
       <workItem from="1698918861259" duration="266000" />
       <workItem from="1698943049980" duration="10581000" />
       <workItem from="1699025022998" duration="2393000" />
-      <workItem from="1699085530171" duration="9455000" />
+      <workItem from="1699085530171" duration="9720000" />
     </task>
     <servers />
   </component>
