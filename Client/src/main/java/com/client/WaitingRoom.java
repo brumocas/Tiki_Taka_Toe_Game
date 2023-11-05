@@ -12,7 +12,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.stage.Stage;
-
+import com.client.logic.Game;
 
 import java.io.IOException;
 import java.net.URL;
@@ -22,11 +22,10 @@ import java.util.ResourceBundle;
 import javafx.scene.text.Text;
 
 public class WaitingRoom implements Initializable {
-    public Player p1 = new Player();
+    private Game game = new Game();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
     @FXML
@@ -37,8 +36,9 @@ public class WaitingRoom implements Initializable {
     public void setNickname1(String playerName, String pin) {
         nickname1.setText(playerName);
         this.pin.setText(pin);
-        p1.setName(playerName);
-        p1.setSymbol('o');
+        game.p1.setName(playerName);
+        game.p1.setSymbol('o');
+        game.p1.setInGame(true);
     }
 
     @FXML
@@ -47,22 +47,28 @@ public class WaitingRoom implements Initializable {
     public void setNickname2(String playerName, String pin) {
         nickname2.setText(playerName);
         this.pin.setText(pin);
-        p1.setName(playerName);
-        p1.setSymbol('x');
+        game.p2.setName(playerName);
+        game.p2.setSymbol('x');
+        game.p2.setInGame(true);
     }
 
     @FXML
     private Button startButton;
-
     private Scene scene;
     private Stage stage;
     private Parent root;
 
     @FXML
     public void setGameScene(ActionEvent event) throws IOException {
-        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("game.fxml")));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("game.fxml"));
+        Parent root = loader.load();
+        Gamec GameController = loader.getController();
+        GameController.setGame(game);
+
+        Scene scene = new Scene(root);
+        scene.setUserData(game);
+
         stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-        scene = new Scene(root);
         Cursor.setCursor(scene);
         stage.setScene(scene);
         stage.show();

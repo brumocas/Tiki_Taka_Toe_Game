@@ -9,10 +9,10 @@ import java.util.Scanner;
 import java.util.Vector;
 
 public class Game {
-    Player p1 = new Player();
-    Player p2 = new Player();
-    Player winner = new Player();
-    Board board = new Board();
+    public Player p1 = new Player();
+    public Player p2 = new Player();
+    public Player winner = new Player();
+    public Board board = new Board();
     Database db = new Database();
 
 

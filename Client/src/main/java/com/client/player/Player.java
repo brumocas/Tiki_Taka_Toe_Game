@@ -1,11 +1,14 @@
 package com.client.player;
 
+import org.controlsfx.control.tableview2.filter.filtereditor.SouthFilter;
+
 public class Player {
      private String name;
      private String guess;
      private char symbol;
      private int x;
      private int y;
+     private boolean inGame = false;
 
      public Player(){
 
@@ -55,6 +58,27 @@ public class Player {
     //get player guess y position
     public int getY(){
         return this.y;
+    }
+
+    //Set player in the current program
+    public void setInGame(boolean inGame){
+         this.inGame = inGame;
+    }
+
+    //Get if player is in the current program
+    public boolean getInGame(){
+        return this.inGame;
+    }
+
+
+    //print player content for debug
+    public void print(){
+        System.out.println("Name:" + name);
+        System.out.println("Guess:" + guess);
+        System.out.println("S:" + symbol);
+        System.out.println("x:" + x);
+        System.out.println("y:" + y);
+        System.out.println("Ingame:" + inGame);
     }
 
 }

@@ -63,12 +63,12 @@ public class Newgame implements Initializable {
             WaitingRoom waitingRoomController = loader.getController();
             waitingRoomController.setNickname1(playerName, pin);
 
-            Scene waitingRoomScene = new Scene(root);
-            waitingRoomScene.setUserData(playerName);
+            Scene scene = new Scene(root);
+            scene.setUserData(playerName);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Cursor.setCursor(waitingRoomScene);
-            stage.setScene(waitingRoomScene);
+            Cursor.setCursor(scene);
+            stage.setScene(scene);
             stage.show();
         }
     }
