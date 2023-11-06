@@ -16,10 +16,9 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
-import java.util.TimerTask;
+
 
 import javafx.scene.text.Text;
-import org.controlsfx.control.tableview2.filter.filtereditor.SouthFilter;
 
 public class WaitingRoom implements Initializable {
     private GameLogic game = new GameLogic();

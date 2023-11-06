@@ -12,9 +12,12 @@ import javafx.fxml.Initializable;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
@@ -41,7 +44,18 @@ public class Game implements Initializable {
     private Label param5;
     @FXML
     private Label param6;
-
+    @FXML
+    private ImageView image1;
+    @FXML
+    private ImageView image2;
+    @FXML
+    private ImageView image3;
+    @FXML
+    private ImageView image4;
+    @FXML
+    private ImageView image5;
+    @FXML
+    private ImageView image6;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -54,7 +68,7 @@ public class Game implements Initializable {
 
         game.run();
 
-        //TODO: Initialize teams/params of the board
+        //TODO: Initialize teams/params of the board and images
         param1.setText(game.board.getUpparams(0));
         param2.setText(game.board.getUpparams(1));
         param3.setText(game.board.getUpparams(2));
@@ -62,6 +76,11 @@ public class Game implements Initializable {
         param4.setText(game.board.getLeftparams(0));
         param5.setText(game.board.getLeftparams(1));
         param6.setText(game.board.getLeftparams(2));
+
+        Image image = new Image("file:@images/shirts/shirto.png");
+        image1.setImage(image);
+        image1.setFitWidth(200);
+        image1.setFitHeight(150);
 
         // Manage chat parameters
         textarea.setEditable(false);

@@ -5,22 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd5ad994-0a10-4a20-a01d-436618bc7815" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../ServerJavaTest/src/Communication/Communication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerJavaTest/src/logic/Board.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../ServerJavaTest/src/logic/GameLogic.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Client.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Gamec.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Instructions.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Instructions.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Joingame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Joingame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Newgame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Newgame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Game.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/client/WaitingRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/WaitingRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/communication/Communication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/communication/Communication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/database/Database.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerJavaTest/src/database/Database.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/database/Footballer.java" beforeDir="false" afterPath="$PROJECT_DIR$/../ServerJavaTest/src/database/Footballer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/logic/Board.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/logic/Board.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/logic/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/logic/GameLogic.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/game.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/game.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/game.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/game.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -131,6 +118,7 @@
       <workItem from="1699095969159" duration="15905000" />
       <workItem from="1699177036663" duration="17458000" />
       <workItem from="1699293690461" duration="10591000" />
+      <workItem from="1699306187886" duration="1926000" />
     </task>
     <servers />
   </component>
