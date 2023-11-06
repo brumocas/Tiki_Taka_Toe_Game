@@ -1,8 +1,9 @@
-package com.client.database;
+package database;
 
 import java.text.SimpleDateFormat;
 import java.util.Objects;
 import java.util.Vector;
+
 
 public class Database {
     private Vector<Footballer> db = new Vector<Footballer>();

@@ -15,7 +15,7 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@game.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.Gamec">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@game.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.Game">
    <children>
       <GridPane layoutX="80.0" layoutY="54.0">
          <columnConstraints>
@@ -70,21 +70,39 @@
                               <Label layoutX="189.0" layoutY="72.0" styleClass="text" text="Vs" />
                            </children>
                         </Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                           <children>
+                              <Label fx:id="param4" layoutX="140.0" layoutY="128.0" styleClass="text" text="Param4" />
+                           </children></Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
+                           <children>
+                              <Label fx:id="param5" layoutX="148.0" layoutY="126.0" styleClass="text" text="Param5" />
+                           </children></Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
+                           <children>
+                              <Label fx:id="param6" layoutX="151.0" layoutY="126.0" styleClass="text" text="Param6" />
+                           </children></Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+                           <children>
+                              <Label fx:id="param1" layoutX="155.0" layoutY="123.0" styleClass="text" text="Param1" />
+                           </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
+                           <children>
+                              <Label fx:id="param2" layoutX="142.0" layoutY="129.0" styleClass="text" text="Param2" />
+                           </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="text" stylesheets="@game.css" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" stylesheets="@game.css" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
+                           <children>
+                              <Label fx:id="param3" layoutX="142.0" layoutY="129.0" styleClass="text" text="Param3" />
+                           </children></Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="3" GridPane.rowIndex="3" />
                      </children>
                   </GridPane>
                   <GridPane prefHeight="228.0" prefWidth="1756.0">

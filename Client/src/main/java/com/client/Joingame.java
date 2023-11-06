@@ -21,7 +21,6 @@ public class Joingame implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
     @FXML
@@ -31,6 +30,7 @@ public class Joingame implements Initializable {
     private Stage stage;
     private Parent root;
 
+    // Action to set main menu scene
     @FXML
     public void setMenuScene(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menu.fxml")));
@@ -49,23 +49,25 @@ public class Joingame implements Initializable {
     @FXML
     private Button startGameButton;
 
+    // Action to set waiting room scene
     @FXML
-    void setWaitingRoomScene(ActionEvent event) throws IOException{
-
+    private void setWaitingRoomScene(ActionEvent event) throws IOException{
         String playerName = nickName.getText();
         String pin = pinGame.getText();
 
-        // TODO: Verify if the pin is correct
+        if (playerName != null && !playerName.isEmpty() && pin != null && !pin.isEmpty()) {
+            // TODO:  Send client request to the server depending on client type
+            // If hosted connect, accept pin and receive host player information
+            // Call communication class here
 
-        if (playerName != null && !playerName.isEmpty()) {
-            // You can pass the playerName to the waiting room scene or start the game here.
-            // For example, load the waiting room scene with playerName.
             FXMLLoader loader = new FXMLLoader(getClass().getResource("waitingroom.fxml"));
             Parent root = loader.load();
+            // Load next scene to pass Data
             WaitingRoom waitingRoomController = loader.getController();
-            waitingRoomController.setNickname2(playerName, pin);
+            waitingRoomController.setHosted(playerName, pin);
 
             Scene waitingRoomScene = new Scene(root);
+            // Pass Data to the next scene
             waitingRoomScene.setUserData(playerName);
 
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();

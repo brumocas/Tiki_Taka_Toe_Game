@@ -1,4 +1,4 @@
-package com.client.logic;
+package logic;
 
 import java.util.Vector;
 
@@ -88,7 +88,6 @@ public class Board {
         }
     }
 
-    // print board char in cmd
     public void print_char() {
         System.out.println("Tiki Taka Board game (cmd)");
         for (int i = 0; i < rows; i++) {

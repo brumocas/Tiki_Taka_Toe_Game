@@ -21,14 +21,14 @@
     -fx-padding: 10px;
 }
 
-.cell_light-style {
-    -fx-background-color: #434848; /* Background color (adjust to your preference) */
+.cell_dark-style {
+    -fx-background-color: rgba(17, 17, 17, 0.38); /* Background color (adjust to your preference) */
     -fx-border-width: 5px; /* Border width (adjust as needed) */
     -fx-padding: 10px;
 }
 
-.cell_dark-style {
-    -fx-background-color: #434848; /* Background color (adjust to your preference) */
+.cell_light-style {
+    -fx-background-color: rgba(17, 17, 17, 0.08); /* Background color (adjust to your preference) */
     -fx-border-width: 5px; /* Border width (adjust as needed) */
     -fx-padding: 10px;
 }

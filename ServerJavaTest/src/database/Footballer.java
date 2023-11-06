@@ -1,4 +1,4 @@
-package com.client.database;
+package database;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Vector;

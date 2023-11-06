@@ -49,20 +49,22 @@ public class Newgame implements Initializable {
     private Button startGameButton;
 
     @FXML
-    void setWaitingRoomScene(ActionEvent event) throws IOException{
-
+    void setWaitingRoomScene(ActionEvent event) throws IOException {
         String playerName = nickName.getText();
-        // TODO: Receive new game pin from server
-        String pin = "1234";
 
         if (playerName != null && !playerName.isEmpty()) {
-            // You can pass the playerName to the waiting room scene or start the game here.
-            // For example, load the waiting room scene with playerName.
+            // TODO:  Send client request to the server depending on client type
+            // If host connect and receive pin
+            // Call communication class here
+            String pin = "1234";
+
             FXMLLoader loader = new FXMLLoader(getClass().getResource("waitingroom.fxml"));
             Parent root = loader.load();
+            // Load next scene to pass Data
             WaitingRoom waitingRoomController = loader.getController();
-            waitingRoomController.setNickname1(playerName, pin);
+            waitingRoomController.setHost(playerName, pin);
 
+            // Pass Data to the next scene
             Scene scene = new Scene(root);
             scene.setUserData(playerName);
 

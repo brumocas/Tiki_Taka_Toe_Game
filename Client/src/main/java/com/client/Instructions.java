@@ -23,14 +23,10 @@ public class Instructions implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
     }
 
     @FXML
     private Hyperlink hyperlink;
-    //@FXML
-    //private WebView webView;
-
     @FXML
     private void hyperlink(ActionEvent event) throws IOException{
         Desktop desktop = Desktop.getDesktop();

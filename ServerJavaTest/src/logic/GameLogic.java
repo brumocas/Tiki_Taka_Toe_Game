@@ -1,14 +1,14 @@
-package com.client.logic;
+package logic;
 
-import com.client.database.Database;
-import com.client.database.Footballer;
-import com.client.player.Player;
-
+import Communication.Communication;
+import database.Footballer;
+import database.Database;
+import player.Player;
 import java.util.Date;
 import java.util.Scanner;
 import java.util.Vector;
 
-public class Game {
+public class GameLogic {
     public Player p1 = new Player();
     public Player p2 = new Player();
     public Player winner = new Player();
@@ -17,6 +17,7 @@ public class Game {
 
 
     public boolean run() {
+
         Vector<String> teams = new Vector<>(3);
         teams.add("Porto");
         teams.add("Chelsea");
