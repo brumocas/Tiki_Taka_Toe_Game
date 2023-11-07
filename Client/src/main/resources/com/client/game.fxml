@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -72,8 +73,8 @@
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                            <children>
-                              <Label fx:id="param4" layoutX="140.0" layoutY="128.0" styleClass="text" text="Param4" />
-                              <ImageView fx:id="image4" fitHeight="115.0" fitWidth="156.0" layoutX="158.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param4" layoutX="140.0" layoutY="135.0" styleClass="text" text="Param4" />
+                              <ImageView fx:id="image4" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/teams/chelsea.png" />
                                  </image>
@@ -81,17 +82,20 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                            <children>
-                              <Label fx:id="param5" layoutX="148.0" layoutY="126.0" styleClass="text" text="Param5" />
-                              <ImageView fx:id="image5" fitHeight="115.0" fitWidth="173.0" layoutX="168.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param5" layoutX="130.0" layoutY="135.0" styleClass="text" text="Param5" />
+                              <ImageView fx:id="image5" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/teams/realmadrid.png" />
                                  </image>
+                                 <viewport>
+                                    <Rectangle2D />
+                                 </viewport>
                               </ImageView>
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                            <children>
-                              <Label fx:id="param6" layoutX="151.0" layoutY="126.0" styleClass="text" text="Param6" />
-                              <ImageView fx:id="image6" fitHeight="115.0" fitWidth="173.0" layoutX="162.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param6" alignment="CENTER" contentDisplay="CENTER" layoutX="130.0" layoutY="135.0" styleClass="text" text="Param6" />
+                              <ImageView fx:id="image6" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/teams/realmadrid.png" />
                                  </image>
@@ -99,40 +103,112 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                            <children>
-                              <Label fx:id="param1" layoutX="133.0" layoutY="137.0" styleClass="text" text="Param1" />
-                              <ImageView fx:id="image1" fitHeight="115.0" fitWidth="173.0" layoutX="162.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param1" layoutX="130.0" layoutY="135.0" styleClass="text" text="Param1" />
+                              <ImageView fx:id="image1" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/teams/realmadrid.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                           <children>
+                              <TextField alignment="CENTER" layoutX="107.0" layoutY="151.0" promptText="(...)" />
+                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/shirts/shirt.png" />
+                                 </image>
+                              </ImageView>
+                           </children></Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/shirts/shirt.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                           </children></Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/shirts/shirt.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                           </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                            <children>
-                              <Label fx:id="param2" layoutX="133.0" layoutY="137.0" styleClass="text" text="Param2" />
-                              <ImageView fx:id="image2" fitHeight="115.0" fitWidth="173.0" layoutX="162.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param2" layoutX="130.0" layoutY="135.0" styleClass="text" text="Param2" />
+                              <ImageView fx:id="image2" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/teams/realmadrid.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" stylesheets="@game.css" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                           <children>
+                              <TextField alignment="CENTER" layoutX="117.0" layoutY="150.0" promptText="(...)" />
+                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/shirts/shirt.png" />
+                                 </image>
+                              </ImageView>
+                           </children></Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/shirts/shirt.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                           </children></Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" stylesheets="@game.css" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                           <children>
+                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/shirts/shirt.png" />
+                                 </image>
+                              </ImageView>
+                           </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
                            <children>
-                              <Label fx:id="param3" layoutX="133.0" layoutY="137.0" styleClass="text" text="Param3" />
-                              <ImageView fx:id="image3" fitHeight="115.0" fitWidth="173.0" layoutX="162.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param3" layoutX="130.0" layoutY="135.0" styleClass="text" text="Param3" />
+                              <ImageView fx:id="image3" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/teams/realmadrid.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
-                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/shirts/shirt.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                           </children></Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/shirts/shirt.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                           </children></Pane>
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                           <children>
+                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@images/shirts/shirt.png" />
+                                 </image>
+                              </ImageView>
+                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                           </children></Pane>
                      </children>
                   </GridPane>
                   <GridPane prefHeight="228.0" prefWidth="1756.0">

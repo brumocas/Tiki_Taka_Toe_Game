@@ -103,5 +103,4 @@ public class WaitingRoom implements Initializable {
         stage.show();
     }
 
-
 }

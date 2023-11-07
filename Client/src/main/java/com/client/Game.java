@@ -13,6 +13,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 
 
+import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -31,6 +32,7 @@ public class Game implements Initializable {
     private Label turn;
     private int timer_value = 30;
     private GameLogic game = new GameLogic();
+    private boolean your_turn ;
     private boolean player_host;
     @FXML
     private Label param1;
@@ -62,14 +64,18 @@ public class Game implements Initializable {
         // See if the player is the host or the hosted
         if (game.p1.getInGame()){
             player_host = game.p1.getInGame();
+            your_turn = true;
         } else if (!game.p2.getInGame()){
             player_host = !game.p2.getInGame();
+            your_turn = false;
         }
 
         game.run();
 
+
         //TODO: Initialize teams/params of the board and images
         param1.setText(game.board.getUpparams(0));
+        param1.setAlignment(Pos.CENTER);
         param2.setText(game.board.getUpparams(1));
         param3.setText(game.board.getUpparams(2));
 
@@ -77,10 +83,10 @@ public class Game implements Initializable {
         param5.setText(game.board.getLeftparams(1));
         param6.setText(game.board.getLeftparams(2));
 
-        Image image = new Image("file:@images/shirts/shirto.png");
+        Image image = new Image("file:src/main/resources/com/client/images/teams/chelsea.png");
         image1.setImage(image);
-        image1.setFitWidth(200);
-        image1.setFitHeight(150);
+        image1.setFitWidth(170);
+        image1.setFitHeight(115 );
 
         // Manage chat parameters
         textarea.setEditable(false);
