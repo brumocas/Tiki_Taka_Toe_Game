@@ -2,7 +2,10 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "Server"
+			"path" : "Server.exe"
+		},
+		{
+			"path" : "Server.pdb"
 		}
 	],
 	"backtrace" : 1,
@@ -73,12 +76,16 @@
 			{
 				"fragment" : "",
 				"role" : "flags"
+			},
+			{
+				"fragment" : "-lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32",
+				"role" : "libraries"
 			}
 		],
 		"language" : "CXX"
 	},
 	"name" : "Server",
-	"nameOnDisk" : "Server",
+	"nameOnDisk" : "Server.exe",
 	"paths" : 
 	{
 		"build" : ".",
