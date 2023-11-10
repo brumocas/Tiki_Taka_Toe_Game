@@ -3,3 +3,9 @@
 //
 
 #include "game.h"
+
+namespace gamelogic{
+
+
+
+}
