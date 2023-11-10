@@ -11,11 +11,18 @@ int main() {
     footballer cris("Cristiano", "Ronaldo", 1985, 02, "Portugal",
                     words, false, true, true, true);
 
-    //cris.print();
+    footballer crisj("Cristiano", "Junior", 2010, 02, "Portugal",
+                    words, false, true, true, true);
 
     database db;
+    db.load();
     db.addFootballer(cris);
+    db.addFootballer(crisj);
     db.print();
+
+    std::cout << db.searchFootballer("Cristiano", "Ronaldo");
+
+    //db.print();
 
     return 0;
 }

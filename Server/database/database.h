@@ -18,13 +18,16 @@ public:
     // Add footballer to database
     void addFootballer(footballer player);
     // Delete footballer from database
-    void deleteFootballer(std::string name, std::string surname);
+    void deleteFootballer(footballer player);
     // Search footballer by name and surname in the database
-    void searchFootballer(std::string name, std::string surname);
+    bool searchFootballer(std::string name, std::string surname) const;
+    // TODO: Function to get footballer object from database
     // Search if there is a footballer with the passed parameter
-    void searchParams(std::string parameter);
+    bool searchParams(std::string parameter);
     // Print Database for debug
     void print();
+    // Load Database
+    void load();
 };
 
 
