@@ -16,4 +16,7 @@ add_executable(Server
         gamelogic/game.cpp
         gamelogic/game.h
         gamelogic/gamerunner.cpp
-        gamelogic/gamerunner.h)
+        gamelogic/gamerunner.h
+        gamelogic/player.cpp
+        gamelogic/player.h
+        Main/main.cpp)
