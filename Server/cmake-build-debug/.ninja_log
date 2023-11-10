@@ -1,0 +1,8 @@
+# ninja log v5
+14	1862	7213162421082488	CMakeFiles/Server.dir/Server.cpp.obj	e49868dbeb6a0ee2
+1865	2351	7213162425767978	Server.exe	11f0a7457e8826e5
+40	276	7213162247826311	CMakeFiles/Server.dir/database/footballer.cpp.obj	4eeae595ae270622
+11	232	7213157125399797	CMakeFiles/Server.dir/database/database.cpp.obj	2f4f20ff9bac4f13
+26	285	7213162247897630	CMakeFiles/Server.dir/communication/communication.cpp.obj	4b233e9fae46285c
+71	303	7213162248129192	CMakeFiles/Server.dir/gamelogic/game.cpp.obj	2dfee4c8ad1ad299
+54	306	7213162248109140	CMakeFiles/Server.dir/gamelogic/board.cpp.obj	2fd2af91b2889426
