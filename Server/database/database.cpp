@@ -2,6 +2,7 @@
 // Created by bruco on 11/10/2023.
 //
 
+#include <iostream>
 #include "database.h"
 
 // Constructor
@@ -13,16 +14,26 @@ void database::addFootballer(footballer player) {
     this->db.push_back(player);
 }
 
-void database::deleteFootballer(footballer player) {
+void database::deleteFootballer(std::string name, std::string surname) {
 
 }
 
-footballer database::searchFootballer(std::string name, std::string surname) {
-
-    return footballer();
+void database::searchFootballer(std::string name, std::string surname) {
 }
 
-footballer database::searchParams(std::string parameter) {
-    return footballer();
+void database::searchParams(std::string parameter) {
+
 }
+
+void database::print() {
+    std::cout << "/-----------------Database-----------------/" << std::endl;
+    for (int i = 0; i < db.size(); ++i) {
+        db[i].print();
+        std::cout << std::endl;
+    }
+}
+
+
+
+
 

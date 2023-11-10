@@ -1,11 +1,21 @@
 #include <iostream>
+#include "database/footballer.h"
+#include "database/database.h"
 
 int main() {
-    // Declare variables to store user input
-    double num1, num2;
 
-    // Get input from the user
-    std::cout << "Server Game Side \n";
+    // Testing implementation
+
+    // Create a vector of strings
+    std::vector<std::string> words = {"Real Madrid", "Juventus", "M.United", "All Mossar", "Sporting"};
+    footballer cris("Cristiano", "Ronaldo", 1985, 02, "Portugal",
+                    words, false, true, true, true);
+
+    //cris.print();
+
+    database db;
+    db.addFootballer(cris);
+    db.print();
 
     return 0;
 }

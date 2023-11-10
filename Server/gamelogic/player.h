@@ -12,7 +12,7 @@ namespace gamelogic {
     class Player {
 
     private:
-        char symbol;
+        char symbol{};
         std::string playerGuessFootballer;
         int x;
         int y;
@@ -28,7 +28,7 @@ namespace gamelogic {
         int getPlayerGuessX(int x);
         int getPlayerGuessY(int y);
         void setPlayerGuessCords(int x, int y);
-        std::string getPlayerGuessFootballer(std::string playerGuessFootballer);
+        static std::string getPlayerGuessFootballer(std::string playerGuessFootballer);
         void setPlayerGuessFootballer(std::string playerGuessFootballer);
         char getSymbol();
         void setSymbol(char symbol);
