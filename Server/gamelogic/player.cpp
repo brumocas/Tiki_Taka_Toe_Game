@@ -43,7 +43,7 @@ namespace gamelogic{
 
     std::string Player::getPlayerGuessFootballer(std::string playerGuessFootballer){
         return playerGuessFootballer;
-    };
+    }
 
     void Player::setPlayerGuessFootballer(std::string playerGuessFootballer) {
         this->playerGuessFootballer = playerGuessFootballer;
