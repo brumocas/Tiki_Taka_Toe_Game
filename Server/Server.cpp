@@ -24,7 +24,7 @@ int main() {
     std::cout << db.searchParams(parameters::WorldCupWinner, true) << std::endl;
 
     footballer messi;
-    if (!db.searchFootballer("Lionel", "Messi"))
+    if (db.searchFootballer("Lionel", "Messi"))
         messi = db.getFootballer("Lionel", "Messi");
 
     messi.print();

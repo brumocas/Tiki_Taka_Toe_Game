@@ -5,7 +5,7 @@
 #ifndef SERVER_GAME_H
 #define SERVER_GAME_H
 
-#include "player.h"
+#include "../player/player.h"
 #include <array>
 #include <iostream>
 

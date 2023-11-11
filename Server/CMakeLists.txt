@@ -15,10 +15,10 @@ add_executable(Server
         System/gamelogic/board.h
         System/gamelogic/game.cpp
         System/gamelogic/game.h
-        System/gamelogic/gamerunner.cpp
-        System/gamelogic/gamerunner.h
-        System/gamelogic/player.cpp
-        System/gamelogic/player.h
+        System/game/gamerunner.cpp
+        System/game/gamerunner.h
+        System/player/player.cpp
+        System/player/player.h
         SystemTests/Test.cpp
         System/database/parameters.h
 )

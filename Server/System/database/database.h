@@ -17,6 +17,7 @@ class database {
 private:
     std::vector<footballer> db;
 public:
+    // Constructor
     database();
     // Add footballer to database
     void addFootballer(footballer player);

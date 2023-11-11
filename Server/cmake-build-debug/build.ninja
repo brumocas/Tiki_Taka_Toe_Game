@@ -85,17 +85,17 @@ build CMakeFiles/Server.dir/System/gamelogic/game.cpp.obj: CXX_COMPILER__Server_
   OBJECT_DIR = CMakeFiles\Server.dir
   OBJECT_FILE_DIR = CMakeFiles\Server.dir\System\gamelogic
 
-build CMakeFiles/Server.dir/System/gamelogic/gamerunner.cpp.obj: CXX_COMPILER__Server_unscanned_Debug C$:/Users/bruco/OneDrive$ -$ Universidade$ do$ Porto/Professional$ Life/Code/Windows/Java/PSW/a01_1/Server/System/gamelogic/gamerunner.cpp || cmake_object_order_depends_target_Server
-  DEP_FILE = CMakeFiles\Server.dir\System\gamelogic\gamerunner.cpp.obj.d
+build CMakeFiles/Server.dir/System/game/gamerunner.cpp.obj: CXX_COMPILER__Server_unscanned_Debug C$:/Users/bruco/OneDrive$ -$ Universidade$ do$ Porto/Professional$ Life/Code/Windows/Java/PSW/a01_1/Server/System/game/gamerunner.cpp || cmake_object_order_depends_target_Server
+  DEP_FILE = CMakeFiles\Server.dir\System\game\gamerunner.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Server.dir
-  OBJECT_FILE_DIR = CMakeFiles\Server.dir\System\gamelogic
+  OBJECT_FILE_DIR = CMakeFiles\Server.dir\System\game
 
-build CMakeFiles/Server.dir/System/gamelogic/player.cpp.obj: CXX_COMPILER__Server_unscanned_Debug C$:/Users/bruco/OneDrive$ -$ Universidade$ do$ Porto/Professional$ Life/Code/Windows/Java/PSW/a01_1/Server/System/gamelogic/player.cpp || cmake_object_order_depends_target_Server
-  DEP_FILE = CMakeFiles\Server.dir\System\gamelogic\player.cpp.obj.d
+build CMakeFiles/Server.dir/System/player/player.cpp.obj: CXX_COMPILER__Server_unscanned_Debug C$:/Users/bruco/OneDrive$ -$ Universidade$ do$ Porto/Professional$ Life/Code/Windows/Java/PSW/a01_1/Server/System/player/player.cpp || cmake_object_order_depends_target_Server
+  DEP_FILE = CMakeFiles\Server.dir\System\player\player.cpp.obj.d
   FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
   OBJECT_DIR = CMakeFiles\Server.dir
-  OBJECT_FILE_DIR = CMakeFiles\Server.dir\System\gamelogic
+  OBJECT_FILE_DIR = CMakeFiles\Server.dir\System\player
 
 build CMakeFiles/Server.dir/SystemTests/Test.cpp.obj: CXX_COMPILER__Server_unscanned_Debug C$:/Users/bruco/OneDrive$ -$ Universidade$ do$ Porto/Professional$ Life/Code/Windows/Java/PSW/a01_1/Server/SystemTests/Test.cpp || cmake_object_order_depends_target_Server
   DEP_FILE = CMakeFiles\Server.dir\SystemTests\Test.cpp.obj.d
@@ -111,7 +111,7 @@ build CMakeFiles/Server.dir/SystemTests/Test.cpp.obj: CXX_COMPILER__Server_unsca
 #############################################
 # Link the executable Server.exe
 
-build Server.exe: CXX_EXECUTABLE_LINKER__Server_Debug CMakeFiles/Server.dir/Server.cpp.obj CMakeFiles/Server.dir/System/database/database.cpp.obj CMakeFiles/Server.dir/System/database/footballer.cpp.obj CMakeFiles/Server.dir/System/communication/communication.cpp.obj CMakeFiles/Server.dir/System/gamelogic/board.cpp.obj CMakeFiles/Server.dir/System/gamelogic/game.cpp.obj CMakeFiles/Server.dir/System/gamelogic/gamerunner.cpp.obj CMakeFiles/Server.dir/System/gamelogic/player.cpp.obj CMakeFiles/Server.dir/SystemTests/Test.cpp.obj
+build Server.exe: CXX_EXECUTABLE_LINKER__Server_Debug CMakeFiles/Server.dir/Server.cpp.obj CMakeFiles/Server.dir/System/database/database.cpp.obj CMakeFiles/Server.dir/System/database/footballer.cpp.obj CMakeFiles/Server.dir/System/communication/communication.cpp.obj CMakeFiles/Server.dir/System/gamelogic/board.cpp.obj CMakeFiles/Server.dir/System/gamelogic/game.cpp.obj CMakeFiles/Server.dir/System/game/gamerunner.cpp.obj CMakeFiles/Server.dir/System/player/player.cpp.obj CMakeFiles/Server.dir/SystemTests/Test.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\Server.dir
