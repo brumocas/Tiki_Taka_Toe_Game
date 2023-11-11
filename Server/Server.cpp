@@ -1,18 +1,18 @@
 #include <iostream>
-#include "database/footballer.h"
-#include "database/database.h"
+#include "system/database/footballer.h"
+#include "system/database/database.h"
 
 int main() {
 
     // Testing implementation
 
     // Create a vector of strings
-    std::vector<std::string> words = {"Real Madrid", "Juventus", "M.United", "All Mossar", "Sporting"};
+    std::vector<std::string> words = {"Real Madrid", "Juventus", "M.United", "All_Mossar", "Sporting"};
     footballer cris("Cristiano", "Ronaldo", 1985, 02, "Portugal",
                     words, false, true, true, true);
 
     footballer crisj("Cristiano", "Junior", 2010, 02, "Portugal",
-                    words, false, true, true, true);
+                    words, false, false, false, false);
 
     database db;
     db.load();
@@ -20,9 +20,14 @@ int main() {
     db.addFootballer(crisj);
     db.print();
 
-    std::cout << db.searchFootballer("Cristiano", "Ronaldo");
+    std::cout << db.searchParams(parameters::Name, (std::string )"Bruno") << std::endl;
+    std::cout << db.searchParams(parameters::WorldCupWinner, true) << std::endl;
 
-    //db.print();
+    footballer messi;
+    if (!db.searchFootballer("Lionel", "Messi"))
+        messi = db.getFootballer("Lionel", "Messi");
+
+    messi.print();
 
     return 0;
 }

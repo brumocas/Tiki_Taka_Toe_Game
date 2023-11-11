@@ -5,6 +5,20 @@
 #include <iostream>
 #include "footballer.h"
 
+footballer::footballer() {
+    // Default Constructor
+    this->name = "";
+    this->surname = "";
+    this->birth_year = -1;
+    this->birth_month = -1;
+    this->nationality = "";
+    this->world_cup_winner = false;
+    this->champions_league_winner = false;
+    this->ballon_dor_winner = false;
+    this->european_winner = false;
+}
+
+
 footballer::footballer(std::string name, std::string surname, int birth_year, int birth_month, std::string nationality,
                        std::vector<std::string> career_teams, bool world_cup_winner, bool champions_league_winner,
                        bool ballon_dor_winner, bool european_winner) {
@@ -78,9 +92,10 @@ void footballer::print() {
     std::cout << "World Cup Winner : " << world_cup_winner << std::endl;
     std::cout << "Champions League Winner : " << champions_league_winner << std::endl;
     std::cout << "Ballon Dor Winner : " << ballon_dor_winner << std::endl;
-    std::cout << "Nationality : "  << european_winner << std::endl;
+    std::cout << "European Winner : "  << european_winner << std::endl;
 
 }
+
 
 
 

@@ -30,7 +30,7 @@ namespace gamelogic {
         int getPlayerGuessY(int y);
         void setPlayerGuessCords(int x, int y);
         static std::string getPlayerGuessFootballer(std::string playerGuessFootballer);
-        void setPlayerGuessFootballer(std::string playerGuessFootballer);
+        void setPlayerGuessFootballer(std::string playerGuessFootballer); //TODO : Need to pass the coordinates as well
         char getSymbol();
         void setSymbol(char symbol);
 

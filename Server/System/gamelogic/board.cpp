@@ -49,7 +49,7 @@ namespace gamelogic{
     }
 
     char Board::getPlay(int x, int y, char symbol) { // TODO: getPlay implementation
-
+        return ' ';
     }
 
 
