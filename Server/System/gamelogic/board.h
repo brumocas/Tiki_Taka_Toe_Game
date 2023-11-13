@@ -6,6 +6,8 @@
 #define SERVER_BOARD_H
 
 #include <iostream>
+//#include "Server/System/player/player.h" TODO: Check this path error
+#include "C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Server\System\player\player.h"
 
 namespace gamelogic {
 
@@ -16,7 +18,7 @@ namespace gamelogic {
         std::string upParameters[3];
         std::string leftParameters[3];
         char symbolArray[3][3];
-        std::string footballerEntry[3][3]; // TODO: footballerEntry implementation
+        std::string footballerEntry[3][3];
 
     public:
         Board();
@@ -24,8 +26,9 @@ namespace gamelogic {
         void setLeftParams(std::string param1, std::string param2, std::string param3);
         std::string getUpParams(int x);
         std::string getLeftParams(int y);
-        void setPlay(int x, int y, char symbol);
-        char getPlay(int x, int y, char symbol); // TODO: getPlay implementation
+        void setPlay(Player player);
+        bool isUsed(int x, int y);
+        char getSymbol(int x, int y);
 
     };
 

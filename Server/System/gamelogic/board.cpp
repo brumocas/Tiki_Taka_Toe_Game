@@ -5,6 +5,7 @@
 #include "board.h"
 #include <iostream>
 
+
 namespace gamelogic{
 
     Board::Board() {
@@ -17,6 +18,7 @@ namespace gamelogic{
         for(int i=0; i < 3; i++){
             for(int j=0; j < 3; j++) {
                 symbolArray[i][j] = '-';
+                footballerEntry[i][j] = '-';
             }
         }
 
@@ -31,9 +33,9 @@ namespace gamelogic{
     }
 
     void Board::setLeftParams(std::string param1, std::string param2, std::string param3) {
-        upParameters[0] = param1;
-        upParameters[1] = param2;
-        upParameters[2] = param3;
+        leftParameters[0] = param1;
+        leftParameters[1] = param2;
+        leftParameters[2] = param3;
     }
 
     std::string Board::getUpParams(int x) {
@@ -44,13 +46,21 @@ namespace gamelogic{
         return upParameters[y];
     }
 
-    void Board::setPlay(int x, int y, char symbol) {
-        symbolArray[x][y]=symbol;
+    void Board::setPlay(Player player) {
+        if (isUsed(player.getPlayerGuessX(), player.getPlayerGuessY())){
+            symbolArray[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getSymbol();
+            footballerEntry[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getPlayerGuessFootballer();
+        } else {
+            std::cerr << "Invalid behaviour" << std::endl;
+        }
     }
 
-    char Board::getPlay(int x, int y, char symbol) { // TODO: getPlay implementation
-        return ' ';
+    char Board::getSymbol(int x, int y) {
+        return symbolArray[x][y];
     }
 
+    bool Board::isUsed(int x, int y) {
+        return footballerEntry[x][y] != "Unknown";
+    }
 
 }

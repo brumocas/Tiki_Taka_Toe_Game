@@ -26,10 +26,10 @@ namespace gamelogic {
         Player(std::string playerName, char symbol);
         std::string getPlayerName();
         void setPlayerName(std:: string playerName);
-        int getPlayerGuessX(int x);
-        int getPlayerGuessY(int y);
+        int getPlayerGuessX();
+        int getPlayerGuessY();
         void setPlayerGuessCords(int x, int y);
-        static std::string getPlayerGuessFootballer(std::string playerGuessFootballer);
+        std::string getPlayerGuessFootballer();
         void setPlayerGuessFootballer(std::string playerGuessFootballer); //TODO : Need to pass the coordinates as well
         char getSymbol();
         void setSymbol(char symbol);

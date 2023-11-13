@@ -27,11 +27,11 @@ namespace gamelogic{
         this->playerName = playerName;
     }
 
-    int Player::getPlayerGuessX(int x){
+    int Player::getPlayerGuessX(){
         return x;
     }
 
-    int Player::getPlayerGuessY(int y){
+    int Player::getPlayerGuessY(){
         return y;
     }
 
@@ -40,7 +40,7 @@ namespace gamelogic{
         this-> y = y;
     }
 
-    std::string Player::getPlayerGuessFootballer(std::string playerGuessFootballer){
+    std::string Player::getPlayerGuessFootballer(){
         return playerGuessFootballer;
     }
 

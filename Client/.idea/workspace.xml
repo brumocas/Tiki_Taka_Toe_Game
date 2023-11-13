@@ -6,9 +6,15 @@
   <component name="ChangeListManager">
     <list default="true" id="cd5ad994-0a10-4a20-a01d-436618bc7815" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Game.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/WaitingRoom.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/WaitingRoom.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/game.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/game.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/cache-v2-4faed6d80f5084c78070.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-11T14-26-04-0333.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/.ninja_deps" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/.ninja_log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/database/database.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/database/database.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +58,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "devel",
+    "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/java/com/client",
     "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/resources/com/client/images/shirts",
     "list.type.of.created.stylesheet": "CSS",
@@ -120,6 +127,8 @@
       <workItem from="1699293690461" duration="10591000" />
       <workItem from="1699306187886" duration="1926000" />
       <workItem from="1699345966413" duration="5952000" />
+      <workItem from="1699712987178" duration="369000" />
+      <workItem from="1699905885572" duration="135000" />
     </task>
     <servers />
   </component>
