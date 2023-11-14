@@ -6,8 +6,7 @@
 #define SERVER_BOARD_H
 
 #include <iostream>
-//#include "Server/System/player/player.h" TODO: Check this path error
-#include "C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Server\System\player\player.h"
+#include "../player/player.h"
 
 namespace gamelogic {
 

@@ -6,26 +6,28 @@
 #define SERVER_GAME_H
 
 #include "../player/player.h"
+#include "board.h"
 #include <array>
 #include <iostream>
-
-using ThreeByThreeArray = std::array<std::array<int, 3>, 3>;
 
 namespace gamelogic {
 
     class game {
     private:
-        Player player1, player2, currentPlayer, winner;
+        Player player1, player2, winner;
+        Board board;
+        bool appRunning;
 
     public:
 
-        bool checkPosition(Player player);
+        void startGame();
+        bool isGameInProgress();
         bool checkAnswer(Player player);
         Player getWinner();
         void setWinner(Player player);
         bool isGameWonByPlayer(Player player);
         bool isGameTied();
-        std::array<ThreeByThreeArray, 8> winningCombination(char symbol);
+        bool winningCombinations(char symbol, Board board);
 
     };
 }
