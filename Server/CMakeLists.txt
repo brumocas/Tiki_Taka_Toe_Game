@@ -3,6 +3,8 @@ project(Server)
 
 set(CMAKE_CXX_STANDARD 14)
 
+add_subdirectory(Google_tests)
+
 add_executable(Server
         Server.cpp
         System/database/database.cpp
@@ -17,6 +19,6 @@ add_executable(Server
         System/gamelogic/game.h
         System/player/player.cpp
         System/player/player.h
-        SystemTests/Test.cpp
+        Google_tests/Test.cpp
         System/database/parameters.h
 )

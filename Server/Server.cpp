@@ -1,9 +1,9 @@
 #include <iostream>
 #include "System/database/footballer.h"
 #include "System/database/database.h"
+#include "gtest/gtest.h"
 
 int main() {
-
     // Testing implementation
 
     // Create a vector of strings
@@ -28,6 +28,8 @@ int main() {
         messi = db.getFootballer("Lionel", "Messi");
 
     messi.print();
+
+
 
 
     return 0;
