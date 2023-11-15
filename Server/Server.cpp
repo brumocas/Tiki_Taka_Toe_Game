@@ -1,6 +1,6 @@
 #include <iostream>
-#include "system/database/footballer.h"
-#include "system/database/database.h"
+#include "System/database/footballer.h"
+#include "System/database/database.h"
 
 int main() {
 
