@@ -6,15 +6,18 @@
   <component name="ChangeListManager">
     <list default="true" id="cd5ad994-0a10-4a20-a01d-436618bc7815" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Client.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/main/Client.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/cache-v2-4faed6d80f5084c78070.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-11T14-26-04-0333.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-13T21-44-52-0413.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.ninja_deps" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/.ninja_deps" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.ninja_log" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/.ninja_log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/Server.cpp.obj" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/Server.cpp.obj" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/rules.ninja" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Server.exe" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/Server.exe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/database/database.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/database/database.txt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,27 +55,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "devel",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_directory_selection": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/java/com/client",
-    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/resources/com/client/images/shirts",
-    "list.type.of.created.stylesheet": "CSS",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.15332031",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;devel&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_directory_selection&quot;: &quot;C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/java/com/client&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/resources/com/client/images/shirts&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15332031&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\shirts" />
@@ -99,7 +102,7 @@
   </component>
   <component name="RunManager">
     <configuration name="Client" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.client.Client" />
+      <option name="MAIN_CLASS_NAME" value="com.client.main.Client" />
       <module name="Client" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -129,6 +132,7 @@
       <workItem from="1699345966413" duration="5952000" />
       <workItem from="1699712987178" duration="369000" />
       <workItem from="1699905885572" duration="135000" />
+      <workItem from="1699951223160" duration="2312000" />
     </task>
     <servers />
   </component>

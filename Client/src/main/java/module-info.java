@@ -10,5 +10,7 @@ module com.client {
     exports com.client;
     exports com.client.gui.defs;
     opens com.client.gui.defs to javafx.fxml;
+    exports com.client.main;
+    opens com.client.main to javafx.fxml;
 
 }

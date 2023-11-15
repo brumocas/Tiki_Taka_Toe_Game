@@ -1,7 +1,7 @@
 # ninja log v5
 28	1035	7213973005804286	CMakeFiles/Server.dir/Main/main.cpp.obj	f935b5bbed34d15a
 35	1647	7213472750513888	CMakeFiles/Server.dir/database/footballer.cpp.obj	4eeae595ae270622
-1016	1815	7216137710528908	Server.exe	67a7db7d234e2551
+9	406	7216150928236435	Server.exe	c3c6b4d568793b08
 9	1330	7214158148819718	CMakeFiles/Server.dir/Server.cpp.obj	e49868dbeb6a0ee2
 18	1622	7213973011737280	CMakeFiles/Server.dir/database/database.cpp.obj	2f4f20ff9bac4f13
 1149	1665	7213401641982515	CMakeFiles/Server.dir/gamelogic/gamerunner.cpp.obj	3b4097d7f10ea3dc
@@ -12,7 +12,7 @@
 97	1963	7213436638693287	CMakeFiles/Server.dir/gamelogic/board.cpp.obj	2fd2af91b2889426
 52	1383	7213948981724729	CMakeFiles/Server.dir/gamelogic/player.cpp.obj	b8d1a4ada6804f63
 31	921	7213973236534286	CMakeFiles/Server.dir/System/communication/communication.cpp.obj	b62cb9fafe0307ed
-6	437	7216150923593259	build.ninja	7b082a59f0e5fcbd
+4	367	7216540459128785	build.ninja	7b082a59f0e5fcbd
 72	531	7213973231164390	CMakeFiles/Server.dir/System/gamelogic/gamerunner.cpp.obj	c56907fd5f41b5d1
 52	948	7216150331046489	CMakeFiles/Server.dir/System/gamelogic/board.cpp.obj	9bc1c4f59a9682d6
 12	1923	7214157912963058	CMakeFiles/Server.dir/System/database/footballer.cpp.obj	dc7f4a8a9ec45134
@@ -20,5 +20,5 @@
 37	1841	7213974193995777	CMakeFiles/Server.dir/System/gamelogic/player.cpp.obj	13c89baf3a2cc75a
 9	123	7213975158900528	CMakeFiles/Server.dir/SystemTests/Test.cpp.obj	201700f5c5c0cfdb
 31	1014	7216137702520304	CMakeFiles/Server.dir/System/player/player.cpp.obj	d79d09b047e2e9b5
-4	367	7216150923593259	build.ninja	7b082a59f0e5fcbd
-9	406	7216150928236435	Server.exe	c3c6b4d568793b08
+35	1855	7216549708810624	CMakeFiles/Server.dir/Server.cpp.obj	e49868dbeb6a0ee2
+1859	2391	7216549713985367	Server.exe	c3c6b4d568793b08
