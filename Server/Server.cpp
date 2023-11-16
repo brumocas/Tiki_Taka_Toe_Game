@@ -1,11 +1,16 @@
 #include <iostream>
-#include "System/database/footballer.h"
-#include "System/database/database.h"
+#include "src/database/footballer.h"
+#include "src/database/database.h"
 #include "gtest/gtest.h"
 
-int main() {
-    // Testing implementation
 
+int main(int argc, char **argv) {
+    // Testing implementation
+    ::testing::InitGoogleTest(&argc, argv);
+    RUN_ALL_TESTS();
+
+
+    /*
     // Create a vector of strings
     std::vector<std::string> words = {"Real Madrid", "Juventus", "M.United", "All_Mossar", "Sporting"};
     footballer cris("Cristiano", "Ronaldo", 1985, 02, "Portugal",
@@ -28,8 +33,7 @@ int main() {
         messi = db.getFootballer("Lionel", "Messi");
 
     messi.print();
-
-
+    */
 
 
     return 0;

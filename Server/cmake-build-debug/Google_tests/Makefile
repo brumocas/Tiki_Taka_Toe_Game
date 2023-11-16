@@ -175,29 +175,29 @@ Google_Tests_run/fast:
 	cd /home/bruno/PSW/a01_1/Server/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/build
 .PHONY : Google_Tests_run/fast
 
-Test.o: Test.cpp.o
-.PHONY : Test.o
+DataTest.o: DataTest.cpp.o
+.PHONY : DataTest.o
 
 # target to build an object file
-Test.cpp.o:
-	cd /home/bruno/PSW/a01_1/Server/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/Test.cpp.o
-.PHONY : Test.cpp.o
+DataTest.cpp.o:
+	cd /home/bruno/PSW/a01_1/Server/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/DataTest.cpp.o
+.PHONY : DataTest.cpp.o
 
-Test.i: Test.cpp.i
-.PHONY : Test.i
+DataTest.i: DataTest.cpp.i
+.PHONY : DataTest.i
 
 # target to preprocess a source file
-Test.cpp.i:
-	cd /home/bruno/PSW/a01_1/Server/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/Test.cpp.i
-.PHONY : Test.cpp.i
+DataTest.cpp.i:
+	cd /home/bruno/PSW/a01_1/Server/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/DataTest.cpp.i
+.PHONY : DataTest.cpp.i
 
-Test.s: Test.cpp.s
-.PHONY : Test.s
+DataTest.s: DataTest.cpp.s
+.PHONY : DataTest.s
 
 # target to generate assembly for a file
-Test.cpp.s:
-	cd /home/bruno/PSW/a01_1/Server/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/Test.cpp.s
-.PHONY : Test.cpp.s
+DataTest.cpp.s:
+	cd /home/bruno/PSW/a01_1/Server/cmake-build-debug && $(MAKE) $(MAKESILENT) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/DataTest.cpp.s
+.PHONY : DataTest.cpp.s
 
 # Help Target
 help:
@@ -212,9 +212,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... Google_Tests_run"
-	@echo "... Test.o"
-	@echo "... Test.i"
-	@echo "... Test.s"
+	@echo "... DataTest.o"
+	@echo "... DataTest.i"
+	@echo "... DataTest.s"
 .PHONY : help
 
 

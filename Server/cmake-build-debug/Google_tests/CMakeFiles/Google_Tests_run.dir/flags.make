@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -isystem /home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/include -isystem /home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest
+CXX_INCLUDES = -isystem /home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest/include -isystem /home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest
 
 CXX_FLAGS = -g -std=gnu++14 -fdiagnostics-color=always
 

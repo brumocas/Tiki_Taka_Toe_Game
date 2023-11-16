@@ -85,51 +85,6 @@ rebuild_cache:
 rebuild_cache/fast: rebuild_cache
 .PHONY : rebuild_cache/fast
 
-# Special rule for the target list_install_components
-list_install_components:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Available install components are: \"gmock\" \"gtest\""
-.PHONY : list_install_components
-
-# Special rule for the target list_install_components
-list_install_components/fast: list_install_components
-.PHONY : list_install_components/fast
-
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/CLion/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/opt/CLion/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
-# Special rule for the target install/local
-install/local: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/CLion/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local
-
-# Special rule for the target install/local
-install/local/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
-	/opt/CLion/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_LOCAL_ONLY=1 -P cmake_install.cmake
-.PHONY : install/local/fast
-
-# Special rule for the target install/strip
-install/strip: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/CLion/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip
-
-# Special rule for the target install/strip
-install/strip/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing the project stripped..."
-	/opt/CLion/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
-.PHONY : install/strip/fast
-
 # The main all target
 all: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles /home/bruno/PSW/a01_1/Server/cmake-build-debug//CMakeFiles/progress.marks
@@ -174,94 +129,29 @@ Server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
 .PHONY : Server/fast
 
-#=============================================================================
-# Target rules for targets named Google_Tests_run
-
-# Build rule for target.
-Google_Tests_run: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 Google_Tests_run
-.PHONY : Google_Tests_run
-
-# fast build rule for target.
-Google_Tests_run/fast:
-	$(MAKE) $(MAKESILENT) -f Google_tests/CMakeFiles/Google_Tests_run.dir/build.make Google_tests/CMakeFiles/Google_Tests_run.dir/build
-.PHONY : Google_Tests_run/fast
-
-#=============================================================================
-# Target rules for targets named gmock
-
-# Build rule for target.
-gmock: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock
-.PHONY : gmock
-
-# fast build rule for target.
-gmock/fast:
-	$(MAKE) $(MAKESILENT) -f Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/build.make Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/build
-.PHONY : gmock/fast
-
-#=============================================================================
-# Target rules for targets named gmock_main
-
-# Build rule for target.
-gmock_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gmock_main
-.PHONY : gmock_main
-
-# fast build rule for target.
-gmock_main/fast:
-	$(MAKE) $(MAKESILENT) -f Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/build.make Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/build
-.PHONY : gmock_main/fast
-
-#=============================================================================
-# Target rules for targets named gtest
-
-# Build rule for target.
-gtest: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest
-.PHONY : gtest
-
-# fast build rule for target.
-gtest/fast:
-	$(MAKE) $(MAKESILENT) -f Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/build.make Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/build
-.PHONY : gtest/fast
-
-#=============================================================================
-# Target rules for targets named gtest_main
-
-# Build rule for target.
-gtest_main: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 gtest_main
-.PHONY : gtest_main
-
-# fast build rule for target.
-gtest_main/fast:
-	$(MAKE) $(MAKESILENT) -f Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/build.make Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/build
-.PHONY : gtest_main/fast
-
-Google_tests/Test.o: Google_tests/Test.cpp.o
-.PHONY : Google_tests/Test.o
+GoogleTests/test_database.o: GoogleTests/test_database.cpp.o
+.PHONY : GoogleTests/test_database.o
 
 # target to build an object file
-Google_tests/Test.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Google_tests/Test.cpp.o
-.PHONY : Google_tests/Test.cpp.o
+GoogleTests/test_database.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o
+.PHONY : GoogleTests/test_database.cpp.o
 
-Google_tests/Test.i: Google_tests/Test.cpp.i
-.PHONY : Google_tests/Test.i
+GoogleTests/test_database.i: GoogleTests/test_database.cpp.i
+.PHONY : GoogleTests/test_database.i
 
 # target to preprocess a source file
-Google_tests/Test.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Google_tests/Test.cpp.i
-.PHONY : Google_tests/Test.cpp.i
+GoogleTests/test_database.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GoogleTests/test_database.cpp.i
+.PHONY : GoogleTests/test_database.cpp.i
 
-Google_tests/Test.s: Google_tests/Test.cpp.s
-.PHONY : Google_tests/Test.s
+GoogleTests/test_database.s: GoogleTests/test_database.cpp.s
+.PHONY : GoogleTests/test_database.s
 
 # target to generate assembly for a file
-Google_tests/Test.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Google_tests/Test.cpp.s
-.PHONY : Google_tests/Test.cpp.s
+GoogleTests/test_database.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GoogleTests/test_database.cpp.s
+.PHONY : GoogleTests/test_database.cpp.s
 
 Server.o: Server.cpp.o
 .PHONY : Server.o
@@ -287,149 +177,149 @@ Server.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server.cpp.s
 .PHONY : Server.cpp.s
 
-System/communication/communication.o: System/communication/communication.cpp.o
-.PHONY : System/communication/communication.o
+src/communication/communication.o: src/communication/communication.cpp.o
+.PHONY : src/communication/communication.o
 
 # target to build an object file
-System/communication/communication.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/communication/communication.cpp.o
-.PHONY : System/communication/communication.cpp.o
+src/communication/communication.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/communication/communication.cpp.o
+.PHONY : src/communication/communication.cpp.o
 
-System/communication/communication.i: System/communication/communication.cpp.i
-.PHONY : System/communication/communication.i
+src/communication/communication.i: src/communication/communication.cpp.i
+.PHONY : src/communication/communication.i
 
 # target to preprocess a source file
-System/communication/communication.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/communication/communication.cpp.i
-.PHONY : System/communication/communication.cpp.i
+src/communication/communication.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/communication/communication.cpp.i
+.PHONY : src/communication/communication.cpp.i
 
-System/communication/communication.s: System/communication/communication.cpp.s
-.PHONY : System/communication/communication.s
+src/communication/communication.s: src/communication/communication.cpp.s
+.PHONY : src/communication/communication.s
 
 # target to generate assembly for a file
-System/communication/communication.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/communication/communication.cpp.s
-.PHONY : System/communication/communication.cpp.s
+src/communication/communication.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/communication/communication.cpp.s
+.PHONY : src/communication/communication.cpp.s
 
-System/database/database.o: System/database/database.cpp.o
-.PHONY : System/database/database.o
+src/database/database.o: src/database/database.cpp.o
+.PHONY : src/database/database.o
 
 # target to build an object file
-System/database/database.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/database/database.cpp.o
-.PHONY : System/database/database.cpp.o
+src/database/database.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/database/database.cpp.o
+.PHONY : src/database/database.cpp.o
 
-System/database/database.i: System/database/database.cpp.i
-.PHONY : System/database/database.i
+src/database/database.i: src/database/database.cpp.i
+.PHONY : src/database/database.i
 
 # target to preprocess a source file
-System/database/database.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/database/database.cpp.i
-.PHONY : System/database/database.cpp.i
+src/database/database.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/database/database.cpp.i
+.PHONY : src/database/database.cpp.i
 
-System/database/database.s: System/database/database.cpp.s
-.PHONY : System/database/database.s
+src/database/database.s: src/database/database.cpp.s
+.PHONY : src/database/database.s
 
 # target to generate assembly for a file
-System/database/database.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/database/database.cpp.s
-.PHONY : System/database/database.cpp.s
+src/database/database.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/database/database.cpp.s
+.PHONY : src/database/database.cpp.s
 
-System/database/footballer.o: System/database/footballer.cpp.o
-.PHONY : System/database/footballer.o
+src/database/footballer.o: src/database/footballer.cpp.o
+.PHONY : src/database/footballer.o
 
 # target to build an object file
-System/database/footballer.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/database/footballer.cpp.o
-.PHONY : System/database/footballer.cpp.o
+src/database/footballer.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/database/footballer.cpp.o
+.PHONY : src/database/footballer.cpp.o
 
-System/database/footballer.i: System/database/footballer.cpp.i
-.PHONY : System/database/footballer.i
+src/database/footballer.i: src/database/footballer.cpp.i
+.PHONY : src/database/footballer.i
 
 # target to preprocess a source file
-System/database/footballer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/database/footballer.cpp.i
-.PHONY : System/database/footballer.cpp.i
+src/database/footballer.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/database/footballer.cpp.i
+.PHONY : src/database/footballer.cpp.i
 
-System/database/footballer.s: System/database/footballer.cpp.s
-.PHONY : System/database/footballer.s
+src/database/footballer.s: src/database/footballer.cpp.s
+.PHONY : src/database/footballer.s
 
 # target to generate assembly for a file
-System/database/footballer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/database/footballer.cpp.s
-.PHONY : System/database/footballer.cpp.s
+src/database/footballer.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/database/footballer.cpp.s
+.PHONY : src/database/footballer.cpp.s
 
-System/gamelogic/board.o: System/gamelogic/board.cpp.o
-.PHONY : System/gamelogic/board.o
+src/gamelogic/board.o: src/gamelogic/board.cpp.o
+.PHONY : src/gamelogic/board.o
 
 # target to build an object file
-System/gamelogic/board.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/gamelogic/board.cpp.o
-.PHONY : System/gamelogic/board.cpp.o
+src/gamelogic/board.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/gamelogic/board.cpp.o
+.PHONY : src/gamelogic/board.cpp.o
 
-System/gamelogic/board.i: System/gamelogic/board.cpp.i
-.PHONY : System/gamelogic/board.i
+src/gamelogic/board.i: src/gamelogic/board.cpp.i
+.PHONY : src/gamelogic/board.i
 
 # target to preprocess a source file
-System/gamelogic/board.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/gamelogic/board.cpp.i
-.PHONY : System/gamelogic/board.cpp.i
+src/gamelogic/board.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/gamelogic/board.cpp.i
+.PHONY : src/gamelogic/board.cpp.i
 
-System/gamelogic/board.s: System/gamelogic/board.cpp.s
-.PHONY : System/gamelogic/board.s
+src/gamelogic/board.s: src/gamelogic/board.cpp.s
+.PHONY : src/gamelogic/board.s
 
 # target to generate assembly for a file
-System/gamelogic/board.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/gamelogic/board.cpp.s
-.PHONY : System/gamelogic/board.cpp.s
+src/gamelogic/board.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/gamelogic/board.cpp.s
+.PHONY : src/gamelogic/board.cpp.s
 
-System/gamelogic/game.o: System/gamelogic/game.cpp.o
-.PHONY : System/gamelogic/game.o
+src/gamelogic/game.o: src/gamelogic/game.cpp.o
+.PHONY : src/gamelogic/game.o
 
 # target to build an object file
-System/gamelogic/game.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/gamelogic/game.cpp.o
-.PHONY : System/gamelogic/game.cpp.o
+src/gamelogic/game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/gamelogic/game.cpp.o
+.PHONY : src/gamelogic/game.cpp.o
 
-System/gamelogic/game.i: System/gamelogic/game.cpp.i
-.PHONY : System/gamelogic/game.i
+src/gamelogic/game.i: src/gamelogic/game.cpp.i
+.PHONY : src/gamelogic/game.i
 
 # target to preprocess a source file
-System/gamelogic/game.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/gamelogic/game.cpp.i
-.PHONY : System/gamelogic/game.cpp.i
+src/gamelogic/game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/gamelogic/game.cpp.i
+.PHONY : src/gamelogic/game.cpp.i
 
-System/gamelogic/game.s: System/gamelogic/game.cpp.s
-.PHONY : System/gamelogic/game.s
+src/gamelogic/game.s: src/gamelogic/game.cpp.s
+.PHONY : src/gamelogic/game.s
 
 # target to generate assembly for a file
-System/gamelogic/game.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/gamelogic/game.cpp.s
-.PHONY : System/gamelogic/game.cpp.s
+src/gamelogic/game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/gamelogic/game.cpp.s
+.PHONY : src/gamelogic/game.cpp.s
 
-System/player/player.o: System/player/player.cpp.o
-.PHONY : System/player/player.o
+src/player/player.o: src/player/player.cpp.o
+.PHONY : src/player/player.o
 
 # target to build an object file
-System/player/player.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/player/player.cpp.o
-.PHONY : System/player/player.cpp.o
+src/player/player.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/player/player.cpp.o
+.PHONY : src/player/player.cpp.o
 
-System/player/player.i: System/player/player.cpp.i
-.PHONY : System/player/player.i
+src/player/player.i: src/player/player.cpp.i
+.PHONY : src/player/player.i
 
 # target to preprocess a source file
-System/player/player.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/player/player.cpp.i
-.PHONY : System/player/player.cpp.i
+src/player/player.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/player/player.cpp.i
+.PHONY : src/player/player.cpp.i
 
-System/player/player.s: System/player/player.cpp.s
-.PHONY : System/player/player.s
+src/player/player.s: src/player/player.cpp.s
+.PHONY : src/player/player.s
 
 # target to generate assembly for a file
-System/player/player.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/System/player/player.cpp.s
-.PHONY : System/player/player.cpp.s
+src/player/player.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/player/player.cpp.s
+.PHONY : src/player/player.cpp.s
 
 # Help Target
 help:
@@ -438,41 +328,32 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... edit_cache"
-	@echo "... install"
-	@echo "... install/local"
-	@echo "... install/strip"
-	@echo "... list_install_components"
 	@echo "... rebuild_cache"
-	@echo "... Google_Tests_run"
 	@echo "... Server"
-	@echo "... gmock"
-	@echo "... gmock_main"
-	@echo "... gtest"
-	@echo "... gtest_main"
-	@echo "... Google_tests/Test.o"
-	@echo "... Google_tests/Test.i"
-	@echo "... Google_tests/Test.s"
+	@echo "... GoogleTests/test_database.o"
+	@echo "... GoogleTests/test_database.i"
+	@echo "... GoogleTests/test_database.s"
 	@echo "... Server.o"
 	@echo "... Server.i"
 	@echo "... Server.s"
-	@echo "... System/communication/communication.o"
-	@echo "... System/communication/communication.i"
-	@echo "... System/communication/communication.s"
-	@echo "... System/database/database.o"
-	@echo "... System/database/database.i"
-	@echo "... System/database/database.s"
-	@echo "... System/database/footballer.o"
-	@echo "... System/database/footballer.i"
-	@echo "... System/database/footballer.s"
-	@echo "... System/gamelogic/board.o"
-	@echo "... System/gamelogic/board.i"
-	@echo "... System/gamelogic/board.s"
-	@echo "... System/gamelogic/game.o"
-	@echo "... System/gamelogic/game.i"
-	@echo "... System/gamelogic/game.s"
-	@echo "... System/player/player.o"
-	@echo "... System/player/player.i"
-	@echo "... System/player/player.s"
+	@echo "... src/communication/communication.o"
+	@echo "... src/communication/communication.i"
+	@echo "... src/communication/communication.s"
+	@echo "... src/database/database.o"
+	@echo "... src/database/database.i"
+	@echo "... src/database/database.s"
+	@echo "... src/database/footballer.o"
+	@echo "... src/database/footballer.i"
+	@echo "... src/database/footballer.s"
+	@echo "... src/gamelogic/board.o"
+	@echo "... src/gamelogic/board.i"
+	@echo "... src/gamelogic/board.s"
+	@echo "... src/gamelogic/game.o"
+	@echo "... src/gamelogic/game.i"
+	@echo "... src/gamelogic/game.s"
+	@echo "... src/player/player.o"
+	@echo "... src/player/player.i"
+	@echo "... src/player/player.s"
 .PHONY : help
 
 

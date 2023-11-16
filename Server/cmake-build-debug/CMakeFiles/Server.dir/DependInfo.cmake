@@ -8,14 +8,14 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/bruno/PSW/a01_1/Server/Google_tests/Test.cpp" "CMakeFiles/Server.dir/Google_tests/Test.cpp.o" "gcc" "CMakeFiles/Server.dir/Google_tests/Test.cpp.o.d"
+  "/home/bruno/PSW/a01_1/Server/GoogleTests/test_database.cpp" "CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o" "gcc" "CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o.d"
   "/home/bruno/PSW/a01_1/Server/Server.cpp" "CMakeFiles/Server.dir/Server.cpp.o" "gcc" "CMakeFiles/Server.dir/Server.cpp.o.d"
-  "/home/bruno/PSW/a01_1/Server/System/communication/communication.cpp" "CMakeFiles/Server.dir/System/communication/communication.cpp.o" "gcc" "CMakeFiles/Server.dir/System/communication/communication.cpp.o.d"
-  "/home/bruno/PSW/a01_1/Server/System/database/database.cpp" "CMakeFiles/Server.dir/System/database/database.cpp.o" "gcc" "CMakeFiles/Server.dir/System/database/database.cpp.o.d"
-  "/home/bruno/PSW/a01_1/Server/System/database/footballer.cpp" "CMakeFiles/Server.dir/System/database/footballer.cpp.o" "gcc" "CMakeFiles/Server.dir/System/database/footballer.cpp.o.d"
-  "/home/bruno/PSW/a01_1/Server/System/gamelogic/board.cpp" "CMakeFiles/Server.dir/System/gamelogic/board.cpp.o" "gcc" "CMakeFiles/Server.dir/System/gamelogic/board.cpp.o.d"
-  "/home/bruno/PSW/a01_1/Server/System/gamelogic/game.cpp" "CMakeFiles/Server.dir/System/gamelogic/game.cpp.o" "gcc" "CMakeFiles/Server.dir/System/gamelogic/game.cpp.o.d"
-  "/home/bruno/PSW/a01_1/Server/System/player/player.cpp" "CMakeFiles/Server.dir/System/player/player.cpp.o" "gcc" "CMakeFiles/Server.dir/System/player/player.cpp.o.d"
+  "/home/bruno/PSW/a01_1/Server/src/communication/communication.cpp" "CMakeFiles/Server.dir/src/communication/communication.cpp.o" "gcc" "CMakeFiles/Server.dir/src/communication/communication.cpp.o.d"
+  "/home/bruno/PSW/a01_1/Server/src/database/database.cpp" "CMakeFiles/Server.dir/src/database/database.cpp.o" "gcc" "CMakeFiles/Server.dir/src/database/database.cpp.o.d"
+  "/home/bruno/PSW/a01_1/Server/src/database/footballer.cpp" "CMakeFiles/Server.dir/src/database/footballer.cpp.o" "gcc" "CMakeFiles/Server.dir/src/database/footballer.cpp.o.d"
+  "/home/bruno/PSW/a01_1/Server/src/gamelogic/board.cpp" "CMakeFiles/Server.dir/src/gamelogic/board.cpp.o" "gcc" "CMakeFiles/Server.dir/src/gamelogic/board.cpp.o.d"
+  "/home/bruno/PSW/a01_1/Server/src/gamelogic/game.cpp" "CMakeFiles/Server.dir/src/gamelogic/game.cpp.o" "gcc" "CMakeFiles/Server.dir/src/gamelogic/game.cpp.o.d"
+  "/home/bruno/PSW/a01_1/Server/src/player/player.cpp" "CMakeFiles/Server.dir/src/player/player.cpp.o" "gcc" "CMakeFiles/Server.dir/src/player/player.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

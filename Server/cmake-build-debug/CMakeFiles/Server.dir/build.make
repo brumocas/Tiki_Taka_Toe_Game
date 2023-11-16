@@ -83,127 +83,128 @@ CMakeFiles/Server.dir/Server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/Server.cpp -o CMakeFiles/Server.dir/Server.cpp.s
 
-CMakeFiles/Server.dir/System/database/database.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/System/database/database.cpp.o: /home/bruno/PSW/a01_1/Server/System/database/database.cpp
-CMakeFiles/Server.dir/System/database/database.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Server.dir/System/database/database.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/System/database/database.cpp.o -MF CMakeFiles/Server.dir/System/database/database.cpp.o.d -o CMakeFiles/Server.dir/System/database/database.cpp.o -c /home/bruno/PSW/a01_1/Server/System/database/database.cpp
+CMakeFiles/Server.dir/src/database/database.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/database/database.cpp.o: /home/bruno/PSW/a01_1/Server/src/database/database.cpp
+CMakeFiles/Server.dir/src/database/database.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/Server.dir/src/database/database.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/src/database/database.cpp.o -MF CMakeFiles/Server.dir/src/database/database.cpp.o.d -o CMakeFiles/Server.dir/src/database/database.cpp.o -c /home/bruno/PSW/a01_1/Server/src/database/database.cpp
 
-CMakeFiles/Server.dir/System/database/database.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/System/database/database.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/System/database/database.cpp > CMakeFiles/Server.dir/System/database/database.cpp.i
+CMakeFiles/Server.dir/src/database/database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/database/database.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/src/database/database.cpp > CMakeFiles/Server.dir/src/database/database.cpp.i
 
-CMakeFiles/Server.dir/System/database/database.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/System/database/database.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/System/database/database.cpp -o CMakeFiles/Server.dir/System/database/database.cpp.s
+CMakeFiles/Server.dir/src/database/database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/database/database.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/src/database/database.cpp -o CMakeFiles/Server.dir/src/database/database.cpp.s
 
-CMakeFiles/Server.dir/System/database/footballer.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/System/database/footballer.cpp.o: /home/bruno/PSW/a01_1/Server/System/database/footballer.cpp
-CMakeFiles/Server.dir/System/database/footballer.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Server.dir/System/database/footballer.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/System/database/footballer.cpp.o -MF CMakeFiles/Server.dir/System/database/footballer.cpp.o.d -o CMakeFiles/Server.dir/System/database/footballer.cpp.o -c /home/bruno/PSW/a01_1/Server/System/database/footballer.cpp
+CMakeFiles/Server.dir/src/database/footballer.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/database/footballer.cpp.o: /home/bruno/PSW/a01_1/Server/src/database/footballer.cpp
+CMakeFiles/Server.dir/src/database/footballer.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/Server.dir/src/database/footballer.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/src/database/footballer.cpp.o -MF CMakeFiles/Server.dir/src/database/footballer.cpp.o.d -o CMakeFiles/Server.dir/src/database/footballer.cpp.o -c /home/bruno/PSW/a01_1/Server/src/database/footballer.cpp
 
-CMakeFiles/Server.dir/System/database/footballer.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/System/database/footballer.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/System/database/footballer.cpp > CMakeFiles/Server.dir/System/database/footballer.cpp.i
+CMakeFiles/Server.dir/src/database/footballer.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/database/footballer.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/src/database/footballer.cpp > CMakeFiles/Server.dir/src/database/footballer.cpp.i
 
-CMakeFiles/Server.dir/System/database/footballer.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/System/database/footballer.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/System/database/footballer.cpp -o CMakeFiles/Server.dir/System/database/footballer.cpp.s
+CMakeFiles/Server.dir/src/database/footballer.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/database/footballer.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/src/database/footballer.cpp -o CMakeFiles/Server.dir/src/database/footballer.cpp.s
 
-CMakeFiles/Server.dir/System/communication/communication.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/System/communication/communication.cpp.o: /home/bruno/PSW/a01_1/Server/System/communication/communication.cpp
-CMakeFiles/Server.dir/System/communication/communication.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Server.dir/System/communication/communication.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/System/communication/communication.cpp.o -MF CMakeFiles/Server.dir/System/communication/communication.cpp.o.d -o CMakeFiles/Server.dir/System/communication/communication.cpp.o -c /home/bruno/PSW/a01_1/Server/System/communication/communication.cpp
+CMakeFiles/Server.dir/src/communication/communication.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/communication/communication.cpp.o: /home/bruno/PSW/a01_1/Server/src/communication/communication.cpp
+CMakeFiles/Server.dir/src/communication/communication.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/Server.dir/src/communication/communication.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/src/communication/communication.cpp.o -MF CMakeFiles/Server.dir/src/communication/communication.cpp.o.d -o CMakeFiles/Server.dir/src/communication/communication.cpp.o -c /home/bruno/PSW/a01_1/Server/src/communication/communication.cpp
 
-CMakeFiles/Server.dir/System/communication/communication.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/System/communication/communication.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/System/communication/communication.cpp > CMakeFiles/Server.dir/System/communication/communication.cpp.i
+CMakeFiles/Server.dir/src/communication/communication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/communication/communication.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/src/communication/communication.cpp > CMakeFiles/Server.dir/src/communication/communication.cpp.i
 
-CMakeFiles/Server.dir/System/communication/communication.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/System/communication/communication.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/System/communication/communication.cpp -o CMakeFiles/Server.dir/System/communication/communication.cpp.s
+CMakeFiles/Server.dir/src/communication/communication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/communication/communication.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/src/communication/communication.cpp -o CMakeFiles/Server.dir/src/communication/communication.cpp.s
 
-CMakeFiles/Server.dir/System/gamelogic/board.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/System/gamelogic/board.cpp.o: /home/bruno/PSW/a01_1/Server/System/gamelogic/board.cpp
-CMakeFiles/Server.dir/System/gamelogic/board.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Server.dir/System/gamelogic/board.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/System/gamelogic/board.cpp.o -MF CMakeFiles/Server.dir/System/gamelogic/board.cpp.o.d -o CMakeFiles/Server.dir/System/gamelogic/board.cpp.o -c /home/bruno/PSW/a01_1/Server/System/gamelogic/board.cpp
+CMakeFiles/Server.dir/src/gamelogic/board.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/gamelogic/board.cpp.o: /home/bruno/PSW/a01_1/Server/src/gamelogic/board.cpp
+CMakeFiles/Server.dir/src/gamelogic/board.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/Server.dir/src/gamelogic/board.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/src/gamelogic/board.cpp.o -MF CMakeFiles/Server.dir/src/gamelogic/board.cpp.o.d -o CMakeFiles/Server.dir/src/gamelogic/board.cpp.o -c /home/bruno/PSW/a01_1/Server/src/gamelogic/board.cpp
 
-CMakeFiles/Server.dir/System/gamelogic/board.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/System/gamelogic/board.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/System/gamelogic/board.cpp > CMakeFiles/Server.dir/System/gamelogic/board.cpp.i
+CMakeFiles/Server.dir/src/gamelogic/board.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/gamelogic/board.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/src/gamelogic/board.cpp > CMakeFiles/Server.dir/src/gamelogic/board.cpp.i
 
-CMakeFiles/Server.dir/System/gamelogic/board.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/System/gamelogic/board.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/System/gamelogic/board.cpp -o CMakeFiles/Server.dir/System/gamelogic/board.cpp.s
+CMakeFiles/Server.dir/src/gamelogic/board.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/gamelogic/board.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/src/gamelogic/board.cpp -o CMakeFiles/Server.dir/src/gamelogic/board.cpp.s
 
-CMakeFiles/Server.dir/System/gamelogic/game.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/System/gamelogic/game.cpp.o: /home/bruno/PSW/a01_1/Server/System/gamelogic/game.cpp
-CMakeFiles/Server.dir/System/gamelogic/game.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Server.dir/System/gamelogic/game.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/System/gamelogic/game.cpp.o -MF CMakeFiles/Server.dir/System/gamelogic/game.cpp.o.d -o CMakeFiles/Server.dir/System/gamelogic/game.cpp.o -c /home/bruno/PSW/a01_1/Server/System/gamelogic/game.cpp
+CMakeFiles/Server.dir/src/gamelogic/game.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/gamelogic/game.cpp.o: /home/bruno/PSW/a01_1/Server/src/gamelogic/game.cpp
+CMakeFiles/Server.dir/src/gamelogic/game.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/Server.dir/src/gamelogic/game.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/src/gamelogic/game.cpp.o -MF CMakeFiles/Server.dir/src/gamelogic/game.cpp.o.d -o CMakeFiles/Server.dir/src/gamelogic/game.cpp.o -c /home/bruno/PSW/a01_1/Server/src/gamelogic/game.cpp
 
-CMakeFiles/Server.dir/System/gamelogic/game.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/System/gamelogic/game.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/System/gamelogic/game.cpp > CMakeFiles/Server.dir/System/gamelogic/game.cpp.i
+CMakeFiles/Server.dir/src/gamelogic/game.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/gamelogic/game.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/src/gamelogic/game.cpp > CMakeFiles/Server.dir/src/gamelogic/game.cpp.i
 
-CMakeFiles/Server.dir/System/gamelogic/game.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/System/gamelogic/game.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/System/gamelogic/game.cpp -o CMakeFiles/Server.dir/System/gamelogic/game.cpp.s
+CMakeFiles/Server.dir/src/gamelogic/game.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/gamelogic/game.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/src/gamelogic/game.cpp -o CMakeFiles/Server.dir/src/gamelogic/game.cpp.s
 
-CMakeFiles/Server.dir/System/player/player.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/System/player/player.cpp.o: /home/bruno/PSW/a01_1/Server/System/player/player.cpp
-CMakeFiles/Server.dir/System/player/player.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Server.dir/System/player/player.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/System/player/player.cpp.o -MF CMakeFiles/Server.dir/System/player/player.cpp.o.d -o CMakeFiles/Server.dir/System/player/player.cpp.o -c /home/bruno/PSW/a01_1/Server/System/player/player.cpp
+CMakeFiles/Server.dir/src/player/player.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/player/player.cpp.o: /home/bruno/PSW/a01_1/Server/src/player/player.cpp
+CMakeFiles/Server.dir/src/player/player.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object CMakeFiles/Server.dir/src/player/player.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/src/player/player.cpp.o -MF CMakeFiles/Server.dir/src/player/player.cpp.o.d -o CMakeFiles/Server.dir/src/player/player.cpp.o -c /home/bruno/PSW/a01_1/Server/src/player/player.cpp
 
-CMakeFiles/Server.dir/System/player/player.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/System/player/player.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/System/player/player.cpp > CMakeFiles/Server.dir/System/player/player.cpp.i
+CMakeFiles/Server.dir/src/player/player.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/player/player.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/src/player/player.cpp > CMakeFiles/Server.dir/src/player/player.cpp.i
 
-CMakeFiles/Server.dir/System/player/player.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/System/player/player.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/System/player/player.cpp -o CMakeFiles/Server.dir/System/player/player.cpp.s
+CMakeFiles/Server.dir/src/player/player.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/player/player.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/src/player/player.cpp -o CMakeFiles/Server.dir/src/player/player.cpp.s
 
-CMakeFiles/Server.dir/Google_tests/Test.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/Google_tests/Test.cpp.o: /home/bruno/PSW/a01_1/Server/Google_tests/Test.cpp
-CMakeFiles/Server.dir/Google_tests/Test.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Server.dir/Google_tests/Test.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/Google_tests/Test.cpp.o -MF CMakeFiles/Server.dir/Google_tests/Test.cpp.o.d -o CMakeFiles/Server.dir/Google_tests/Test.cpp.o -c /home/bruno/PSW/a01_1/Server/Google_tests/Test.cpp
+CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o: /home/bruno/PSW/a01_1/Server/GoogleTests/test_database.cpp
+CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o -MF CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o.d -o CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o -c /home/bruno/PSW/a01_1/Server/GoogleTests/test_database.cpp
 
-CMakeFiles/Server.dir/Google_tests/Test.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Google_tests/Test.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/Google_tests/Test.cpp > CMakeFiles/Server.dir/Google_tests/Test.cpp.i
+CMakeFiles/Server.dir/GoogleTests/test_database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/GoogleTests/test_database.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/PSW/a01_1/Server/GoogleTests/test_database.cpp > CMakeFiles/Server.dir/GoogleTests/test_database.cpp.i
 
-CMakeFiles/Server.dir/Google_tests/Test.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Google_tests/Test.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/Google_tests/Test.cpp -o CMakeFiles/Server.dir/Google_tests/Test.cpp.s
+CMakeFiles/Server.dir/GoogleTests/test_database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/GoogleTests/test_database.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/PSW/a01_1/Server/GoogleTests/test_database.cpp -o CMakeFiles/Server.dir/GoogleTests/test_database.cpp.s
 
 # Object files for target Server
 Server_OBJECTS = \
 "CMakeFiles/Server.dir/Server.cpp.o" \
-"CMakeFiles/Server.dir/System/database/database.cpp.o" \
-"CMakeFiles/Server.dir/System/database/footballer.cpp.o" \
-"CMakeFiles/Server.dir/System/communication/communication.cpp.o" \
-"CMakeFiles/Server.dir/System/gamelogic/board.cpp.o" \
-"CMakeFiles/Server.dir/System/gamelogic/game.cpp.o" \
-"CMakeFiles/Server.dir/System/player/player.cpp.o" \
-"CMakeFiles/Server.dir/Google_tests/Test.cpp.o"
+"CMakeFiles/Server.dir/src/database/database.cpp.o" \
+"CMakeFiles/Server.dir/src/database/footballer.cpp.o" \
+"CMakeFiles/Server.dir/src/communication/communication.cpp.o" \
+"CMakeFiles/Server.dir/src/gamelogic/board.cpp.o" \
+"CMakeFiles/Server.dir/src/gamelogic/game.cpp.o" \
+"CMakeFiles/Server.dir/src/player/player.cpp.o" \
+"CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o"
 
 # External object files for target Server
 Server_EXTERNAL_OBJECTS =
 
 Server: CMakeFiles/Server.dir/Server.cpp.o
-Server: CMakeFiles/Server.dir/System/database/database.cpp.o
-Server: CMakeFiles/Server.dir/System/database/footballer.cpp.o
-Server: CMakeFiles/Server.dir/System/communication/communication.cpp.o
-Server: CMakeFiles/Server.dir/System/gamelogic/board.cpp.o
-Server: CMakeFiles/Server.dir/System/gamelogic/game.cpp.o
-Server: CMakeFiles/Server.dir/System/player/player.cpp.o
-Server: CMakeFiles/Server.dir/Google_tests/Test.cpp.o
+Server: CMakeFiles/Server.dir/src/database/database.cpp.o
+Server: CMakeFiles/Server.dir/src/database/footballer.cpp.o
+Server: CMakeFiles/Server.dir/src/communication/communication.cpp.o
+Server: CMakeFiles/Server.dir/src/gamelogic/board.cpp.o
+Server: CMakeFiles/Server.dir/src/gamelogic/game.cpp.o
+Server: CMakeFiles/Server.dir/src/player/player.cpp.o
+Server: CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o
 Server: CMakeFiles/Server.dir/build.make
+Server: /usr/lib/x86_64-linux-gnu/libgtest.a
 Server: CMakeFiles/Server.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bruno/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Linking CXX executable Server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Server.dir/link.txt --verbose=$(VERBOSE)

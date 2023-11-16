@@ -5,7 +5,7 @@
 		<Option title="Server"/>
 		<Option makefile_is_custom="1"/>
 		<Option compiler="gcc"/>
-		<Option virtualFolders="CMake Files\;CMake Files\Google_tests\;CMake Files\Google_tests\lib\;CMake Files\Google_tests\lib\googletest-main\;CMake Files\Google_tests\lib\googletest-main\googlemock\;CMake Files\Google_tests\lib\googletest-main\googlemock\cmake\;CMake Files\Google_tests\lib\googletest-main\googletest\;CMake Files\Google_tests\lib\googletest-main\googletest\cmake\;"/>
+		<Option virtualFolders="CMake Files\;CMake Files\..\;CMake Files\..\..\;CMake Files\..\..\..\;CMake Files\..\..\..\..\;CMake Files\..\..\..\..\..\;CMake Files\..\..\..\..\..\usr\;CMake Files\..\..\..\..\..\usr\lib\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\;CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\GTest\;"/>
 		<Build>
 			<Target title="all">
 				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug"/>
@@ -81,385 +81,66 @@
 					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
-			<Target title="list_install_components">
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install">
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/local">
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="install/strip">
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug"/>
-				<Option type="4"/>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Google_Tests_run">
-				<Option output="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/Google_Tests_run" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 Google_Tests_run"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="Google_Tests_run/fast">
-				<Option output="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/Google_Tests_run" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests"/>
-				<Option object_output="./"/>
-				<Option type="1"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 Google_Tests_run/fast"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gmock">
-				<Option output="/home/bruno/PSW/a01_1/Server/cmake-build-debug/lib/libgmock.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 gmock"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gmock/fast">
-				<Option output="/home/bruno/PSW/a01_1/Server/cmake-build-debug/lib/libgmock.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 gmock/fast"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gmock_main">
-				<Option output="/home/bruno/PSW/a01_1/Server/cmake-build-debug/lib/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 gmock_main"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gmock_main/fast">
-				<Option output="/home/bruno/PSW/a01_1/Server/cmake-build-debug/lib/libgmock_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 gmock_main/fast"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gtest">
-				<Option output="/home/bruno/PSW/a01_1/Server/cmake-build-debug/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 gtest"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gtest/fast">
-				<Option output="/home/bruno/PSW/a01_1/Server/cmake-build-debug/lib/libgtest.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 gtest/fast"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gtest_main">
-				<Option output="/home/bruno/PSW/a01_1/Server/cmake-build-debug/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 gtest_main"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
-			<Target title="gtest_main/fast">
-				<Option output="/home/bruno/PSW/a01_1/Server/cmake-build-debug/lib/libgtest_main.a" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest"/>
-				<Option object_output="./"/>
-				<Option type="2"/>
-				<Option compiler="gcc"/>
-				<Compiler>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/include"/>
-					<Add directory="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest"/>
-					<Add directory="/usr/include/c++/11"/>
-					<Add directory="/usr/include/x86_64-linux-gnu/c++/11"/>
-					<Add directory="/usr/include/c++/11/backward"/>
-					<Add directory="/usr/lib/gcc/x86_64-linux-gnu/11/include"/>
-					<Add directory="/usr/local/include"/>
-					<Add directory="/usr/include/x86_64-linux-gnu"/>
-					<Add directory="/usr/include"/>
-				</Compiler>
-				<MakeCommands>
-					<Build command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 gtest_main/fast"/>
-					<CompileFile command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/gmake -j8 -f &quot;/home/bruno/PSW/a01_1/Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile&quot;  VERBOSE=1 clean"/>
-				</MakeCommands>
-			</Target>
 		</Build>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/Test.cpp">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/GoogleTests/test_database.cpp">
 			<Option target="Server"/>
-			<Option target="Google_Tests_run"/>
-		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock/src/gmock-all.cc">
-			<Option target="gmock"/>
-		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock/src/gmock_main.cc">
-			<Option target="gmock_main"/>
-		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/src/gtest-all.cc">
-			<Option target="gtest"/>
-		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/src/gtest_main.cc">
-			<Option target="gtest_main"/>
 		</Unit>
 		<Unit filename="/home/bruno/PSW/a01_1/Server/Server.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/communication/communication.cpp">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/communication/communication.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/communication/communication.h">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/communication/communication.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/database/database.cpp">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/database/database.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/database/database.h">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/database/database.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/database/footballer.cpp">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/database/footballer.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/database/footballer.h">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/database/footballer.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/database/parameters.h">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/database/parameters.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/gamelogic/board.cpp">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/gamelogic/board.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/gamelogic/board.h">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/gamelogic/board.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/gamelogic/game.cpp">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/gamelogic/game.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/gamelogic/game.h">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/gamelogic/game.h">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/player/player.cpp">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/player/player.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/System/player/player.h">
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/player/player.h">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/bruno/PSW/a01_1/Server/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\Google_tests\"/>
+		<Unit filename="/home/bruno/PSW/a01_1/Server/../../../../../usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfig.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\GTest\"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\Google_tests\lib\googletest-main\"/>
+		<Unit filename="/home/bruno/PSW/a01_1/Server/../../../../../usr/lib/x86_64-linux-gnu/cmake/GTest/GTestConfigVersion.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\GTest\"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\Google_tests\lib\googletest-main\googlemock\"/>
+		<Unit filename="/home/bruno/PSW/a01_1/Server/../../../../../usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets-none.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\GTest\"/>
 		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock/cmake/gmock.pc.in">
-			<Option virtualFolder="CMake Files\Google_tests\lib\googletest-main\googlemock\cmake\"/>
-		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googlemock/cmake/gmock_main.pc.in">
-			<Option virtualFolder="CMake Files\Google_tests\lib\googletest-main\googlemock\cmake\"/>
-		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/CMakeLists.txt">
-			<Option virtualFolder="CMake Files\Google_tests\lib\googletest-main\googletest\"/>
-		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/cmake/Config.cmake.in">
-			<Option virtualFolder="CMake Files\Google_tests\lib\googletest-main\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/cmake/gtest.pc.in">
-			<Option virtualFolder="CMake Files\Google_tests\lib\googletest-main\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/cmake/gtest_main.pc.in">
-			<Option virtualFolder="CMake Files\Google_tests\lib\googletest-main\googletest\cmake\"/>
-		</Unit>
-		<Unit filename="/home/bruno/PSW/a01_1/Server/Google_tests/lib/googletest-main/googletest/cmake/internal_utils.cmake">
-			<Option virtualFolder="CMake Files\Google_tests\lib\googletest-main\googletest\cmake\"/>
+		<Unit filename="/home/bruno/PSW/a01_1/Server/../../../../../usr/lib/x86_64-linux-gnu/cmake/GTest/GTestTargets.cmake">
+			<Option virtualFolder="CMake Files\..\..\..\..\..\usr\lib\x86_64-linux-gnu\cmake\GTest\"/>
 		</Unit>
 	</Project>
 </CodeBlocks_project_file>
