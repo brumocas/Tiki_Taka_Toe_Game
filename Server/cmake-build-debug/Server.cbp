@@ -127,6 +127,12 @@
 		<Unit filename="/home/bruno/PSW/a01_1/Server/src/gamelogic/game.h">
 			<Option target="Server"/>
 		</Unit>
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/gamelogic/gameRunner.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/bruno/PSW/a01_1/Server/src/gamelogic/gameRunner.h">
+			<Option target="Server"/>
+		</Unit>
 		<Unit filename="/home/bruno/PSW/a01_1/Server/src/player/player.cpp">
 			<Option target="Server"/>
 		</Unit>

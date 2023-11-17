@@ -17,6 +17,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/Server.dir/src/gamelogic/board.cpp.o.d"
   "CMakeFiles/Server.dir/src/gamelogic/game.cpp.o"
   "CMakeFiles/Server.dir/src/gamelogic/game.cpp.o.d"
+  "CMakeFiles/Server.dir/src/gamelogic/gameRunner.cpp.o"
+  "CMakeFiles/Server.dir/src/gamelogic/gameRunner.cpp.o.d"
   "CMakeFiles/Server.dir/src/player/player.cpp.o"
   "CMakeFiles/Server.dir/src/player/player.cpp.o.d"
   "Server"

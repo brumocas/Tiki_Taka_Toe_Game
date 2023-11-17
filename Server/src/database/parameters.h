@@ -18,6 +18,7 @@ enum class parameters {
     WorldCupWinner,
     ChampionsLeagueWinner,
     BallonDorWinner,
-    EuropeanWinner
+    EuropeanWinner,
+    Team
 };
 #endif //SERVER_PARAMETERS_H

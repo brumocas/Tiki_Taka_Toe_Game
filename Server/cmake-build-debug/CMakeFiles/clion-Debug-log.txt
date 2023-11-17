@@ -1,4 +1,4 @@
 /opt/CLion/CLion-2023.2.2/clion-2023.2.2/bin/cmake/linux/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -G "CodeBlocks - Unix Makefiles" -S /home/bruno/PSW/a01_1/Server -B /home/bruno/PSW/a01_1/Server/cmake-build-debug
--- Configuring done (0.8s)
--- Generating done (0.1s)
+-- Configuring done (1.2s)
+-- Generating done (0.0s)
 -- Build files have been written to: /home/bruno/PSW/a01_1/Server/cmake-build-debug

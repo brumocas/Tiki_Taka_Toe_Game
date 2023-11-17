@@ -10,6 +10,7 @@
 #include <array>
 #include <iostream>
 
+
 namespace gamelogic {
 
     class game {
@@ -19,16 +20,16 @@ namespace gamelogic {
         bool appRunning;
 
     public:
-
-        void startGame();
-        bool isGameInProgress();
+        game();
         bool checkAnswer(Player player);
         Player getWinner();
         void setWinner(Player player);
         bool isGameWonByPlayer(Player player);
         bool isGameTied();
         bool winningCombinations(char symbol, Board board);
-
+        void setParams(std::string param1, std::string param2, std::string param3,
+                       std::string param4, std::string param5, std::string param6);
+        void print();
     };
 }
 

@@ -28,7 +28,8 @@ namespace gamelogic {
         void setPlay(Player player);
         bool isUsed(int x, int y);
         char getSymbol(int x, int y);
-
+        void printFootballers();
+        void printSymbols();
     };
 
 }

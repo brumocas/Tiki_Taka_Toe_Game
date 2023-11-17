@@ -6,17 +6,17 @@
 #include <iostream>
 
 
-namespace gamelogic{
+namespace gamelogic {
 
     Board::Board() {
         //Initialize all the board parameters
-        for(int i=0; i <3 ; i++){
+        for (int i = 0; i < 3; i++) {
             upParameters[i] = "Unknown";
             leftParameters[i] = "Unknown";
         }
         //Initialize the symbol array
-        for(int i=0; i < 3; i++){
-            for(int j=0; j < 3; j++) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
                 symbolArray[i][j] = '-';
                 footballerEntry[i][j] = '-';
             }
@@ -47,7 +47,7 @@ namespace gamelogic{
     }
 
     void Board::setPlay(Player player) {
-        if (isUsed(player.getPlayerGuessX(), player.getPlayerGuessY())){
+        if (isUsed(player.getPlayerGuessX(), player.getPlayerGuessY())) {
             symbolArray[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getSymbol();
             footballerEntry[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getPlayerGuessFootballer();
         } else {
@@ -61,6 +61,30 @@ namespace gamelogic{
 
     bool Board::isUsed(int x, int y) {
         return footballerEntry[x][y] != "Unknown";
+    }
+
+    void Board::printFootballers() {
+        std::cout << "/----Footballers board----/" << std::endl;
+        std::cout << upParameters[0] << "\t" << upParameters[1] << "\t" << upParameters[2] << "\t" << std::endl;
+        for (int i = 0; i < 3; ++i) {
+            std::cout << leftParameters[i] << "\t";
+            for (int j = 0; j < 3; ++j) {
+                std::cout << footballerEntry[i][j] << "\t";
+            }
+            std::cout << std::endl;
+        }
+        std::cout << std::endl;
+    }
+
+    void Board::printSymbols() {
+        std::cout << "/-----Symbols board-----/" << std::endl;
+        for (int i = 0; i < 3; ++i) {
+            for (int j = 0; j < 3; ++j) {
+                std::cout << symbolArray[i][j] << "\t";
+            }
+            std::cout << std::endl;
+        }
+        std::cout << std::endl;
     }
 
 }

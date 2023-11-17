@@ -17,6 +17,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/bruno/PSW/a01_1/Server/src/database/footballer.cpp" "CMakeFiles/Server.dir/src/database/footballer.cpp.o" "gcc" "CMakeFiles/Server.dir/src/database/footballer.cpp.o.d"
   "/home/bruno/PSW/a01_1/Server/src/gamelogic/board.cpp" "CMakeFiles/Server.dir/src/gamelogic/board.cpp.o" "gcc" "CMakeFiles/Server.dir/src/gamelogic/board.cpp.o.d"
   "/home/bruno/PSW/a01_1/Server/src/gamelogic/game.cpp" "CMakeFiles/Server.dir/src/gamelogic/game.cpp.o" "gcc" "CMakeFiles/Server.dir/src/gamelogic/game.cpp.o.d"
+  "/home/bruno/PSW/a01_1/Server/src/gamelogic/gameRunner.cpp" "CMakeFiles/Server.dir/src/gamelogic/gameRunner.cpp.o" "gcc" "CMakeFiles/Server.dir/src/gamelogic/gameRunner.cpp.o.d"
   "/home/bruno/PSW/a01_1/Server/src/player/player.cpp" "CMakeFiles/Server.dir/src/player/player.cpp.o" "gcc" "CMakeFiles/Server.dir/src/player/player.cpp.o.d"
   )
 

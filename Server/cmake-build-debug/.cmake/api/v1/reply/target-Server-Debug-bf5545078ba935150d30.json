@@ -31,7 +31,7 @@
 			{
 				"command" : 1,
 				"file" : 0,
-				"line" : 28,
+				"line" : 30,
 				"parent" : 0
 			}
 		]
@@ -69,7 +69,8 @@
 				11,
 				14,
 				15,
-				16
+				16,
+				17
 			]
 		}
 	],
@@ -116,7 +117,8 @@
 				11,
 				14,
 				15,
-				16
+				16,
+				17
 			]
 		},
 		{
@@ -129,7 +131,8 @@
 				8,
 				10,
 				12,
-				13
+				13,
+				18
 			]
 		}
 	],
@@ -229,6 +232,17 @@
 			"compileGroupIndex" : 0,
 			"path" : "GoogleTests/test_board.cpp",
 			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"compileGroupIndex" : 0,
+			"path" : "src/gamelogic/gameRunner.cpp",
+			"sourceGroupIndex" : 0
+		},
+		{
+			"backtrace" : 1,
+			"path" : "src/gamelogic/gameRunner.h",
+			"sourceGroupIndex" : 1
 		}
 	],
 	"type" : "EXECUTABLE"

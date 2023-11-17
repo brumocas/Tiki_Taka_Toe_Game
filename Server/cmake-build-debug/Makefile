@@ -345,6 +345,30 @@ src/gamelogic/game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/gamelogic/game.cpp.s
 .PHONY : src/gamelogic/game.cpp.s
 
+src/gamelogic/gameRunner.o: src/gamelogic/gameRunner.cpp.o
+.PHONY : src/gamelogic/gameRunner.o
+
+# target to build an object file
+src/gamelogic/gameRunner.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/gamelogic/gameRunner.cpp.o
+.PHONY : src/gamelogic/gameRunner.cpp.o
+
+src/gamelogic/gameRunner.i: src/gamelogic/gameRunner.cpp.i
+.PHONY : src/gamelogic/gameRunner.i
+
+# target to preprocess a source file
+src/gamelogic/gameRunner.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/gamelogic/gameRunner.cpp.i
+.PHONY : src/gamelogic/gameRunner.cpp.i
+
+src/gamelogic/gameRunner.s: src/gamelogic/gameRunner.cpp.s
+.PHONY : src/gamelogic/gameRunner.s
+
+# target to generate assembly for a file
+src/gamelogic/gameRunner.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/gamelogic/gameRunner.cpp.s
+.PHONY : src/gamelogic/gameRunner.cpp.s
+
 src/player/player.o: src/player/player.cpp.o
 .PHONY : src/player/player.o
 
@@ -405,6 +429,9 @@ help:
 	@echo "... src/gamelogic/game.o"
 	@echo "... src/gamelogic/game.i"
 	@echo "... src/gamelogic/game.s"
+	@echo "... src/gamelogic/gameRunner.o"
+	@echo "... src/gamelogic/gameRunner.i"
+	@echo "... src/gamelogic/gameRunner.s"
 	@echo "... src/player/player.o"
 	@echo "... src/player/player.i"
 	@echo "... src/player/player.s"
