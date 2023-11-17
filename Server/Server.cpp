@@ -9,7 +9,6 @@ int main(int argc, char **argv) {
     ::testing::InitGoogleTest(&argc, argv);
     RUN_ALL_TESTS();
 
-
     /*
     // Create a vector of strings
     std::vector<std::string> words = {"Real Madrid", "Juventus", "M.United", "All_Mossar", "Sporting"};

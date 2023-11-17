@@ -82,6 +82,9 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/bruno/PSW/a01_1/Server/GoogleTests/test_board.cpp">
+			<Option target="Server"/>
+		</Unit>
 		<Unit filename="/home/bruno/PSW/a01_1/Server/GoogleTests/test_database.cpp">
 			<Option target="Server"/>
 		</Unit>

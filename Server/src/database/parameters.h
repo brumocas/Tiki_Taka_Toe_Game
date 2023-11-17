@@ -13,6 +13,7 @@ enum class parameters {
     Surname,
     BirthYear,
     BirthMonth,
+    CareerTeams,
     Nationality,
     WorldCupWinner,
     ChampionsLeagueWinner,

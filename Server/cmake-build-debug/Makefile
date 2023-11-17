@@ -129,6 +129,30 @@ Server/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/build
 .PHONY : Server/fast
 
+GoogleTests/test_board.o: GoogleTests/test_board.cpp.o
+.PHONY : GoogleTests/test_board.o
+
+# target to build an object file
+GoogleTests/test_board.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GoogleTests/test_board.cpp.o
+.PHONY : GoogleTests/test_board.cpp.o
+
+GoogleTests/test_board.i: GoogleTests/test_board.cpp.i
+.PHONY : GoogleTests/test_board.i
+
+# target to preprocess a source file
+GoogleTests/test_board.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GoogleTests/test_board.cpp.i
+.PHONY : GoogleTests/test_board.cpp.i
+
+GoogleTests/test_board.s: GoogleTests/test_board.cpp.s
+.PHONY : GoogleTests/test_board.s
+
+# target to generate assembly for a file
+GoogleTests/test_board.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GoogleTests/test_board.cpp.s
+.PHONY : GoogleTests/test_board.cpp.s
+
 GoogleTests/test_database.o: GoogleTests/test_database.cpp.o
 .PHONY : GoogleTests/test_database.o
 
@@ -354,6 +378,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... Server"
+	@echo "... GoogleTests/test_board.o"
+	@echo "... GoogleTests/test_board.i"
+	@echo "... GoogleTests/test_board.s"
 	@echo "... GoogleTests/test_database.o"
 	@echo "... GoogleTests/test_database.i"
 	@echo "... GoogleTests/test_database.s"

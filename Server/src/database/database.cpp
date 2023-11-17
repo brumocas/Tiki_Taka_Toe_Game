@@ -61,6 +61,15 @@ bool database::searchParams(parameters parameter, std::string param) {
                     return true;
             }
             break;
+        case parameters::CareerTeams:
+            for(auto & f : db){
+                std::vector<std::string> teams = f.getCareerTeams();
+                for(auto & t : teams){
+                    if (t == param)
+                        return true;
+                }
+            }
+            break;
         default:
             std::cerr << "Invalid choice\n";
     }

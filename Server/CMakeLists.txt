@@ -23,5 +23,6 @@ add_executable(Server
         GoogleTests/test_database.cpp
         GoogleTests/test_database.cpp
         GoogleTests/test_footballer.cpp
+        GoogleTests/test_board.cpp
 )
 target_link_libraries(Server ${GTEST_LIBRARIES})

@@ -1,5 +1,5 @@
-CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o: \
- /home/bruno/PSW/a01_1/Server/GoogleTests/test_database.cpp \
+CMakeFiles/Server.dir/GoogleTests/main.cpp.o: \
+ /home/bruno/PSW/a01_1/Server/GoogleTests/main.cpp \
  /usr/include/stdc-predef.h /usr/include/gtest/gtest.h \
  /usr/include/c++/11/cstddef \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++config.h \
@@ -249,7 +249,4 @@ CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o: \
  /usr/include/c++/11/cassert /usr/include/assert.h \
  /usr/include/gtest/gtest-test-part.h /usr/include/gtest/gtest_prod.h \
  /usr/include/gtest/gtest-typed-test.h \
- /usr/include/gtest/gtest_pred_impl.h \
- /home/bruno/PSW/a01_1/Server/GoogleTests/../src/database/database.h \
- /home/bruno/PSW/a01_1/Server/GoogleTests/../src/database/footballer.h \
- /home/bruno/PSW/a01_1/Server/GoogleTests/../src/database/parameters.h
+ /usr/include/gtest/gtest_pred_impl.h
