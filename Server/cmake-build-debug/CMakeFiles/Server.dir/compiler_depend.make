@@ -314,7 +314,8 @@ CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o: /home/bruno/PSW/a01_1/Ser
   /usr/include/gtest/gtest_pred_impl.h \
   /home/bruno/PSW/a01_1/Server/src/database/database.h \
   /home/bruno/PSW/a01_1/Server/src/database/footballer.h \
-  /home/bruno/PSW/a01_1/Server/src/database/parameters.h
+  /home/bruno/PSW/a01_1/Server/src/database/parameters.h \
+  /home/bruno/PSW/a01_1/Server/src/database/footballer.h
 
 CMakeFiles/Server.dir/Server.cpp.o: /home/bruno/PSW/a01_1/Server/Server.cpp \
   /usr/include/stdc-predef.h \
