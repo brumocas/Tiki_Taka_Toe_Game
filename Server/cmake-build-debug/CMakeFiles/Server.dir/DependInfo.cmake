@@ -9,6 +9,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
   "/home/bruno/PSW/a01_1/Server/GoogleTests/test_database.cpp" "CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o" "gcc" "CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o.d"
+  "/home/bruno/PSW/a01_1/Server/GoogleTests/test_footballer.cpp" "CMakeFiles/Server.dir/GoogleTests/test_footballer.cpp.o" "gcc" "CMakeFiles/Server.dir/GoogleTests/test_footballer.cpp.o.d"
   "/home/bruno/PSW/a01_1/Server/Server.cpp" "CMakeFiles/Server.dir/Server.cpp.o" "gcc" "CMakeFiles/Server.dir/Server.cpp.o.d"
   "/home/bruno/PSW/a01_1/Server/src/communication/communication.cpp" "CMakeFiles/Server.dir/src/communication/communication.cpp.o" "gcc" "CMakeFiles/Server.dir/src/communication/communication.cpp.o.d"
   "/home/bruno/PSW/a01_1/Server/src/database/database.cpp" "CMakeFiles/Server.dir/src/database/database.cpp.o" "gcc" "CMakeFiles/Server.dir/src/database/database.cpp.o.d"

@@ -22,5 +22,6 @@ add_executable(Server
         src/database/parameters.h
         GoogleTests/test_database.cpp
         GoogleTests/test_database.cpp
+        GoogleTests/test_footballer.cpp
 )
 target_link_libraries(Server ${GTEST_LIBRARIES})

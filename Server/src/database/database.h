@@ -36,7 +36,7 @@ public:
     // Print Database for debug
     void print();
     // Load Database line by line
-    void load();
+    void load(std::string path);
     // Function to parse lines
     std::vector<std::string> parseLine(std::string& line);
     // Function to parse teams string

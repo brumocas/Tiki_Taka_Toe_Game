@@ -129,9 +129,9 @@ void database::print() {
     std::cout << "/-----------------Database-End-------------/" << std::endl << std::endl;
 }
 
-void database::load() {
+void database::load(std::string path) {
     // Open a text file for reading
-    std::ifstream inputFile("database/database.txt");
+    std::ifstream inputFile(path);
 
     // Check if the file is open
     if (!inputFile.is_open()) {

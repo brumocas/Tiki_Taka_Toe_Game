@@ -1,6 +1,8 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o"
   "CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o.d"
+  "CMakeFiles/Server.dir/GoogleTests/test_footballer.cpp.o"
+  "CMakeFiles/Server.dir/GoogleTests/test_footballer.cpp.o.d"
   "CMakeFiles/Server.dir/Server.cpp.o"
   "CMakeFiles/Server.dir/Server.cpp.o.d"
   "CMakeFiles/Server.dir/src/communication/communication.cpp.o"
