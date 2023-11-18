@@ -77,18 +77,20 @@ void gameRunner::run() {
             break;
         }
     }
-
     running = false;
 }
 
 void gameRunner::startGame() {
     this->running = true;
-    // TODO: Randomize teams and cups
     player1.setSymbol('x');
     player2.setSymbol('o');
-    game.setParams("Real_Madrid", "Barcelona", "PSG", "BD", "CL", "WC");
+
+    // TODO: Randomize teams and cups
+    game.setParams("Real_Madrid", "Barcelona", "PSG", "BD", "CL", "E");
 }
 
 bool gameRunner::isGameInProgress() {
     return this->running;
 }
+
+

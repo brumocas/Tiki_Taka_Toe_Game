@@ -16,6 +16,8 @@ class param;
 class database {
 private:
     std::vector<footballer> db;
+    std::vector<std::string> teams;
+    std::vector<std::string> nations;
 public:
     // Constructor
     database();
@@ -43,6 +45,18 @@ public:
     std::vector<std::string> parseTeams(std::string &string);
     // Number of footballers in the database
     int size();
+    // Store all Teams available in the DB
+    void loadTeams();
+    // Get all Teams available in the DB
+    std::vector<std::string> getTeams();
+    // Store all Nations available in the DB
+    void loadNations();
+    // Get all Teams available in the DB
+    std::vector<std::string> getNations();
+    // Check if the param is Team
+    bool isTeam(std::string string);
+    // Check if the param is Nation
+    bool isNation(std::string string);
 };
 
 

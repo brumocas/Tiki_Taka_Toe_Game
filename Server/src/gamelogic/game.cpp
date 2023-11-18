@@ -78,6 +78,9 @@ namespace gamelogic {
     void game::setParams(std::string param1, std::string param2, std::string param3,
                          std::string param4, std::string param5, std::string param6) {
 
+        // TODO: Randomize params available in the DB
+
+
         board.setUpParams(param1, param2, param3);
         board.setLeftParams(param4, param5, param6);
     }
@@ -118,6 +121,8 @@ namespace gamelogic {
             if (!f.isEuropeanWinner())
                 return false;
         } else {
+            // TODO: Implement Nationalities
+
             // Check if player played in the corresponding team
             if (!checkTeamGuess(paramUp, f.getCareerTeams()))
                 return false;
@@ -141,11 +146,12 @@ namespace gamelogic {
             if (!f.isEuropeanWinner())
                 return false;
         } else {
+            // TODO: Implement Nationalities
+
             // Check if player played in the corresponding team
             if (!checkTeamGuess(paramUp, f.getCareerTeams()))
                 return false;
         }
-
         return true;
     }
 

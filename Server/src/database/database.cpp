@@ -206,6 +206,51 @@ int database::size() {
     return db.size();
 }
 
+void database::loadTeams() {
+    for (auto & f : db) {
+        std::vector<std::string> career_teams = f.getCareerTeams();
+        for (auto & t : career_teams) {
+            teams.push_back(t);
+        }
+    }
+}
+
+void database::loadNations() {
+    for (auto & f : db) {
+        nations.push_back(f.getNationality());
+    }
+}
+
+bool database::isTeam(std::string string) {
+    loadTeams();
+    std::vector<std::string> teams = getTeams();
+    for (auto & t : teams) {
+        if (t == string)
+            return true;
+    }
+    return false;
+}
+
+bool database::isNation(std::string string) {
+    loadNations();
+    std::vector<std::string> nations = getNations();
+    for (auto & n : nations) {
+        if (n == string)
+            return true;
+    }
+    return false;
+}
+
+std::vector<std::string> database::getTeams() {
+    return teams;
+}
+
+std::vector<std::string> database::getNations() {
+    return nations;
+}
+
+
+
 
 
 

@@ -19,19 +19,17 @@ namespace gamelogic {
         database db;
         Player winner;
         Board board;
-        bool appRunning;
-
     public:
         game();
         void setParams(std::string param1, std::string param2, std::string param3,
                        std::string param4, std::string param5, std::string param6);
-        bool checkAnswer(Player player);
+        bool checkAnswer(gamelogic::Player player);
         bool checkFootballerGuess(gamelogic::Player player);
         bool checkParamsGuess(gamelogic::Player player);
         bool checkTeamGuess(std::string team, std::vector<std::string> career_teams);
-        Player getWinner();
-        void setWinner(Player player);
-        bool isGameWonByPlayer(Player player);
+        gamelogic::Player getWinner();
+        void setWinner(gamelogic::Player player);
+        bool isGameWonByPlayer(gamelogic::Player player);
         bool isGameTied(gamelogic::Player player1, gamelogic::Player player2);
         bool winningCombinations(char symbol);
         void print();
