@@ -9,6 +9,7 @@
 
 class gameRunner {
 private:
+    gamelogic::Player player1, player2;
     bool running = false;
     gamelogic::game game;
 public:
@@ -16,6 +17,5 @@ public:
     void startGame();
     bool isGameInProgress();
 };;
-
 
 #endif //SERVER_GAMERUNNER_H

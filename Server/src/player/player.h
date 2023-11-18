@@ -13,14 +13,14 @@ namespace gamelogic {
 
     private:
         char symbol{};
-        std::string playerGuessFootballer;
+        std::string playerName;
+        std::string FootballerGuessName;
+        std::string FootballerGuessSurname;
         int x;
         int y;
 
 
-
     public:
-        std::string playerName;
 
         Player();
         Player(std::string playerName, char symbol);
@@ -29,8 +29,10 @@ namespace gamelogic {
         int getPlayerGuessX();
         int getPlayerGuessY();
         void setPlayerGuessCords(int x, int y);
-        std::string getPlayerGuessFootballer();
-        void setPlayerGuessFootballer(std::string playerGuessFootballer); //TODO : Need to pass the coordinates as well
+        std::string getFootballerGuessName();
+        void setFootballerGuessName(std::string name);
+        std::string getFootballerGuessSurname();
+        void setFootballerGuessSurname(std::string surname);
         char getSymbol();
         void setSymbol(char symbol);
 

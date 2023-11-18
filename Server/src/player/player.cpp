@@ -40,13 +40,6 @@ namespace gamelogic{
         this-> y = y;
     }
 
-    std::string Player::getPlayerGuessFootballer(){
-        return playerGuessFootballer;
-    }
-
-    void Player::setPlayerGuessFootballer(std::string playerGuessFootballer) {
-        this->playerGuessFootballer = playerGuessFootballer;
-    }
 
     char Player::getSymbol() {
         return symbol;
@@ -56,6 +49,21 @@ namespace gamelogic{
         this->symbol = symbol;
     }
 
+    std::string Player::getFootballerGuessName() {
+        return this->FootballerGuessName;
+    }
+
+    void Player::setFootballerGuessName(std::string name) {
+        FootballerGuessName = name;
+    }
+
+    std::string Player::getFootballerGuessSurname() {
+        return FootballerGuessSurname;
+    }
+
+    void Player::setFootballerGuessSurname(std::string surname) {
+        FootballerGuessSurname = surname;
+    }
 
 }
 

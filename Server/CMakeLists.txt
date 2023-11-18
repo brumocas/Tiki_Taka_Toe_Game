@@ -26,5 +26,6 @@ add_executable(Server
         GoogleTests/test_board.cpp
         src/gamelogic/gameRunner.cpp
         src/gamelogic/gameRunner.h
+        GoogleTests/test_game.cpp
 )
 target_link_libraries(Server ${GTEST_LIBRARIES})

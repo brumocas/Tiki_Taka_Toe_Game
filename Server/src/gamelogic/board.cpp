@@ -22,8 +22,6 @@ namespace gamelogic {
             }
         }
 
-        rows = 3;
-        columns = 3;
     }
 
     void Board::setUpParams(std::string param1, std::string param2, std::string param3) {
@@ -43,13 +41,13 @@ namespace gamelogic {
     }
 
     std::string Board::getLeftParams(int y) {
-        return upParameters[y];
+        return leftParameters[y];
     }
 
     void Board::setPlay(Player player) {
-        if (isUsed(player.getPlayerGuessX(), player.getPlayerGuessY())) {
+        if (!isUsed(player.getPlayerGuessX(), player.getPlayerGuessY())) {
             symbolArray[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getSymbol();
-            footballerEntry[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getPlayerGuessFootballer();
+            footballerEntry[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getFootballerGuessName() + "_" + player.getFootballerGuessSurname();
         } else {
             std::cerr << "Invalid behaviour" << std::endl;
         }
@@ -60,7 +58,17 @@ namespace gamelogic {
     }
 
     bool Board::isUsed(int x, int y) {
-        return footballerEntry[x][y] != "Unknown";
+        return footballerEntry[x][y] != "-";
+    }
+
+    bool Board::isFull() {
+        for (int i = 0; i < 3; ++i) {
+            for (int j = 0; j < 3; ++j) {
+                if (symbolArray[i][j] == '-')
+                    return false;
+            }
+        }
+        return true;
     }
 
     void Board::printFootballers() {

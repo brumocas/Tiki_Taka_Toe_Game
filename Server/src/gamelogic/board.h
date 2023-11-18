@@ -12,8 +12,6 @@ namespace gamelogic {
 
     class Board {
     private:
-        int rows;
-        int columns;
         std::string upParameters[3];
         std::string leftParameters[3];
         char symbolArray[3][3];
@@ -27,6 +25,7 @@ namespace gamelogic {
         std::string getLeftParams(int y);
         void setPlay(Player player);
         bool isUsed(int x, int y);
+        bool isFull();
         char getSymbol(int x, int y);
         void printFootballers();
         void printSymbols();

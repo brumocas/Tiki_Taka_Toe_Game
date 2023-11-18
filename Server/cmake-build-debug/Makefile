@@ -201,6 +201,30 @@ GoogleTests/test_footballer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GoogleTests/test_footballer.cpp.s
 .PHONY : GoogleTests/test_footballer.cpp.s
 
+GoogleTests/test_game.o: GoogleTests/test_game.cpp.o
+.PHONY : GoogleTests/test_game.o
+
+# target to build an object file
+GoogleTests/test_game.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GoogleTests/test_game.cpp.o
+.PHONY : GoogleTests/test_game.cpp.o
+
+GoogleTests/test_game.i: GoogleTests/test_game.cpp.i
+.PHONY : GoogleTests/test_game.i
+
+# target to preprocess a source file
+GoogleTests/test_game.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GoogleTests/test_game.cpp.i
+.PHONY : GoogleTests/test_game.cpp.i
+
+GoogleTests/test_game.s: GoogleTests/test_game.cpp.s
+.PHONY : GoogleTests/test_game.s
+
+# target to generate assembly for a file
+GoogleTests/test_game.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GoogleTests/test_game.cpp.s
+.PHONY : GoogleTests/test_game.cpp.s
+
 Server.o: Server.cpp.o
 .PHONY : Server.o
 
@@ -411,6 +435,9 @@ help:
 	@echo "... GoogleTests/test_footballer.o"
 	@echo "... GoogleTests/test_footballer.i"
 	@echo "... GoogleTests/test_footballer.s"
+	@echo "... GoogleTests/test_game.o"
+	@echo "... GoogleTests/test_game.i"
+	@echo "... GoogleTests/test_game.s"
 	@echo "... Server.o"
 	@echo "... Server.i"
 	@echo "... Server.s"
