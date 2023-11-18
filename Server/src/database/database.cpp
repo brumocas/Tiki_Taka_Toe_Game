@@ -205,7 +205,7 @@ std::vector<std::string> database::parseTeams(std::string& string) {
 int database::size() {
     return db.size();
 }
-
+    //etst
 void database::loadTeams() {
     for (auto & f : db) {
         std::vector<std::string> career_teams = f.getCareerTeams();
