@@ -36,6 +36,16 @@ namespace gamelogic {
         char getSymbol();
         void setSymbol(char symbol);
 
+            // Equality operator
+        bool operator==(const Player& other) const {
+            return  x == other.x &&
+                    y == other.y &&
+                    symbol == other.symbol &&
+                    playerName == other.playerName &&
+                    FootballerGuessName == other.FootballerGuessName &&
+                    FootballerGuessSurname == other.FootballerGuessSurname;
+        }
+
     };
 
 }
