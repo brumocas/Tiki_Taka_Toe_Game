@@ -13,7 +13,8 @@ private:
     bool running = false;
     gamelogic::game game;
 public:
-    void run();
+    void runCMD();
+    void runRemote();
     void startGame();
     bool isGameInProgress();
 };;

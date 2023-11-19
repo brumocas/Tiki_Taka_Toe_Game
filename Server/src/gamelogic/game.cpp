@@ -9,10 +9,17 @@ namespace gamelogic {
 
     game::game() {
         // Initiate game and load DB
-        db.load("../src/database/files/light_database.txt");
+        db.load("../src/database/files/game_test_database.txt");
         // TODO: randomize teams and cups
-
     }
+
+    game::game(std::string db_path) {
+        // Initiate game and load DB
+        db.load(db_path);
+        // TODO: randomize teams and cups
+    }
+
+
 
     bool game::checkAnswer(gamelogic::Player player) {
         // Check if cell is free first
@@ -20,7 +27,7 @@ namespace gamelogic {
             return false;
         else {
             // Check footballer guess
-            if (checkFootballerGuess(player)){
+            if (checkFootballerGuess(player)) {
                 board.setPlay(player);
                 return true;
             }
@@ -112,7 +119,7 @@ namespace gamelogic {
             // Check if player won the WORLD CUP
             if (!f.isChampionsLeagueWinner())
                 return false;
-        } else if (paramUp == "CL") {
+        } else if (paramUp == "BD") {
             // Check if player won the BALLON DOR
             if (!f.isBallonDorWinner())
                 return false;
@@ -121,36 +128,53 @@ namespace gamelogic {
             if (!f.isEuropeanWinner())
                 return false;
         } else {
-            // TODO: Implement Nationalities
 
-            // Check if player played in the corresponding team
-            if (!checkTeamGuess(paramUp, f.getCareerTeams()))
-                return false;
+            if (db.isNation(paramUp)) {
+                // Check if the Nation is the same as the footballer guessed
+                if (paramUp != f.getNationality())
+                    return false;
+            } else if (db.isTeam(paramUp)) {
+                // Check if footballer played in the corresponding team
+                if (!checkTeamGuess(paramUp, f.getCareerTeams()))
+                    return false;
+            } else {
+                // Never enters here
+                std::cerr << "Error1\n";
+            }
+
         }
 
         std::string paramLeft = board.getLeftParams((player.getPlayerGuessX()));
-        if (paramUp == "WC") {
+        if (paramLeft == "WC") {
             // Check if player won the WORLD CUP
             if (!f.isWorldCupWinner())
                 return false;
-        } else if (paramUp == "CL") {
+        } else if (paramLeft == "CL") {
             // Check if player won the WORLD CUP
             if (!f.isChampionsLeagueWinner())
                 return false;
-        } else if (paramUp == "CL") {
+        } else if (paramLeft == "BD") {
             // Check if player won the BALLON DOR
             if (!f.isBallonDorWinner())
                 return false;
-        } else if (paramUp == "E") {
+        } else if (paramLeft == "E") {
             // Check if player won the EURO CUP
             if (!f.isEuropeanWinner())
                 return false;
         } else {
-            // TODO: Implement Nationalities
 
-            // Check if player played in the corresponding team
-            if (!checkTeamGuess(paramUp, f.getCareerTeams()))
-                return false;
+            if (db.isNation(paramLeft)) {
+                // Check if the Nation is the same as the footballer guessed
+                if (paramLeft != f.getNationality())
+                    return false;
+            } else if (db.isTeam(paramLeft)) {
+                // Check if footballer played in the corresponding team
+                if (!checkTeamGuess(paramLeft, f.getCareerTeams()))
+                    return false;
+            } else {
+                // Never enters here
+                std::cerr << "Error2\n";
+            }
         }
         return true;
     }

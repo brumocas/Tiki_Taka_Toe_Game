@@ -170,6 +170,10 @@ void database::load(std::string path) {
 
     // Close the file
     inputFile.close();
+    // Load all DB Teams
+    loadTeams();
+    // Load all DB Nations
+    loadNations();
 }
 
 std::vector<std::string> database::parseLine(std::string& line) {

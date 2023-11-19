@@ -203,6 +203,60 @@ TEST(parseTeams, example) {
     ASSERT_EQ("Inter_Miami", parsed[2]);
 }
 
+TEST(loadTeams, example) {
+    database db;
+    db.load(path);
+    std::vector<std::string> teams = db.getTeams();
+    ASSERT_EQ("Barcelona", teams[0]);
+    ASSERT_EQ("PSG", teams[1]);
+    ASSERT_EQ("Inter_Miami", teams[2]);
+    ASSERT_EQ("Agucadoura", teams[3]);
+    ASSERT_EQ("Porto", teams[4]);
+    ASSERT_EQ("All_Mossar", teams[5]);
+}
+
+TEST(loadNations, example) {
+    database db;
+    db.load(path);
+    std::vector<std::string> nations = db.getNations();
+    ASSERT_EQ("Argentina", nations[0]);
+    ASSERT_EQ("Portugal", nations[1]);
+    ASSERT_EQ("Cameroon", nations[2]);
+}
+
+TEST(isTeam, positive) {
+    database db;
+    db.load(path);
+    ASSERT_EQ(true, db.isTeam("PSG"));
+    ASSERT_EQ(true, db.isTeam("Barcelona"));
+    ASSERT_EQ(true, db.isTeam("Porto"));
+}
+
+TEST(isTeam, negative) {
+    database db;
+    db.load(path);
+    ASSERT_EQ(false, db.isTeam("Portugal"));
+    ASSERT_EQ(false, db.isTeam("Argentina"));
+    ASSERT_EQ(false, db.isTeam("Cameroon"));
+}
+
+
+TEST(isNation, positive) {
+    database db;
+    db.load(path);
+    ASSERT_EQ(true, db.isNation("Portugal"));
+    ASSERT_EQ(true, db.isNation("Argentina"));
+    ASSERT_EQ(true, db.isNation("Cameroon"));
+}
+
+TEST(isNation, negative) {
+    database db;
+    db.load(path);
+    ASSERT_EQ(false, db.isNation("Porto"));
+    ASSERT_EQ(false, db.isNation("PSG"));
+    ASSERT_EQ(false, db.isNation("Barcelona"));
+}
+
 
 
 

@@ -4,7 +4,7 @@
 
 #include "gameRunner.h"
 
-void gameRunner::run() {
+void gameRunner::runCMD() {
     startGame();
     game.print();
 
@@ -86,11 +86,17 @@ void gameRunner::startGame() {
     player2.setSymbol('o');
 
     // TODO: Randomize teams and cups
-    game.setParams("Real_Madrid", "Barcelona", "PSG", "BD", "CL", "E");
+    game.setParams("Real_Madrid", "Barcelona", "PSG", "BD", "CL", "Portugal");
 }
 
 bool gameRunner::isGameInProgress() {
     return this->running;
+}
+
+void gameRunner::runRemote() {
+    // For remote gaming
+    // Links with communication class
+    // TODO: Sprint 4 ...
 }
 
 

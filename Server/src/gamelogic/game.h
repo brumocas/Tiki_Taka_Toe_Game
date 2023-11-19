@@ -21,6 +21,7 @@ namespace gamelogic {
         Board board;
     public:
         game();
+        game(std::string db_path);
         void setParams(std::string param1, std::string param2, std::string param3,
                        std::string param4, std::string param5, std::string param6);
         bool checkAnswer(gamelogic::Player player);
