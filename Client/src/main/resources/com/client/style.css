@@ -1,0 +1,83 @@
+.anchor {
+    -fx-background-image:url("images/background.jpg");
+    -fx-background-size: cover; /* Ensures the image covers the entire container */
+    -fx-background-position: center; /* Centers the image horizontally and vertically */
+}
+
+/* Define a CSS class for the title label */
+.title-label {
+    -fx-text-fill: #B3AE83; /* Same text color as the button */
+    -fx-font-size: 200; /* Adjust the font size as needed */
+    -fx-alignment: center;
+    -fx-font-family: "Verdana";
+}
+
+/* Define a CSS class for the sub title label */
+.subtitle-label {
+    -fx-text-fill: #B3AE83; /* Same text color as the button */
+    -fx-font-size: 50; /* Adjust the font size as needed */
+    -fx-alignment: center;
+    -fx-font-family: "Verdana";
+    -fx-font-weight: bold
+}
+
+/* Define a CSS class for buttons with custom border color */
+.box {
+    -fx-background-color: #434848; /* Background color (adjust to your preference) */
+    -fx-background-radius: 60px;
+    -fx-border-color: #B3AE83; /* Border color (red in this example) */
+    -fx-border-width: 2px; /* Border width (adjust as needed) */
+    -fx-border-radius: 60px; /* Border radius (rounded corners, adjust as needed) */
+    -fx-background-insets: 2; /* Adjust to control the distance between the border and the button content */
+    -fx-opacity: 0.9;
+}
+
+/* Define a CSS class for buttons with custom border color */
+.goBackButton {
+    -fx-background-color: #434848; /* Background color (adjust to your preference) */
+    -fx-background-radius: 15px;
+    -fx-border-color: #B3AE83; /* Border color (red in this example) */
+    -fx-border-width: 2px; /* Border width (adjust as needed) */
+    -fx-border-radius: 15px; /* Border radius (rounded corners, adjust as needed) */
+    -fx-background-insets: 2; /* Adjust to control the distance between the border and the button content */
+    -fx-opacity: 0.9;
+    -fx-shape: "M5,20 L25,10 L25,15 L40,15 L40,25 L25,25 L25,30 L5,20 Z";
+    -fx-text-fill: #434848;
+}
+.goBackButton:hover {
+    -fx-background-color: #B3AE83; /* Background color on hover */
+    -fx-text-fill: #B3AE83; /* Text color on hover */
+    -fx-border-color: #434848; /* Border color on hover */
+}
+
+/* Define a CSS class for the sub title label */
+.text {
+    -fx-text-fill: #B3AE83; /* Same text color as the button */
+    -fx-font-size: 40; /* Adjust the font size as needed */
+    -fx-font-weight: bold;
+    -fx-font-family: "Verdana";
+}
+
+/* Define text field for inputs like nicknames as pins*/
+.text-field{
+    -fx-background-color: #b3ae83; /* Background color (adjust to your preference) */
+    -fx-background-radius: 15px;
+    -fx-border-color: #434848; /* Border color (red in this example) */
+    -fx-border-width: 2px; /* Border width (adjust as needed) */
+    -fx-border-radius: 15px; /* Border radius (rounded corners, adjust as needed) */
+    -fx-background-insets: 2; /* Adjust to control the distance between the border and the button content */
+    -fx-opacity: 0.9;
+    -fx-text-fill: #434848;
+    -fx-font-size: 20px; /* You can adjust the font size to your preference */
+    -fx-font-weight: bold;
+    -fx-font-family: "Verdana";
+    -fx-alignment: center;
+}
+
+/* Define the hyperlink style */
+.hyperlink{
+    -fx-text-fill: #9f7d0b;
+    -fx-underline: true;
+}
+
+

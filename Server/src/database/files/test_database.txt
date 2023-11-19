@@ -1,0 +1,4 @@
+Name, Surname, BirthYear, BirthMonth, Nationality, WorldCup, ChampionsLeague, BallonDor, EuropeanWinner, Teams,
+Lionel, Messi, 1987, 06, Argentina, 1, 1, 1, 0, Barcelona PSG Inter_Miami,
+Bruno, Costa, 2002, 09, Portugal, 0, 0, 0, 0, Agucadoura,
+Vincent, Aboubakar, 1990, 10, Cameroon, 0, 0, 0, 0, Porto All_Mossar,

@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@menu.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.Newgame">
+   <children>
+      <Button fx:id="startGameButton" layoutX="769.0" layoutY="850.0" mnemonicParsing="false" onAction="#setWaitingRoomScene" prefHeight="58.0" prefWidth="394.0" stylesheets="@menu.css" text="StartGame">
+         <styleClass>
+            <String fx:value="custom-button" />
+            <String fx:value="main-button" />
+         </styleClass>
+      </Button>
+      <Button alignment="TOP_CENTER" layoutX="511.0" layoutY="483.0" mnemonicParsing="false" prefHeight="339.0" prefWidth="900.0" styleClass="box" stylesheets="@style.css" textAlignment="CENTER" />
+      <Label layoutX="58.0" layoutY="100.0" prefHeight="292.0" prefWidth="1887.0" styleClass="title-label" stylesheets="@menu.css" text="Tiki Taka Toe" textFill="WHITE">
+         <font>
+            <Font size="96.0" />
+         </font>
+      </Label>
+      <Label layoutX="451.0" layoutY="354.0" prefHeight="65.0" prefWidth="1082.0" styleClass="subtitle-label" text="The ultimate tic tac toe football game" textFill="#f2eded" />
+      <Button fx:id="goBackButton" alignment="CENTER" contentDisplay="CENTER" layoutX="871.0" layoutY="928.0" mnemonicParsing="false" onAction="#setMenuScene" prefHeight="64.0" prefWidth="154.0" styleClass="goBackButton" stylesheets="@style.css" textAlignment="CENTER" textFill="#41454500" />
+      <Label alignment="CENTER" layoutX="-2.0" layoutY="519.0" prefHeight="38.0" prefWidth="1929.0" stylesheets="@style.css" text="New Game">
+         <styleClass>
+            <String fx:value="subtext" />
+            <String fx:value="text" />
+         </styleClass></Label>
+      <Text fill="#b3ae83" layoutX="650.0" layoutY="685.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nickname :" wrappingWidth="175.469970703125">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Text>
+      <TextField fx:id="nickName" layoutX="824.0" layoutY="650.0" prefHeight="49.0" prefWidth="303.0" stylesheets="@style.css" />
+   </children>
+</AnchorPane>
