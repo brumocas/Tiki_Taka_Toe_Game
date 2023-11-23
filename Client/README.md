@@ -17,18 +17,32 @@ It communicates with the server using the TCP/IP transport protocol to exchange 
 - Tiki Taka Toe game Server running on a specified host and port.
 
 ## How to Run
+### Option: 1 (IDEA ide)
 1. Clone this repository to your local machine.
    ```bash
    git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
    cd Client
 
-2. Open with IntelliJ IDEA the `Client` directory from the cloned project
+2. Open with IntelliJ IDEA the `/Client` directory from the cloned project
 3. Go to `file` --> `Project Structure...` and add the openJdk-21 Package available in the 
 InstallationPackages directory from the project by choosing the `lib` subfolder
 ![img_1.png](READMEImages/img_1.png)
 ![img.png](READMEImages/img.png)
 4. Run the `Client` main from the project
 ![img_2.png](READMEImages/img_2.png)
+
+### Option: 2 (executable jar file)
+1. Clone this repository to your local machine.
+   ```bash
+   git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
+   cd Client
+
+2. Open with IntelliJ IDEA the `/Client` directory from the cloned project
+3. Go to `file` --> `Project Structure...` and add the openJdk-21 Package available in the
+   InstallationPackages directory from the project by choosing the `lib` subfolder
+   ![img_1.png](READMEImages/img_1.png)
+   ![img.png](READMEImages/img.png)
+4. Run the `Client.jar` file from  `/out/artifacts/Client_jar` project directory
 
 
 
