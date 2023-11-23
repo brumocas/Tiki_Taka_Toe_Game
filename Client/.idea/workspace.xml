@@ -5,9 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd5ad994-0a10-4a20-a01d-436618bc7815" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/images/iconball.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/gui/defs/iconball.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/gui/defs/Cursor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/gui/defs/Cursor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/gui/defs/Icon.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/gui/defs/Icon.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/cache-v2-ba84fa323bd184d78d4b.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-da79bc08237691c0e72e.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-a5da03893dd53e9a5aec.json" beforeDir="false" />
@@ -15,15 +22,17 @@
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-18T10-16-26-0223.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/target-Server-Debug-2e873f895d4b1fb8635e.json" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-99265b04de7ada3aac9e.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeCache.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.out" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Google_Tests_run.dir/DependInfo.cmake" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Google_Tests_run.dir/Server.cpp.o" beforeDir="false" />
@@ -82,8 +91,12 @@
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/progress.make" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/communication/Communication.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/communication/Communication.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/communication/communication.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/communication/communication.cpp.o.d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/database/Database.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/database/Database.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/database/database.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/database/database.cpp.o.d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/database/footballer.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/database/footballer.cpp.o.d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/gamelogic/board.cpp.o" beforeDir="false" />
@@ -95,10 +108,263 @@
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/player/player.cpp.o" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/player/player.cpp.o.d" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/DataTest.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/DataTest.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/Test.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/Test.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/Google_Tests_run.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/Google_tests.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googlemock/gmock.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-distribution.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/gmock_main.dir/src/gmock_main.cc.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googlemock/gmock.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest-distribution.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-debug.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/generated/GTestConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/generated/GTestConfigVersion.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/generated/gmock.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/generated/gmock_main.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/generated/gtest.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/generated/gtest_main.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest-main/googletest/gtest.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-debug.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/compiler_depend.internal" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/generated/GTestConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/generated/GTestConfigVersion.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/generated/gmock.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/generated/gmock_main.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/generated/gtest.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/generated/gtest_main.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Google_tests/lib/googletest/gtest.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Server" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Server.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock.dir/src/gmock-all.cc.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock_main.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock_main.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock_main.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock_main.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock_main.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock_main.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock_main.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock_main.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/gmock_main.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googlemock/gmock.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest-distribution.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets-debug.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/Export/0c08b8e77dd885bfe55a19a9659d9fc1/GTestTargets.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest.dir/src/gtest-all.cc.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/cmake_clean_target.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/gtest_main.dir/src/gtest_main.cc.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/CTestTestfile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/Makefile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/generated/GTestConfig.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/generated/GTestConfigVersion.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/generated/gmock.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/generated/gmock_main.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/generated/gtest.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/generated/gtest_main.pc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/googletest/gtest.cbp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/libgmock.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/libgmock_main.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/libgtest.a" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/lib/libgtest_main.a" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -147,14 +413,14 @@
     "git-widget-placeholder": "devel",
     "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/java/com/client",
-    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1",
+    "last_opened_file_path": "/home/bruno/Master/PSW/a01_1/Client/src/main/java/com/client/images",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "SDKs",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15332031",
     "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.pluginManager",
@@ -163,18 +429,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/client/images" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\installationPackages" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\shirts" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\images" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client" />
-      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/java/com/client/gui/defs" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\nations" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\Trophies" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\noBack\teams" />
-      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\java\com\client" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.client" />

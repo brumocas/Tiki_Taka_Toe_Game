@@ -1,1 +1,0 @@
-/usr/bin/c++ -g CMakeFiles/Google_Tests_run.dir/DataTest.cpp.o -o Google_Tests_run  -lSystem/communication ../lib/libgtest.a ../lib/libgtest_main.a ../lib/libgtest.a 
