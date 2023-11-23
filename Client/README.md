@@ -43,7 +43,7 @@ InstallationPackages directory from the project by choosing the `lib` subfolder
    ![img_1.png](READMEImages/img_1.png)
    ![img.png](READMEImages/img.png)
 4. Run the `Client.jar` file from  `/out/artifacts/Client_jar` project directory
-
+![img.png](READMEImages/img5.png)
 
 
 
