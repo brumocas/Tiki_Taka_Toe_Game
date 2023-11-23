@@ -58,7 +58,7 @@ namespace gamelogic {
     }
 
     bool Board::isUsed(int x, int y) {
-        return footballerEntry[x][y] != "-";
+        return symbolArray[x][y] != '-';
     }
 
     bool Board::isFull() {

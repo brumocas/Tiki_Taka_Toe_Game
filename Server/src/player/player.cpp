@@ -17,6 +17,8 @@ namespace gamelogic{
     Player::Player(std::string playerName, char symbol){
         this->playerName = playerName;
         this->symbol = symbol;
+        x = -1; // valid plays are 0, 1, 2, 10, 11, 12 , 20, 21, 22,
+        y = -1; // when x or y = 3 it means the play is invalid or that the player didn't make a play yet
     }
 
     std::string Player::getPlayerName() {
