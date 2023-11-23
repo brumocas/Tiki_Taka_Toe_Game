@@ -25,10 +25,10 @@ It communicates with the server using the TCP/IP transport protocol to exchange 
 2. Open with IntelliJ IDEA the `Client` directory from the cloned project
 3. Go to `file` --> `Project Structure...` and add the openJdk-21 Package available in the 
 InstallationPackages directory from the project by choosing the `lib` subfolder
-![img_1.png](img_1.png)
-![img.png](img.png)
+![img_1.png](READMEImages/img_1.png)
+![img.png](READMEImages/img.png)
 4. Run the `Client` main from the project
-![img_2.png](img_2.png)
+![img_2.png](READMEImages/img_2.png)
 
 
 
