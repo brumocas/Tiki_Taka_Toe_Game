@@ -14,28 +14,32 @@ Communication::~Communication() {
     }
 }
 
-void Communication::sendMessage(const std::string &message) {
-    if (send(clientSocket, message.c_str(), message.size(), 0) == -1) {
+void Communication::sendMessage(std::string& message) {
+    std::string messageWithNewline = message.append("\n");
+    size_t bytes = 0;
+    if ((bytes = send(clientSocket, messageWithNewline.c_str(), messageWithNewline.length(), 0)) <= 0) {
         perror("Failed to send message");
     }
 }
+
 std::string Communication::receiveMessage() {
     char buffer[1024] = {0};
-    ssize_t valread = read(clientSocket, buffer, 1024);
-    if (valread == -1) {
+    ssize_t bytes = recv(clientSocket, buffer, 1024, 0);
+    if (bytes <= 0) {
         perror("Failed to read message");
         return "";
     }
-    return std::string(buffer, valread);
+    buffer[bytes - 1] = '\0';
+    return std::string(buffer, bytes - 1);
 }
 
 void Communication::closeConnection() {
     close(clientSocket);
 }
 
-void Communication::addHeader(std::string header, const std::string &message) {
+void Communication::addHeader(std::string header,std::string message) {
 }
 
-std::string Communication::extractHeader(const std::string &message) {
+std::string Communication::extractHeader(std::string message) {
     return std::string();
 }

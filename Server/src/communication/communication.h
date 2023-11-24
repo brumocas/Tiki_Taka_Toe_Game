@@ -17,10 +17,10 @@ class Communication {
 public:
     Communication(int clientSocket);
     ~Communication();
-    void sendMessage(const std::string& message);
+    void sendMessage(std::string& message);
     std::string receiveMessage();
-    void addHeader(std::string header ,const std::string& message);
-    std::string extractHeader(const std::string& message);
+    void addHeader(std::string header ,std::string message);
+    std::string extractHeader(std::string message);
     void closeConnection();
 private:
     int clientSocket;

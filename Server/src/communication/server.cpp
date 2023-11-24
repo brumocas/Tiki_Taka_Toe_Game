@@ -71,6 +71,7 @@ void Server::acceptClients() {
               << ntohs(client1Addr.sin_port) << std::endl;
     clientSockets[0] = client1Socket;
 
+
     int client2Socket = accept(serverSocket, reinterpret_cast<struct sockaddr *>(&client2Addr), &client2AddrLen);
     if (client2Socket == -1) {
         perror("Acceptance failed");

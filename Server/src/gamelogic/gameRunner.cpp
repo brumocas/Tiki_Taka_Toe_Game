@@ -14,14 +14,14 @@ void gameRunner::runCMD() {
     int y = -1;
     std::string name;
     std::string surname;
-    while (running){
+    while (running) {
         // player 1 plays
         std::cout << "Player 1 turn :\n";
         std::cout << "x :";
         std::cin >> x;
         std::cout << "y :";
         std::cin >> y;
-        player1.setPlayerGuessCords(x , y);
+        player1.setPlayerGuessCords(x, y);
         std::cout << "Name :";
         std::cin >> name;
         std::cout << "Surname :";
@@ -30,7 +30,7 @@ void gameRunner::runCMD() {
         player1.setFootballerGuessSurname(surname);
 
         // check player 1 answer
-        if(!game.checkAnswer(player1)){
+        if (!game.checkAnswer(player1)) {
             std::cout << "Incorrect\n";
         }
         game.print();
@@ -42,7 +42,7 @@ void gameRunner::runCMD() {
         }
 
         // check if game is tied
-        if (game.isGameTied(player1,player2)){
+        if (game.isGameTied(player1, player2)) {
             std::cout << "Tied\n";
             break;
         }
@@ -53,7 +53,7 @@ void gameRunner::runCMD() {
         std::cin >> x;
         std::cout << "y :";
         std::cin >> y;
-        player2.setPlayerGuessCords(x , y);
+        player2.setPlayerGuessCords(x, y);
         std::cout << "Name :";
         std::cin >> name;
         std::cout << "Surname :";
@@ -62,7 +62,7 @@ void gameRunner::runCMD() {
         player2.setFootballerGuessSurname(surname);
 
         // check player 2 answer
-        if(!game.checkAnswer(player2)){
+        if (!game.checkAnswer(player2)) {
             std::cout << "Incorrect\n";
         }
         game.print();
@@ -74,7 +74,7 @@ void gameRunner::runCMD() {
         }
 
         // check if game is tied
-        if (game.isGameTied(player1,player2)){
+        if (game.isGameTied(player1, player2)) {
             std::cout << "Tied\n";
             break;
         }
@@ -98,7 +98,7 @@ bool gameRunner::isGameInProgress() {
 void gameRunner::runRemote() {
     // Create a Server
     std::cout << "Remote game session started :)" << std::endl;
-    Server gameServer(8080);
+    Server gameServer(8081);
     // Open Server and wait to connect with 2 clients
     gameServer.start();
 
@@ -107,24 +107,25 @@ void gameRunner::runRemote() {
     Communication client1 = sockets[0];
     Communication client2 = sockets[1];
 
-    std::string string;
+    startGame();
 
-    while (true){
-        // Get Client 1 name
-        string = client1.receiveMessage();
-        std::cout << string << std::endl;
-        // Get Client 2 name
+    std::string message;
+    while(true){
+        std::string m = client1.receiveMessage();
+        std::cout << "C1: " << m << std::endl;
+        std::cout << "S to C1: ";
+        std::cin >> message ;
+        client1.sendMessage(message);
 
+        m = client2.receiveMessage();
+        std::cout << "C2: " << m << std::endl;
+        std::cout << "S to C2: ";
+        std::cin >> message;
+        client2.sendMessage(message);
     }
-
-
-    client1.sendMessage("Hello c1");
-    client2.sendMessage("Hello c2");
-
 
     client1.closeConnection();
     client2.closeConnection();
-
 }
 
 
