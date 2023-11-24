@@ -5,11 +5,27 @@
 #ifndef SERVER_COMMUNICATION_H
 #define SERVER_COMMUNICATION_H
 
+#include <cstring>
+#include <cstdlib>
+#include <thread>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <iostream>
+#include <stdexcept>
 
-class communication {
+class Communication {
 public:
-
+    Communication(int clientSocket);
+    ~Communication();
+    void sendMessage(const std::string& message);
+    std::string receiveMessage();
+    void addHeader(std::string header ,const std::string& message);
+    std::string extractHeader(const std::string& message);
+    void closeConnection();
+private:
+    int clientSocket;
 };
+
 
 
 #endif //SERVER_COMMUNICATION_H

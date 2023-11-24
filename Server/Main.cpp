@@ -19,11 +19,13 @@ void databaseMenu();
 int main(int argc, char **argv) {
 
     // Testing implementation
-    ::testing::InitGoogleTest(&argc, argv);
-    RUN_ALL_TESTS();
+    //::testing::InitGoogleTest(&argc, argv);
+    //RUN_ALL_TESTS();
 
     // Simple Menu
     //runMenu();
+
+    remoteGame();
 
     return 0;
 }
@@ -57,7 +59,7 @@ void runMenu() {
                 break;
         }
 
-        // Quit Server application
+        // Quit Main application
         if (option == 4)
             break;
 
@@ -128,7 +130,7 @@ void remoteGame() {
 
 void printMenu() {
     // Print Menu options
-    std::cout << "/----Server Menu----/\n";
+    std::cout << "/----Main Menu----/\n";
     std::cout << "Local Game (1)\n";
     std::cout << "Remote Game (2)\n";
     std::cout << "Database (3)\n";

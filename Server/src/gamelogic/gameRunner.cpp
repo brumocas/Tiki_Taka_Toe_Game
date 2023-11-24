@@ -3,6 +3,8 @@
 //
 
 #include "gameRunner.h"
+#include "../communication/communication.h"
+#include "../communication/server.h"
 
 void gameRunner::runCMD() {
     startGame();
@@ -94,9 +96,35 @@ bool gameRunner::isGameInProgress() {
 }
 
 void gameRunner::runRemote() {
-    // For remote gaming
-    // Links with communication class
-    // TODO: Sprint 4 ...
+    // Create a Server
+    std::cout << "Remote game session started :)" << std::endl;
+    Server gameServer(8080);
+    // Open Server and wait to connect with 2 clients
+    gameServer.start();
+
+    // Create Communication paths after establishing connection
+    std::array<int, MAX_CLIENTS> sockets = gameServer.getClientSockets();
+    Communication client1 = sockets[0];
+    Communication client2 = sockets[1];
+
+    std::string string;
+
+    while (true){
+        // Get Client 1 name
+        string = client1.receiveMessage();
+        std::cout << string << std::endl;
+        // Get Client 2 name
+
+    }
+
+
+    client1.sendMessage("Hello c1");
+    client2.sendMessage("Hello c2");
+
+
+    client1.closeConnection();
+    client2.closeConnection();
+
 }
 
 
