@@ -10,10 +10,88 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cd5ad994-0a10-4a20-a01d-436618bc7815" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/../Server/Makefile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/Server.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Server.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Server/cmake_install.cmake" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/client/images/teams_nations/Chelsea.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/client/images/teams_nations/M_united.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/client/images/teams_nations/Portugal.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/client/images/teams_nations/Real_Madrid.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AutomationScripts/Resize.py" beforeDir="false" afterPath="$PROJECT_DIR$/../AutomationScripts/Resize.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AutomationScripts/teams/chelsea.png" beforeDir="false" afterPath="$PROJECT_DIR$/../AutomationScripts/teams/chelsea.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AutomationScripts/teams/m.united.png" beforeDir="false" afterPath="$PROJECT_DIR$/../AutomationScripts/teams/m.united.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AutomationScripts/teams/realmadrid.png" beforeDir="false" afterPath="$PROJECT_DIR$/../AutomationScripts/teams/realmadrid.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AutomationScripts/trophies/ballondor.png" beforeDir="false" afterPath="$PROJECT_DIR$/../AutomationScripts/trophies/ballondor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../AutomationScripts/trophies/champions.png" beforeDir="false" afterPath="$PROJECT_DIR$/../AutomationScripts/trophies/champions.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Game.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/Newgame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/Newgame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/logic/GameLogic.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/logic/GameLogic.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/client/main/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/client/main/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/game.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/game.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/images/Trophies/ballondor.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/images/trophies/ballondor.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/images/Trophies/champions.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/images/trophies/champions.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/images/nations/portugal.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/images/shirts/shirto.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/images/shirts/shirto.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/images/shirts/shirtx.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/client/images/shirts/shirtx.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/images/teams/chelsea.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/images/teams/m.united.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/client/images/teams/realmadrid.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/Main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/Main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/cache-v2-6194553d088a4063f9ca.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-a67112da8622d44af18b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-0392ac0fb9c83e38816e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/index-2023-11-23T20-41-36-0862.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/target-Server-Debug-2e873f895d4b1fb8635e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-99265b04de7ada3aac9e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeCache.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeCache.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeCXXCompiler.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_C.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeDetermineCompilerABI_CXX.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CMakeSystem.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/3.26.4/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/CMakeDirectoryInformation.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Makefile.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Makefile2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/DependInfo.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/GoogleTests/test_board.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/GoogleTests/test_board.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/GoogleTests/test_database.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/GoogleTests/test_footballer.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/GoogleTests/test_footballer.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/GoogleTests/test_game.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/GoogleTests/test_game.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/Server.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/Server.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/build.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/cmake_clean.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/compiler_depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/compiler_depend.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/depend.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/flags.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/link.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/progress.make" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/communication/communication.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/communication/communication.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/database/database.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/database/database.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/database/footballer.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/database/footballer.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/gamelogic/board.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/gamelogic/board.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/gamelogic/game.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/gamelogic/game.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/gamelogic/gameRunner.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/gamelogic/gameRunner.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/player/player.cpp.o" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/Server.dir/src/player/player.cpp.o.d" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/clion-environment.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/CMakeFiles/progress.marks" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Server/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" afterPath="$PROJECT_DIR$/../Server/cmake-build-debug/Testing/Temporary/LastTest.log" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +140,7 @@
     "git-widget-placeholder": "devel",
     "ignore.virus.scanning.warn.message": "true",
     "last_directory_selection": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/java/com/client",
-    "last_opened_file_path": "/home/bruno/Master/PSW/a01_1/Client/src/main/java/com/client/images",
+    "last_opened_file_path": "C:/Users/bruco/OneDrive - Universidade do Porto/Professional Life/Code/Windows/Java/PSW/a01_1/Client/src/main/resources/com/client/images/Trophies",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -78,18 +156,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/java/com/client/images" />
-      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\installationPackages" />
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\Trophies" />
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\teams" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\shirts" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\images" />
-      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client" />
+      <recent name="$PROJECT_DIR$/src/main/java/com/client/images" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\teams" />
+      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\nations" />
       <recent name="$PROJECT_DIR$/READMEImages" />
       <recent name="$PROJECT_DIR$/src/main/java/com/client/gui/defs" />
-      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\nations" />
       <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images\Trophies" />
-      <recent name="C:\Users\bruco\OneDrive - Universidade do Porto\Professional Life\Code\Windows\Java\PSW\a01_1\Client\src\main\resources\com\client\images" />
     </key>
     <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
       <recent name="com.client" />
@@ -101,8 +179,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.Client">
-    <configuration name="Client" type="Application" factoryName="Application">
-      <option name="MAIN_CLASS_NAME" value="com.client.main.Client" />
+    <configuration name="Client" type="Application" factoryName="Application" singleton="false">
+      <option name="MAIN_CLASS_NAME" value="com.client.main.Main" />
       <module name="Client" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -112,6 +190,10 @@
       <option name="JAR_PATH" value="$PROJECT_DIR$/out/artifacts/Client_jar/Client.jar" />
       <method v="2" />
     </configuration>
+    <list>
+      <item itemvalue="Application.Client" />
+      <item itemvalue="JAR Application.Client.jar" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="JAR Application.Client.jar" />

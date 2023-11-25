@@ -12,7 +12,10 @@ def resize_images(input_dir, output_dir, new_size):
     # Loop through each file in the directory
     for file in files:
         # Check if the file is an image
-        if file.lower().endswith(('.png', '.jpg', '.jpeg', '.gif', '.bmp')):
+        if file.lower().endswith(('.jpg', '.jpeg', '.gif', '.bmp')):
+            print("Images with different extension")
+            break
+        if file.lower().endswith(('.png')):
             # Construct the full path to the input image
             input_path = os.path.join(input_dir, file)
 
@@ -38,13 +41,11 @@ if __name__ == "__main__":
     output_directory = ""
 
     # Specify the new size (width, height) for the images
-    new_size = (300, 300)  # Adjust the size as needed
+    new_size = (170, 115)  # Adjust the size as needed
 
     # Call the function to resize images
-    resize_images("trophies", "trophies2.0", new_size)
+    resize_images("teams_nations_old", "teams_nations", new_size)
 
     # Call the function to resize images
-    resize_images("nations", "nations2.0", new_size)
+    resize_images("trophies_old", "trophies", new_size)
 
-    # Call the function to resize images
-    resize_images("teams", "teams2.0", new_size)

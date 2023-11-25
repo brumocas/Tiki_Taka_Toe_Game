@@ -57,12 +57,12 @@
                               </ImageView>
                               <HBox layoutX="75.0" layoutY="130.0" prefHeight="60.0" prefWidth="56.0" styleClass="text_box" stylesheets="@game.css">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                                    <Text fx:id="scoreLeft" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
                                  </children>
                               </HBox>
                               <HBox layoutX="310.0" layoutY="130.0" prefHeight="60.0" prefWidth="56.0" styleClass="text_box" stylesheets="@game.css">
                                  <children>
-                                    <Text strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
+                                    <Text fx:id="scoreRight" strokeType="OUTSIDE" strokeWidth="0.0" text="0" />
                                  </children>
                                  <opaqueInsets>
                                     <Insets />
@@ -73,19 +73,19 @@
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                            <children>
-                              <Label fx:id="param4" layoutX="140.0" layoutY="135.0" styleClass="text" text="Param4" />
-                              <ImageView fx:id="image4" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param4" alignment="CENTER" layoutX="8.0" layoutY="135.0" prefHeight="51.0" prefWidth="433.0" styleClass="text" text="Param4" textAlignment="CENTER" />
+                              <ImageView fx:id="image4" fitHeight="115.0" fitWidth="170.0" layoutX="125.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams/chelsea.png" />
+                                    <Image url="@images/teams_nations/chelsea.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                            <children>
-                              <Label fx:id="param5" layoutX="130.0" layoutY="135.0" styleClass="text" text="Param5" />
-                              <ImageView fx:id="image5" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param5" alignment="CENTER" layoutX="4.0" layoutY="135.0" prefHeight="51.0" prefWidth="433.0" styleClass="text" text="Param5" textAlignment="CENTER" />
+                              <ImageView fx:id="image5" fitHeight="115.0" fitWidth="170.0" layoutX="125.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams/realmadrid.png" />
+                                    <Image url="@images/teams_nations/Real_Madrid.png" />
                                  </image>
                                  <viewport>
                                     <Rectangle2D />
@@ -94,19 +94,19 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                            <children>
-                              <Label fx:id="param6" alignment="CENTER" contentDisplay="CENTER" layoutX="130.0" layoutY="135.0" styleClass="text" text="Param6" />
-                              <ImageView fx:id="image6" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param6" alignment="CENTER" layoutX="4.0" layoutY="135.0" prefHeight="51.0" prefWidth="429.0" styleClass="text" text="Param6" textAlignment="CENTER" />
+                              <ImageView fx:id="image6" fitHeight="115.0" fitWidth="170.0" layoutX="125.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams/realmadrid.png" />
+                                    <Image url="@images/teams_nations/Real_Madrid.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                            <children>
-                              <Label fx:id="param1" layoutX="130.0" layoutY="135.0" styleClass="text" text="Param1" />
-                              <ImageView fx:id="image1" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param1" alignment="CENTER" layoutX="-4.0" layoutY="135.0" prefHeight="51.0" prefWidth="449.0" styleClass="text" text="Param1" textAlignment="CENTER" />
+                              <ImageView fx:id="image1" fitHeight="115.0" fitWidth="170.0" layoutX="125.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams/realmadrid.png" />
+                                    <Image url="@images/teams_nations/Real_Madrid.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
@@ -139,10 +139,10 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                            <children>
-                              <Label fx:id="param2" layoutX="130.0" layoutY="135.0" styleClass="text" text="Param2" />
-                              <ImageView fx:id="image2" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param2" alignment="CENTER" layoutY="135.0" prefHeight="51.0" prefWidth="439.0" styleClass="text" text="Param2" textAlignment="CENTER" />
+                              <ImageView fx:id="image2" fitHeight="115.0" fitWidth="170.0" layoutX="125.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams/realmadrid.png" />
+                                    <Image url="@images/teams_nations/Real_Madrid.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
@@ -175,10 +175,10 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
                            <children>
-                              <Label fx:id="param3" layoutX="130.0" layoutY="135.0" styleClass="text" text="Param3" />
-                              <ImageView fx:id="image3" fitHeight="115.0" fitWidth="170.0" layoutX="160.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
+                              <Label fx:id="param3" alignment="CENTER" layoutY="135.0" prefHeight="51.0" prefWidth="443.0" styleClass="text" text="Param3" textAlignment="CENTER" />
+                              <ImageView fx:id="image3" fitHeight="115.0" fitWidth="170.0" layoutX="125.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams/realmadrid.png" />
+                                    <Image url="@images/teams_nations/Real_Madrid.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>

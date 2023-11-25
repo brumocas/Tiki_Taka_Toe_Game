@@ -1,6 +1,7 @@
 package com.client.main;
 
 
+import com.client.Gui;
 import com.client.communication.Communication;
 
 import java.io.IOException;
@@ -12,11 +13,11 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         // GUI remote Game
-        //Gui.main(args);
+        Gui.main(args);
 
 
         // CMD remote game
-        remoteCMD();
+        //remoteCMD();
 
     }
 

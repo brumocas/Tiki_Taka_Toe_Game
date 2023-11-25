@@ -13,9 +13,9 @@ public class GameLogic {
 
     public void run() {
         Vector<String> teams = new Vector<>(3);
-        teams.add("Porto");
+        teams.add("Real_Madrid");
         teams.add("Chelsea");
-        teams.add("Inter");
+        teams.add("ballondor");
 
         p1.setSymbol('o');
         p2.setSymbol('x');
@@ -27,16 +27,6 @@ public class GameLogic {
         //System.out.println();
         //board.print_char();
 
-    }
-
-    public boolean checkAnswer(Player p) {
-
-        return false;
-    }
-
-    public boolean checkWinner(Player p) {
-
-        return false;
     }
 
 
