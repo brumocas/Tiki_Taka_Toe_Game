@@ -23,18 +23,21 @@ int main(int argc, char **argv) {
     //RUN_ALL_TESTS();
 
     // Simple Menu
-    //runMenu();
+    runMenu();
 
-    remoteGame();
+    //remoteGame();
 
     return 0;
 }
 
 void runMenu() {
 
-    int option;
     while (true) {
+        int option;
         printMenu();
+        // Quit Main application
+        if (option == 4)
+            break;
         std::cout << "Insert option : ";
         std::cin >> option;
 
@@ -58,10 +61,6 @@ void runMenu() {
                 std::cout << "Invalid option\n";
                 break;
         }
-
-        // Quit Main application
-        if (option == 4)
-            break;
 
         std::cout << std::endl;
     }

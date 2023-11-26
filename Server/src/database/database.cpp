@@ -169,7 +169,7 @@ void database::load(std::string path) {
     }
 
     // Close the file
-    inputFile.close();
+        inputFile.close();
     // Load all DB Teams
     loadTeams();
     // Load all DB Nations
@@ -182,12 +182,14 @@ std::vector<std::string> database::parseLine(std::string& line) {
     std::istringstream lineStream(line);
     std::string attribute;
 
+
     while (std::getline(lineStream, attribute, ',')) {
-        // Remove leading and trailing whitespaces
-        size_t start = attribute.find_first_not_of(" ");
-        size_t end = attribute.find_last_not_of(" ");
-        std::string parsed_string = attribute.substr(start, end - start + 1);
-        parsed.push_back(parsed_string);
+        // Remove leading whitespace
+        if (!attribute.empty() && attribute[0] == ' ') {
+            attribute = attribute.substr(1);
+        }
+
+        parsed.push_back(attribute);
     }
 
     return parsed;

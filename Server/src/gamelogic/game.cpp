@@ -187,4 +187,18 @@ namespace gamelogic {
         return false;
     }
 
+    std::vector<std::string> game::getParams() {
+        std::vector<std::string> params;
+
+        for (int i = 0; i < 3; ++i) {
+            params.push_back(board.getUpParams(i));
+        }
+
+        for (int i = 0; i < 3; ++i) {
+            params.push_back(board.getLeftParams(i));
+        }
+
+        return params;
+    }
+
 }

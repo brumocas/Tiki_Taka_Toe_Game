@@ -6,6 +6,7 @@
 #define SERVER_GAMERUNNER_H
 
 #include "game.h"
+#include "../communication/communication.h"
 
 class gameRunner {
 private:
@@ -13,10 +14,16 @@ private:
     bool running = false;
     gamelogic::game game;
 public:
+    void startGame();
     void runCMD();
     void runRemote();
-    void startGame();
     bool isGameInProgress();
-};;
+    void connectRemote(Communication client1, Communication client2);
+    void exchangeNames(Communication client1, Communication client2);
+    void sendParams(Communication client1, Communication client2);
+    std::vector<std::string> getPlay(Communication client);
+};
+
+
 
 #endif //SERVER_GAMERUNNER_H

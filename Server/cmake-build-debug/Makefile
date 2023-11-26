@@ -225,29 +225,29 @@ GoogleTests/test_game.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/GoogleTests/test_game.cpp.s
 .PHONY : GoogleTests/test_game.cpp.s
 
-Server.o: Server.cpp.o
-.PHONY : Server.o
+Main.o: Main.cpp.o
+.PHONY : Main.o
 
 # target to build an object file
-Server.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server.cpp.o
-.PHONY : Server.cpp.o
+Main.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Main.cpp.o
+.PHONY : Main.cpp.o
 
-Server.i: Server.cpp.i
-.PHONY : Server.i
+Main.i: Main.cpp.i
+.PHONY : Main.i
 
 # target to preprocess a source file
-Server.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server.cpp.i
-.PHONY : Server.cpp.i
+Main.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Main.cpp.i
+.PHONY : Main.cpp.i
 
-Server.s: Server.cpp.s
-.PHONY : Server.s
+Main.s: Main.cpp.s
+.PHONY : Main.s
 
 # target to generate assembly for a file
-Server.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Server.cpp.s
-.PHONY : Server.cpp.s
+Main.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/Main.cpp.s
+.PHONY : Main.cpp.s
 
 src/communication/communication.o: src/communication/communication.cpp.o
 .PHONY : src/communication/communication.o
@@ -272,6 +272,30 @@ src/communication/communication.s: src/communication/communication.cpp.s
 src/communication/communication.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/communication/communication.cpp.s
 .PHONY : src/communication/communication.cpp.s
+
+src/communication/server.o: src/communication/server.cpp.o
+.PHONY : src/communication/server.o
+
+# target to build an object file
+src/communication/server.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/communication/server.cpp.o
+.PHONY : src/communication/server.cpp.o
+
+src/communication/server.i: src/communication/server.cpp.i
+.PHONY : src/communication/server.i
+
+# target to preprocess a source file
+src/communication/server.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/communication/server.cpp.i
+.PHONY : src/communication/server.cpp.i
+
+src/communication/server.s: src/communication/server.cpp.s
+.PHONY : src/communication/server.s
+
+# target to generate assembly for a file
+src/communication/server.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Server.dir/build.make CMakeFiles/Server.dir/src/communication/server.cpp.s
+.PHONY : src/communication/server.cpp.s
 
 src/database/database.o: src/database/database.cpp.o
 .PHONY : src/database/database.o
@@ -438,12 +462,15 @@ help:
 	@echo "... GoogleTests/test_game.o"
 	@echo "... GoogleTests/test_game.i"
 	@echo "... GoogleTests/test_game.s"
-	@echo "... Server.o"
-	@echo "... Server.i"
-	@echo "... Server.s"
+	@echo "... Main.o"
+	@echo "... Main.i"
+	@echo "... Main.s"
 	@echo "... src/communication/communication.o"
 	@echo "... src/communication/communication.i"
 	@echo "... src/communication/communication.s"
+	@echo "... src/communication/server.o"
+	@echo "... src/communication/server.i"
+	@echo "... src/communication/server.s"
 	@echo "... src/database/database.o"
 	@echo "... src/database/database.i"
 	@echo "... src/database/database.s"

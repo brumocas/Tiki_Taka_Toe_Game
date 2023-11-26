@@ -94,13 +94,19 @@
 		<Unit filename="/home/bruno/Master/PSW/a01_1/Server/GoogleTests/test_game.cpp">
 			<Option target="Server"/>
 		</Unit>
-		<Unit filename="/home/bruno/Master/PSW/a01_1/Server/Server.cpp">
+		<Unit filename="/home/bruno/Master/PSW/a01_1/Server/Main.cpp">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/bruno/Master/PSW/a01_1/Server/src/communication/communication.cpp">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/bruno/Master/PSW/a01_1/Server/src/communication/communication.h">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/bruno/Master/PSW/a01_1/Server/src/communication/server.cpp">
+			<Option target="Server"/>
+		</Unit>
+		<Unit filename="/home/bruno/Master/PSW/a01_1/Server/src/communication/server.h">
 			<Option target="Server"/>
 		</Unit>
 		<Unit filename="/home/bruno/Master/PSW/a01_1/Server/src/database/database.cpp">

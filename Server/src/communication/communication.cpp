@@ -8,13 +8,7 @@ Communication::Communication(int clientSocket) : clientSocket(clientSocket) {
 
 }
 
-Communication::~Communication() {
-    if (clientSocket != -1) {
-        close(clientSocket);
-    }
-}
-
-void Communication::sendMessage(std::string& message) {
+void Communication::sendMessage(std::string message) {
     std::string messageWithNewline = message.append("\n");
     size_t bytes = 0;
     if ((bytes = send(clientSocket, messageWithNewline.c_str(), messageWithNewline.length(), 0)) <= 0) {
@@ -42,4 +36,10 @@ void Communication::addHeader(std::string header,std::string message) {
 
 std::string Communication::extractHeader(std::string message) {
     return std::string();
+}
+
+// Definition of the == operator as a member function
+bool Communication::operator==(const Communication& other) const {
+    // Compare based on the equality of clientSocket values
+    return this->clientSocket == other.clientSocket;
 }

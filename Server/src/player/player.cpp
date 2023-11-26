@@ -26,7 +26,7 @@ namespace gamelogic{
     }
 
     void Player::setPlayerName(std::string PlayerName){
-        this->playerName = playerName;
+        this->playerName = PlayerName;
     }
 
     int Player::getPlayerGuessX(){

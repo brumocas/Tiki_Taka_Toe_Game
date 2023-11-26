@@ -69,19 +69,19 @@ include CMakeFiles/Server.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Server.dir/flags.make
 
-CMakeFiles/Server.dir/Server.cpp.o: CMakeFiles/Server.dir/flags.make
-CMakeFiles/Server.dir/Server.cpp.o: /home/bruno/Master/PSW/a01_1/Server/Server.cpp
-CMakeFiles/Server.dir/Server.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Master/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Server.dir/Server.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/Server.cpp.o -MF CMakeFiles/Server.dir/Server.cpp.o.d -o CMakeFiles/Server.dir/Server.cpp.o -c /home/bruno/Master/PSW/a01_1/Server/Server.cpp
+CMakeFiles/Server.dir/Main.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/Main.cpp.o: /home/bruno/Master/PSW/a01_1/Server/Main.cpp
+CMakeFiles/Server.dir/Main.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Master/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Server.dir/Main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/Main.cpp.o -MF CMakeFiles/Server.dir/Main.cpp.o.d -o CMakeFiles/Server.dir/Main.cpp.o -c /home/bruno/Master/PSW/a01_1/Server/Main.cpp
 
-CMakeFiles/Server.dir/Server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Server.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Master/PSW/a01_1/Server/Server.cpp > CMakeFiles/Server.dir/Server.cpp.i
+CMakeFiles/Server.dir/Main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/Main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Master/PSW/a01_1/Server/Main.cpp > CMakeFiles/Server.dir/Main.cpp.i
 
-CMakeFiles/Server.dir/Server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Server.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Master/PSW/a01_1/Server/Server.cpp -o CMakeFiles/Server.dir/Server.cpp.s
+CMakeFiles/Server.dir/Main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/Main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Master/PSW/a01_1/Server/Main.cpp -o CMakeFiles/Server.dir/Main.cpp.s
 
 CMakeFiles/Server.dir/src/database/database.cpp.o: CMakeFiles/Server.dir/flags.make
 CMakeFiles/Server.dir/src/database/database.cpp.o: /home/bruno/Master/PSW/a01_1/Server/src/database/database.cpp
@@ -237,9 +237,23 @@ CMakeFiles/Server.dir/GoogleTests/test_game.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/GoogleTests/test_game.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Master/PSW/a01_1/Server/GoogleTests/test_game.cpp -o CMakeFiles/Server.dir/GoogleTests/test_game.cpp.s
 
+CMakeFiles/Server.dir/src/communication/server.cpp.o: CMakeFiles/Server.dir/flags.make
+CMakeFiles/Server.dir/src/communication/server.cpp.o: /home/bruno/Master/PSW/a01_1/Server/src/communication/server.cpp
+CMakeFiles/Server.dir/src/communication/server.cpp.o: CMakeFiles/Server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/bruno/Master/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Building CXX object CMakeFiles/Server.dir/src/communication/server.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/Server.dir/src/communication/server.cpp.o -MF CMakeFiles/Server.dir/src/communication/server.cpp.o.d -o CMakeFiles/Server.dir/src/communication/server.cpp.o -c /home/bruno/Master/PSW/a01_1/Server/src/communication/server.cpp
+
+CMakeFiles/Server.dir/src/communication/server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Server.dir/src/communication/server.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/bruno/Master/PSW/a01_1/Server/src/communication/server.cpp > CMakeFiles/Server.dir/src/communication/server.cpp.i
+
+CMakeFiles/Server.dir/src/communication/server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Server.dir/src/communication/server.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/bruno/Master/PSW/a01_1/Server/src/communication/server.cpp -o CMakeFiles/Server.dir/src/communication/server.cpp.s
+
 # Object files for target Server
 Server_OBJECTS = \
-"CMakeFiles/Server.dir/Server.cpp.o" \
+"CMakeFiles/Server.dir/Main.cpp.o" \
 "CMakeFiles/Server.dir/src/database/database.cpp.o" \
 "CMakeFiles/Server.dir/src/database/footballer.cpp.o" \
 "CMakeFiles/Server.dir/src/communication/communication.cpp.o" \
@@ -250,12 +264,13 @@ Server_OBJECTS = \
 "CMakeFiles/Server.dir/GoogleTests/test_footballer.cpp.o" \
 "CMakeFiles/Server.dir/GoogleTests/test_board.cpp.o" \
 "CMakeFiles/Server.dir/src/gamelogic/gameRunner.cpp.o" \
-"CMakeFiles/Server.dir/GoogleTests/test_game.cpp.o"
+"CMakeFiles/Server.dir/GoogleTests/test_game.cpp.o" \
+"CMakeFiles/Server.dir/src/communication/server.cpp.o"
 
 # External object files for target Server
 Server_EXTERNAL_OBJECTS =
 
-Server: CMakeFiles/Server.dir/Server.cpp.o
+Server: CMakeFiles/Server.dir/Main.cpp.o
 Server: CMakeFiles/Server.dir/src/database/database.cpp.o
 Server: CMakeFiles/Server.dir/src/database/footballer.cpp.o
 Server: CMakeFiles/Server.dir/src/communication/communication.cpp.o
@@ -267,10 +282,11 @@ Server: CMakeFiles/Server.dir/GoogleTests/test_footballer.cpp.o
 Server: CMakeFiles/Server.dir/GoogleTests/test_board.cpp.o
 Server: CMakeFiles/Server.dir/src/gamelogic/gameRunner.cpp.o
 Server: CMakeFiles/Server.dir/GoogleTests/test_game.cpp.o
+Server: CMakeFiles/Server.dir/src/communication/server.cpp.o
 Server: CMakeFiles/Server.dir/build.make
 Server: /usr/lib/x86_64-linux-gnu/libgtest.a
 Server: CMakeFiles/Server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bruno/Master/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Linking CXX executable Server"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/bruno/Master/PSW/a01_1/Server/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Linking CXX executable Server"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/Server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

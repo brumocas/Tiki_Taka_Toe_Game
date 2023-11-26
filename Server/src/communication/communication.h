@@ -16,12 +16,15 @@
 class Communication {
 public:
     Communication(int clientSocket);
-    ~Communication();
-    void sendMessage(std::string& message);
+    void sendMessage(std::string message);
     std::string receiveMessage();
     void addHeader(std::string header ,std::string message);
     std::string extractHeader(std::string message);
     void closeConnection();
+
+    // Overloading the == operator as a member function
+    bool operator==(const Communication& other) const;
+
 private:
     int clientSocket;
 };
