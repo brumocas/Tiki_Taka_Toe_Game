@@ -1,7 +1,6 @@
 package com.client.main;
 
 
-import com.client.Gui;
 import com.client.communication.Communication;
 import com.client.logic.Board;
 import com.client.player.Player;
@@ -12,7 +11,7 @@ import java.util.Scanner;
 import java.util.Vector;
 
 
-public class Main {
+public class Client {
 
     public static void main(String[] args) throws IOException {
 
