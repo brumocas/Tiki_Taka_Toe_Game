@@ -134,7 +134,7 @@ Fernando, Torres, 1984, 03, Spain, 1, 1, 0, 1, Atletico_Madrid Liverpool Chelsea
 David, Villa, 1981, 12, Spain, 1, 1, 0, 1, Barcelona Atletico_Madrid,
 David, Silva, 1986, 01, Spain, 1, 0, 0, 1, Manchester_City,
 Diego, Forlan, 1979, 05, Uruguay, 0, 0, 0, 0, Manchester_United Atletico_Madrid Inter,
-Didier, Drogba, 1978, 03, Ivory_Coast, 0, 1, 0, 0, Chelsea
+Didier, Drogba, 1978, 03, Ivory_Coast, 0, 1, 0, 0, Chelsea 
 Gerard, Pique, 1987, 02, Spain, 1, 1, 0, 1, Manchester_United Barcelona,
 Wesley, Sneijder, 1984, 06, Netherlands, 0, 1, 0, 0, Real_Madrid Inter,
 Radamel, Falcao, 1986, 02, Colombia, 0, 0, 0, 0, Porto Atletico_Madrid Manchester_United Chelsea,
