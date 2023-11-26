@@ -68,7 +68,7 @@ void runMenu() {
 
 void databaseMenu() {
     database db;
-    db.load("../src/database/files/game_test_database.txt");
+    db.load("../src/database/files/default_database.txt");
     int option;
     while (true){
         std::cout << std::endl;

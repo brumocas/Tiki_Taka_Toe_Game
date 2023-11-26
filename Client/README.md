@@ -36,13 +36,8 @@ InstallationPackages directory from the project by choosing the `lib` subfolder
    ```bash
    git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
    cd Client
-
-2. Open with IntelliJ IDEA the `/Client` directory from the cloned project
-3. Go to `file` --> `Project Structure...` and add the openJdk-21 Package available in the
-   InstallationPackages directory from the project by choosing the `lib` subfolder
-   ![img_1.png](READMEImages/img_1.png)
-   ![img.png](READMEImages/img.png)
-4. Run the `Client.jar` file from  `/out/artifacts/Client_jar` project directory
+   
+2. Run the `Client.jar` file from  `/out/artifacts/Client.jar` project directory
 ![img.png](READMEImages/img5.png)
 
 
