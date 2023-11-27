@@ -6,6 +6,7 @@
 #include <algorithm>
 #include <fstream>
 #include <sstream>
+#include <algorithm>
 #include "database.h"
 
 
@@ -213,9 +214,14 @@ int database::size() {
 }
 
 void database::loadTeams() {
+
+
     for (auto & f : db) {
         std::vector<std::string> career_teams = f.getCareerTeams();
         for (auto & t : career_teams) {
+            // Check if the vector does not contain the string
+            auto it = std::find(teams.begin(), teams.end(), t);
+            if (it == teams.end())
             teams.push_back(t);
         }
     }
@@ -223,6 +229,9 @@ void database::loadTeams() {
 
 void database::loadNations() {
     for (auto & f : db) {
+        // Check if the vector does not contain the string
+        auto it = std::find(nations.begin(), nations.end(), f.getNationality());
+        if (it == nations.end())
         nations.push_back(f.getNationality());
     }
 }
@@ -253,6 +262,22 @@ std::vector<std::string> database::getTeams() {
 
 std::vector<std::string> database::getNations() {
     return nations;
+}
+
+void database::printTeams() {
+    std::cout << std::endl;
+    std::cout << "DB Teams: " << std::endl;
+    for (int i = 0; i < teams.size(); ++i) {
+        std::cout << teams[i] << std::endl;
+    }
+}
+
+void database::printNations() {
+    std::cout << std::endl;
+    std::cout << "DB Nations: " << std::endl;
+    for (int i = 0; i < nations.size(); ++i) {
+        std::cout << nations[i] << std::endl;
+    }
 }
 
 

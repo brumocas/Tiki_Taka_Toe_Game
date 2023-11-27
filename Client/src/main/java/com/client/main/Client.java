@@ -17,11 +17,11 @@ public class Client {
     public static void main(String[] args) throws IOException {
 
         // GUI remote Game
-        Gui.main(args);
+        //Gui.main(args);
 
 
         // CMD remote game
-        //remoteCMD();
+        remoteCMD();
 
     }
 
@@ -31,7 +31,7 @@ public class Client {
         Scanner scanner = new Scanner(System.in);
         try {
             Communication client = new Communication();
-            client.connectToServer("localhost", 8081);
+            client.connectToServer("localhost", 8080);
 
             // Establish pins connection and receive bool for host or hosted
             if (client.connectRemote())

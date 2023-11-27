@@ -37,6 +37,10 @@ public:
     bool searchParams(parameters parameter, bool param);
     // Print Database for debug
     void print();
+    // Print Teams for debug
+    void printTeams();
+    // Print Teams for debug
+    void printNations();
     // Load Database line by line
     void load(std::string path);
     // Function to parse lines

@@ -164,8 +164,7 @@ void gameRunner::runRemote() {
         player2.setPlayerGuessCords(std::stoi(packet[0]), std::stoi(packet[1]));
         player2.setFootballerGuessName(packet[2]);
         player2.setFootballerGuessSurname(packet[3]);
-        std::cout << packet[0] + "-" + packet[1] + "-" + packet[2] +
-                     "-" + packet[3] << std::endl;
+
         // Check guess
         if (game.checkAnswer(player2)) {
             // Correct send response

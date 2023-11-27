@@ -75,7 +75,9 @@ void databaseMenu() {
         std::cout << "/----Database Menu----/\n";
         std::cout << "Print Database (1)\n";
         std::cout << "Search Player (2)\n";
-        std::cout << "Go Back (3)\n";
+        std::cout << "Print Teams (3)\n";
+        std::cout << "Print Nations (4)\n";
+        std::cout << "Go Back (5)\n";
         std::cout << "Insert option : ";
         std::cin >> option;
 
@@ -89,6 +91,14 @@ void databaseMenu() {
                 break;
             }
             case 3:{
+                db.printTeams();
+                break;
+            }
+            case 4:{
+                db.printNations();
+                break;
+            }
+            case 5:{
                 return;
             }
             default:
