@@ -12,9 +12,9 @@ It communicates with the server using the TCP/IP transport protocol to exchange 
 - Sends and receives updates from the server regarding the game state.
 
 ## Requirements
-- Windows OS (it runs on linux, but with some deformations in the GUI, you can try it, but we recommend Windows OS )
-- Java Development Kit (JDK) installed on your system.
-- IntelliJ IDEA to avoid using terminal to run the application
+- Windows OS. (it runs on linux, but with some deformations in the GUI, you can try it, but we recommend Windows OS )
+- Java Development Kit (JDK) installed on your system. 
+- IntelliJ IDEA to avoid using the terminal to run the application. (not mandatory)
 - Tiki Taka Toe game Server running on a specified host and port.
 
 
@@ -30,7 +30,8 @@ It communicates with the server using the TCP/IP transport protocol to exchange 
 InstallationPackages directory from the project by choosing the `lib` subfolder
 ![img_1.png](READMEImages/img_1.png)
 ![img.png](READMEImages/img.png)
-4. Run the `Client` main from the project
+4. TODO -> Change the IP and Port in the Programs Arguments for the
+5. Run the `Client` main from the project
 ![img_2.png](READMEImages/img_2.png)
 
 ### Option: 2 (executable jar file)

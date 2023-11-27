@@ -19,6 +19,11 @@ We used this framework to test 4 classes:
 ## How to run created Gtests
 
 ### Requirements
-1. Gtest library installed in your computer
+1. Gtest library installed in your OS.
 
-### Run Steps
+### Run Steps 
+1. In the `/Server` directory go to the `Main.cpp` file and in the `main` 
+function, uncomment the `::testing::InitGoogleTest(&argc, argv);` and
+`RUN_ALL_TESTS()` lines of code.
+2. Run the Server application as before and the Google Tests developed will 
+be performed.
