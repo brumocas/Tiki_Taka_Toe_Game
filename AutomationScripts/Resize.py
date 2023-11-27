@@ -41,11 +41,11 @@ if __name__ == "__main__":
     output_directory = ""
 
     # Specify the new size (width, height) for the images
-    new_size = (170, 115)  # Adjust the size as needed
+    new_size = (150, 115)  # Adjust the size as needed
 
     # Call the function to resize images
-    resize_images("teams_nations_old", "teams_nations", new_size)
+    resize_images("teams_nations", "teams_nations", new_size)
 
     # Call the function to resize images
-    resize_images("trophies_old", "trophies", new_size)
+    resize_images("trophies", "trophies", new_size)
 

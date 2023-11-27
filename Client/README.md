@@ -12,9 +12,11 @@ It communicates with the server using the TCP/IP transport protocol to exchange 
 - Sends and receives updates from the server regarding the game state.
 
 ## Requirements
+- Windows OS (it runs on linux, but with some deformations in the GUI, you can try it, but we recommend Windows OS )
 - Java Development Kit (JDK) installed on your system.
 - IntelliJ IDEA to avoid using terminal to run the application
 - Tiki Taka Toe game Server running on a specified host and port.
+
 
 ## How to Run
 ### Option: 1 (IDEA ide)
@@ -37,7 +39,8 @@ InstallationPackages directory from the project by choosing the `lib` subfolder
    git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
    cd Client
    
-2. Run the `Client.jar` file from  `/out/artifacts/Client.jar` project directory
+2. Run the `Client.jar` file from  `/out/artifacts` project directory
+
 ![img.png](READMEImages/img5.png)
 
 

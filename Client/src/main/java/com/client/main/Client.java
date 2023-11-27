@@ -1,6 +1,7 @@
 package com.client.main;
 
 
+import com.client.Gui;
 import com.client.communication.Communication;
 import com.client.logic.Board;
 import com.client.player.Player;
@@ -16,11 +17,11 @@ public class Client {
     public static void main(String[] args) throws IOException {
 
         // GUI remote Game
-        //Gui.main(args);
+        Gui.main(args);
 
 
         // CMD remote game
-        remoteCMD();
+        //remoteCMD();
 
     }
 
