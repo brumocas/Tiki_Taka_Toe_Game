@@ -1,0 +1,3 @@
+/home/fmesquita/PSW_Game/a01_1/Server/cmake-build-debug/CMakeFiles/Server.dir
+/home/fmesquita/PSW_Game/a01_1/Server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/fmesquita/PSW_Game/a01_1/Server/cmake-build-debug/CMakeFiles/rebuild_cache.dir
