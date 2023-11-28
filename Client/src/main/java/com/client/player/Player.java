@@ -1,6 +1,5 @@
 package com.client.player;
 
-import org.controlsfx.control.tableview2.filter.filtereditor.SouthFilter;
 
 public class Player {
      private String name;

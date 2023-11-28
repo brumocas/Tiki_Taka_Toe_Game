@@ -24,6 +24,7 @@ namespace gamelogic {
         game(std::string db_path);
         void setParams(std::string param1, std::string param2, std::string param3,
                        std::string param4, std::string param5, std::string param6);
+        std::vector<std::string> getParams();
         bool checkAnswer(gamelogic::Player player);
         bool checkFootballerGuess(gamelogic::Player player);
         bool checkParamsGuess(gamelogic::Player player);

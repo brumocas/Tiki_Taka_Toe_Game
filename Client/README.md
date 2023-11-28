@@ -12,24 +12,37 @@ It communicates with the server using the TCP/IP transport protocol to exchange 
 - Sends and receives updates from the server regarding the game state.
 
 ## Requirements
-- Java Development Kit (JDK) installed on your system.
-- IntelliJ IDEA to avoid using terminal to run the application
+- Windows OS. (it runs on linux, but with some deformations in the GUI, you can try it, but we recommend Windows OS )
+- Java Development Kit (JDK) installed on your system. 
+- IntelliJ IDEA to avoid using the terminal to run the application. (not mandatory)
 - Tiki Taka Toe game Server running on a specified host and port.
 
+
 ## How to Run
+### Option: 1 (IDEA ide)
 1. Clone this repository to your local machine.
    ```bash
    git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
    cd Client
 
-2. Open with IntelliJ IDEA the `Client` directory from the cloned project
+2. Open with IntelliJ IDEA the `/Client` directory from the cloned project
 3. Go to `file` --> `Project Structure...` and add the openJdk-21 Package available in the 
 InstallationPackages directory from the project by choosing the `lib` subfolder
-![img_1.png](img_1.png)
-![img.png](img.png)
-4. Run the `Client` main from the project
-![img_2.png](img_2.png)
+![img_1.png](READMEImages/img_1.png)
+![img.png](READMEImages/img.png)
+4. TODO -> Change the IP and Port in the Programs Arguments for the
+5. Run the `Client` main from the project
+![img_2.png](READMEImages/img_2.png)
 
+### Option: 2 (executable jar file)
+1. Clone this repository to your local machine.
+   ```bash
+   git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
+   cd Client
+   
+2. Run the `Client.jar` file from  `/out/artifacts` project directory
+
+![img.png](READMEImages/img5.png)
 
 
 

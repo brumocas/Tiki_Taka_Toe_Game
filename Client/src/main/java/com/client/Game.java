@@ -21,8 +21,11 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
+
+import static javafx.geometry.Pos.CENTER;
 
 public class Game implements Initializable {
 
@@ -30,10 +33,16 @@ public class Game implements Initializable {
     private Text timer;
     @FXML
     private Label turn;
+    @FXML
+    private Text scoreLeft;
+    @FXML
+    private Text scoreRight;
+
     private int timer_value = 30;
     private GameLogic game = new GameLogic();
-    private boolean your_turn ;
+    private boolean your_turn;
     private boolean player_host;
+
     @FXML
     private Label param1;
     @FXML
@@ -62,38 +71,25 @@ public class Game implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         // See if the player is the host or the hosted
-        if (game.p1.getInGame()){
+        if (game.p1.getInGame()) {
             player_host = game.p1.getInGame();
             your_turn = true;
-        } else if (!game.p2.getInGame()){
+        } else if (game.p2.getInGame()) {
             player_host = !game.p2.getInGame();
-            your_turn = false;
+            your_turn = true;
         }
 
         game.run();
 
+        //Initialize teams/params of the board and images
+        updateParamsTeams();
 
-        //TODO: Initialize teams/params of the board and images
-        param1.setText(game.board.getUpparams(0));
-        param1.setAlignment(Pos.CENTER);
-        param2.setText(game.board.getUpparams(1));
-        param3.setText(game.board.getUpparams(2));
-
-        param4.setText(game.board.getLeftparams(0));
-        param5.setText(game.board.getLeftparams(1));
-        param6.setText(game.board.getLeftparams(2));
-
-        Image image = new Image("file:src/main/resources/com/client/images/teams/chelsea.png");
-        image1.setImage(image);
-        image1.setFitWidth(170);
-        image1.setFitHeight(115 );
 
         // Manage chat parameters
         textarea.setEditable(false);
-        textarea.appendText("Chat :\n");
+        textarea.appendText("/------------------------------------------------------------------------------------" +
+                "----------Chat----------------------------------------------------------------------:\n");
     }
-
-
 
     public void setGame(GameLogic game) {
         // Pass game object from the previous scene
@@ -103,6 +99,7 @@ public class Game implements Initializable {
         // Host plays always first
         if (player_host) {
             // Client host type
+            turn.setText("Your turn :");
             startTimer();
         } else {
             // Client hosted type
@@ -111,9 +108,78 @@ public class Game implements Initializable {
         }
     }
 
-    public Player getGuiPlayer(){
+    public Player getGuiPlayer() {
         return game.p1.getInGame() ? game.p1 : game.p2;
     }
+
+
+    //-------------------Handle Chat--------------------------//
+    @FXML
+    private TextField prompt;
+    @FXML
+    private TextArea textarea;
+
+    @FXML
+    void getMessage(KeyEvent event) {
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            String message = prompt.getText();
+            textarea.appendText(getGuiPlayer().getName() + " : " + message + "\n");
+            prompt.setText("");
+            // TODO: Sent received message to the server
+
+        }
+    }
+
+
+    //------------------- Aux Functions----------------------//
+
+    // Update all new params and images
+    void updateParamsTeams() {
+        // Update labels
+        changeParams(param1, game.board.getUpparams(0));
+        changeParams(param2, game.board.getUpparams(1));
+        changeParams(param3, game.board.getUpparams(2));
+        changeParams(param4, game.board.getLeftparams(0));
+        changeParams(param5, game.board.getLeftparams(1));
+        changeParams(param6, game.board.getLeftparams(2));
+
+        // Update Images
+        changeImage(image1, getParamPath(game.board.getUpparams(0)));
+        changeImage(image2, getParamPath(game.board.getUpparams(1)));
+        changeImage(image3, getParamPath(game.board.getUpparams(2)));
+        changeImage(image4, getParamPath(game.board.getLeftparams(0)));
+        changeImage(image5, getParamPath(game.board.getLeftparams(1)));
+        changeImage(image6, getParamPath(game.board.getLeftparams(2)));
+    }
+
+    // Change Params from scene
+    void changeParams(Label label, String new_param) {
+        label.setText(new_param);
+        label.setAlignment(CENTER);
+    }
+
+    // Change images from Scene
+    void changeImage(ImageView image, String path) {
+        Image image_aux = new Image(path);
+        image.setImage(image_aux);
+        image.setFitWidth(170);
+        image.setFitHeight(115);
+    }
+
+    // Get image path according to param
+    String getParamPath(String param) {
+        String path = "file:src/main/resources/com/client/images/";
+        switch (param) {
+            // It is not a team or nation
+            case "worldcup", "european", "ballondor", "champions" -> {
+                path = path + "trophies/" + param + ".png";
+                return path;
+            }
+        }
+        // It is a team or a nation
+        return path + "teams_nations/" + param + ".png";
+    }
+
 
     // Setting up a 30 seconds countdown timer
     public void startTimer() {
@@ -137,18 +203,18 @@ public class Game implements Initializable {
             timer_value = 30;
     }
 
-    @FXML
-    private TextField prompt;
-    @FXML
-    private TextArea textarea;
-    @FXML
-    void getMessage(KeyEvent event) {
-        if (event.getCode().equals(KeyCode.ENTER)) {
-            String message = prompt.getText();
-            textarea.appendText(getGuiPlayer().getName() + " : " + message + "\n");
-            prompt.setText("");
-            // TODO: Sent received message to the server
-        }
+    // Increase left score
+    void increaseLeftScore(){
+        int score = Integer.parseInt(scoreLeft.getText());
+        score++;
+        scoreLeft.setText(String.valueOf(score));
+    }
+
+    // Increase right score
+    void increaseRightScore(){
+        int score = Integer.parseInt(scoreRight.getText());
+        score++;
+        scoreRight.setText(String.valueOf(score));
     }
 
 }

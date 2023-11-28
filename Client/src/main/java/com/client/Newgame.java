@@ -27,7 +27,6 @@ public class Newgame implements Initializable {
 
     @FXML
     private Button goBackButton;
-
     private Scene scene;
     private Stage stage;
     private Parent root;

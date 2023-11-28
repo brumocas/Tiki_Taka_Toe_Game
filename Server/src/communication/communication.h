@@ -5,11 +5,30 @@
 #ifndef SERVER_COMMUNICATION_H
 #define SERVER_COMMUNICATION_H
 
+#include <cstring>
+#include <cstdlib>
+#include <thread>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <iostream>
+#include <stdexcept>
 
-class communication {
+class Communication {
 public:
+    Communication(int clientSocket);
+    void sendMessage(std::string message);
+    std::string receiveMessage();
+    void addHeader(std::string header ,std::string message);
+    std::string extractHeader(std::string message);
+    void closeConnection();
 
+    // Overloading the == operator as a member function
+    bool operator==(const Communication& other) const;
+
+private:
+    int clientSocket;
 };
+
 
 
 #endif //SERVER_COMMUNICATION_H
