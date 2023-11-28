@@ -62,6 +62,8 @@ public class WaitingRoom implements Initializable {
     @FXML
     public void setGameScene(ActionEvent event) throws IOException {
         // TODO: Check if connection is established between the 2 clients and then enter the game
+        // TODO :Pass Communication Class
+
         if (checkConnection()) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("game.fxml"));
             Parent root = loader.load();

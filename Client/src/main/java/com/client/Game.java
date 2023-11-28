@@ -5,11 +5,14 @@ import com.client.player.Player;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 
 import java.net.URL;
+import java.util.IllegalFormatCodePointException;
 import java.util.ResourceBundle;
 
 
@@ -29,6 +32,11 @@ import static javafx.geometry.Pos.CENTER;
 
 public class Game implements Initializable {
 
+    private GameLogic game = new GameLogic();
+    private int timer_value = 30;
+    private boolean your_turn;
+    private boolean player_host;
+
     @FXML
     private Text timer;
     @FXML
@@ -37,11 +45,6 @@ public class Game implements Initializable {
     private Text scoreLeft;
     @FXML
     private Text scoreRight;
-
-    private int timer_value = 30;
-    private GameLogic game = new GameLogic();
-    private boolean your_turn;
-    private boolean player_host;
 
     @FXML
     private Label param1;
@@ -70,47 +73,39 @@ public class Game implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // See if the player is the host or the hosted
-        if (game.p1.getInGame()) {
-            player_host = game.p1.getInGame();
-            your_turn = true;
-        } else if (game.p2.getInGame()) {
-            player_host = !game.p2.getInGame();
-            your_turn = true;
-        }
 
         game.run();
 
         //Initialize teams/params of the board and images
         updateParamsTeams();
-
-
         // Manage chat parameters
         textarea.setEditable(false);
         textarea.appendText("/------------------------------------------------------------------------------------" +
                 "----------Chat----------------------------------------------------------------------:\n");
+
+        // Create GameLogic Task Here
+
     }
 
     public void setGame(GameLogic game) {
         // Pass game object from the previous scene
         this.game = game;
 
-        // Se which opponent type is in the client (Host or Hosted)
-        // Host plays always first
-        if (player_host) {
+        // See if the player is the host or the hosted
+        if (game.p1.getInGame()) {
             // Client host type
             turn.setText("Your turn :");
             startTimer();
-        } else {
+            player_host = game.p1.getInGame();
+        } else if (game.p2.getInGame()) {
             // Client hosted type
             turn.setText("Opponent :");
             startTimer();
+            player_host = !game.p2.getInGame();
         }
+
     }
 
-    public Player getGuiPlayer() {
-        return game.p1.getInGame() ? game.p1 : game.p2;
-    }
 
 
     //-------------------Handle Chat--------------------------//
@@ -118,7 +113,6 @@ public class Game implements Initializable {
     private TextField prompt;
     @FXML
     private TextArea textarea;
-
     @FXML
     void getMessage(KeyEvent event) {
         if (event.getCode().equals(KeyCode.ENTER)) {
@@ -126,7 +120,6 @@ public class Game implements Initializable {
             textarea.appendText(getGuiPlayer().getName() + " : " + message + "\n");
             prompt.setText("");
             // TODO: Sent received message to the server
-
         }
     }
 
@@ -180,7 +173,6 @@ public class Game implements Initializable {
         return path + "teams_nations/" + param + ".png";
     }
 
-
     // Setting up a 30 seconds countdown timer
     public void startTimer() {
         timer.setText(String.valueOf(timer_value) + " sec");
@@ -203,6 +195,11 @@ public class Game implements Initializable {
             timer_value = 30;
     }
 
+    // Get the Gui Player Class
+    public Player getGuiPlayer() {
+        return game.p1.getInGame() ? game.p1 : game.p2;
+    }
+
     // Increase left score
     void increaseLeftScore(){
         int score = Integer.parseInt(scoreLeft.getText());
@@ -217,4 +214,26 @@ public class Game implements Initializable {
         scoreRight.setText(String.valueOf(score));
     }
 
+    // Change for 'X' or 'O' shirt when the client plays
+    void changeShirt(ImageView shirt,char symbol){
+        String path = "file:src/main/resources/com/client/images/";
+        if (symbol == 'O'){
+            Image image_aux = new Image(path + "/shirts/" + "shirto.png");
+            shirt.setImage(image_aux);
+        } else if (symbol == 'X'){
+            Image image_aux = new Image(path + "/shirts/" + "shirtX.png");
+            shirt.setImage(image_aux);
+        } else {
+            System.err.println("Invalid symbol passed to function");
+        }
+
+    }
+
+    // Make Text Field disappear and create Text Field
+    void removeTextField(TextField textField, Label text, String name){
+        // TODO: Implement when play is correct
+        textField.setVisible(false);
+        //text.setVisible(true);
+        //text.setText(name);
+    }
 }

@@ -69,7 +69,6 @@ public class Player {
         return this.inGame;
     }
 
-
     //print player content for debug
     public void print(){
         System.out.println("Name:" + name);
