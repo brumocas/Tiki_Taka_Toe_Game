@@ -99,7 +99,6 @@ bool gameRunner::isGameInProgress() {
 
 void gameRunner::runRemote() {
     // Create a Server
-    std::cout << "Remote game session started :)" << std::endl;
     Server gameServer(8080);
     // Open Server and wait to connect with 2 clients
     gameServer.start();

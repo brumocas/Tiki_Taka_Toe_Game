@@ -270,6 +270,7 @@ void database::printTeams() {
     for (int i = 0; i < teams.size(); ++i) {
         std::cout << teams[i] << std::endl;
     }
+    std::cout << std::endl;
 }
 
 void database::printNations() {
@@ -278,6 +279,7 @@ void database::printNations() {
     for (int i = 0; i < nations.size(); ++i) {
         std::cout << nations[i] << std::endl;
     }
+    std::cout << std::endl;
 }
 
 
