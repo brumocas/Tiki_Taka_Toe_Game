@@ -18,8 +18,8 @@ public class GameLogic {
         teams.add("Brazil");
 
         Vector<String> teams2 = new Vector<>(3);
-        teams2.add("Arsenal");
-        teams2.add("Bayern");
+        teams2.add("Juventus");
+        teams2.add("Manchester_United");
         teams2.add("Chile");
 
         p1.setSymbol('o');
