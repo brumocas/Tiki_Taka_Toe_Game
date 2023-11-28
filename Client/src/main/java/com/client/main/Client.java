@@ -2,7 +2,7 @@ package com.client.main;
 
 
 import com.client.Gui;
-import com.client.communication.Communication;
+import com.client.communication.CommunicationCMD;
 import com.client.logic.Board;
 import com.client.player.Player;
 
@@ -30,7 +30,7 @@ public class Client {
         Player p = new Player();
         Scanner scanner = new Scanner(System.in);
         try {
-            Communication client = new Communication();
+            CommunicationCMD client = new CommunicationCMD();
             client.connectToServer("localhost", 8080);
 
             // Establish pins connection and receive bool for host or hosted

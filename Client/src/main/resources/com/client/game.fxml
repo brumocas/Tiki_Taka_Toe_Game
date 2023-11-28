@@ -14,6 +14,7 @@
 <?import javafx.scene.layout.Pane?>
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" styleClass="anchor" stylesheets="@game.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.client.Game">
@@ -73,7 +74,10 @@
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                            <children>
-                              <Label fx:id="param4" alignment="CENTER" layoutX="4.0" layoutY="135.0" prefHeight="51.0" prefWidth="433.0" styleClass="text" text="Param4" textAlignment="CENTER" />
+                              <Label fx:id="param4" alignment="CENTER" cacheShape="false" layoutX="4.0" layoutY="135.0" prefHeight="51.0" prefWidth="433.0" styleClass="text" stylesheets="@game.css" text="Param4" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="31.0" />
+                                 </font></Label>
                               <ImageView fx:id="image4" fitHeight="115.0" fitWidth="150.0" layoutX="140.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/teams_nations/chelsea.png" />
@@ -112,30 +116,33 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
-                              <TextField alignment="CENTER" layoutX="107.0" layoutY="151.0" promptText="(...)" />
-                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                              <TextField fx:id="textfield1" alignment="CENTER" layoutX="107.0" layoutY="151.0" promptText="(...)" />
+                              <ImageView fx:id="shirt1" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
+                              <Label fx:id="name1" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
-                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="shirt4" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield4" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <Label fx:id="name4" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <children>
-                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="shirt7" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield7" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <Label fx:id="name7" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                            <children>
@@ -148,30 +155,33 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <children>
-                              <TextField alignment="CENTER" layoutX="117.0" layoutY="150.0" promptText="(...)" />
-                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                              <TextField fx:id="textfield2" alignment="CENTER" layoutX="117.0" layoutY="150.0" promptText="(...)" />
+                              <ImageView fx:id="shirt2" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
+                              <Label fx:id="name2" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <children>
-                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="shirt5" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield5" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <Label fx:id="name5" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" stylesheets="@game.css" GridPane.columnIndex="2" GridPane.rowIndex="3">
                            <children>
-                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
-                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                              <TextField fx:id="textfield8" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <ImageView fx:id="shirt8" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
+                              <Label fx:id="name8" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
                            <children>
@@ -184,30 +194,33 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="3" GridPane.rowIndex="1">
                            <children>
-                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="shirt3" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield3" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <Label fx:id="name3" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <children>
-                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="shirt6" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield6" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <Label fx:id="name6" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="3" GridPane.rowIndex="3">
                            <children>
-                              <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
+                              <ImageView fx:id="shirt9" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield9" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <Label fx:id="name9" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                      </children>
                   </GridPane>

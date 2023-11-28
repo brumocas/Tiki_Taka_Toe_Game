@@ -5,18 +5,14 @@ import com.client.player.Player;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
-import javafx.application.Platform;
-import javafx.concurrent.Task;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 
 
 import java.net.URL;
-import java.util.IllegalFormatCodePointException;
 import java.util.ResourceBundle;
 
 
-import javafx.geometry.Pos;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -24,18 +20,12 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
-import javafx.scene.layout.StackPane;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
 import static javafx.geometry.Pos.CENTER;
 
 public class Game implements Initializable {
-
-    private GameLogic game = new GameLogic();
-    private int timer_value = 30;
-    private boolean your_turn;
-    private boolean player_host;
 
     @FXML
     private Text timer;
@@ -45,7 +35,6 @@ public class Game implements Initializable {
     private Text scoreLeft;
     @FXML
     private Text scoreRight;
-
     @FXML
     private Label param1;
     @FXML
@@ -59,6 +48,24 @@ public class Game implements Initializable {
     @FXML
     private Label param6;
     @FXML
+    private Label name1;
+    @FXML
+    private Label name2;
+    @FXML
+    private Label name3;
+    @FXML
+    private Label name4;
+    @FXML
+    private Label name5;
+    @FXML
+    private Label name6;
+    @FXML
+    private Label name7;
+    @FXML
+    private Label name8;
+    @FXML
+    private Label name9;
+    @FXML
     private ImageView image1;
     @FXML
     private ImageView image2;
@@ -70,11 +77,54 @@ public class Game implements Initializable {
     private ImageView image5;
     @FXML
     private ImageView image6;
+    @FXML
+    private TextField textfield1;
+    @FXML
+    private TextField textfield2;
+    @FXML
+    private TextField textfield3;
+    @FXML
+    private TextField textfield4;
+    @FXML
+    private TextField textfield5;
+    @FXML
+    private TextField textfield6;
+    @FXML
+    private TextField textfield7;
+    @FXML
+    private TextField textfield8;
+    @FXML
+    private TextField textfield9;
+    @FXML
+    private ImageView shirt1;
+    @FXML
+    private ImageView shirt2;
+    @FXML
+    private ImageView shirt3;
+    @FXML
+    private ImageView shirt4;
+    @FXML
+    private ImageView shirt5;
+    @FXML
+    private ImageView shirt6;
+    @FXML
+    private ImageView shirt7;
+    @FXML
+    private ImageView shirt8;
+    @FXML
+    private ImageView shirt9;
+
+
+    private GameLogic gameLogic = new GameLogic();
+    private int timer_value = 30;
+    private boolean your_turn;
+    private boolean player_host;
+
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        game.run();
+        gameLogic.run();
 
         //Initialize teams/params of the board and images
         updateParamsTeams();
@@ -84,24 +134,27 @@ public class Game implements Initializable {
                 "----------Chat----------------------------------------------------------------------:\n");
 
         // Create GameLogic Task Here
-
+        
     }
 
-    public void setGame(GameLogic game) {
+    public void setGameLogic(GameLogic gameLogic) {
+        // Receive  Communication object from the previous scene
+
+
         // Pass game object from the previous scene
-        this.game = game;
+        this.gameLogic = gameLogic;
 
         // See if the player is the host or the hosted
-        if (game.p1.getInGame()) {
+        if (gameLogic.p1.getInGame()) {
             // Client host type
             turn.setText("Your turn :");
             startTimer();
-            player_host = game.p1.getInGame();
-        } else if (game.p2.getInGame()) {
+            player_host = gameLogic.p1.getInGame();
+        } else if (gameLogic.p2.getInGame()) {
             // Client hosted type
             turn.setText("Opponent :");
             startTimer();
-            player_host = !game.p2.getInGame();
+            player_host = !gameLogic.p2.getInGame();
         }
 
     }
@@ -129,23 +182,23 @@ public class Game implements Initializable {
     // Update all new params and images
     void updateParamsTeams() {
         // Update labels
-        changeParams(param1, game.board.getUpparams(0));
-        changeParams(param2, game.board.getUpparams(1));
-        changeParams(param3, game.board.getUpparams(2));
-        changeParams(param4, game.board.getLeftparams(0));
-        changeParams(param5, game.board.getLeftparams(1));
-        changeParams(param6, game.board.getLeftparams(2));
+        changeParams(param1, gameLogic.board.getUpparams(0));
+        changeParams(param2, gameLogic.board.getUpparams(1));
+        changeParams(param3, gameLogic.board.getUpparams(2));
+        changeParams(param4, gameLogic.board.getLeftparams(0));
+        changeParams(param5, gameLogic.board.getLeftparams(1));
+        changeParams(param6, gameLogic.board.getLeftparams(2));
 
         // Update Images
-        changeImage(image1, getParamPath(game.board.getUpparams(0)));
-        changeImage(image2, getParamPath(game.board.getUpparams(1)));
-        changeImage(image3, getParamPath(game.board.getUpparams(2)));
-        changeImage(image4, getParamPath(game.board.getLeftparams(0)));
-        changeImage(image5, getParamPath(game.board.getLeftparams(1)));
-        changeImage(image6, getParamPath(game.board.getLeftparams(2)));
+        changeImage(image1, getParamPath(gameLogic.board.getUpparams(0)));
+        changeImage(image2, getParamPath(gameLogic.board.getUpparams(1)));
+        changeImage(image3, getParamPath(gameLogic.board.getUpparams(2)));
+        changeImage(image4, getParamPath(gameLogic.board.getLeftparams(0)));
+        changeImage(image5, getParamPath(gameLogic.board.getLeftparams(1)));
+        changeImage(image6, getParamPath(gameLogic.board.getLeftparams(2)));
     }
 
-    // Change Params from scene
+    // Change Params from a scene
     void changeParams(Label label, String new_param) {
         label.setText(new_param);
         label.setAlignment(CENTER);
@@ -173,7 +226,7 @@ public class Game implements Initializable {
         return path + "teams_nations/" + param + ".png";
     }
 
-    // Setting up a 30 seconds countdown timer
+    // Setting up a 30-second countdown timer
     public void startTimer() {
         timer.setText(String.valueOf(timer_value) + " sec");
         Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), e -> {
@@ -197,7 +250,7 @@ public class Game implements Initializable {
 
     // Get the Gui Player Class
     public Player getGuiPlayer() {
-        return game.p1.getInGame() ? game.p1 : game.p2;
+        return gameLogic.p1.getInGame() ? gameLogic.p1 : gameLogic.p2;
     }
 
     // Increase left score
@@ -231,9 +284,52 @@ public class Game implements Initializable {
 
     // Make Text Field disappear and create Text Field
     void removeTextField(TextField textField, Label text, String name){
-        // TODO: Implement when play is correct
         textField.setVisible(false);
-        //text.setVisible(true);
-        //text.setText(name);
+        text.setVisible(true);
+        text.setText(name);
+    }
+
+    // Text field in guess mode
+    void changeTextFieldToGuess(){
+        textfield1.setEditable(true);
+        textfield1.setText("Guess");
+        textfield2.setEditable(true);
+        textfield2.setText("Guess");
+        textfield3.setEditable(true);
+        textfield3.setText("Guess");
+        textfield4.setEditable(true);
+        textfield4.setText("Guess");
+        textfield5.setEditable(true);
+        textfield5.setText("Guess");
+        textfield6.setEditable(true);
+        textfield6.setText("Guess");
+        textfield7.setEditable(true);
+        textfield7.setText("Guess");
+        textfield8.setEditable(true);
+        textfield8.setText("Guess");
+        textfield9.setEditable(true);
+        textfield9.setText("Guess");
+    }
+
+    // Text field in wait mode
+    void changeTextFieldToWait(){
+        textfield1.setEditable(false);
+        textfield1.setText("(...)");
+        textfield2.setEditable(false);
+        textfield2.setText("(...)");
+        textfield3.setEditable(false);
+        textfield3.setText("(...)");
+        textfield4.setEditable(false);
+        textfield4.setText("(...)");
+        textfield5.setEditable(false);
+        textfield5.setText("(...)");
+        textfield6.setEditable(false);
+        textfield6.setText("(...)");
+        textfield7.setEditable(false);
+        textfield7.setText("(...)");
+        textfield8.setEditable(false);
+        textfield8.setText("(...)");
+        textfield9.setEditable(false);
+        textfield9.setText("(...)");
     }
 }

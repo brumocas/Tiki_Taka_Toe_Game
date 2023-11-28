@@ -70,7 +70,7 @@ public class WaitingRoom implements Initializable {
 
             // Load next scene to pass Game data
             Game GameController = loader.getController();
-            GameController.setGame(game);
+            GameController.setGameLogic(game);
 
             Scene scene = new Scene(root);
             // Pass Game data to the next scene
