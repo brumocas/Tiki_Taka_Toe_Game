@@ -13,10 +13,12 @@ private:
     gamelogic::Player player1, player2;
     bool running = false;
     gamelogic::game game;
-    int getIntCommand();
+    std::string gamepin;
 
 public:
     void startGame();
+    void setGamePin();
+    std::string getGamePin();
     void runCMD();
     void runRemote();
     bool isGameInProgress();

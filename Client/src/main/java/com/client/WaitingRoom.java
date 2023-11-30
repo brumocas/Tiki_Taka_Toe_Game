@@ -17,6 +17,7 @@ import com.client.logic.GameLogic;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
@@ -25,10 +26,11 @@ import javafx.scene.text.Text;
 
 public class WaitingRoom implements Initializable {
     private GameLogic game = new GameLogic();
+    List<String> args = Gui.getInstance().getParameters().getRaw();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        System.out.println(args.get(0));
     }
 
 
@@ -44,9 +46,8 @@ public class WaitingRoom implements Initializable {
         game.p1.setName(playerName);
         game.p1.setSymbol('O');
         game.host = true;
-
         // Connect Client1
-        client1.connectToServer("localhost", 8080);
+        client1.connectToServer(args.get(1), Integer.parseInt(args.get(2)));
 
         // Release a task to check connection from client2
         checkClient2Connection cC2c = new checkClient2Connection(client1);
@@ -126,8 +127,6 @@ public class WaitingRoom implements Initializable {
 
         @Override
         protected Void call() throws Exception {
-            // Check Client 2 connection
-
             // Receive Host information
             String message = client1.receiveMessage();
             if (!Objects.equals(message, "Host")) {
@@ -146,22 +145,6 @@ public class WaitingRoom implements Initializable {
             return null;
         }
 
-        @Override
-        protected void succeeded() {
-            super.succeeded();
-            // Update UI after task completes successfully
-            Platform.runLater(() -> {
-                        System.out.println("Task completed successfully");
-                    }
-            );
-        }
-
-        @Override
-        protected void failed() {
-            super.failed();
-            // Update UI after task fails
-            Platform.runLater(() -> System.out.println("Task Failed"));
-        }
     }
 
 }

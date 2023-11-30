@@ -17,7 +17,7 @@ void Communication::sendMessage(std::string message) {
 }
 
 std::string Communication::receiveMessage() {
-    char buffer[1024] = {0};
+    char buffer[MAX_MESSAGE_SIZE] = {0};
     ssize_t bytes = recv(clientSocket, buffer, 1024, 0);
     if (bytes <= 0) {
         perror("Failed to read message");
@@ -31,12 +31,6 @@ void Communication::closeConnection() {
     close(clientSocket);
 }
 
-void Communication::addHeader(std::string header,std::string message) {
-}
-
-std::string Communication::extractHeader(std::string message) {
-    return std::string();
-}
 
 // Definition of the == operator as a member function
 bool Communication::operator==(const Communication& other) const {

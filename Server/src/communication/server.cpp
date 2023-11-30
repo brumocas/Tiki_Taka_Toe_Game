@@ -17,7 +17,6 @@ void Server::start() {
     try {
         if (initializeServer() && bindServer() && listenForClients()) {
             std::cout << "Server is listening on port " << port << "...\n";
-            acceptClients();
         }
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
@@ -55,35 +54,21 @@ bool Server::listenForClients() {
     return true;
 }
 
-void Server::acceptClients() {
+int Server::acceptClient() {
     sockaddr_in client1Addr{};
     socklen_t client1AddrLen = sizeof(client1Addr);
-
-    sockaddr_in client2Addr{};
-    socklen_t client2AddrLen = sizeof(client2Addr);
 
     int client1Socket = accept(serverSocket, reinterpret_cast<struct sockaddr *>(&client1Addr), &client1AddrLen);
     if (client1Socket == -1) {
         perror("Acceptance failed");
-        throw std::runtime_error("Failed to accept client 1");
+        throw std::runtime_error("Failed to accept client ");
     }
-    std::cout << "Client 1 connected from " << inet_ntoa(client1Addr.sin_addr) << ":"
+    std::cout << "Client connected from " << inet_ntoa(client1Addr.sin_addr) << ":"
               << ntohs(client1Addr.sin_port) << std::endl;
-    clientSockets[0] = client1Socket;
 
-
-    int client2Socket = accept(serverSocket, reinterpret_cast<struct sockaddr *>(&client2Addr), &client2AddrLen);
-    if (client2Socket == -1) {
-        perror("Acceptance failed");
-        throw std::runtime_error("Failed to accept client 2");
-    }
-    std::cout << "Client 2 connected from " << inet_ntoa(client2Addr.sin_addr) << ":"
-              << ntohs(client2Addr.sin_port) << std::endl;
-    clientSockets[1] = client2Socket;
-
+    return client1Socket;
 }
 
-std::array<int, MAX_CLIENTS> &Server::getClientSockets() {
-    return clientSockets;
-}
+
+
 

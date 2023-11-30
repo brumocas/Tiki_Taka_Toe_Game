@@ -10,13 +10,11 @@ namespace gamelogic {
     game::game() {
         // Initiate game and load DB
         db.load("../src/database/files/default_database.txt");
-        // TODO: randomize teams and cups
     }
 
     game::game(std::string db_path) {
         // Initiate game and load DB
         db.load(db_path);
-        // TODO: randomize teams and cups
     }
 
 

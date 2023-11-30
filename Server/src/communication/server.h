@@ -17,22 +17,19 @@
 #include "communication.h"
 
 const int MAX_CLIENTS = 2;
-const int MAX_MESSAGE_SIZE = 1024;
 
 class Server {
 public:
     Server(int port);
     ~Server();
     void start();
-    std::array<int, MAX_CLIENTS>&  getClientSockets();
+    int acceptClient();
 private:
     int serverSocket;
     int port;
-    std::array<int, MAX_CLIENTS> clientSockets;
     bool initializeServer();
     bool bindServer();
     bool listenForClients();
-    void acceptClients();
 };
 
 #endif //SERVER_SERVER_H

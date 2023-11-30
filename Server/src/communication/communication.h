@@ -13,16 +13,15 @@
 #include <iostream>
 #include <stdexcept>
 
+
+const int MAX_MESSAGE_SIZE = 1024;
+
 class Communication {
 public:
     Communication(int clientSocket);
     void sendMessage(std::string message);
     std::string receiveMessage();
-    void addHeader(std::string header ,std::string message);
-    std::string extractHeader(std::string message);
     void closeConnection();
-    void setPin(std::string pin);
-    std::string getPin();
 
     // Overloading the == operator as a member function
     bool operator==(const Communication& other) const;

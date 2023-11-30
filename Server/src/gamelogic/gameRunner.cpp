@@ -85,6 +85,7 @@ void gameRunner::startGame() {
     this->running = true;
     player1.setSymbol('x');
     player2.setSymbol('o');
+    setGamePin();
 
     // TODO: Randomize teams and cups
     // Important to follow name struct "WC" , "CL", "BD", "E" for trophies
@@ -103,12 +104,26 @@ void gameRunner::runRemote() {
     gameServer.start();
 
     // Create Communication paths after establishing connection
-    std::array<int, MAX_CLIENTS> sockets = gameServer.getClientSockets();
-    Communication client1 = sockets[0];
-    Communication client2 = sockets[1];
+    Communication client1 = gameServer.acceptClient();
+    // Send Game Pin Here
+    client1.sendMessage("Host");
+    client1.sendMessage(gamepin);
 
-    // Connect both clients with unique pin
-    connectRemote(client1, client2);
+    Communication client2 = gameServer.acceptClient();
+
+    client2.sendMessage("Hosted");
+    // accept client 2 pin
+    std::string message = client2.receiveMessage();
+    while (message != gamepin) {
+        std::cout << "Incorrect pin :" << message << std::endl;
+        client2.sendMessage("Incorrect");
+        message = client2.receiveMessage();
+    }
+
+    // Connection Established
+    client2.sendMessage("Correct");
+    std::cout << "Clients are both connected\n";
+
 
     // Exchange names
     exchangeNames(client1, client2);
@@ -197,30 +212,6 @@ void gameRunner::runRemote() {
     client2.closeConnection();
 }
 
-void gameRunner::connectRemote(Communication client1, Communication client2) {
-
-    std::string message;
-    client1.sendMessage("Host");
-    client2.sendMessage("Hosted");
-
-    // Send pin to client 1
-    //TODO: Randomize pin
-    std::string pin = "9999";
-    client1.sendMessage(pin);
-
-    // accept client 2 pin
-    message = client2.receiveMessage();
-    while (message != pin) {
-        std::cout << "Incorrect pin :" << message << std::endl;
-        client2.sendMessage("Incorrect");
-        message = client2.receiveMessage();
-    }
-
-    // Connection Established
-    client2.sendMessage("Correct");
-    std::cout << "Clients are both connected\n";
-
-}
 
 void gameRunner::exchangeNames(Communication client1, Communication client2) {
 
@@ -285,6 +276,14 @@ int gameRunner::getIntCMD(std::string name) {
 
     // Return the valid integer
     return userInput;
+}
+
+void gameRunner::setGamePin() {
+    gamepin = "1234";
+}
+
+std::string gameRunner::getGamePin() {
+    return this->gamepin;
 }
 
 

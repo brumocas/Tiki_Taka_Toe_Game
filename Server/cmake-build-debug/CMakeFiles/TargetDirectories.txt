@@ -1,0 +1,3 @@
+/home/bruno/Master/PSW/a01_1/Server/cmake-build-debug/CMakeFiles/Server.dir
+/home/bruno/Master/PSW/a01_1/Server/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/bruno/Master/PSW/a01_1/Server/cmake-build-debug/CMakeFiles/rebuild_cache.dir

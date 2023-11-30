@@ -40,6 +40,6 @@
             <Font size="30.0" />
          </font>
       </Text>
-      <TextField fx:id="pinGame" layoutX="821.0" layoutY="702.0" onAction="#setConnection" prefHeight="49.0" prefWidth="303.0" stylesheets="@style.css" />
+      <TextField fx:id="pinGame" layoutX="821.0" layoutY="702.0" prefHeight="49.0" prefWidth="303.0" stylesheets="@style.css" />
    </children>
 </AnchorPane>

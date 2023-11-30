@@ -63,6 +63,7 @@ private:
     void remoteGame() {
         std::cout << "Remote game session started :)" << std::endl;
         gameRunner gameRunner;
+        gameRunner.startGame();
         gameRunner.runRemote();
         std::cout << "Remote Game Ended\n";
     }

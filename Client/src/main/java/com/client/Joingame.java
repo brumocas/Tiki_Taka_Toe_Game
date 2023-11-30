@@ -15,39 +15,23 @@ import javafx.stage.Stage;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
 public class Joingame implements Initializable {
-    CommunicationGui client2 = new CommunicationGui();
+    List<String> args = Gui.getInstance().getParameters().getRaw();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        try {
-            client2.connectToServer("localhost", 8080);
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        // Receive Hosted message
-        String message;
-        try {
-            message = client2.receiveMessage();
-        } catch (IOException e) {
-            throw new RuntimeException(e);
-        }
-        if (!message.equals("Hosted")) {
-            System.err.println("Error invalid message received");
-        }
 
     }
 
     @FXML
     private Button goBackButton;
-
     private Scene scene;
     private Stage stage;
     private Parent root;
-
     // Action to set main menu scene
     @FXML
     public void setMenuScene(ActionEvent event) throws IOException {
@@ -68,18 +52,26 @@ public class Joingame implements Initializable {
     private Button startGameButton;
 
 
-    // Action to set Client2 Server Connection
-    @FXML
-    private void setConnection(ActionEvent event) throws IOException {
-
-    }
-
     // Action to set waiting room scene
+    boolean first_time = true;
+    CommunicationGui client2 = new CommunicationGui();
     @FXML
     private void setWaitingRoomScene(ActionEvent event) throws IOException {
         String playerName = nickName.getText();
         String pin = pinGame.getText();
         String message;
+
+        if (first_time){
+
+            client2.connectToServer(args.get(1), Integer.parseInt(args.get(2)));
+            // Receive Hosted message
+            message = client2.receiveMessage();
+            if (!message.equals("Hosted")) {
+                System.err.println("Error invalid message received");
+            }
+
+            first_time = false;
+        }
 
         // Send pin guess
         client2.sendMessage(pin);
