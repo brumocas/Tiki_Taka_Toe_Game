@@ -9,6 +9,7 @@ public class GameLogic {
     public Player p1 = new Player();
     public Player p2 = new Player();
     public Board board = new Board();
+    public boolean host = false;
 
 
     public void run() {
@@ -22,15 +23,12 @@ public class GameLogic {
         teams2.add("Manchester_United");
         teams2.add("Chile");
 
-        p1.setSymbol('o');
-        p2.setSymbol('x');
+        p1.setSymbol('O');
+        p2.setSymbol('X');
 
         board.setUpparams(teams);
         board.setLeftparams(teams2);
 
-        //board.print();
-        //System.out.println();
-        //board.print_char();
 
     }
 

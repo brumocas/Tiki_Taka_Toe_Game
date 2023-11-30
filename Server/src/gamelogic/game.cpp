@@ -9,7 +9,7 @@ namespace gamelogic {
 
     game::game() {
         // Initiate game and load DB
-        db.load("../src/database/files/game_test_database.txt");
+        db.load("../src/database/files/default_database.txt");
         // TODO: randomize teams and cups
     }
 

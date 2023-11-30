@@ -13,6 +13,8 @@ private:
     gamelogic::Player player1, player2;
     bool running = false;
     gamelogic::game game;
+    int getIntCommand();
+
 public:
     void startGame();
     void runCMD();
@@ -22,6 +24,7 @@ public:
     void exchangeNames(Communication client1, Communication client2);
     void sendParams(Communication client1, Communication client2);
     std::vector<std::string> getPlay(Communication client);
+    int getIntCMD(std::string name);
 };
 
 

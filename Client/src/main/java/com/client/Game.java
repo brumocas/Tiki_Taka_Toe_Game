@@ -1,5 +1,6 @@
 package com.client;
 
+import com.client.communication.CommunicationGui;
 import com.client.logic.GameLogic;
 import com.client.player.Player;
 import javafx.animation.Animation;
@@ -115,6 +116,7 @@ public class Game implements Initializable {
     private ImageView shirt9;
 
 
+    CommunicationGui client;
     private GameLogic gameLogic = new GameLogic();
     private int timer_value = 30;
     private boolean your_turn;
@@ -137,8 +139,7 @@ public class Game implements Initializable {
         
     }
 
-    public void setGameLogic(GameLogic gameLogic) {
-        // Receive  Communication object from the previous scene
+    public void setGameLogic(GameLogic gameLogic, CommunicationGui client) {
 
 
         // Pass game object from the previous scene
@@ -157,6 +158,8 @@ public class Game implements Initializable {
             player_host = !gameLogic.p2.getInGame();
         }
 
+        // Receive  Communication object from the previous scene
+        this.client = client;
     }
 
 

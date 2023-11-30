@@ -52,10 +52,7 @@ public class Newgame implements Initializable {
         String playerName = nickName.getText();
 
         if (playerName != null && !playerName.isEmpty()) {
-            // TODO:  Send client request to the server depending on client type
-            // If host connect and receive pin
-            // Call communication class here
-            String pin = "1234";
+            String pin = "----";
 
             FXMLLoader loader = new FXMLLoader(getClass().getResource("waitingroom.fxml"));
             Parent root = loader.load();

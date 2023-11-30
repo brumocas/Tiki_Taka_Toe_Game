@@ -5,6 +5,9 @@
 #include <sstream>
 #include "gameRunner.h"
 #include "../communication/server.h"
+#include <iostream>
+#include <random>
+#include <ctime>
 
 void gameRunner::runCMD() {
     startGame();
@@ -17,10 +20,8 @@ void gameRunner::runCMD() {
     while (running) {
         // player 1 plays
         std::cout << "Player 1 turn :\n";
-        std::cout << "x :";
-        std::cin >> x;
-        std::cout << "y :";
-        std::cin >> y;
+        x = getIntCMD("x");
+        y = getIntCMD("y");
         player1.setPlayerGuessCords(x, y);
         std::cout << "Name :";
         std::cin >> name;
@@ -49,10 +50,8 @@ void gameRunner::runCMD() {
 
         // player 2 plays
         std::cout << "Player 2 turn :\n";
-        std::cout << "x :";
-        std::cin >> x;
-        std::cout << "y :";
-        std::cin >> y;
+        x = getIntCMD("x");
+        y = getIntCMD("y");
         player2.setPlayerGuessCords(x, y);
         std::cout << "Name :";
         std::cin >> name;
@@ -270,5 +269,25 @@ std::vector<std::string> gameRunner::getPlay(Communication client) {
     }
     return tokens;
 }
+
+int gameRunner::getIntCMD(std::string name) {
+    std::cout << name + " :";
+    int userInput;
+
+    // Check if input is a valid integer within the specified range
+    while (!(std::cin >> userInput) || userInput < 0 || userInput > 2) {
+        // Clear input buffer in case of invalid input
+        std::cin.clear();
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+
+        std::cout << "Invalid input..." << std::endl<<  name + " :";
+    }
+
+    // Return the valid integer
+    return userInput;
+}
+
+
+
 
 

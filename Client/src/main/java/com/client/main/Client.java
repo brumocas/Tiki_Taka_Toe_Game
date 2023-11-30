@@ -17,12 +17,12 @@ public class Client {
     public static void main(String[] args) throws IOException {
 
         // GUI remote Game
-        Gui.main(args);
-
-
-        // CMD remote game
-        //remoteCMD();
-
+        if (Objects.equals(args[0], "True"))
+            // GUI remote Game
+            Gui.main(args);
+        else
+            // CMD remote game
+            remoteCMD();
     }
 
     static void remoteCMD() throws IOException {

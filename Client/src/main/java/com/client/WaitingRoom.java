@@ -1,6 +1,9 @@
 package com.client;
 
+import com.client.communication.CommunicationGui;
 import com.client.gui.defs.Cursor;
+import javafx.application.Platform;
+import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -28,29 +31,45 @@ public class WaitingRoom implements Initializable {
 
     }
 
+
     @FXML
     private Text nickname1;
     @FXML
     private Text pin;
+    CommunicationGui client1 = new CommunicationGui();
     // If host set nickname of player and pin
-    public void setHost(String playerName, String pin) {
+    public void setHost(String playerName, String pin) throws IOException {
         nickname1.setText(playerName);
         this.pin.setText(pin);
         game.p1.setName(playerName);
-        game.p1.setSymbol('o');
-        game.p1.setInGame(true);
+        game.p1.setSymbol('O');
+        game.host = true;
+
+        // Connect Client1
+        client1.connectToServer("localhost", 8080);
+
+        // Release a task to check connection from client2
+        checkClient2Connection cC2c = new checkClient2Connection(client1);
+        new Thread(cC2c).start();
+
     }
+
 
     @FXML
     private Text nickname2;
+    CommunicationGui client2 = new CommunicationGui();
     // If hosted set nickname of player 2, pin and player 1 nickname
-    // TODO: Receive player 1 nickname
-    public void setHosted(String playerName, String pin) {
+    public void setHosted(String playerName, String pin, CommunicationGui client2) throws IOException {
         nickname2.setText(playerName);
         this.pin.setText(pin);
         game.p2.setName(playerName);
         game.p2.setSymbol('x');
-        game.p2.setInGame(true);
+        game.host = false;
+
+        // Receive Client2 communication and place player Name
+        this.client2 = client2;
+        game.p1.setName(client2.exchangeNames(nickname2.getText()));
+        nickname1.setText(game.p1.getName());
     }
 
     @FXML
@@ -58,19 +77,18 @@ public class WaitingRoom implements Initializable {
     private Scene scene;
     private Stage stage;
     private Parent root;
+
     // Action event to change to game scene
     @FXML
     public void setGameScene(ActionEvent event) throws IOException {
-        // TODO: Check if connection is established between the 2 clients and then enter the game
-        // TODO :Pass Communication Class
 
-        if (checkConnection()) {
+        if (true) {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("game.fxml"));
             Parent root = loader.load();
 
             // Load next scene to pass Game data
             Game GameController = loader.getController();
-            GameController.setGameLogic(game);
+            GameController.setGameLogic(game, (game.host) ? client1 : client2);
 
             Scene scene = new Scene(root);
             // Pass Game data to the next scene
@@ -81,19 +99,11 @@ public class WaitingRoom implements Initializable {
             stage.setScene(scene);
             stage.show();
         }
-
     }
-
-    public boolean checkConnection() {
-        // TODO : Background task to check if the connection is established or failed
-        // If in host mode wait for connection of hosted player
-        System.out.println("Waiting for host");
-        return true;
-    }
-
 
     @FXML
     private Button goBackButton;
+
     // Action event to go to main menu
     @FXML
     public void setMenuScene(ActionEvent event) throws IOException {
@@ -103,6 +113,55 @@ public class WaitingRoom implements Initializable {
         Cursor.setCursor(scene);
         stage.setScene(scene);
         stage.show();
+    }
+
+    // Task to check Client2 connection
+    private class checkClient2Connection extends Task<Void> {
+
+        CommunicationGui client1;
+
+        public checkClient2Connection(CommunicationGui client1) {
+            this.client1 = client1;
+        }
+
+        @Override
+        protected Void call() throws Exception {
+            // Check Client 2 connection
+
+            // Receive Host information
+            String message = client1.receiveMessage();
+            if (!Objects.equals(message, "Host")) {
+                System.err.println("Invalid Reception");
+            }
+
+            // You are host receive pin
+            message = client1.receiveMessage();
+            System.out.println("You entered the game as host and the pin is: " + message);
+            pin.setText(message);
+
+            // Exchange Names
+            game.p2.setName(client1.exchangeNames(nickname1.getText()));
+            nickname2.setText(game.p2.getName());
+
+            return null;
+        }
+
+        @Override
+        protected void succeeded() {
+            super.succeeded();
+            // Update UI after task completes successfully
+            Platform.runLater(() -> {
+                        System.out.println("Task completed successfully");
+                    }
+            );
+        }
+
+        @Override
+        protected void failed() {
+            super.failed();
+            // Update UI after task fails
+            Platform.runLater(() -> System.out.println("Task Failed"));
+        }
     }
 
 }

@@ -72,12 +72,12 @@ namespace gamelogic {
     }
 
     void Board::printFootballers() {
-        std::cout << "/----Footballers board----/" << std::endl;
-        std::cout << upParameters[0] << "\t" << upParameters[1] << "\t" << upParameters[2] << "\t" << std::endl;
+        std::cout << "/---------Footballers board---------/" << std::endl;
+        std::cout << "\t" << upParameters[0] << "\t" << upParameters[1] << "\t" << upParameters[2] << "\t" << std::endl;
         for (int i = 0; i < 3; ++i) {
             std::cout << leftParameters[i] << "\t";
             for (int j = 0; j < 3; ++j) {
-                std::cout << footballerEntry[i][j] << "\t";
+                std::cout << "\t" << footballerEntry[i][j] << "\t";
             }
             std::cout << std::endl;
         }
@@ -85,10 +85,11 @@ namespace gamelogic {
     }
 
     void Board::printSymbols() {
-        std::cout << "/-----Symbols board-----/" << std::endl;
+        std::cout << "/----------Symbols board----------/" << std::endl;
         for (int i = 0; i < 3; ++i) {
+            std::cout << "\t\t";
             for (int j = 0; j < 3; ++j) {
-                std::cout << symbolArray[i][j] << "\t";
+                std::cout << symbolArray[i][j] << "\t\t";
             }
             std::cout << std::endl;
         }

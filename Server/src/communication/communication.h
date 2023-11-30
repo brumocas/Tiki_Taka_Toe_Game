@@ -21,12 +21,15 @@ public:
     void addHeader(std::string header ,std::string message);
     std::string extractHeader(std::string message);
     void closeConnection();
+    void setPin(std::string pin);
+    std::string getPin();
 
     // Overloading the == operator as a member function
     bool operator==(const Communication& other) const;
 
 private:
     int clientSocket;
+    std::string pin;
 };
 
 
