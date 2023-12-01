@@ -30,7 +30,7 @@ public class WaitingRoom implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        System.out.println(args.get(0));
+
     }
 
 
@@ -53,6 +53,8 @@ public class WaitingRoom implements Initializable {
         checkClient2Connection cC2c = new checkClient2Connection(client1);
         new Thread(cC2c).start();
 
+        startButton.setVisible(false);
+        goBackButton.setVisible(false);
     }
 
 
@@ -71,6 +73,9 @@ public class WaitingRoom implements Initializable {
         this.client2 = client2;
         game.p1.setName(client2.exchangeNames(nickname2.getText()));
         nickname1.setText(game.p1.getName());
+
+        startButton.setVisible(true);
+        goBackButton.setVisible(false);
     }
 
     @FXML
@@ -141,6 +146,8 @@ public class WaitingRoom implements Initializable {
             // Exchange Names
             game.p2.setName(client1.exchangeNames(nickname1.getText()));
             nickname2.setText(game.p2.getName());
+
+            startButton.setVisible(true);
 
             return null;
         }

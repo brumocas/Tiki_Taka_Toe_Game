@@ -121,7 +121,7 @@ namespace gamelogic {
             // Check if player won the BALLON DOR
             if (!f.isBallonDorWinner())
                 return false;
-        } else if (paramUp == "E") {
+        } else if (paramUp == "EC") {
             // Check if player won the EURO CUP
             if (!f.isEuropeanWinner())
                 return false;
@@ -155,7 +155,7 @@ namespace gamelogic {
             // Check if player won the BALLON DOR
             if (!f.isBallonDorWinner())
                 return false;
-        } else if (paramLeft == "E") {
+        } else if (paramLeft == "EC") {
             // Check if player won the EURO CUP
             if (!f.isEuropeanWinner())
                 return false;

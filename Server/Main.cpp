@@ -130,9 +130,13 @@ private:
 };
 
 int main(int argc, char **argv) {
+
+
     // Testing implementation
-    //::testing::InitGoogleTest(&argc, argv);
-    //RUN_ALL_TESTS();
+    if (std::strcmp(argv[1], "True") == 0){
+        ::testing::InitGoogleTest(&argc, argv);
+        RUN_ALL_TESTS();
+    }
 
     // Game Application
     GameApplication gameApp;

@@ -45,6 +45,7 @@ public class Client {
             String[] params = client.getParams();
             setParams(board, params);
 
+            System.out.println();
             System.out.println("Remote CMD game started");
 
             outerLoop:
@@ -123,7 +124,6 @@ public class Client {
     private static String[] parseOpponentPacket(String opponentPacket) {
         return opponentPacket.split("-");
     }
-
 
     static void setParams(Board board, String[] params){
         Vector<String> upparams = new Vector<>(3);

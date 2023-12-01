@@ -7,6 +7,8 @@
 #include "../communication/server.h"
 #include <iostream>
 #include <random>
+#include <string>
+#include <cstdlib>
 #include <ctime>
 
 void gameRunner::runCMD() {
@@ -90,7 +92,7 @@ void gameRunner::startGame() {
     // TODO: Randomize teams and cups
     // Important to follow name struct "WC" , "CL", "BD", "E" for trophies
     // Important to follow teams and Nation struct --> example : Real_Madrid
-    game.setParams("Real_Madrid", "Barcelona", "PSG", "BD", "CL", "Portugal");
+    game.setParams("Real_Madrid", "Manchester_City", "PSG", "EC", "CL", "Portugal");
 }
 
 bool gameRunner::isGameInProgress() {
@@ -162,7 +164,7 @@ void gameRunner::runRemote() {
         if (game.isGameWonByPlayer(player1)){
             client1.sendMessage("Winner");
             client2.sendMessage("Loser");
-            std::cout << player1.getPlayerName() << "Wins\n";
+            std::cout << player1.getPlayerName() << " Wins\n";
             break;
         }
 
@@ -195,7 +197,7 @@ void gameRunner::runRemote() {
         if (game.isGameWonByPlayer(player2)){
             client2.sendMessage("Winner");
             client1.sendMessage("Loser");
-            std::cout << player2.getPlayerName() << "Wins\n";
+            std::cout << player2.getPlayerName() << " Wins\n";
             break;
         }
 
@@ -279,13 +281,25 @@ int gameRunner::getIntCMD(std::string name) {
 }
 
 void gameRunner::setGamePin() {
-    gamepin = "1234";
+    gamepin = randomString();
 }
 
 std::string gameRunner::getGamePin() {
     return this->gamepin;
 }
 
+std::string gameRunner::randomString() {
+    const std::string CHARACTERS = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
+
+    std::string random_string;
+    std::srand(std::time(0));
+
+    for (int i = 0; i < 5; i++) {
+        random_string += CHARACTERS[std::rand() % CHARACTERS.size()];
+    }
+
+    return random_string;
+}
 
 
 

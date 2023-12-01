@@ -32,6 +32,7 @@ public class Joingame implements Initializable {
     private Scene scene;
     private Stage stage;
     private Parent root;
+
     // Action to set main menu scene
     @FXML
     public void setMenuScene(ActionEvent event) throws IOException {
@@ -55,52 +56,54 @@ public class Joingame implements Initializable {
     // Action to set waiting room scene
     boolean first_time = true;
     CommunicationGui client2 = new CommunicationGui();
+
     @FXML
     private void setWaitingRoomScene(ActionEvent event) throws IOException {
         String playerName = nickName.getText();
         String pin = pinGame.getText();
         String message;
 
-        if (first_time){
 
-            client2.connectToServer(args.get(1), Integer.parseInt(args.get(2)));
-            // Receive Hosted message
+        if (playerName != null && !playerName.isEmpty() && pin != null && !pin.isEmpty()) {
+
+            if (first_time) {
+
+                client2.connectToServer(args.get(1), Integer.parseInt(args.get(2)));
+                // Receive Hosted message
+                message = client2.receiveMessage();
+                if (!message.equals("Hosted")) {
+                    System.err.println("Error invalid message received");
+                }
+                goBackButton.setVisible(false);
+                first_time = false;
+            }
+
+            // Send pin guess
+            client2.sendMessage(pin);
+            // Receive Response
             message = client2.receiveMessage();
-            if (!message.equals("Hosted")) {
-                System.err.println("Error invalid message received");
+            if (Objects.equals(message, "Correct")) {
+                if (playerName != null && !playerName.isEmpty() && pin != null && !pin.isEmpty()) {
+
+                    FXMLLoader loader = new FXMLLoader(getClass().getResource("waitingroom.fxml"));
+                    Parent root = loader.load();
+                    // Load next scene to pass Data
+                    WaitingRoom waitingRoomController = loader.getController();
+                    waitingRoomController.setHosted(playerName, pin, client2);
+
+                    Scene waitingRoomScene = new Scene(root);
+                    // Pass Data to the next scene
+                    waitingRoomScene.setUserData(playerName);
+
+                    Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+                    Cursor.setCursor(waitingRoomScene);
+                    stage.setScene(waitingRoomScene);
+                    stage.show();
+                }
+            } else {
+                // TODO: Add Label
+                pinGame.setText("Incorrect Pin");
             }
-
-            first_time = false;
         }
-
-        // Send pin guess
-        client2.sendMessage(pin);
-        // Receive Response
-        message = client2.receiveMessage();
-        if (Objects.equals(message, "Correct")) {
-            if (playerName != null && !playerName.isEmpty() && pin != null && !pin.isEmpty()) {
-
-                FXMLLoader loader = new FXMLLoader(getClass().getResource("waitingroom.fxml"));
-                Parent root = loader.load();
-                // Load next scene to pass Data
-                WaitingRoom waitingRoomController = loader.getController();
-                waitingRoomController.setHosted(playerName, pin, client2);
-
-                Scene waitingRoomScene = new Scene(root);
-                // Pass Data to the next scene
-                waitingRoomScene.setUserData(playerName);
-
-                Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-                Cursor.setCursor(waitingRoomScene);
-                stage.setScene(waitingRoomScene);
-                stage.show();
-            }
-        } else {
-            // TODO: Add Label
-            pinGame.setText("Incorrect Pin");
-        }
-
-
     }
-
 }

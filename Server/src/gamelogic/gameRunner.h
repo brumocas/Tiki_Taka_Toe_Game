@@ -22,11 +22,11 @@ public:
     void runCMD();
     void runRemote();
     bool isGameInProgress();
-    void connectRemote(Communication client1, Communication client2);
     void exchangeNames(Communication client1, Communication client2);
     void sendParams(Communication client1, Communication client2);
     std::vector<std::string> getPlay(Communication client);
     int getIntCMD(std::string name);
+    std::string randomString();
 };
 
 

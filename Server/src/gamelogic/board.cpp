@@ -47,7 +47,12 @@ namespace gamelogic {
     void Board::setPlay(Player player) {
         if (!isUsed(player.getPlayerGuessX(), player.getPlayerGuessY())) {
             symbolArray[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getSymbol();
-            footballerEntry[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getFootballerGuessName() + "_" + player.getFootballerGuessSurname();
+            if (player.getFootballerGuessSurname() == "null"){
+                footballerEntry[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getFootballerGuessName();
+            } else {
+                footballerEntry[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getFootballerGuessName() + "_" + player.getFootballerGuessSurname();
+            }
+
         } else {
             std::cerr << "Invalid behaviour" << std::endl;
         }
