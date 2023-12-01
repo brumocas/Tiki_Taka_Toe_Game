@@ -89,6 +89,7 @@ void gameRunner::startGame() {
     player2.setSymbol('o');
     setGamePin();
 
+
     // TODO: Randomize teams and cups
     // Important to follow name struct "WC" , "CL", "BD", "E" for trophies
     // Important to follow teams and Nation struct --> example : Real_Madrid
@@ -101,22 +102,22 @@ bool gameRunner::isGameInProgress() {
 
 void gameRunner::runRemote() {
     // Create a Server
-    Server gameServer(8080);
+    Server gameServer(std::stoi(argv[2]));
     // Open Server and wait to connect with 2 clients
     gameServer.start();
 
-    // Create Communication paths after establishing connection
-    Communication client1 = gameServer.acceptClient();
+    // Create communication paths after establishing connection
+    communication client1 = gameServer.acceptClient();
     // Send Game Pin Here
     client1.sendMessage("Host");
     client1.sendMessage(gamepin);
 
-    Communication client2 = gameServer.acceptClient();
+    communication client2 = gameServer.acceptClient();
 
     client2.sendMessage("Hosted");
     // accept client 2 pin
     std::string message = client2.receiveMessage();
-    while (message != gamepin) {
+    while (message != getGamePin()) {
         std::cout << "Incorrect pin :" << message << std::endl;
         client2.sendMessage("Incorrect");
         message = client2.receiveMessage();
@@ -215,7 +216,7 @@ void gameRunner::runRemote() {
 }
 
 
-void gameRunner::exchangeNames(Communication client1, Communication client2) {
+void gameRunner::exchangeNames(communication client1, communication client2) {
 
     //Request for names
     client2.sendMessage("Name");
@@ -230,7 +231,7 @@ void gameRunner::exchangeNames(Communication client1, Communication client2) {
     client2.sendMessage(client1Name);
 }
 
-void gameRunner::sendParams(Communication client1, Communication client2) {
+void gameRunner::sendParams(communication client1, communication client2) {
 
     // Send params to the clients
     std::string packet;
@@ -243,7 +244,7 @@ void gameRunner::sendParams(Communication client1, Communication client2) {
     client2.sendMessage(packet);
 }
 
-std::vector<std::string> gameRunner::getPlay(Communication client) {
+std::vector<std::string> gameRunner::getPlay(communication client) {
     // Received message contains 3 things
     // 1 - x board location
     // 2 - y board location
@@ -299,6 +300,15 @@ std::string gameRunner::randomString() {
     }
 
     return random_string;
+}
+
+gameRunner::gameRunner() {
+
+}
+
+gameRunner::gameRunner(int argc, char **argv) {
+    this->argc = argc;
+    this->argv = argv;
 }
 
 

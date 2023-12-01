@@ -3,9 +3,10 @@
 #include "src/database/database.h"
 #include "gtest/gtest.h"
 
-class GameApplication {
+
+class gameApplication {
 public:
-    void run() {
+    void run(int argc, char** argv) {
 
         while (true) {
             int option;
@@ -25,7 +26,7 @@ public:
                 }
                 case 2: {
                     // Remote Game
-                    remoteGame();
+                    remoteGame(argc, argv);
                     break;
                 }
                 case 3: {
@@ -43,7 +44,7 @@ public:
     }
 
 private:
-    void printMenu() {
+    static void printMenu() {
         // Print Menu options
         std::cout << "/----Main Menu----/\n";
         std::cout << "Local Game (1)\n";
@@ -53,16 +54,16 @@ private:
         std::cout << std::endl;
     }
 
-    void localGame() {
+    static void localGame() {
         std::cout << "Local game session started :)" << std::endl;
         gameRunner gameRunner;
         gameRunner.runCMD();
         std::cout << "Local Game Ended\n";
     }
 
-    void remoteGame() {
+    static void remoteGame(int argc, char** argv) {
         std::cout << "Remote game session started :)" << std::endl;
-        gameRunner gameRunner;
+        gameRunner gameRunner(argc, argv);
         gameRunner.startGame();
         gameRunner.runRemote();
         std::cout << "Remote Game Ended\n";
@@ -79,6 +80,7 @@ private:
             std::cout << "Print Teams (3)\n";
             std::cout << "Print Nations (4)\n";
             std::cout << "Go Back (5)\n";
+            std::cout << std::endl;
             std::cout << "Insert option : ";
             std::cin >> option;
             std::cout << std::endl;
@@ -111,7 +113,7 @@ private:
         }
     }
 
-    void databaseSearch(database db) {
+    static void databaseSearch(database db) {
         std::string name;
         std::string surname;
         std::cout << "Footballer Search\n";
@@ -131,7 +133,6 @@ private:
 
 int main(int argc, char **argv) {
 
-
     // Testing implementation
     if (std::strcmp(argv[1], "True") == 0){
         ::testing::InitGoogleTest(&argc, argv);
@@ -139,8 +140,8 @@ int main(int argc, char **argv) {
     }
 
     // Game Application
-    GameApplication gameApp;
-    gameApp.run();
+    gameApplication gameApp ;
+    gameApp.run(argc, argv);
     return 0;
 }
 

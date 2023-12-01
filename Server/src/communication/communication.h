@@ -16,19 +16,18 @@
 
 const int MAX_MESSAGE_SIZE = 1024;
 
-class Communication {
+class communication {
 public:
-    Communication(int clientSocket);
+    communication(int clientSocket);
     void sendMessage(std::string message);
     std::string receiveMessage();
     void closeConnection();
 
     // Overloading the == operator as a member function
-    bool operator==(const Communication& other) const;
+    bool operator==(const communication& other) const;
 
 private:
     int clientSocket;
-    std::string pin;
 };
 
 

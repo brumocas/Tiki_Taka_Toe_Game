@@ -4,11 +4,11 @@
 
 #include "communication.h"
 
-Communication::Communication(int clientSocket) : clientSocket(clientSocket) {
+communication::communication(int clientSocket) : clientSocket(clientSocket) {
 
 }
 
-void Communication::sendMessage(std::string message) {
+void communication::sendMessage(std::string message) {
     std::string messageWithNewline = message.append("\n");
     size_t bytes = 0;
     if ((bytes = send(clientSocket, messageWithNewline.c_str(), messageWithNewline.length(), 0)) <= 0) {
@@ -16,7 +16,7 @@ void Communication::sendMessage(std::string message) {
     }
 }
 
-std::string Communication::receiveMessage() {
+std::string communication::receiveMessage() {
     char buffer[MAX_MESSAGE_SIZE] = {0};
     ssize_t bytes = recv(clientSocket, buffer, 1024, 0);
     if (bytes <= 0) {
@@ -27,13 +27,13 @@ std::string Communication::receiveMessage() {
     return std::string(buffer, bytes - 1);
 }
 
-void Communication::closeConnection() {
+void communication::closeConnection() {
     close(clientSocket);
 }
 
 
 // Definition of the == operator as a member function
-bool Communication::operator==(const Communication& other) const {
+bool communication::operator==(const communication& other) const {
     // Compare based on the equality of clientSocket values
     return this->clientSocket == other.clientSocket;
 }

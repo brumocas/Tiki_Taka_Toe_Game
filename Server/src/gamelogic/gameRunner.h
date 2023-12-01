@@ -14,17 +14,21 @@ private:
     bool running = false;
     gamelogic::game game;
     std::string gamepin;
+    int argc;
+    char** argv;
 
 public:
+    gameRunner();
+    gameRunner(int argc, char** argv);
     void startGame();
     void setGamePin();
     std::string getGamePin();
     void runCMD();
     void runRemote();
     bool isGameInProgress();
-    void exchangeNames(Communication client1, Communication client2);
-    void sendParams(Communication client1, Communication client2);
-    std::vector<std::string> getPlay(Communication client);
+    void exchangeNames(communication client1, communication client2);
+    void sendParams(communication client1, communication client2);
+    std::vector<std::string> getPlay(communication client);
     int getIntCMD(std::string name);
     std::string randomString();
 };

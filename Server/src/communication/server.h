@@ -21,7 +21,6 @@ const int MAX_CLIENTS = 2;
 class Server {
 public:
     Server(int port);
-    ~Server();
     void start();
     int acceptClient();
 private:
@@ -30,6 +29,7 @@ private:
     bool initializeServer();
     bool bindServer();
     bool listenForClients();
+    void printServerInfo() const;
 };
 
 #endif //SERVER_SERVER_H

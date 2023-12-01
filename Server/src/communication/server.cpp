@@ -7,16 +7,10 @@
 
 Server::Server(int port) : serverSocket(-1), port(port) {}
 
-Server::~Server() {
-    if (serverSocket != -1) {
-        close(serverSocket);
-    }
-}
-
 void Server::start() {
     try {
         if (initializeServer() && bindServer() && listenForClients()) {
-            std::cout << "Server is listening on port " << port << "...\n";
+            printServerInfo();
         }
     } catch (const std::exception& e) {
         std::cerr << "Error: " << e.what() << std::endl;
@@ -38,6 +32,7 @@ bool Server::bindServer() {
     serverAddr.sin_family = AF_INET;
     serverAddr.sin_addr.s_addr = INADDR_ANY;
     serverAddr.sin_port = htons(port);
+
 
     if (bind(serverSocket, reinterpret_cast<struct sockaddr *>(&serverAddr), sizeof(serverAddr)) == -1) {
         perror("Binding failed");
@@ -67,6 +62,18 @@ int Server::acceptClient() {
               << ntohs(client1Addr.sin_port) << std::endl;
 
     return client1Socket;
+}
+
+void Server::printServerInfo() const {
+    sockaddr_in serverAddr{};
+    socklen_t addrLen = sizeof(serverAddr);
+    if (getsockname(serverSocket, reinterpret_cast<struct sockaddr*>(&serverAddr), &addrLen) == 0) {
+        char ip[INET_ADDRSTRLEN];
+        inet_ntop(AF_INET, &(serverAddr.sin_addr), ip, INET_ADDRSTRLEN);
+        std::cout << "Server is listening on IP: " << ip << ", Port: " << port << std::endl;
+    } else {
+        perror("Error getting server address");
+    }
 }
 
 
