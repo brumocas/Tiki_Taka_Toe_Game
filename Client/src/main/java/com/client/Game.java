@@ -220,7 +220,7 @@ public class Game implements Initializable {
         String path = "file:src/main/resources/com/client/images/";
         switch (param) {
             // It is not a team or nation
-            case "worldcup", "european", "ballondor", "champions" -> {
+            case "WC", "EC", "BD", "CL" -> {
                 path = path + "trophies/" + param + ".png";
                 return path;
             }
@@ -277,7 +277,7 @@ public class Game implements Initializable {
             Image image_aux = new Image(path + "/shirts/" + "shirto.png");
             shirt.setImage(image_aux);
         } else if (symbol == 'X'){
-            Image image_aux = new Image(path + "/shirts/" + "shirtX.png");
+            Image image_aux = new Image(path + "/shirts/" + "shirtx.png");
             shirt.setImage(image_aux);
         } else {
             System.err.println("Invalid symbol passed to function");
