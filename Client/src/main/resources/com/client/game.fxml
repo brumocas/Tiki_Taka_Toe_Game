@@ -116,7 +116,7 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
-                              <TextField fx:id="textfield1" alignment="CENTER" layoutX="107.0" layoutY="151.0" promptText="(...)" />
+                              <TextField fx:id="textfield1" alignment="CENTER" layoutX="107.0" layoutY="151.0" onKeyPressed="#makeGuessF1" promptText="(...)" />
                               <ImageView fx:id="shirt1" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />

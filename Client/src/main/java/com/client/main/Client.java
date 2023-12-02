@@ -76,7 +76,7 @@ public class Client {
                         String packet = String.valueOf(x) + "-" + String.valueOf(y) + "-" +
                                 name + "-" + surname;
 
-                        p.setGuess(name + " " + surname);
+                        p.setGuess(name + "_" + surname);
 
                         client.sendMessage(packet);
 
@@ -96,7 +96,7 @@ public class Client {
                         String opponentPacket = client.receiveMessage();
                         String[] play = parseOpponentPacket(opponentPacket);
                         board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
-                                play[2] + ' ' +play[3], (p.getSymbol() == 'X') ? 'O' : 'X' );
+                                play[2] + '_' +play[3], (p.getSymbol() == 'X') ? 'O' : 'X' );
                         break ;
                     case "Winner":
                         // End game as a winner

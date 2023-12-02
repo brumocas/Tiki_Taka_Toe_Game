@@ -1,17 +1,17 @@
 package com.client;
 
 import com.client.communication.CommunicationGui;
-import com.client.logic.GameLogic;
+import com.client.logic.Board;
 import com.client.player.Player;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
-import javafx.fxml.Initializable;
 
 
-import java.net.URL;
-import java.util.ResourceBundle;
+import java.io.IOException;
+import java.util.Objects;
 
 
 import javafx.scene.control.Label;
@@ -24,9 +24,10 @@ import javafx.scene.input.KeyEvent;
 import javafx.scene.text.Text;
 import javafx.util.Duration;
 
+
 import static javafx.geometry.Pos.CENTER;
 
-public class Game implements Initializable {
+public class Game {
 
     @FXML
     private Text timer;
@@ -115,19 +116,35 @@ public class Game implements Initializable {
     @FXML
     private ImageView shirt9;
 
+    private TextField[][] textFields;
+    private ImageView[][] shirts;
+    private Label[][] names;
 
     CommunicationGui client;
-    private GameLogic gameLogic = new GameLogic();
+    Board board = new Board();
     private int timer_value = 30;
-    private boolean your_turn;
-    private boolean player_host;
+    private boolean host;
 
+    public void setGameLogic(boolean host, CommunicationGui client, Player p1, Player p2) throws IOException {
+        this.host = host;
 
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+        // See if the player is the host or the hosted
+        if (host) {
+            // Client host type
+            changeTextFieldToWait();
 
-        gameLogic.run();
+            p2.setSymbol('X');
+        } else if (!host) {
+            // Client hosted type
+            p1.setSymbol('O');
+            p2.setSymbol('X');
+            changeTextFieldToWait();
+        }
 
+        // Receive  Communication object from the previous scene
+        this.client = client;
+        // Receive Game Params
+        board.setParams(client);
         //Initialize teams/params of the board and images
         updateParamsTeams();
         // Manage chat parameters
@@ -135,33 +152,130 @@ public class Game implements Initializable {
         textarea.appendText("/------------------------------------------------------------------------------------" +
                 "----------Chat----------------------------------------------------------------------:\n");
 
-        // Create GameLogic Task Here
-        
+        // Initialize
+        textFields = new TextField[][]{
+                {textfield1, textfield2, textfield3},
+                {textfield4, textfield5, textfield6},
+                {textfield7, textfield8, textfield9}
+        };
+
+        shirts = new ImageView[][]{
+                {shirt1, shirt2, shirt3},
+                {shirt4, shirt5, shirt6},
+                {shirt7, shirt8, shirt9}};
+
+        names = new Label[][]{
+                {name1, name2, name3},
+                {name4, name5, name6},
+                {name7, name8, name9}
+        };
+
+        // Create GameLogic Thread
+        Thread backgroundThread = new Thread(() -> {
+            // Your background task logic goes here
+            outerLoop:
+            while (true) {
+
+                // Busy waiting for you time to play
+                String message = null;
+                try {
+                    message = client.receiveMessage();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+                switch (message) {
+                    case "YourTurn":
+                        // UI will Handle This
+                        System.out.println("Hello from thread");
+
+                        // UI-related code goes here
+                        Platform.runLater(this::changeTextFieldToGuess);
+
+                        break;
+                    case "OpponentPlay":
+                        // Receive Opponent play and place it in the board
+                        String[] play = new String[0];
+
+                        try {
+                            play = client.receiveMessage().split("-");
+                        } catch (IOException e) {
+                            throw new RuntimeException(e);
+                        }
+                        board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
+                                play[2] + ' ' + play[3], (host) ? 'O' : 'X');
+
+                        break;
+                    case "Winner":
+                        // End game as a winner
+                        System.out.println("Your Win");
+                        break outerLoop;
+                    case "Loser":
+                        // End game as a loser
+                        System.out.println("Your Lose");
+                        break outerLoop;
+                    case "Tie":
+                        // End game as a tie
+                        System.out.println("Tie");
+                        break outerLoop;
+                    default:
+                        System.out.println(message);
+                        System.out.println("Default");
+                        break;
+                }
+            }
+
+            // Sleep for a while to simulate work
+            try {
+                Thread.sleep(250);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+
+        });
+
+        // Set the thread as a daemon so that it will automatically terminate when the application exits
+        backgroundThread.setDaemon(true);
+
+        // Start the thread
+        backgroundThread.start();
     }
 
-    public void setGameLogic(GameLogic gameLogic, CommunicationGui client) {
 
+    //-------------------User Makes a play---------------------//
+    @FXML
+    void makeGuessF1(KeyEvent event) throws IOException {
+        String message;
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            //message = client.receiveMessage();
 
-        // Pass game object from the previous scene
-        this.gameLogic = gameLogic;
+            //if (message != "YourTurn")
+              //  System.err.println("Error");
 
-        // See if the player is the host or the hosted
-        if (gameLogic.p1.getInGame()) {
-            // Client host type
-            turn.setText("Your turn :");
-            startTimer();
-            player_host = gameLogic.p1.getInGame();
-        } else if (gameLogic.p2.getInGame()) {
-            // Client hosted type
-            turn.setText("Opponent :");
-            startTimer();
-            player_host = !gameLogic.p2.getInGame();
+            String[] play = textfield1.getText().split(" ");
+            message = "0-0-" + play[0] + "-" + play[1];
+
+            try {
+                client.sendMessage(message);
+            } catch (IOException e){
+                throw new RuntimeException(e);
+            }
+
+            try {
+                message = client.receiveMessage();
+            } catch (IOException e){
+                throw new RuntimeException(e);
+            }
+
+            if (Objects.equals(message, "Correct")) {
+                board.setPlay(0, 0, play[0] + " " + play[1], (host) ? 'O' : 'X');
+                removeTextField(textfield1, name1, play[0] + " " + play[1]);
+                changeShirt(shirt1, (host) ? 'O' : 'X');
+            }
+
+            changeTextFieldToWait();
         }
-
-        // Receive  Communication object from the previous scene
-        this.client = client;
     }
-
 
 
     //-------------------Handle Chat--------------------------//
@@ -169,11 +283,12 @@ public class Game implements Initializable {
     private TextField prompt;
     @FXML
     private TextArea textarea;
+
     @FXML
     void getMessage(KeyEvent event) {
         if (event.getCode().equals(KeyCode.ENTER)) {
             String message = prompt.getText();
-            textarea.appendText(getGuiPlayer().getName() + " : " + message + "\n");
+            textarea.appendText(" : " + message + "\n");
             prompt.setText("");
             // TODO: Sent received message to the server
         }
@@ -185,20 +300,20 @@ public class Game implements Initializable {
     // Update all new params and images
     void updateParamsTeams() {
         // Update labels
-        changeParams(param1, gameLogic.board.getUpparams(0));
-        changeParams(param2, gameLogic.board.getUpparams(1));
-        changeParams(param3, gameLogic.board.getUpparams(2));
-        changeParams(param4, gameLogic.board.getLeftparams(0));
-        changeParams(param5, gameLogic.board.getLeftparams(1));
-        changeParams(param6, gameLogic.board.getLeftparams(2));
+        changeParams(param1, board.getUpparams(0));
+        changeParams(param2, board.getUpparams(1));
+        changeParams(param3, board.getUpparams(2));
+        changeParams(param4, board.getLeftparams(0));
+        changeParams(param5, board.getLeftparams(1));
+        changeParams(param6, board.getLeftparams(2));
 
         // Update Images
-        changeImage(image1, getParamPath(gameLogic.board.getUpparams(0)));
-        changeImage(image2, getParamPath(gameLogic.board.getUpparams(1)));
-        changeImage(image3, getParamPath(gameLogic.board.getUpparams(2)));
-        changeImage(image4, getParamPath(gameLogic.board.getLeftparams(0)));
-        changeImage(image5, getParamPath(gameLogic.board.getLeftparams(1)));
-        changeImage(image6, getParamPath(gameLogic.board.getLeftparams(2)));
+        changeImage(image1, getParamPath(board.getUpparams(0)));
+        changeImage(image2, getParamPath(board.getUpparams(1)));
+        changeImage(image3, getParamPath(board.getUpparams(2)));
+        changeImage(image4, getParamPath(board.getLeftparams(0)));
+        changeImage(image5, getParamPath(board.getLeftparams(1)));
+        changeImage(image6, getParamPath(board.getLeftparams(2)));
     }
 
     // Change Params from a scene
@@ -251,32 +366,27 @@ public class Game implements Initializable {
             timer_value = 30;
     }
 
-    // Get the Gui Player Class
-    public Player getGuiPlayer() {
-        return gameLogic.p1.getInGame() ? gameLogic.p1 : gameLogic.p2;
-    }
-
     // Increase left score
-    void increaseLeftScore(){
+    void increaseLeftScore() {
         int score = Integer.parseInt(scoreLeft.getText());
         score++;
         scoreLeft.setText(String.valueOf(score));
     }
 
     // Increase right score
-    void increaseRightScore(){
+    void increaseRightScore() {
         int score = Integer.parseInt(scoreRight.getText());
         score++;
         scoreRight.setText(String.valueOf(score));
     }
 
     // Change for 'X' or 'O' shirt when the client plays
-    void changeShirt(ImageView shirt,char symbol){
+    void changeShirt(ImageView shirt, char symbol) {
         String path = "file:src/main/resources/com/client/images/";
-        if (symbol == 'O'){
+        if (symbol == 'O') {
             Image image_aux = new Image(path + "/shirts/" + "shirto.png");
             shirt.setImage(image_aux);
-        } else if (symbol == 'X'){
+        } else if (symbol == 'X') {
             Image image_aux = new Image(path + "/shirts/" + "shirtx.png");
             shirt.setImage(image_aux);
         } else {
@@ -286,36 +396,38 @@ public class Game implements Initializable {
     }
 
     // Make Text Field disappear and create Text Field
-    void removeTextField(TextField textField, Label text, String name){
+    void removeTextField(TextField textField, Label text, String name) {
         textField.setVisible(false);
         text.setVisible(true);
         text.setText(name);
     }
 
     // Text field in guess mode
-    void changeTextFieldToGuess(){
+    void changeTextFieldToGuess() {
+        turn.setText("Your turn :");
         textfield1.setEditable(true);
-        textfield1.setText("Guess");
+        textfield1.setText("");
         textfield2.setEditable(true);
-        textfield2.setText("Guess");
+        textfield2.setText("");
         textfield3.setEditable(true);
-        textfield3.setText("Guess");
+        textfield3.setText("");
         textfield4.setEditable(true);
-        textfield4.setText("Guess");
+        textfield4.setText("");
         textfield5.setEditable(true);
-        textfield5.setText("Guess");
+        textfield5.setText("");
         textfield6.setEditable(true);
-        textfield6.setText("Guess");
+        textfield6.setText("");
         textfield7.setEditable(true);
-        textfield7.setText("Guess");
+        textfield7.setText("");
         textfield8.setEditable(true);
-        textfield8.setText("Guess");
+        textfield8.setText("");
         textfield9.setEditable(true);
-        textfield9.setText("Guess");
+        textfield9.setText("");
     }
 
     // Text field in wait mode
-    void changeTextFieldToWait(){
+    void changeTextFieldToWait() {
+        turn.setText("Opponent :");
         textfield1.setEditable(false);
         textfield1.setText("(...)");
         textfield2.setEditable(false);
@@ -335,4 +447,5 @@ public class Game implements Initializable {
         textfield9.setEditable(false);
         textfield9.setText("(...)");
     }
+
 }

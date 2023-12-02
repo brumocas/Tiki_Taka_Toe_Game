@@ -2,7 +2,7 @@ package com.client;
 
 import com.client.communication.CommunicationGui;
 import com.client.gui.defs.Cursor;
-import javafx.application.Platform;
+import com.client.player.Player;
 import javafx.concurrent.Task;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -13,7 +13,6 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;
-import com.client.logic.GameLogic;
 
 import java.io.IOException;
 import java.net.URL;
@@ -25,8 +24,10 @@ import java.util.ResourceBundle;
 import javafx.scene.text.Text;
 
 public class WaitingRoom implements Initializable {
-    private GameLogic game = new GameLogic();
     List<String> args = Gui.getInstance().getParameters().getRaw();
+    private boolean host ;
+    Player p1 = new Player();
+    Player p2 = new Player();
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -43,9 +44,9 @@ public class WaitingRoom implements Initializable {
     public void setHost(String playerName, String pin) throws IOException {
         nickname1.setText(playerName);
         this.pin.setText(pin);
-        game.p1.setName(playerName);
-        game.p1.setSymbol('O');
-        game.host = true;
+        p1.setName(playerName);
+        p1.setSymbol('O');
+        host = true;
         // Connect Client1
         client1.connectToServer(args.get(1), Integer.parseInt(args.get(2)));
 
@@ -65,14 +66,14 @@ public class WaitingRoom implements Initializable {
     public void setHosted(String playerName, String pin, CommunicationGui client2) throws IOException {
         nickname2.setText(playerName);
         this.pin.setText(pin);
-        game.p2.setName(playerName);
-        game.p2.setSymbol('x');
-        game.host = false;
+        p2.setName(playerName);
+        p2.setSymbol('x');
+        host = false;
 
         // Receive Client2 communication and place player Name
         this.client2 = client2;
-        game.p1.setName(client2.exchangeNames(nickname2.getText()));
-        nickname1.setText(game.p1.getName());
+        p1.setName(client2.exchangeNames(nickname2.getText()));
+        nickname1.setText(p1.getName());
 
         startButton.setVisible(true);
         goBackButton.setVisible(false);
@@ -94,11 +95,11 @@ public class WaitingRoom implements Initializable {
 
             // Load next scene to pass Game data
             Game GameController = loader.getController();
-            GameController.setGameLogic(game, (game.host) ? client1 : client2);
+            GameController.setGameLogic(host, (host) ? client1 : client2, p1, p2);
 
             Scene scene = new Scene(root);
             // Pass Game data to the next scene
-            scene.setUserData(game);
+            scene.setUserData(host);
 
             stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Cursor.setCursor(scene);
@@ -144,8 +145,8 @@ public class WaitingRoom implements Initializable {
             pin.setText(message);
 
             // Exchange Names
-            game.p2.setName(client1.exchangeNames(nickname1.getText()));
-            nickname2.setText(game.p2.getName());
+            p2.setName(client1.exchangeNames(nickname1.getText()));
+            nickname2.setText(p2.getName());
 
             startButton.setVisible(true);
 
