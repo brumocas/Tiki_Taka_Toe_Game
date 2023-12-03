@@ -116,7 +116,7 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
                            <children>
-                              <TextField fx:id="textfield1" alignment="CENTER" layoutX="107.0" layoutY="151.0" onKeyPressed="#makeGuessF1" promptText="(...)" />
+                              <TextField fx:id="textfield1" alignment="CENTER" layoutX="107.0" layoutY="151.0" onKeyPressed="#makeGuessF1" />
                               <ImageView fx:id="shirt1" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
@@ -131,7 +131,7 @@
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField fx:id="textfield4" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield4" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF4" />
                               <Label fx:id="name4" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="1" GridPane.rowIndex="3">
@@ -141,7 +141,7 @@
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField fx:id="textfield7" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield7" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF7" />
                               <Label fx:id="name7" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
@@ -155,7 +155,7 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" GridPane.columnIndex="2" GridPane.rowIndex="1">
                            <children>
-                              <TextField fx:id="textfield2" alignment="CENTER" layoutX="117.0" layoutY="150.0" promptText="(...)" />
+                              <TextField fx:id="textfield2" alignment="CENTER" layoutX="117.0" layoutY="150.0" onKeyPressed="#makeGuessF2" />
                               <ImageView fx:id="shirt2" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
@@ -170,12 +170,12 @@
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField fx:id="textfield5" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield5" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF5" />
                               <Label fx:id="name5" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" stylesheets="@game.css" GridPane.columnIndex="2" GridPane.rowIndex="3">
                            <children>
-                              <TextField fx:id="textfield8" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield8" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF8" />
                               <ImageView fx:id="shirt8" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
@@ -199,7 +199,7 @@
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField fx:id="textfield3" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield3" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF3" />
                               <Label fx:id="name3" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" GridPane.columnIndex="3" GridPane.rowIndex="2">
@@ -209,7 +209,7 @@
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField fx:id="textfield6" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield6" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF6" />
                               <Label fx:id="name6" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="3" GridPane.rowIndex="3">
@@ -219,7 +219,7 @@
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <TextField fx:id="textfield9" alignment="CENTER" layoutX="110.0" layoutY="155.0" promptText="(...)" />
+                              <TextField fx:id="textfield9" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF9" />
                               <Label fx:id="name9" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
                            </children></Pane>
                      </children>

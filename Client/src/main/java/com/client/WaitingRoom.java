@@ -97,6 +97,7 @@ public class WaitingRoom implements Initializable {
             Game GameController = loader.getController();
             GameController.setGameLogic(host, (host) ? client1 : client2, p1, p2);
 
+
             Scene scene = new Scene(root);
             // Pass Game data to the next scene
             scene.setUserData(host);

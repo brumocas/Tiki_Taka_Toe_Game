@@ -122,35 +122,19 @@ public class Game {
 
     CommunicationGui client;
     Board board = new Board();
+    Player p1;
+    Player p2;
     private int timer_value = 30;
     private boolean host;
+    // Needs to be read from memory every time its accessed
+    private volatile String buffer;
 
     public void setGameLogic(boolean host, CommunicationGui client, Player p1, Player p2) throws IOException {
         this.host = host;
-
-        // See if the player is the host or the hosted
-        if (host) {
-            // Client host type
-            changeTextFieldToWait();
-
-            p2.setSymbol('X');
-        } else if (!host) {
-            // Client hosted type
-            p1.setSymbol('O');
-            p2.setSymbol('X');
-            changeTextFieldToWait();
-        }
-
+        this.p1 = p1;
+        this.p2 = p2;
         // Receive  Communication object from the previous scene
         this.client = client;
-        // Receive Game Params
-        board.setParams(client);
-        //Initialize teams/params of the board and images
-        updateParamsTeams();
-        // Manage chat parameters
-        textarea.setEditable(false);
-        textarea.appendText("/------------------------------------------------------------------------------------" +
-                "----------Chat----------------------------------------------------------------------:\n");
 
         // Initialize
         textFields = new TextField[][]{
@@ -170,14 +154,40 @@ public class Game {
                 {name7, name8, name9}
         };
 
+        // See if the player is the host or the hosted
+        if (host) {
+            // Client host type
+            changeTextFieldToWait();
+            p1.setSymbol('O');
+            p2.setSymbol('X');
+        } else if (!host) {
+            // Client hosted type
+            p1.setSymbol('O');
+            p2.setSymbol('X');
+            changeTextFieldToWait();
+        }
+
+        // Manage chat parameters
+        textarea.setEditable(false);
+        textarea.appendText("/------------------------------------------------------------------------------------" +
+                "----------Chat----------------------------------------------------------------------:\n");
+
+
+        // Receive Game Params
+        board.setParams(client);
+        //Initialize teams/params of the board and images
+        updateParamsTeams();
+
         // Create GameLogic Thread
         Thread backgroundThread = new Thread(() -> {
+
             // Your background task logic goes here
+            String[] play = new String[0];
+            String message = null;
             outerLoop:
             while (true) {
 
-                // Busy waiting for you time to play
-                String message = null;
+                // Receive Server Message to proceed
                 try {
                     message = client.receiveMessage();
                 } catch (IOException e) {
@@ -186,25 +196,12 @@ public class Game {
 
                 switch (message) {
                     case "YourTurn":
-                        // UI will Handle This
-                        System.out.println("Hello from thread");
-
-                        // UI-related code goes here
-                        Platform.runLater(this::changeTextFieldToGuess);
-
+                        // Make new play
+                        getUIplay();
                         break;
                     case "OpponentPlay":
-                        // Receive Opponent play and place it in the board
-                        String[] play = new String[0];
-
-                        try {
-                            play = client.receiveMessage().split("-");
-                        } catch (IOException e) {
-                            throw new RuntimeException(e);
-                        }
-                        board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
-                                play[2] + ' ' + play[3], (host) ? 'O' : 'X');
-
+                        // Receive Opponent play
+                        getOpponentPlay();
                         break;
                     case "Winner":
                         // End game as a winner
@@ -219,24 +216,20 @@ public class Game {
                         System.out.println("Tie");
                         break outerLoop;
                     default:
-                        System.out.println(message);
-                        System.out.println("Default");
+                        System.err.println(message);
                         break;
                 }
             }
-
             // Sleep for a while to simulate work
             try {
-                Thread.sleep(250);
+                Thread.sleep(100);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }
-
         });
 
         // Set the thread as a daemon so that it will automatically terminate when the application exits
         backgroundThread.setDaemon(true);
-
         // Start the thread
         backgroundThread.start();
     }
@@ -245,36 +238,101 @@ public class Game {
     //-------------------User Makes a play---------------------//
     @FXML
     void makeGuessF1(KeyEvent event) throws IOException {
-        String message;
+
         if (event.getCode().equals(KeyCode.ENTER)) {
-            //message = client.receiveMessage();
-
-            //if (message != "YourTurn")
-              //  System.err.println("Error");
-
             String[] play = textfield1.getText().split(" ");
-            message = "0-0-" + play[0] + "-" + play[1];
-
-            try {
-                client.sendMessage(message);
-            } catch (IOException e){
-                throw new RuntimeException(e);
-            }
-
-            try {
-                message = client.receiveMessage();
-            } catch (IOException e){
-                throw new RuntimeException(e);
-            }
-
-            if (Objects.equals(message, "Correct")) {
-                board.setPlay(0, 0, play[0] + " " + play[1], (host) ? 'O' : 'X');
-                removeTextField(textfield1, name1, play[0] + " " + play[1]);
-                changeShirt(shirt1, (host) ? 'O' : 'X');
-            }
-
+            buffer = "0-0-" + play[0] + "-" + play[1];
             changeTextFieldToWait();
         }
+
+    }
+
+    @FXML
+    void makeGuessF2(KeyEvent event) throws IOException {
+
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            String[] play = textfield2.getText().split(" ");
+            buffer = "0-1-" + play[0] + "-" + play[1];
+            changeTextFieldToWait();
+        }
+
+    }
+
+    @FXML
+    void makeGuessF3(KeyEvent event) throws IOException {
+
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            String[] play = textfield3.getText().split(" ");
+            buffer = "0-2-" + play[0] + "-" + play[1];
+            changeTextFieldToWait();
+        }
+
+    }
+
+    @FXML
+    void makeGuessF4(KeyEvent event) throws IOException {
+
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            String[] play = textfield4.getText().split(" ");
+            buffer = "1-0-" + play[0] + "-" + play[1];
+            changeTextFieldToWait();
+        }
+
+    }
+
+    @FXML
+    void makeGuessF5(KeyEvent event) throws IOException {
+
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            String[] play = textfield5.getText().split(" ");
+            buffer = "1-1-" + play[0] + "-" + play[1];
+            changeTextFieldToWait();
+        }
+
+    }
+
+    @FXML
+    void makeGuessF6(KeyEvent event) throws IOException {
+
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            String[] play = textfield6.getText().split(" ");
+            buffer = "1-2-" + play[0] + "-" + play[1];
+            changeTextFieldToWait();
+        }
+
+    }
+
+    @FXML
+    void makeGuessF7(KeyEvent event) throws IOException {
+
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            String[] play = textfield7.getText().split(" ");
+            buffer = "2-0-" + play[0] + "-" + play[1];
+            changeTextFieldToWait();
+        }
+
+    }
+
+    @FXML
+    void makeGuessF8(KeyEvent event) throws IOException {
+
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            String[] play = textfield8.getText().split(" ");
+            buffer = "2-1-" + play[0] + "-" + play[1];
+            changeTextFieldToWait();
+        }
+
+    }
+
+    @FXML
+    void makeGuessF9(KeyEvent event) throws IOException {
+
+        if (event.getCode().equals(KeyCode.ENTER)) {
+            String[] play = textfield9.getText().split(" ");
+            buffer = "2-2-" + play[0] + "-" + play[1];
+            changeTextFieldToWait();
+        }
+
     }
 
 
@@ -288,7 +346,7 @@ public class Game {
     void getMessage(KeyEvent event) {
         if (event.getCode().equals(KeyCode.ENTER)) {
             String message = prompt.getText();
-            textarea.appendText(" : " + message + "\n");
+            textarea.appendText((host) ? p1.getName() + " : " + message + "\n" : p2.getName() + " : " + message + "\n");
             prompt.setText("");
             // TODO: Sent received message to the server
         }
@@ -296,6 +354,90 @@ public class Game {
 
 
     //------------------- Aux Functions----------------------//
+
+    // Get opponent Play
+    void getOpponentPlay() {
+        String[] play = new String[0];
+        String message = null;
+
+        // Receive Opponent play from Server
+        try {
+            play = client.receiveMessage().split("-");
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        // Set new play in the board
+        board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
+                play[2] + ' ' + play[3], (host) ? 'X' : 'O');
+
+        // Update UI
+        Platform.runLater(() -> updateUI(textFields, shirts, names));
+
+    }
+
+    // Get Gui User Guess
+    void getUIplay() {
+        String[] play = new String[0];
+        String message = null;
+
+        // Make Guess available in the GUI
+        Platform.runLater(this::changeTextFieldToGuess);
+        Platform.runLater(this::startTimer);
+
+        // Busy waiting until buffer is filled
+        while (buffer == null) {
+            // Sleep for a while to simulate work
+            if (checkTimer() < 1) {
+                // Create invalid guess to Server, timed out
+                buffer = "4-4-null-null";
+                Platform.runLater(this::changeTextFieldToWait);
+                break;
+            }
+
+            try {
+                Thread.sleep(250);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
+
+        // Get player guess
+        play = buffer.split("-");
+
+        if (play.length == 3) {
+            // Send guess with only one name
+            message = play[0] + "-" + play[1] + "-" + play[2] + "-null";
+        } else if (play.length == 4) {
+            // Send guess with name and surname
+            message = play[0] + "-" + play[1] + "-" + play[2] + "-" + play[3];
+        }
+
+        // reset buffer
+        buffer = null;
+
+        // Send play to Server
+        try {
+            client.sendMessage(message);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        // Receive play response from Server
+        try {
+            if (Objects.equals(client.receiveMessage(), "Correct")) {
+                board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
+                        play[2] + ' ' + play[3], (host) ? 'O' : 'X');
+
+                Platform.runLater(() -> updateUI(textFields, shirts, names));
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
+        // Stop Timer
+        Platform.runLater(this::stopTimer);
+    }
 
     // Update all new params and images
     void updateParamsTeams() {
@@ -344,10 +486,12 @@ public class Game {
         return path + "teams_nations/" + param + ".png";
     }
 
+    Timeline timeline;
+
     // Setting up a 30-second countdown timer
     public void startTimer() {
         timer.setText(String.valueOf(timer_value) + " sec");
-        Timeline timeline = new Timeline(new KeyFrame(Duration.seconds(1), e -> {
+        timeline = new Timeline(new KeyFrame(Duration.seconds(1), e -> {
             timer_value--;
             timer.setText(String.valueOf(timer_value) + " sec");
         }));
@@ -360,10 +504,12 @@ public class Game {
         return timer_value;
     }
 
-    // Reset timer countdown
-    public void resetTimer() {
-        if (checkTimer() < 1)
+    // Stop timer from counting
+    public void stopTimer() {
+        if (timeline != null) {
+            timeline.stop();
             timer_value = 30;
+        }
     }
 
     // Increase left score
@@ -405,47 +551,41 @@ public class Game {
     // Text field in guess mode
     void changeTextFieldToGuess() {
         turn.setText("Your turn :");
-        textfield1.setEditable(true);
-        textfield1.setText("");
-        textfield2.setEditable(true);
-        textfield2.setText("");
-        textfield3.setEditable(true);
-        textfield3.setText("");
-        textfield4.setEditable(true);
-        textfield4.setText("");
-        textfield5.setEditable(true);
-        textfield5.setText("");
-        textfield6.setEditable(true);
-        textfield6.setText("");
-        textfield7.setEditable(true);
-        textfield7.setText("");
-        textfield8.setEditable(true);
-        textfield8.setText("");
-        textfield9.setEditable(true);
-        textfield9.setText("");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board.isEmpty(i,j)){
+                    textFields[i][j].setVisible(true);
+                    textFields[i][j].setText("");
+                    textFields[i][j].setEditable(true);
+                }
+            }
+        }
     }
 
     // Text field in wait mode
     void changeTextFieldToWait() {
         turn.setText("Opponent :");
-        textfield1.setEditable(false);
-        textfield1.setText("(...)");
-        textfield2.setEditable(false);
-        textfield2.setText("(...)");
-        textfield3.setEditable(false);
-        textfield3.setText("(...)");
-        textfield4.setEditable(false);
-        textfield4.setText("(...)");
-        textfield5.setEditable(false);
-        textfield5.setText("(...)");
-        textfield6.setEditable(false);
-        textfield6.setText("(...)");
-        textfield7.setEditable(false);
-        textfield7.setText("(...)");
-        textfield8.setEditable(false);
-        textfield8.setText("(...)");
-        textfield9.setEditable(false);
-        textfield9.setText("(...)");
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                textFields[i][j].setVisible(false);
+            }
+        }
+        timer.setText(String.valueOf(30) + " sec");
+    }
+
+    // Update UI
+    private void updateUI(TextField[][] textFields, ImageView[][] shirts, Label[][] names) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (!board.isEmpty(i, j)) {
+                    removeTextField(textFields[i][j], names[i][j], board.getPlayer(i, j));
+                    changeShirt(shirts[i][j], board.getSymbol(i, j));
+                }
+            }
+        }
     }
 
 }
+
+
+    

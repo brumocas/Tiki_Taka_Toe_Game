@@ -93,7 +93,7 @@ void gameRunner::startGame() {
     // TODO: Randomize teams and cups
     // Important to follow name struct "WC" , "CL", "BD", "E" for trophies
     // Important to follow teams and Nation struct --> example : Real_Madrid
-    game.setParams("Real_Madrid", "Manchester_City", "PSG", "EC", "CL", "Portugal");
+    game.setParams("Real_Madrid", "Manchester_City", "PSG", "Argentina", "CL", "Portugal");
 }
 
 bool gameRunner::isGameInProgress() {
