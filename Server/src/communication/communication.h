@@ -18,9 +18,13 @@ const int MAX_MESSAGE_SIZE = 1024;
 
 class communication {
 public:
+    // Constructor
     communication(int clientSocket);
+    // Method to send messages
     void sendMessage(std::string message);
+    // Method to receive messages
     std::string receiveMessage();
+    // Method to close connection
     void closeConnection();
 
     // Overloading the == operator as a member function

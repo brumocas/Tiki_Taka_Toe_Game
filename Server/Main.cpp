@@ -38,7 +38,6 @@ public:
                     std::cout << "Invalid option\n";
                     break;
             }
-
             std::cout << std::endl;
         }
     }
@@ -55,6 +54,7 @@ private:
     }
 
     static void localGame() {
+        // Local Gaming Session
         std::cout << "Local game session started :)" << std::endl;
         gameRunner gameRunner;
         gameRunner.runCMD();
@@ -62,6 +62,7 @@ private:
     }
 
     static void remoteGame(int argc, char** argv) {
+        // Remote Gaming Session
         std::cout << "Remote game session started :)" << std::endl;
         gameRunner gameRunner(argc, argv);
         gameRunner.startGame();
@@ -74,6 +75,7 @@ private:
         db.load("../src/database/files/default_database.txt");
         int option;
         while (true) {
+            // Print database menu
             std::cout << "/----Database Menu----/\n";
             std::cout << "Print Database (1)\n";
             std::cout << "Search Player (2)\n";
@@ -85,7 +87,7 @@ private:
             std::cin >> option;
             std::cout << std::endl;
 
-
+            // Database menu Options
             switch (option) {
                 case 1: {
                     db.print();
@@ -114,6 +116,7 @@ private:
     }
 
     static void databaseSearch(database db) {
+        // Search for a specific footballer in the db
         std::string name;
         std::string surname;
         std::cout << "Footballer Search\n";

@@ -20,15 +20,22 @@ const int MAX_CLIENTS = 2;
 
 class Server {
 public:
+    // Constructor
     Server(int port);
+    // Start Server
     void start();
+    // Accept Clients connections
     int acceptClient();
 private:
     int serverSocket;
     int port;
+    // Initialize Server
     bool initializeServer();
+    // Bind Server to the given port
     bool bindServer();
+    // Listen for clients connection
     bool listenForClients();
+    // Print Server information
     void printServerInfo() const;
 };
 

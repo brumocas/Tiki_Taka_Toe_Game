@@ -80,13 +80,13 @@ void gameRunner::runCMD() {
             break;
         }
     }
-    running = false;
+    endGame();
 }
 
 void gameRunner::startGame() {
     this->running = true;
-    player1.setSymbol('x');
-    player2.setSymbol('o');
+    player1.setSymbol('o');
+    player2.setSymbol('x');
     setGamePin();
 
 
@@ -98,6 +98,10 @@ void gameRunner::startGame() {
 
 bool gameRunner::isGameInProgress() {
     return this->running;
+}
+
+bool gameRunner::endGame(){
+    running = false;
 }
 
 void gameRunner::runRemote() {
@@ -134,82 +138,8 @@ void gameRunner::runRemote() {
     std::cout << "Client1 name is: " + player1.getPlayerName() << std::endl;
     std::cout << "Client2 name is: " + player2.getPlayerName() << std::endl;
 
-    // Set Params
-    startGame();
 
-    //Send board params
-    sendParams(client1, client2);
-
-    // Start Game
-    while (true) {
-        std::vector<std::string> packet;
-        // Ask player 1 to play
-        packet = getPlay(client1);
-        player1.setPlayerGuessCords(std::stoi(packet[0]), std::stoi(packet[1]));
-        player1.setFootballerGuessName(packet[2]);
-        player1.setFootballerGuessSurname(packet[3]);
-        // Check guess
-        if (game.checkAnswer(player1)) {
-            // Correct send response
-            client1.sendMessage("Correct");
-            client2.sendMessage("OpponentPlay");
-            client2.sendMessage(packet[0] + "-" + packet[1] + "-" + packet[2] +
-                                "-" + packet[3]);
-        } else {
-            // Incorrect send response
-            client1.sendMessage("Incorrect");
-        }
-
-
-        // Check winner
-        if (game.isGameWonByPlayer(player1)){
-            client1.sendMessage("Winner");
-            client2.sendMessage("Loser");
-            std::cout << player1.getPlayerName() << " Wins\n";
-            break;
-        }
-
-        if (game.isGameTied(player1, player2)){
-            client1.sendMessage("Tie");
-            client2.sendMessage("Tie");
-            break;
-        }
-
-        // Ask player 2 to play
-        packet = getPlay(client2);
-        player2.setPlayerGuessCords(std::stoi(packet[0]), std::stoi(packet[1]));
-        player2.setFootballerGuessName(packet[2]);
-        player2.setFootballerGuessSurname(packet[3]);
-
-        // Check guess
-        if (game.checkAnswer(player2)) {
-            // Correct send response
-            client2.sendMessage("Correct");
-            client1.sendMessage("OpponentPlay");
-            client1.sendMessage(packet[0] + "-" + packet[1] + "-" + packet[2] +
-                                "-" + packet[3]);
-
-        } else {
-            // Incorrect send response
-            client2.sendMessage("Incorrect");
-        }
-
-        // Check winner
-        if (game.isGameWonByPlayer(player2)){
-            client2.sendMessage("Winner");
-            client1.sendMessage("Loser");
-            std::cout << player2.getPlayerName() << " Wins\n";
-            break;
-        }
-
-        if (game.isGameTied(player1, player2)){
-            client1.sendMessage("Tie");
-            client2.sendMessage("Tie");
-            std::cout << "Tied game\n";
-            break;
-        }
-
-    }
+    gameCycle(client1, client2);
 
     client1.closeConnection();
     client2.closeConnection();
@@ -309,6 +239,87 @@ gameRunner::gameRunner() {
 gameRunner::gameRunner(int argc, char **argv) {
     this->argc = argc;
     this->argv = argv;
+}
+
+void gameRunner::gameCycle(communication client1, communication client2) {
+
+    // Generate new Params
+    startGame();
+
+    //Send board params
+    sendParams(client1, client2);
+
+    // Start Game
+    while (true) {
+        std::vector<std::string> packet;
+        // Ask player 1 to play
+        packet = getPlay(client1);
+        player1.setPlayerGuessCords(std::stoi(packet[0]), std::stoi(packet[1]));
+        player1.setFootballerGuessName(packet[2]);
+        player1.setFootballerGuessSurname(packet[3]);
+        // Check guess
+        if (game.checkAnswer(player1)) {
+            // Correct send response
+            client1.sendMessage("Correct");
+            client2.sendMessage("OpponentPlay");
+            client2.sendMessage(packet[0] + "-" + packet[1] + "-" + packet[2] +
+                                "-" + packet[3]);
+        } else {
+            // Incorrect send response
+            client1.sendMessage("Incorrect");
+        }
+
+        // Check winner for player 1
+        if (game.isGameWonByPlayer(player1)){
+            client1.sendMessage("Winner");
+            client2.sendMessage("Loser");
+            std::cout << player1.getPlayerName() << " Wins\n";
+            break;
+        }
+
+        // Check tie
+        if (game.isGameTied(player1, player2)){
+            client1.sendMessage("Tie");
+            client2.sendMessage("Tie");
+            break;
+        }
+
+        // Ask player 2 to play
+        packet = getPlay(client2);
+        player2.setPlayerGuessCords(std::stoi(packet[0]), std::stoi(packet[1]));
+        player2.setFootballerGuessName(packet[2]);
+        player2.setFootballerGuessSurname(packet[3]);
+
+        // Check guess
+        if (game.checkAnswer(player2)) {
+            // Correct send response
+            client2.sendMessage("Correct");
+            client1.sendMessage("OpponentPlay");
+            client1.sendMessage(packet[0] + "-" + packet[1] + "-" + packet[2] +
+                                "-" + packet[3]);
+        } else {
+            // Incorrect send response
+            client2.sendMessage("Incorrect");
+        }
+
+        // Check winner for player 2
+        if (game.isGameWonByPlayer(player2)){
+            client2.sendMessage("Winner");
+            client1.sendMessage("Loser");
+            std::cout << player2.getPlayerName() << " Wins\n";
+            break;
+        }
+
+        // Check tie
+        if (game.isGameTied(player1, player2)){
+            client1.sendMessage("Tie");
+            client2.sendMessage("Tie");
+            std::cout << "Tied game\n";
+            break;
+        }
+
+    }
+
 }
 
 

@@ -21,22 +21,32 @@ namespace gamelogic {
 
 
     public:
-
+        // Constructor
         Player();
+        // Constructor
         Player(std::string playerName, char symbol);
+        // Getter for player name
         std::string getPlayerName();
+        // Setter for player
         void setPlayerName(std:: string playerName);
+        // Getter for player x coordinate guess
         int getPlayerGuessX();
+        // Getter for player y coordinate guess
         int getPlayerGuessY();
+        // Setter for player x and y coordinates
         void setPlayerGuessCords(int x, int y);
+        // Getter for footballer guess Name
         std::string getFootballerGuessName();
+        // Setter for footballer guess Name
         void setFootballerGuessName(std::string name);
+        // Getter for footballer guess Surname
         std::string getFootballerGuessSurname();
+        // Setter for footballer guess Surname
         void setFootballerGuessSurname(std::string surname);
         char getSymbol();
         void setSymbol(char symbol);
 
-            // Equality operator
+        // Equality operator
         bool operator==(const Player& other) const {
             return  x == other.x &&
                     y == other.y &&

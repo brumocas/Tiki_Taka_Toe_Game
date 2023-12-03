@@ -18,19 +18,36 @@ private:
     char** argv;
 
 public:
+    // Default constructor
     gameRunner();
+    // Constructor that gets program arguments
     gameRunner(int argc, char** argv);
+    // Start current game
     void startGame();
+    // Generate a Random pin for remote game
     void setGamePin();
+    // Getter for gamepin
     std::string getGamePin();
+    // Logic to run the TIKI TAKA TOE game in the CMD
     void runCMD();
+    // Logic to run the TIKI TAKA TOE game remotely
     void runRemote();
+    // Check if game is still running
     bool isGameInProgress();
+    // Exchange Clients names in remote game version
     void exchangeNames(communication client1, communication client2);
+    // Send game parameters to clients in remote game version
     void sendParams(communication client1, communication client2);
+    // Get client play in remote game version
     std::vector<std::string> getPlay(communication client);
+    // Aux function to get inputs from terminal
     int getIntCMD(std::string name);
+    // Method to generate random string for the remote game version
     std::string randomString();
+    // End game
+    bool endGame();
+    // Method that executes one game logic
+    void gameCycle(communication client1, communication client2);
 };
 
 
