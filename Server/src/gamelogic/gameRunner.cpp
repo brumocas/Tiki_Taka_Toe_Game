@@ -134,14 +134,26 @@ void gameRunner::runRemote() {
 
     // Exchange names
     exchangeNames(client1, client2);
-
     std::cout << "Client1 name is: " + player1.getPlayerName() << std::endl;
     std::cout << "Client2 name is: " + player2.getPlayerName() << std::endl;
 
 
-    while(player1.getScore() != 2 || player2.getScore() != 2){
+    while(true){
         gameCycle(client1, client2);
+
+        // Game ended
+        if(player1.getScore() == 2){
+            std::cout << player1.getPlayerName() <<  " Wins the game\n";
+            break;
+        }
+
+        if(player2.getScore() == 2){
+            std::cout << player2.getPlayerName() <<  " Wins the game\n";
+            break;
+        }
+
     }
+
     client1.closeConnection();
     client2.closeConnection();
 }

@@ -139,7 +139,8 @@ int main(int argc, char **argv) {
     // Testing implementation
     if (std::strcmp(argv[1], "True") == 0){
         ::testing::InitGoogleTest(&argc, argv);
-        RUN_ALL_TESTS();
+        if (!RUN_ALL_TESTS())
+            std::cerr << "Tests failed\n";
     }
 
     // Game Application
