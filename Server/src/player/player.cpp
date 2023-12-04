@@ -67,5 +67,13 @@ namespace gamelogic{
         FootballerGuessSurname = surname;
     }
 
+    void Player::increaseScore() {
+        numberWins++;
+    }
+
+    int Player::getScore() {
+        return numberWins;
+    }
+
 }
 

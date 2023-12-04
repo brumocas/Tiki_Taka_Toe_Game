@@ -173,53 +173,16 @@ public class Game {
                 "----------Chat----------------------------------------------------------------------:\n");
 
 
-        // Receive Game Params
-        board.setParams(client);
-        //Initialize teams/params of the board and images
-        updateParamsTeams();
 
         // Create GameLogic Thread
         Thread backgroundThread = new Thread(() -> {
 
-            // Your background task logic goes here
-            String[] play = new String[0];
-            String message = null;
-            outerLoop:
-            while (true) {
+            while (!gameEnded())
+                gameCycle();
 
-                // Receive Server Message to proceed
-                try {
-                    message = client.receiveMessage();
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
+            // TODO: Print Winner/Loser to the Board
 
-                switch (message) {
-                    case "YourTurn":
-                        // Make new play
-                        getUIplay();
-                        break;
-                    case "OpponentPlay":
-                        // Receive Opponent play
-                        getOpponentPlay();
-                        break;
-                    case "Winner":
-                        // End game as a winner
-                        System.out.println("Your Win");
-                        break outerLoop;
-                    case "Loser":
-                        // End game as a loser
-                        System.out.println("Your Lose");
-                        break outerLoop;
-                    case "Tie":
-                        // End game as a tie
-                        System.out.println("Tie");
-                        break outerLoop;
-                    default:
-                        System.err.println(message);
-                        break;
-                }
-            }
+
             // Sleep for a while to simulate work
             try {
                 Thread.sleep(100);
@@ -241,7 +204,13 @@ public class Game {
 
         if (event.getCode().equals(KeyCode.ENTER)) {
             String[] play = textfield1.getText().split(" ");
-            buffer = "0-0-" + play[0] + "-" + play[1];
+            if (play.length == 1) {
+                // Send guess with only one name
+                buffer = "0-0-" + play[0] + "-null";
+            } else if (play.length == 2) {
+                // Send guess with name and surname
+                buffer = "0-0-" + play[0] + "-" + play[1];
+            }
             changeTextFieldToWait();
         }
 
@@ -252,7 +221,13 @@ public class Game {
 
         if (event.getCode().equals(KeyCode.ENTER)) {
             String[] play = textfield2.getText().split(" ");
-            buffer = "0-1-" + play[0] + "-" + play[1];
+            if (play.length == 1) {
+                // Send guess with only one name
+                buffer = "0-1-" + play[0] + "-null";
+            } else if (play.length == 2) {
+                // Send guess with name and surname
+                buffer = "0-1-" + play[0] + "-" + play[1];
+            }
             changeTextFieldToWait();
         }
 
@@ -263,7 +238,13 @@ public class Game {
 
         if (event.getCode().equals(KeyCode.ENTER)) {
             String[] play = textfield3.getText().split(" ");
-            buffer = "0-2-" + play[0] + "-" + play[1];
+            if (play.length == 1) {
+                // Send guess with only one name
+                buffer = "0-2-" + play[0] + "-null";
+            } else if (play.length == 2) {
+                // Send guess with name and surname
+                buffer = "0-2-" + play[0] + "-" + play[1];
+            }
             changeTextFieldToWait();
         }
 
@@ -274,7 +255,13 @@ public class Game {
 
         if (event.getCode().equals(KeyCode.ENTER)) {
             String[] play = textfield4.getText().split(" ");
-            buffer = "1-0-" + play[0] + "-" + play[1];
+            if (play.length == 1) {
+                // Send guess with only one name
+                buffer = "1-0-" + play[0] + "-null";
+            } else if (play.length == 2) {
+                // Send guess with name and surname
+                buffer = "1-0-" + play[0] + "-" + play[1];
+            }
             changeTextFieldToWait();
         }
 
@@ -285,7 +272,13 @@ public class Game {
 
         if (event.getCode().equals(KeyCode.ENTER)) {
             String[] play = textfield5.getText().split(" ");
-            buffer = "1-1-" + play[0] + "-" + play[1];
+            if (play.length == 1) {
+                // Send guess with only one name
+                buffer = "1-1-" + play[0] + "-null";
+            } else if (play.length == 2) {
+                // Send guess with name and surname
+                buffer = "1-1-" + play[0] + "-" + play[1];
+            }
             changeTextFieldToWait();
         }
 
@@ -296,7 +289,13 @@ public class Game {
 
         if (event.getCode().equals(KeyCode.ENTER)) {
             String[] play = textfield6.getText().split(" ");
-            buffer = "1-2-" + play[0] + "-" + play[1];
+            if (play.length == 1) {
+                // Send guess with only one name
+                buffer = "1-2-" + play[0] + "-null";
+            } else if (play.length == 2) {
+                // Send guess with name and surname
+                buffer = "1-2-" + play[0] + "-" + play[1];
+            }
             changeTextFieldToWait();
         }
 
@@ -307,7 +306,13 @@ public class Game {
 
         if (event.getCode().equals(KeyCode.ENTER)) {
             String[] play = textfield7.getText().split(" ");
-            buffer = "2-0-" + play[0] + "-" + play[1];
+            if (play.length == 1) {
+                // Send guess with only one name
+                buffer = "2-0-" + play[0] + "-null";
+            } else if (play.length == 2) {
+                // Send guess with name and surname
+                buffer = "2-0-" + play[0] + "-" + play[1];
+            }
             changeTextFieldToWait();
         }
 
@@ -318,7 +323,13 @@ public class Game {
 
         if (event.getCode().equals(KeyCode.ENTER)) {
             String[] play = textfield8.getText().split(" ");
-            buffer = "2-1-" + play[0] + "-" + play[1];
+            if (play.length == 1) {
+                // Send guess with only one name
+                buffer = "2-1-" + play[0] + "-null";
+            } else if (play.length == 2) {
+                // Send guess with name and surname
+                buffer = "2-1-" + play[0] + "-" + play[1];
+            }
             changeTextFieldToWait();
         }
 
@@ -329,7 +340,13 @@ public class Game {
 
         if (event.getCode().equals(KeyCode.ENTER)) {
             String[] play = textfield9.getText().split(" ");
-            buffer = "2-2-" + play[0] + "-" + play[1];
+            if (play.length == 1) {
+                // Send guess with only one name
+                buffer = "2-2-" + play[0] + "-null";
+            } else if (play.length == 2) {
+                // Send guess with name and surname
+                buffer = "2-2-" + play[0] + "-" + play[1];
+            }
             changeTextFieldToWait();
         }
 
@@ -368,11 +385,14 @@ public class Game {
         }
 
         // Set new play in the board
-        board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
-                play[2] + ' ' + play[3], (host) ? 'X' : 'O');
+        if (Objects.equals(play[3], "null")){
+            board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
+                    play[2], (host) ? 'X' : 'O');
+        } else {
+            board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
+                    play[2] + ' ' + play[3], (host) ? 'X' : 'O');
+        }
 
-        // Update UI
-        Platform.runLater(() -> updateUI(textFields, shirts, names));
 
     }
 
@@ -405,13 +425,8 @@ public class Game {
         // Get player guess
         play = buffer.split("-");
 
-        if (play.length == 3) {
-            // Send guess with only one name
-            message = play[0] + "-" + play[1] + "-" + play[2] + "-null";
-        } else if (play.length == 4) {
-            // Send guess with name and surname
-            message = play[0] + "-" + play[1] + "-" + play[2] + "-" + play[3];
-        }
+        // Send guess with name and surname
+        message = play[0] + "-" + play[1] + "-" + play[2] + "-" + play[3];
 
         // reset buffer
         buffer = null;
@@ -426,10 +441,15 @@ public class Game {
         // Receive play response from Server
         try {
             if (Objects.equals(client.receiveMessage(), "Correct")) {
-                board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
-                        play[2] + ' ' + play[3], (host) ? 'O' : 'X');
 
-                Platform.runLater(() -> updateUI(textFields, shirts, names));
+                if (Objects.equals(play[3], "null")){
+                    board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
+                            play[2], (host) ? 'O' : 'X');
+                } else {
+                    board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
+                            play[2] + ' ' + play[3], (host) ? 'O' : 'X');
+                }
+
             }
         } catch (IOException e) {
             throw new RuntimeException(e);
@@ -535,7 +555,10 @@ public class Game {
         } else if (symbol == 'X') {
             Image image_aux = new Image(path + "/shirts/" + "shirtx.png");
             shirt.setImage(image_aux);
-        } else {
+        } else if (symbol == 'n') {
+            Image image_aux = new Image(path + "/shirts/" + "shirt.png");
+            shirt.setImage(image_aux);
+        }else {
             System.err.println("Invalid symbol passed to function");
         }
 
@@ -553,7 +576,7 @@ public class Game {
         turn.setText("Your turn :");
         for (int i = 0; i < 3; i++) {
             for (int j = 0; j < 3; j++) {
-                if (board.isEmpty(i,j)){
+                if (board.isEmpty(i, j)) {
                     textFields[i][j].setVisible(true);
                     textFields[i][j].setText("");
                     textFields[i][j].setEditable(true);
@@ -585,6 +608,112 @@ public class Game {
         }
     }
 
+    // Implements a Game turn
+    private void gameCycle(){
+
+        // Receive Game Params
+        try {
+            board.setParams(client);
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+        //Initialize teams/params of the board and images
+        updateParamsTeams();
+
+
+        String[] play = new String[0];
+        String message = null;
+        outerLoop:
+        while (true) {
+
+            // Receive Server Message to proceed
+            try {
+                message = client.receiveMessage();
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+
+            switch (message) {
+                case "YourTurn":
+                    // Make new play
+                    getUIplay();
+                    Platform.runLater(() -> updateUI(textFields, shirts, names));
+                    break;
+                case "OpponentPlay":
+                    // Receive Opponent play
+                    getOpponentPlay();
+                    Platform.runLater(() -> updateUI(textFields, shirts, names));
+                    break;
+                case "Winner":
+                    // Change score
+                    if (host) {
+                        increaseLeftScore();
+                    } else {
+                        increaseRightScore();
+                    }
+                    Platform.runLater(() -> updateUI(textFields, shirts, names));
+                    delay();
+                    resetGame();
+                    System.out.println("Your Win");
+                    break outerLoop;
+                case "Loser":
+                    // Change score
+                    if (!host) {
+                        increaseLeftScore();
+                    } else {
+                        increaseRightScore();
+                    }
+                    Platform.runLater(() -> updateUI(textFields, shirts, names));
+                    delay();
+                    resetGame();
+                    System.out.println("Your Lose");
+                    break outerLoop;
+                case "Tie":
+                    // End game as a tie
+                    Platform.runLater(() -> updateUI(textFields, shirts, names));
+                    delay();
+                    resetGame();
+                    System.out.println("Tie");
+                    break outerLoop;
+                default:
+                    System.err.println(message);
+                    break;
+            }
+
+        }
+    }
+
+    void resetGame(){
+        board.eraseBoard();
+        Platform.runLater(() -> {
+            for (int i = 0; i < 3; i++) {
+                for (int j = 0; j < 3; j++) {
+                    textFields[i][j].setText("");
+                    names[i][j].setText("");
+                    names[i][j].setVisible(false);
+                    textFields[i][j].setText("");
+                    changeShirt(shirts[i][j],'n');
+                }
+            }
+        });
+    }
+
+    // Checks if the game Ended
+    boolean gameEnded(){
+        int hostScore = Integer.parseInt(scoreLeft.getText());
+        int hostedScore = Integer.parseInt(scoreRight.getText());
+        return hostedScore == 2 || hostScore == 2;
+    }
+
+    void delay(){
+        try {
+            // Sleep for 10000 milliseconds (10 second)
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+    }
 }
 
 

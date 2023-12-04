@@ -101,4 +101,19 @@ namespace gamelogic {
         std::cout << std::endl;
     }
 
+    void Board::eraseBoard() {
+        //Initialize all the board parameters
+        for (int i = 0; i < 3; i++) {
+            upParameters[i] = "Unknown";
+            leftParameters[i] = "Unknown";
+        }
+        //Initialize the symbol array
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                symbolArray[i][j] = '-';
+                footballerEntry[i][j] = '-';
+            }
+        }
+    }
+
 }

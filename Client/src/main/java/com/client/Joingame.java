@@ -101,8 +101,8 @@ public class Joingame implements Initializable {
                     stage.show();
                 }
             } else {
-                // TODO: Add Label
-                pinGame.setText("Incorrect Pin");
+                pinGame.setText("");
+                pinGame.setPromptText("Incorrect Pin");
             }
         }
     }

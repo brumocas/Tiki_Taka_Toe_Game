@@ -1,6 +1,7 @@
 package com.client.logic;
 
 import com.client.communication.CommunicationGui;
+import javafx.scene.control.TextField;
 
 import java.io.IOException;
 import java.util.Vector;
@@ -118,5 +119,10 @@ public class Board {
         leftparams.add(packet[4]);
         leftparams.add(packet[5]);
         setLeftparams(leftparams);
+    }
+
+    public void eraseBoard(){
+        board = new String[rows][columns];
+        board_char = new char[rows][columns];
     }
 }

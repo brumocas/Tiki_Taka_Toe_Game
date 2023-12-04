@@ -45,9 +45,10 @@ public:
     // Method to generate random string for the remote game version
     std::string randomString();
     // End game
-    bool endGame();
+    void endGame();
     // Method that executes one game logic
     void gameCycle(communication client1, communication client2);
+
 };
 
 

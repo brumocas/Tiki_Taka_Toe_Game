@@ -16,6 +16,7 @@ namespace gamelogic {
         std::string playerName;
         std::string FootballerGuessName;
         std::string FootballerGuessSurname;
+        int numberWins = 0;
         int x;
         int y;
 
@@ -43,8 +44,14 @@ namespace gamelogic {
         std::string getFootballerGuessSurname();
         // Setter for footballer guess Surname
         void setFootballerGuessSurname(std::string surname);
+
         char getSymbol();
+
         void setSymbol(char symbol);
+        // Increase Player number of Wins
+        void increaseScore();
+        // Get player number of wins
+        int getScore();
 
         // Equality operator
         bool operator==(const Player& other) const {

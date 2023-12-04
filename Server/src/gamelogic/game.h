@@ -49,6 +49,10 @@ namespace gamelogic {
         bool winningCombinations(char symbol);
         // Print game
         void print();
+        // Erase board for new game
+        void erasePreviousGame(){
+            board.eraseBoard();
+        }
 
     };
 }

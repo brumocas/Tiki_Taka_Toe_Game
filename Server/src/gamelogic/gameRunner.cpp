@@ -100,7 +100,7 @@ bool gameRunner::isGameInProgress() {
     return this->running;
 }
 
-bool gameRunner::endGame(){
+void gameRunner::endGame(){
     running = false;
 }
 
@@ -139,8 +139,9 @@ void gameRunner::runRemote() {
     std::cout << "Client2 name is: " + player2.getPlayerName() << std::endl;
 
 
-    gameCycle(client1, client2);
-
+    while(player1.getScore() != 2 || player2.getScore() != 2){
+        gameCycle(client1, client2);
+    }
     client1.closeConnection();
     client2.closeConnection();
 }
@@ -273,7 +274,9 @@ void gameRunner::gameCycle(communication client1, communication client2) {
         if (game.isGameWonByPlayer(player1)){
             client1.sendMessage("Winner");
             client2.sendMessage("Loser");
-            std::cout << player1.getPlayerName() << " Wins\n";
+            std::cout << player1.getPlayerName() << " Wins round\n";
+            player1.increaseScore();
+            game.erasePreviousGame();
             break;
         }
 
@@ -281,6 +284,7 @@ void gameRunner::gameCycle(communication client1, communication client2) {
         if (game.isGameTied(player1, player2)){
             client1.sendMessage("Tie");
             client2.sendMessage("Tie");
+            game.erasePreviousGame();
             break;
         }
 
@@ -306,7 +310,9 @@ void gameRunner::gameCycle(communication client1, communication client2) {
         if (game.isGameWonByPlayer(player2)){
             client2.sendMessage("Winner");
             client1.sendMessage("Loser");
-            std::cout << player2.getPlayerName() << " Wins\n";
+            std::cout << player2.getPlayerName() << " Wins round\n";
+            player2.increaseScore();
+            game.erasePreviousGame();
             break;
         }
 
@@ -314,7 +320,8 @@ void gameRunner::gameCycle(communication client1, communication client2) {
         if (game.isGameTied(player1, player2)){
             client1.sendMessage("Tie");
             client2.sendMessage("Tie");
-            std::cout << "Tied game\n";
+            std::cout << "Tied round\n";
+            game.erasePreviousGame();
             break;
         }
 

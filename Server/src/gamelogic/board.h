@@ -40,6 +40,8 @@ namespace gamelogic {
         void printFootballers();
         // Print Footballers board for debug
         void printSymbols();
+        // Erase board for new game
+        void eraseBoard();
     };
 
 }
