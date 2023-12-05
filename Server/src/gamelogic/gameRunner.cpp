@@ -106,7 +106,7 @@ void gameRunner::startGame() {
             game.setParams("England", "EC", "Spain", "Manchester_United", "Real_Madrid", "Chelsea");
             break;
         case 4:
-            game.setParams("Sporting", "Bayern", "Dortmund", "CL", "Portugal", "Barcelona", "Benfica");
+            game.setParams("Sporting", "Bayern", "Dortmund", "CL", "Portugal", "Barcelona");
             break;
         case 5:
             game.setParams("Atletico_Madrid", "BD", "Porto", "Spain", "Chelsea", "Brazil");
@@ -127,6 +127,7 @@ void gameRunner::startGame() {
             game.setParams("Arsenal", "Manchester_City", "CL", "Norway", "England", "Dortmund");
             break;
         default:
+            std::cout << "Invalid board!";
     }
 
 }
