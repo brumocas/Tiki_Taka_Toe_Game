@@ -93,7 +93,42 @@ void gameRunner::startGame() {
     // TODO: Randomize teams and cups
     // Important to follow name struct "WC" , "CL", "BD", "E" for trophies
     // Important to follow teams and Nation struct --> example : Real_Madrid
-    game.setParams("Real_Madrid", "Manchester_City", "PSG", "Argentina", "CL", "Portugal");
+    int caseNumber = std::rand() % 10 + 1;
+    
+    switch(caseNumber) {
+        case 1:
+            game.setParams("Real_Madrid", "Manchester_City", "PSG", "Argentina", "CL", "Portugal");
+            break;
+        case 2:
+            game.setParams("AC_Milan", "WC", "Benfica", "Brazil", "Barcelona", "Inter");
+            break;
+        case 3:
+            game.setParams("England", "EC", "Spain", "Manchester_United", "Real_Madrid", "Chelsea");
+            break;
+        case 4:
+            game.setParams("Sporting", "Bayern", "Dortmund", "CL", "Portugal", "Barcelona", "Benfica");
+            break;
+        case 5:
+            game.setParams("Atletico_Madrid", "BD", "Porto", "Spain", "Chelsea", "Brazil");
+            break;
+        case 6:
+            game.setParams("Juventus", "Tottenham", "Italy", "Inter", "EC", "AC_Milan");
+            break;
+        case 7:
+            game.setParams("Liverpool", "France", "Bayern", "WC", "Arsenal", "Real_Madrid");
+            break;
+        case 8:
+            game.setParams("Manchester_City", "PSG", "Chelsea", "Argentina", "CL", "Juventus");
+            break;
+        case 9:
+            game.setParams("Belgium", "EC", "Manchester_United", "Chelsea", "Atletico_Madrid", "Inter");
+            break;
+        case 10:
+            game.setParams("Arsenal", "Manchester_City", "CL", "Norway", "England", "Dortmund");
+            break;
+        default:
+    }
+
 }
 
 bool gameRunner::isGameInProgress() {
