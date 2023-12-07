@@ -619,7 +619,7 @@ public class Game {
             throw new RuntimeException(e);
         }
         //Initialize teams/params of the board and images
-        updateParamsTeams();
+        Platform.runLater(() -> updateParamsTeams());
 
 
         String[] play = new String[0];
