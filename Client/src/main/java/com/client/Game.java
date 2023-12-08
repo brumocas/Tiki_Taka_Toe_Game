@@ -1,12 +1,14 @@
 package com.client;
 
 import com.client.communication.CommunicationGui;
+import com.client.gui.defs.Cursor;
 import com.client.logic.Board;
 import com.client.player.Player;
 import javafx.animation.Animation;
 import javafx.animation.KeyFrame;
 import javafx.animation.Timeline;
 import javafx.application.Platform;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 
 
@@ -14,6 +16,11 @@ import java.io.IOException;
 import java.util.Objects;
 
 
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
@@ -21,14 +28,21 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
+import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
+import javafx.stage.Stage;
 import javafx.util.Duration;
 
 
 import static javafx.geometry.Pos.CENTER;
 
 public class Game {
-
+    @FXML
+    private HBox timeBox;
+    @FXML
+    private Button menuButton;
+    @FXML
+    private Label gameInfo;
     @FXML
     private Text timer;
     @FXML
@@ -154,6 +168,9 @@ public class Game {
                 {name7, name8, name9}
         };
 
+        gameInfo.setVisible(false);
+        menuButton.setVisible(false);
+
         // See if the player is the host or the hosted
         if (host) {
             // Client host type
@@ -174,6 +191,8 @@ public class Game {
         //       "----------Chat----------------------------------------------------------------------:\n");
 
 
+        // Todo : Connect socket for chat
+
 
         // Create GameLogic Thread
         Thread backgroundThread = new Thread(() -> {
@@ -181,8 +200,22 @@ public class Game {
             while (!gameEnded())
                 gameCycle();
 
-            // TODO: Print Winner/Loser to the Board
+            int hostScore = Integer.parseInt(scoreLeft.getText());
+            int hostedScore = Integer.parseInt(scoreRight.getText());
 
+            if (hostScore == 2 && host){
+                Platform.runLater(() -> setGameInfo("You Win"));
+            } else if (hostScore == 2 && !host) {
+                Platform.runLater(() -> setGameInfo("You Lose"));
+            } else if (hostedScore == 2 && host){
+                Platform.runLater(() -> setGameInfo("You Lose"));
+            } else if (hostedScore == 2 && !host){
+                Platform.runLater(() -> setGameInfo("You Win"));
+            }
+
+            Platform.runLater(this::setMenuButton);
+
+            client.closeConnection();
 
             // Sleep for a while to simulate work
             try {
@@ -393,7 +426,6 @@ public class Game {
             board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
                     play[2] + ' ' + play[3], (host) ? 'X' : 'O');
         }
-
 
     }
 
@@ -653,6 +685,8 @@ public class Game {
                         increaseRightScore();
                     }
                     Platform.runLater(() -> updateUI(textFields, shirts, names));
+                    // Set game info
+                    Platform.runLater(() -> setGameInfo("Round Won"));
                     delay();
                     resetGame();
                     System.out.println("Your Win");
@@ -665,6 +699,8 @@ public class Game {
                         increaseRightScore();
                     }
                     Platform.runLater(() -> updateUI(textFields, shirts, names));
+                    // Set game info
+                    Platform.runLater(() -> setGameInfo("Round Lost"));
                     delay();
                     resetGame();
                     System.out.println("Your Lose");
@@ -672,6 +708,8 @@ public class Game {
                 case "Tie":
                     // End game as a tie
                     Platform.runLater(() -> updateUI(textFields, shirts, names));
+                    // Set game info
+                    Platform.runLater(() -> setGameInfo("Tied Round"));
                     delay();
                     resetGame();
                     System.out.println("Tie");
@@ -687,6 +725,7 @@ public class Game {
     void resetGame(){
         board.eraseBoard();
         Platform.runLater(() -> {
+            removeGameInfo();
             for (int i = 0; i < 3; i++) {
                 for (int j = 0; j < 3; j++) {
                     textFields[i][j].setText("");
@@ -708,12 +747,41 @@ public class Game {
 
     void delay(){
         try {
-            // Sleep for 10000 milliseconds (10 second)
-            Thread.sleep(10000);
+            // Sleep for 5000 milliseconds (5 second)
+            Thread.sleep(5000);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
+    }
+
+    void setGameInfo(String message){
+        gameInfo.setText(message);
+        gameInfo.setVisible(true);
+    }
+
+    void removeGameInfo(){
+        gameInfo.setVisible(false);
+    }
+
+    void setMenuButton(){
+        turn.setVisible(false);
+        timeBox.setVisible(false);
+        menuButton.setVisible(true);
+    }
+
+    private Scene scene;
+    private Stage stage;
+    private Parent root;
+    // Action to set main menu scene
+    @FXML
+    public void setMenuScene(ActionEvent event) throws IOException {
+        root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menu.fxml")));
+        stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        scene = new Scene(root);
+        Cursor.setCursor(scene);
+        stage.setScene(scene);
+        stage.show();
     }
 }
 

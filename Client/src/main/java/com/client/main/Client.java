@@ -25,6 +25,7 @@ public class Client {
             remoteCMD();
     }
 
+    // The code bellow was used for testing the communication
     static void remoteCMD() throws IOException {
         Board board = new Board();
         Player p = new Player();

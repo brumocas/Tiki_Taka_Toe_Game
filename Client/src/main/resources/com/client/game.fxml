@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.String?>
 <?import javafx.geometry.Insets?>
 <?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextArea?>
 <?import javafx.scene.control.TextField?>
@@ -172,17 +174,23 @@
                               </ImageView>
                               <TextField fx:id="textfield5" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF5" />
                               <Label fx:id="name5" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
+                              <Label fx:id="gameInfo" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="31.0" prefHeight="101.0" prefWidth="394.0" styleClass="text_message" stylesheets="@game.css" text="Round Won" textAlignment="CENTER">
+                                 <font>
+                                    <Font size="25.0" />
+                                 </font>
+                              </Label>
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" stylesheets="@game.css" GridPane.columnIndex="2" GridPane.rowIndex="3">
                            <children>
-                              <TextField fx:id="textfield8" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF8" />
                               <ImageView fx:id="shirt8" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
+                              <TextField fx:id="textfield8" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF8" />
                               <Label fx:id="name8" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
-                           </children></Pane>
+                           </children>
+                        </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
                            <children>
                               <Label fx:id="param3" alignment="CENTER" layoutX="4.0" layoutY="135.0" prefHeight="51.0" prefWidth="443.0" styleClass="text" text="Param3" textAlignment="CENTER" />
@@ -211,7 +219,8 @@
                               </ImageView>
                               <TextField fx:id="textfield6" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF6" />
                               <Label fx:id="name6" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
-                           </children></Pane>
+                           </children>
+                        </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="3" GridPane.rowIndex="3">
                            <children>
                               <ImageView fx:id="shirt9" fitHeight="90.0" fitWidth="99.0" layoutX="170.0" layoutY="45.0" pickOnBounds="true" preserveRatio="true">
@@ -227,11 +236,20 @@
                   <GridPane prefHeight="228.0" prefWidth="1756.0">
                     <columnConstraints>
                       <ColumnConstraints hgrow="SOMETIMES" maxWidth="862.0" minWidth="10.0" prefWidth="438.0" />
-                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="1382.0" minWidth="10.0" prefWidth="1318.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" maxWidth="862.0" minWidth="10.0" prefWidth="98.66665649414062" />
+                        <ColumnConstraints hgrow="SOMETIMES" maxWidth="1382.0" minWidth="10.0" prefWidth="1365.3333435058594" />
                     </columnConstraints>
                     <rowConstraints>
                       <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
+                        <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="53.3333740234375" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints />
                     </rowConstraints>
                      <children>
                         <VBox prefHeight="200.0" prefWidth="100.0" styleClass="cell-style">
@@ -239,18 +257,23 @@
                               <Pane prefHeight="200.0" prefWidth="200.0">
                                  <children>
                                     <Label fx:id="turn" layoutX="29.0" layoutY="25.0" styleClass="text" stylesheets="@game.css" text="Your Turn : " />
-                                    <HBox />
-                                    <HBox layoutX="296.0" layoutY="25.0" prefHeight="51.0" prefWidth="114.0" styleClass="text_box" stylesheets="@game.css">
+                                    <HBox fx:id="timeBox" layoutX="296.0" layoutY="25.0" prefHeight="51.0" prefWidth="114.0" styleClass="text_box" stylesheets="@game.css">
                                        <children>
                                           <Text fx:id="timer" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_box" text="30 sec" />
                                        </children>
                                     </HBox>
+                                    <Button fx:id="menuButton" alignment="CENTER" contentDisplay="CENTER" layoutX="63.0" layoutY="20.0" mnemonicParsing="false" onAction="#setMenuScene" prefHeight="79.0" prefWidth="322.0" stylesheets="@menu.css" text="Menu" textAlignment="CENTER" visible="false">
+                                       <styleClass>
+                                          <String fx:value="custom-button" />
+                                          <String fx:value="main-button" />
+                                       </styleClass>
+                                    </Button>
                                  </children>
                               </Pane>
                            </children>
                         </VBox>
-                        <TextArea fx:id="textarea" prefHeight="146.0" prefWidth="1318.0" stylesheets="@game.css" GridPane.columnIndex="1" />
-                        <TextField fx:id="prompt" onKeyPressed="#getMessage" prefHeight="39.0" prefWidth="1317.0" promptText="Write a message to your opponent..." stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                        <TextArea fx:id="textarea" prefHeight="152.0" prefWidth="1172.0" stylesheets="@game.css" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="7" />
+                        <TextField fx:id="prompt" onKeyPressed="#getMessage" prefHeight="33.0" prefWidth="1294.0" promptText="Write a message to your opponent..." stylesheets="@game.css" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="BOTTOM" />
                      </children>
                   </GridPane>
                </children>
