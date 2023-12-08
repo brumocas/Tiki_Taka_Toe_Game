@@ -16,6 +16,7 @@
 #include <stdexcept>
 #include "communication.h"
 
+
 const int MAX_CLIENTS = 2;
 
 class Server {
@@ -26,6 +27,8 @@ public:
     void start();
     // Accept Clients connections
     int acceptClient();
+    // Close Server Socket
+    void closeServer();
 private:
     int serverSocket;
     int port;
@@ -37,6 +40,8 @@ private:
     bool listenForClients();
     // Print Server information
     void printServerInfo() const;
+
+
 };
 
 #endif //SERVER_SERVER_H

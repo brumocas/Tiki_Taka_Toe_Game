@@ -14,7 +14,6 @@ void communication::sendMessage(std::string message) {
     if ((bytes = send(clientSocket, messageWithNewline.c_str(), messageWithNewline.length(), 0)) <= 0) {
         perror("Failed to send message");
     }
-    std::cout << messageWithNewline;
 }
 
 std::string communication::receiveMessage() {
@@ -25,7 +24,6 @@ std::string communication::receiveMessage() {
         return "";
     }
     buffer[bytes - 1] = '\0';
-    std::cout << std::string(buffer, bytes - 1) << std::endl;
     return std::string(buffer, bytes - 1);
 }
 

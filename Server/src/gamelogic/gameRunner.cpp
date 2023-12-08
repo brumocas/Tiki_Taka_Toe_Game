@@ -167,33 +167,31 @@ void gameRunner::runRemote() {
     client2.sendMessage("Correct");
     std::cout << "Clients are both connected\n";
 
-
     // Exchange names
     exchangeNames(client1, client2);
     std::cout << "Client1 name is: " + player1.getPlayerName() << std::endl;
     std::cout << "Client2 name is: " + player2.getPlayerName() << std::endl;
 
+    Server chatServer(std::stoi(argv[2]) + 1);
+    chatServer.start();
+    communication chat1 = chatServer.acceptClient();
+    communication chat2 = chatServer.acceptClient();
 
-    while(true){
-        gameCycle(client1, client2);
+    std::thread gameThread(&gameRunner::gameThread, this, client1, client2);
+    std::thread chat1Thread(&gameRunner::chatThread, this, chat1, chat2);
+    std::thread chat2Thread(&gameRunner::chatThread, this, chat2, chat1);
 
-        // Game ended
-        if(player1.getScore() == 2){
-            std::cout << player1.getPlayerName() <<  " Wins the game\n";
-            break;
-        }
+    gameThread.join();
+    chat1Thread.join();
+    chat2Thread.join();
 
-        if(player2.getScore() == 2){
-            std::cout << player2.getPlayerName() <<  " Wins the game\n";
-            break;
-        }
-
-    }
-
+    chat1.closeConnection();
+    chat2.closeConnection();
     client1.closeConnection();
     client2.closeConnection();
+    gameServer.closeServer();
+    chatServer.closeServer();
 }
-
 
 void gameRunner::exchangeNames(communication client1, communication client2) {
 
@@ -375,6 +373,36 @@ void gameRunner::gameCycle(communication client1, communication client2) {
 
     }
 
+}
+
+void gameRunner::chatThread(communication chat1, communication chat2) {
+
+    while (true){
+        std::string message;
+        message = chat1.receiveMessage();
+        if (message == "Close")
+            break;
+        chat2.sendMessage(message);
+    }
+}
+
+void gameRunner::gameThread(communication client1, communication client2) {
+
+    while(true){
+        gameCycle(client1, client2);
+
+        // Game ended
+        if(player1.getScore() == 2){
+            std::cout << player1.getPlayerName() <<  " Wins the game\n";
+            break;
+        }
+
+        if(player2.getScore() == 2){
+            std::cout << player2.getPlayerName() <<  " Wins the game\n";
+            break;
+        }
+
+    }
 }
 
 

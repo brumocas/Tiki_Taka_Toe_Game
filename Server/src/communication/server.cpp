@@ -76,6 +76,10 @@ void Server::printServerInfo() const {
     }
 }
 
+void Server::closeServer() {
+    close(serverSocket);
+}
+
 
 
 

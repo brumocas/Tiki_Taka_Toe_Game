@@ -13,6 +13,7 @@ import javafx.fxml.FXML;
 
 
 import java.io.IOException;
+import java.util.List;
 import java.util.Objects;
 
 
@@ -134,6 +135,7 @@ public class Game {
     private ImageView[][] shirts;
     private Label[][] names;
 
+    CommunicationGui chat = new CommunicationGui();
     CommunicationGui client;
     Board board = new Board();
     Player p1;
@@ -144,6 +146,7 @@ public class Game {
     private volatile String buffer;
 
     public void setGameLogic(boolean host, CommunicationGui client, Player p1, Player p2) throws IOException {
+        List<String> args = Gui.getInstance().getParameters().getRaw();
         this.host = host;
         this.p1 = p1;
         this.p2 = p2;
@@ -191,8 +194,34 @@ public class Game {
         //       "----------Chat----------------------------------------------------------------------:\n");
 
 
-        // Todo : Connect socket for chat
+        // Todo : Connect another socket for chat
+        chat.connectToServer(args.get(1), Integer.parseInt(args.get(2)) + 1);
 
+        // Create chat Thread to receive Opponent chat message
+        Thread chatThread = new Thread(() -> {
+
+            while (true){
+                String message;
+                // Sleep for a while to simulate work
+                try {
+                    message = chat.receiveMessage();
+                } catch (IOException e) {
+                    throw new RuntimeException(e);
+                }
+
+                if (message!= null){
+                    Platform.runLater(() -> {
+                        receiveMessage(message);
+                    });
+                }
+
+                try {
+                    Thread.sleep(250);
+                } catch (InterruptedException e) {
+                    e.printStackTrace();
+                }
+            }
+        });
 
         // Create GameLogic Thread
         Thread backgroundThread = new Thread(() -> {
@@ -227,8 +256,10 @@ public class Game {
 
         // Set the thread as a daemon so that it will automatically terminate when the application exits
         backgroundThread.setDaemon(true);
+        chatThread.setDaemon(true);
         // Start the thread
         backgroundThread.start();
+        chatThread.start();
     }
 
 
@@ -394,13 +425,18 @@ public class Game {
     private TextArea textarea;
 
     @FXML
-    void getMessage(KeyEvent event) {
+    void getMessage(KeyEvent event) throws IOException {
         if (event.getCode().equals(KeyCode.ENTER)) {
             String message = prompt.getText();
             textarea.appendText((host) ? p1.getName() + " : " + message + "\n" : p2.getName() + " : " + message + "\n");
             prompt.setText("");
-            // TODO: Sent received message to the server
+            // Send Message to the other player
+            chat.sendMessage(message);
         }
+    }
+
+    void receiveMessage(String message){
+        textarea.appendText((!host) ? p1.getName() + " : " + message + "\n" : p2.getName() + " : " + message + "\n");
     }
 
 
@@ -782,6 +818,7 @@ public class Game {
         Cursor.setCursor(scene);
         stage.setScene(scene);
         stage.show();
+        chat.sendMessage("Close");
     }
 }
 

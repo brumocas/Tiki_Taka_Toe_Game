@@ -90,7 +90,6 @@ public class CommunicationGui {
 
         try {
             writer.println(message);
-            System.out.println(message);
         } catch (UncheckedIOException e) {
             throw new IOException("Error sending message to server", e);
         }
@@ -102,9 +101,7 @@ public class CommunicationGui {
         }
 
         try {
-            String message = reader.readLine();
-            System.out.println(message);
-            return message;
+            return reader.readLine();
         } catch (IOException e) {
             throw new IOException("Error receiving message from server", e);
         }

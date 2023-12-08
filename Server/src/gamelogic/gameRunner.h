@@ -48,6 +48,10 @@ public:
     void endGame();
     // Method that executes one game logic
     void gameCycle(communication client1, communication client2);
+    // Task Function to run the remote Game
+    void gameThread(communication client1, communication client2);
+    // Task Function to run the remote chat
+    void chatThread(communication chat1, communication chat2);
 
 };
 
