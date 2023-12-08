@@ -1,6 +1,5 @@
 package com.client.player;
 
-import org.controlsfx.control.tableview2.filter.filtereditor.SouthFilter;
 
 public class Player {
      private String name;
@@ -69,7 +68,6 @@ public class Player {
     public boolean getInGame(){
         return this.inGame;
     }
-
 
     //print player content for debug
     public void print(){

@@ -4,7 +4,6 @@
     -fx-background-position: center; /* Centers the image horizontally and vertically */
 }
 
-
 /* styles.css */
 .Vbox {
     -fx-background-color: #434848; /* Background color (adjust to your preference) */
@@ -40,6 +39,7 @@
     -fx-font-weight: bold;
     -fx-font-family: "Verdana";
 }
+
 
 /* Define text field for inputs like nicknames as pins*/
 .text-field {
@@ -90,5 +90,20 @@
     -fx-alignment: center;
 }
 
+.text_message{
+    -fx-background-color: #b3ae83; /* Background color (adjust to your preference) */
+    -fx-background-radius: 15px;
+    -fx-border-color: #111111; /* Border color (red in this example) */
+    -fx-border-width: 2px; /* Border width (adjust as needed) */
+    -fx-border-radius: 15px; /* Border radius (rounded corners, adjust as needed) */
+    -fx-background-insets: 2; /* Adjust to control the distance between the border and the button content */
+    -fx-text-fill: #434848;
+    -fx-font-size: 20px; /* You can adjust the font size to your preference */
+    -fx-font-weight: bold;
+    -fx-font-family: "Verdana";
+    -fx-prompt-text-fill: #111111;
+    -fx-alignment: center;
+
+}
 
 

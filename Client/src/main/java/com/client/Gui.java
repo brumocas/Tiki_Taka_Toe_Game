@@ -12,6 +12,16 @@ import javafx.stage.Stage;
 import java.io.IOException;
 
 public class Gui extends Application {
+    private static Gui instance;
+
+    public Gui(){
+        instance = this;
+    }
+
+    public static Gui getInstance() {
+        return instance;
+    }
+
 
     @Override
     public void start(Stage stage) throws IOException {
@@ -32,6 +42,6 @@ public class Gui extends Application {
     }
 
     public static void main(String[] args) {
-        launch();
+        launch(args);
     }
 }

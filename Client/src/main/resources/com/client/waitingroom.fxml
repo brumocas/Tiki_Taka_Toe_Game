@@ -70,7 +70,7 @@
             <String fx:value="text-field" />
          </styleClass>
          <children>
-            <Text fx:id="nickname1" fill="#434848" strokeType="OUTSIDE" strokeWidth="0.0" text="nick1">
+            <Text fx:id="nickname1" fill="#434848" strokeType="OUTSIDE" strokeWidth="0.0">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-field" />
@@ -84,7 +84,7 @@
             <String fx:value="text-field" />
          </styleClass>
          <children>
-            <Text fx:id="nickname2" fill="#434848" strokeType="OUTSIDE" strokeWidth="0.0" text="nick2">
+            <Text fx:id="nickname2" fill="#434848" strokeType="OUTSIDE" strokeWidth="0.0">
                <styleClass>
                   <String fx:value="text" />
                   <String fx:value="text-field" />

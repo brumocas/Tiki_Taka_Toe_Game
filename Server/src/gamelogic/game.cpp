@@ -9,14 +9,12 @@ namespace gamelogic {
 
     game::game() {
         // Initiate game and load DB
-        db.load("../src/database/files/game_test_database.txt");
-        // TODO: randomize teams and cups
+        db.load("../src/database/files/default_database.txt");
     }
 
     game::game(std::string db_path) {
         // Initiate game and load DB
         db.load(db_path);
-        // TODO: randomize teams and cups
     }
 
 
@@ -123,7 +121,7 @@ namespace gamelogic {
             // Check if player won the BALLON DOR
             if (!f.isBallonDorWinner())
                 return false;
-        } else if (paramUp == "E") {
+        } else if (paramUp == "EC") {
             // Check if player won the EURO CUP
             if (!f.isEuropeanWinner())
                 return false;
@@ -157,7 +155,7 @@ namespace gamelogic {
             // Check if player won the BALLON DOR
             if (!f.isBallonDorWinner())
                 return false;
-        } else if (paramLeft == "E") {
+        } else if (paramLeft == "EC") {
             // Check if player won the EURO CUP
             if (!f.isEuropeanWinner())
                 return false;
@@ -185,6 +183,20 @@ namespace gamelogic {
                 return true;
         }
         return false;
+    }
+
+    std::vector<std::string> game::getParams() {
+        std::vector<std::string> params;
+
+        for (int i = 0; i < 3; ++i) {
+            params.push_back(board.getUpParams(i));
+        }
+
+        for (int i = 0; i < 3; ++i) {
+            params.push_back(board.getLeftParams(i));
+        }
+
+        return params;
     }
 
 }

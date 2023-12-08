@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 14)
 find_package(GTest REQUIRED)
 
 add_executable(Server
-        Server.cpp
+        Main.cpp
         src/database/database.cpp
         src/database/database.h
         src/database/footballer.cpp
@@ -27,5 +27,7 @@ add_executable(Server
         src/gamelogic/gameRunner.cpp
         src/gamelogic/gameRunner.h
         GoogleTests/test_game.cpp
+        src/communication/server.cpp
+        src/communication/server.h
 )
 target_link_libraries(Server ${GTEST_LIBRARIES})

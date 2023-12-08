@@ -47,7 +47,12 @@ namespace gamelogic {
     void Board::setPlay(Player player) {
         if (!isUsed(player.getPlayerGuessX(), player.getPlayerGuessY())) {
             symbolArray[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getSymbol();
-            footballerEntry[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getFootballerGuessName() + "_" + player.getFootballerGuessSurname();
+            if (player.getFootballerGuessSurname() == "null"){
+                footballerEntry[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getFootballerGuessName();
+            } else {
+                footballerEntry[player.getPlayerGuessX()][player.getPlayerGuessY()] = player.getFootballerGuessName() + "_" + player.getFootballerGuessSurname();
+            }
+
         } else {
             std::cerr << "Invalid behaviour" << std::endl;
         }
@@ -58,7 +63,7 @@ namespace gamelogic {
     }
 
     bool Board::isUsed(int x, int y) {
-        return footballerEntry[x][y] != "-";
+        return symbolArray[x][y] != '-';
     }
 
     bool Board::isFull() {
@@ -72,12 +77,12 @@ namespace gamelogic {
     }
 
     void Board::printFootballers() {
-        std::cout << "/----Footballers board----/" << std::endl;
-        std::cout << upParameters[0] << "\t" << upParameters[1] << "\t" << upParameters[2] << "\t" << std::endl;
+        std::cout << "/---------Footballers board---------/" << std::endl;
+        std::cout << "\t" << upParameters[0] << "\t" << upParameters[1] << "\t" << upParameters[2] << "\t" << std::endl;
         for (int i = 0; i < 3; ++i) {
             std::cout << leftParameters[i] << "\t";
             for (int j = 0; j < 3; ++j) {
-                std::cout << footballerEntry[i][j] << "\t";
+                std::cout << "\t" << footballerEntry[i][j] << "\t";
             }
             std::cout << std::endl;
         }
@@ -85,14 +90,30 @@ namespace gamelogic {
     }
 
     void Board::printSymbols() {
-        std::cout << "/-----Symbols board-----/" << std::endl;
+        std::cout << "/----------Symbols board----------/" << std::endl;
         for (int i = 0; i < 3; ++i) {
+            std::cout << "\t\t";
             for (int j = 0; j < 3; ++j) {
-                std::cout << symbolArray[i][j] << "\t";
+                std::cout << symbolArray[i][j] << "\t\t";
             }
             std::cout << std::endl;
         }
         std::cout << std::endl;
+    }
+
+    void Board::eraseBoard() {
+        //Initialize all the board parameters
+        for (int i = 0; i < 3; i++) {
+            upParameters[i] = "Unknown";
+            leftParameters[i] = "Unknown";
+        }
+        //Initialize the symbol array
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                symbolArray[i][j] = '-';
+                footballerEntry[i][j] = '-';
+            }
+        }
     }
 
 }

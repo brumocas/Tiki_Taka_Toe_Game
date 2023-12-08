@@ -78,6 +78,7 @@ TEST(isGameTied, GameNotTied) {
     player1.setFootballerGuessName("Cristiano");
     player1.setFootballerGuessSurname("Ronaldo");
     player1.setPlayerGuessCords(0,0);
+    player2.setPlayerGuessCords(1,1);
     testGame.checkAnswer(player1);
     testGame.checkAnswer(player2);
     player2.setFootballerGuessName("Cristiano");
