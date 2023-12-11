@@ -549,8 +549,16 @@ public class Game {
 
     // Change Params from a scene
     void changeParams(Label label, String new_param) {
-        label.setText(new_param);
-        label.setAlignment(CENTER);
+        String[] params = new_param.split("_");
+
+        if (params.length == 2){
+            label.setText(params[0] + " " + params[1]);
+            label.setAlignment(CENTER);
+        } else if (params.length == 1) {
+            label.setText(new_param);
+            label.setAlignment(CENTER);
+        }
+
     }
 
     // Change images from Scene
