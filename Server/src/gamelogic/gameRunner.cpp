@@ -112,7 +112,7 @@ void gameRunner::startGame() {
             game.setParams("Atletico_Madrid", "BD", "PSG", "France", "Chelsea", "Brazil");
             break;
         case 6:
-            game.setParams("Juventus", "Tottenham", "Italy", "Inter", "EC", "AC_Milan");
+            game.setParams("Juventus", "Tottenham", "Italy", "Inter", "WC", "AC_Milan");
             break;
         case 7:
             game.setParams("Liverpool", "France", "Bayern", "WC", "Arsenal", "Real_Madrid");
