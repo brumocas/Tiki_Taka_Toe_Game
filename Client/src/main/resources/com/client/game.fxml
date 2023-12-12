@@ -47,7 +47,7 @@
                      <children>
                         <Pane prefHeight="200.0" prefWidth="200.0">
                            <children>
-                              <Label layoutX="135.0" layoutY="-5.0" styleClass="text" text="Score :" />
+                              <Label alignment="CENTER" layoutX="3.0" layoutY="-5.0" prefHeight="49.0" prefWidth="439.0" styleClass="text" stylesheets="@game.css" text="Score :" />
                               <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="53.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirto.png" />
