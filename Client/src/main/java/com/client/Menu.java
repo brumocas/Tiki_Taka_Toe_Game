@@ -24,7 +24,6 @@ public class Menu implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        // This method is automatically called when the FXML is loaded
 
         // Handle the button click event
         quitGameButton.setOnAction(event -> {
@@ -36,6 +35,7 @@ public class Menu implements Initializable {
         });
     }
 
+    // Task to handle Quit Game button
     @FXML
     public void exitMenuScene(ActionEvent event) throws IOException{
         System.exit(0);
@@ -47,6 +47,7 @@ public class Menu implements Initializable {
     private Stage stage;
     private Parent root;
 
+    // Task to handle New Game button
     @FXML
     public void setNewGameScene(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("newgame.fxml")));
@@ -60,6 +61,7 @@ public class Menu implements Initializable {
     @FXML
     private Button joinGameButton;
 
+    // Task to handle Join Game button
     @FXML
     public void setJoinGameScene(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("joingame.fxml")));
@@ -73,6 +75,7 @@ public class Menu implements Initializable {
     @FXML
     private Button instructionsButton;
 
+    // Task to handle Instructions button
     @FXML
     public void setInstructionsScene(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("instructions.fxml")));
@@ -86,6 +89,7 @@ public class Menu implements Initializable {
     @FXML
     private Button aboutUsButton;
 
+    // Task to handle About Us button
     @FXML
     public void setAboutUsScene(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("aboutus.fxml")));

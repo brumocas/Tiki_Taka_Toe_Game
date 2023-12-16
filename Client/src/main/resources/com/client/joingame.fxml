@@ -29,13 +29,13 @@
             <String fx:value="subtext" />
             <String fx:value="text" />
          </styleClass></Label>
-      <Text fill="#b3ae83" layoutX="650.0" layoutY="633.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nickname :" wrappingWidth="151.469970703125">
+      <Text fill="#b3ae83" layoutX="645.0" layoutY="630.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nickname :" wrappingWidth="175.469970703125">
          <font>
             <Font size="30.0" />
          </font>
       </Text>
       <TextField fx:id="nickName" layoutX="821.0" layoutY="598.0" prefHeight="49.0" prefWidth="303.0" stylesheets="@style.css" />
-      <Text fill="#b3ae83" layoutX="738.0" layoutY="733.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pin :" wrappingWidth="60.80328369140625">
+      <Text fill="#b3ae83" layoutX="747.0" layoutY="737.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pin :" wrappingWidth="94.80328369140625">
          <font>
             <Font size="30.0" />
          </font>

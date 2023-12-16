@@ -15,7 +15,7 @@ It communicates with the server using the TCP/IP transport protocol to exchange 
 - Windows OS. (it runs on linux, but with some deformations in the GUI, you can try it, but we recommend Windows OS )
 - Java Development Kit (JDK) installed on your system. 
 - IntelliJ IDEA to avoid using the terminal to run the application. (not mandatory)
-- Tiki Taka Toe game Server running on a specified host and port.
+- Tiki Taka Toe game Server running on a specified IP and port.
 
 
 ## How to Run
@@ -26,23 +26,37 @@ It communicates with the server using the TCP/IP transport protocol to exchange 
    cd Client
 
 2. Open with IntelliJ IDEA the `/Client` directory from the cloned project
-3. Go to `file` --> `Project Structure...` and add the openJdk-21 Package available in the 
-InstallationPackages directory from the project by choosing the `lib` subfolder
-![img_1.png](READMEImages/img_1.png)
-![img.png](READMEImages/img.png)
-4. TODO -> Change the IP and Port in the Programs Arguments for the
+3. Go to `file` --> `Project Structure...` and add the openJdk-21 Package available in the
+`/InstallationPackages` directory from the project by choosing the `lib` subfolder
+
+   <img src="ReadmeImages/img_1.png" alt="img_1.png" width="40%" />
+
+   <img src="ReadmeImages/img_2.png" alt="img_2.png" width="40%" />
+
+
+4. Change the IP and Port in the Programs Arguments
+
+   <img src="ReadmeImages/img_5.png" alt="img_5.png" width="40%" />
+
 5. Run the `Client` main from the project
-![img_2.png](READMEImages/img_2.png)
+
+   <img src="ReadmeImages/img_3.png" alt="img_3.png" width="70%" />
+
 
 ### Option: 2 (executable jar file)
 1. Clone this repository to your local machine.
    ```bash
    git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
    cd Client
+
+4. Add a Jar file Run configuration and change the IP and Port in the Programs Arguments
+
+   <img src="ReadmeImages/img_6.png" alt="img_6.png" width="35%" />
    
 2. Run the `Client.jar` file from  `/out/artifacts` project directory
 
-![img.png](READMEImages/img5.png)
+   <img src="ReadmeImages/img_4.png" alt="img_4.png" width="20%" />
+
 
 
 

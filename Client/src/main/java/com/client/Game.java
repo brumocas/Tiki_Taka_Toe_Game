@@ -1,6 +1,6 @@
 package com.client;
 
-import com.client.communication.CommunicationGui;
+import com.client.communication.Communication;
 import com.client.gui.defs.Cursor;
 import com.client.logic.Board;
 import com.client.player.Player;
@@ -13,11 +13,14 @@ import javafx.fxml.FXML;
 
 
 import java.io.IOException;
+import java.net.URL;
 import java.util.List;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -30,7 +33,6 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.KeyCode;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.HBox;
-import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
@@ -38,7 +40,7 @@ import javafx.util.Duration;
 
 import static javafx.geometry.Pos.CENTER;
 
-public class Game {
+public class Game implements Initializable {
     @FXML
     private HBox timeBox;
     @FXML
@@ -136,8 +138,8 @@ public class Game {
     private ImageView[][] shirts;
     private Label[][] names;
 
-    CommunicationGui chat = new CommunicationGui();
-    CommunicationGui client;
+    Communication chat = new Communication();
+    Communication client;
     Board board = new Board();
     Player p1;
     Player p2;
@@ -146,7 +148,7 @@ public class Game {
     // Needs to be read from memory every time its accessed
     private volatile String buffer;
 
-    public void setGameLogic(boolean host, CommunicationGui client, Player p1, Player p2) throws IOException {
+    public void setGameLogic(boolean host, Communication client, Player p1, Player p2) throws IOException {
         List<String> args = Gui.getInstance().getParameters().getRaw();
         this.host = host;
         this.p1 = p1;
@@ -194,9 +196,8 @@ public class Game {
         //textarea.appendText("/------------------------------------------------------------------------------------" +
         //       "----------Chat----------------------------------------------------------------------:\n");
 
-
-        // Todo : Connect another socket for chat
-        chat.connectToServer(args.get(1), Integer.parseInt(args.get(2)) + 1);
+        // Connect another socket for chat
+        chat.connectToServer(args.get(0), Integer.parseInt(args.get(1)) + 1);
 
         // Create chat Thread to receive Opponent chat message
         Thread chatThread = new Thread(() -> {
@@ -828,6 +829,21 @@ public class Game {
         stage.setScene(scene);
         stage.show();
         chat.sendMessage("Close");
+    }
+
+    @Override
+    public void initialize(URL url, ResourceBundle resourceBundle) {
+
+        // Todo : Adding suggestion to the textFields
+
+        /*
+        Platform.runLater(() -> {
+            // Add text field suggestions
+            String[] names = {"Ola", "Xau", "Queque"};
+            TextFields.bindAutoCompletion(textfield1, names);
+        });
+        */
+
     }
 }
 

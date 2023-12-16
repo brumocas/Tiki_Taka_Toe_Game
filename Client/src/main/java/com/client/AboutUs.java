@@ -23,13 +23,16 @@ public class AboutUs implements Initializable {
 
     }
 
+
+
+    // Set button to go back to main menu
     @FXML
     private Button goBackButton;
-
     private Scene scene;
     private Stage stage;
     private Parent root;
 
+    // Task that checks if button was clicked
     @FXML
     public void setMenuScene(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menu.fxml")));

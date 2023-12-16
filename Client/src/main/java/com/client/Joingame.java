@@ -1,6 +1,6 @@
 package com.client;
 
-import com.client.communication.CommunicationGui;
+import com.client.communication.Communication;
 import com.client.gui.defs.Cursor;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -55,7 +55,7 @@ public class Joingame implements Initializable {
 
     // Action to set waiting room scene
     boolean first_time = true;
-    CommunicationGui client2 = new CommunicationGui();
+    Communication client2 = new Communication();
 
     @FXML
     private void setWaitingRoomScene(ActionEvent event) throws IOException {
@@ -68,7 +68,7 @@ public class Joingame implements Initializable {
 
             if (first_time) {
 
-                client2.connectToServer(args.get(1), Integer.parseInt(args.get(2)));
+                client2.connectToServer(args.get(0), Integer.parseInt(args.get(1)));
                 // Receive Hosted message
                 message = client2.receiveMessage();
                 if (!message.equals("Hosted")) {

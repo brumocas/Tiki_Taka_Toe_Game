@@ -5,7 +5,7 @@ import java.net.Socket;
 import java.util.Objects;
 import java.util.Scanner;
 
-public class CommunicationGui {
+public class Communication {
     private Socket socket = null;
     private PrintWriter writer = null;
     private BufferedReader reader = null;

@@ -14,14 +14,15 @@ import java.io.IOException;
 public class Gui extends Application {
     private static Gui instance;
 
+    // Instance to pass Cli args to other controllers
     public Gui(){
         instance = this;
     }
 
+    // Instance to pass Cli args to other controllers
     public static Gui getInstance() {
         return instance;
     }
-
 
     @Override
     public void start(Stage stage) throws IOException {

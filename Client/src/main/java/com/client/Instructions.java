@@ -25,6 +25,7 @@ public class Instructions implements Initializable {
     public void initialize(URL url, ResourceBundle resourceBundle) {
     }
 
+    // Set outside connection to check game rules by clicking in a link
     @FXML
     private Hyperlink hyperlink;
     @FXML
@@ -34,13 +35,14 @@ public class Instructions implements Initializable {
     }
 
 
+    // Set button to go back to main menu
     @FXML
     private Button goBackButton;
-
     private Scene scene;
     private Stage stage;
     private Parent root;
 
+    // Task that checks if button was clicked
     @FXML
     public void setMenuScene(ActionEvent event) throws IOException {
         root = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("menu.fxml")));
