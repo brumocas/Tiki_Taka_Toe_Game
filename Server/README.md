@@ -56,12 +56,14 @@ C++ is chosen for the server application due to its performance benefits. It is 
     cmake --build .
    
 3. Search for the `Server` executable file generated in the compilation
+
    <img src="ReadMeImages/img_1.png" alt="img_1.png" width="60%" />
 
 4. Pass the 2 arguments to the application executable: 
    1. `"True"` if you want to run the Unit Tests , `"False"` if not 
    2. Port number wished for the Server Client TCP/IP communication
-      <img src="ReadMeImages/img_2.png" alt="img_2.png" width="60%" />
+   
+   <img src="ReadMeImages/img_2.png" alt="img_2.png" width="60%" />
 
 5. Run the compiled `Server` executable.
 
@@ -71,11 +73,12 @@ C++ is chosen for the server application due to its performance benefits. It is 
     git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
     cd a01_1/Server/Executable   
 
-2. Search for the `Server` executable file generated in the `Server/Executable` file
+2. Search for the `Server` executable file in the `Server/Executable` file
 
 3. Pass the 2 arguments to the application executable:
    1. `"True"` if you want to run the Unit Tests , `"False"` if not
    2. Port number wished for the Server Client TCP/IP communication
+   
    <img src="ReadMeImages/img_3.png" alt="img_3.png" width="60%" />
 
 4. Run the `Server` executable.
