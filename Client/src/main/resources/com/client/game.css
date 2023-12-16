@@ -105,17 +105,8 @@
     -fx-font-size: 35; /* Adjust the font size as needed */
     -fx-font-weight: bold;
     -fx-font-family: "Verdana";
-    -fx-text-alignment: center;
 }
 
-/* Additional styles or modifications for the same class */
-.text.some-other-style {
-    -fx-text-fill: #B3AE83; /* Same text color as the button */
-    -fx-font-size: 20; /* Adjust the font size as needed */
-    -fx-font-weight: bold;
-    -fx-font-family: "Verdana";
-    -fx-text-alignment: center;
-}
 
 
 
