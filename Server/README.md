@@ -38,18 +38,31 @@ C++ is chosen for the server application due to its performance benefits. It is 
 
 ## Requirements
 1. Google Tests library installed in your OS for testing purposes.
-2. CLion to avoid using the terminal to run the application. (not mandatory)
+
 
 
 ## How to Run
-### Option: 1 (CLion ide)
+### Option: 1 (Generate executable file)
 1. Clone this repository to your local machine.
     ```bash
     git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
-    cd Server
-2. Open with CLion ide the `/Server` directory from the cloned project.
-3. Build the Server application using the provided CMakeLists.txt .
-4. Pass the IP and Port wished to the program arguments. (If empty LocalHost and port 8080 is used)
+    cd a01_1/Server   
+   
+2. Build the Server application using the provided CMakeLists.txt inside the `/Server` folder.
+    ```bash
+    mkdir build
+    cd build
+    cmake ..
+    cmake --build .
+   
+3. Search for the `Server` executable file generated in the compilation
+   <img src="ReadMeImages/img_1.png" alt="img_1.png" width="60%" />
+
+4. Pass the 2 arguments to the application executable: 
+   1. `"True"` if you want to run the Unit Tests , `"False"` if not 
+   2. Port number wished for the Server Client TCP/IP communication
+      <img src="ReadMeImages/img_2.png" alt="img_2.png" width="60%" />
+
 5. Run the compiled server executable.
 
 ### Option: 2 (executable file))

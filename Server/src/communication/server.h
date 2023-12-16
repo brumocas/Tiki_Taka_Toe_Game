@@ -20,6 +20,7 @@
 const int MAX_CLIENTS = 2;
 
 class Server {
+
 public:
     // Constructor
     Server(int port);
@@ -29,6 +30,7 @@ public:
     int acceptClient();
     // Close Server Socket
     void closeServer();
+
 private:
     int serverSocket;
     int port;
