@@ -40,7 +40,7 @@ It communicates with the server using the TCP/IP transport protocol to exchange 
    <img src="ReadmeImages/img_2.png" alt="img_2.png" width="40%" />
 
 4. Add the following VM option to the project in the run/debug
-   configuration `--add-exports=javafx.base/com.sun.javafx.event=org.controlsfx.control`
+   configuration `--add-exports javafx.base/com.sun.javafx.event=org.controlsfx.controls`
 
    <img src="ReadmeImages/img_3.png" alt="img_3.png" width="40%" />
 
@@ -57,7 +57,7 @@ It communicates with the server using the TCP/IP transport protocol to exchange 
    git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
    cd Client
 
-2. Create a Jar file run/debug configuration and the following VM option `--add-exports=javafx.base/com.sun.javafx.event=org.controlsfx.control`
+2. Create a Jar file run/debug configuration and the following VM option `--add-exports javafx.base/com.sun.javafx.event=org.controlsfx.controls`
 
    The project jar file is inside the `/out/artifacts/Client_jar` directory
 
