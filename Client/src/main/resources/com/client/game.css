@@ -83,6 +83,32 @@
     -fx-alignment: center;
 }
 
+
+/* Define a CSS class for the sub title label */
+.text {
+    -fx-text-fill: #B3AE83; /* Same text color as the button */
+    /*-fx-font-size: 25; /* Adjust the font size as needed */
+    -fx-font-weight: bold;
+    -fx-font-family: "Verdana";
+}
+
+/* Define a CSS class for the sub title label */
+.text_turn {
+    -fx-text-fill: #B3AE83; /* Same text color as the button */
+    -fx-font-size: 35; /* Adjust the font size as needed */
+    -fx-font-weight: bold;
+    -fx-font-family: "Verdana";
+}
+
+/* Define a CSS class for the sub title label */
+.text_param {
+    -fx-text-fill: #B3AE83; /* Same text color as the button */
+    -fx-font-size: 25; /* Adjust the font size as needed */
+    -fx-font-weight: bold;
+    -fx-font-family: "Verdana";
+}
+
+
 .text_message{
     -fx-background-color: #b3ae83; /* Background color (adjust to your preference) */
     -fx-background-radius: 15px;
@@ -91,7 +117,7 @@
     -fx-border-radius: 15px; /* Border radius (rounded corners, adjust as needed) */
     -fx-background-insets: 2; /* Adjust to control the distance between the border and the button content */
     -fx-text-fill: #434848;
-    -fx-font-size: 20px; /* You can adjust the font size to your preference */
+    -fx-font-size: 40px; /* You can adjust the font size to your preference */
     -fx-font-weight: bold;
     -fx-font-family: "Verdana";
     -fx-prompt-text-fill: #111111;
@@ -99,14 +125,87 @@
 
 }
 
-/* Define a CSS class for the sub title label */
-.text {
-    -fx-text-fill: #B3AE83; /* Same text color as the button */
-    -fx-font-size: 35; /* Adjust the font size as needed */
-    -fx-font-weight: bold;
-    -fx-font-family: "Verdana";
+.auto-complete-popup {
+    -fx-background-color: gold;
+    -fx-background-insets: 0.0px;
+    -fx-background-radius: 0.0px;
+    -fx-border-width: 0.0px;
+    -fx-border-color: transparent;
+    -fx-border-radius: 0.0px;
 }
 
+.auto-complete-popup > .list-view {
+    -fx-background-color: #434848;
+    -fx-background-insets: 0.0px;
+    -fx-background-radius: 0.0px;
+    -fx-border-color: transparent;
+    -fx-border-width: 0.0px;
+    -fx-border-radius: 0.0px;
+    -fx-padding: 0.0px;
+}
 
+.auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-background-color: #b3ae83; /* Change this to your desired background color */
+    -fx-background-radius: 15px;
+    -fx-border-color: #434848;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-insets: 2;
+    -fx-opacity: 0.9;
+    -fx-text-fill: #434848;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Verdana";
+    -fx-alignment: center;
+}
 
+.auto-complete-popup {
+    -fx-background-color: gold;
+    -fx-background-insets: 0.0px;
+    -fx-background-radius: 0.0px;
+    -fx-border-width: 0.0px;
+    -fx-border-color: transparent;
+    -fx-border-radius: 0.0px;
+}
 
+.auto-complete-popup > .list-view {
+    -fx-background-color: #434848;
+    -fx-background-insets: 0.0px;
+    -fx-background-radius: 0.0px;
+    -fx-border-color: transparent;
+    -fx-border-width: 0.0px;
+    -fx-border-radius: 0.0px;
+    -fx-padding: 0.0px;
+}
+
+.auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
+    -fx-background-color: #b3ae83; /* Change this to your desired background color */
+    -fx-background-radius: 15px;
+    -fx-border-color: #434848;
+    -fx-border-width: 2px;
+    -fx-border-radius: 15px;
+    -fx-background-insets: 2;
+    -fx-opacity: 0.9;
+    -fx-text-fill: #434848;
+    -fx-font-size: 15px;
+    -fx-font-weight: bold;
+    -fx-font-family: "Verdana";
+    -fx-alignment: center;
+}
+
+.auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover,
+.auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:focused {
+    -fx-background-color: #b3ae83;
+    -fx-text-fill: white;
+}
+
+.auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected,
+.auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
+    -fx-background-color: #0078ce;
+    -fx-text-fill: white;
+    -fx-cursor: default;
+}
+
+.auto-complete-popup > .list-view > .placeholder > .label {
+    -fx-text-fill: #65728B;
+}

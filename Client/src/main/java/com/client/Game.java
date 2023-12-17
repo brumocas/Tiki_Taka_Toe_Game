@@ -14,6 +14,8 @@ import javafx.fxml.FXML;
 
 import java.io.IOException;
 import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
@@ -36,6 +38,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.controlsfx.control.textfield.AutoCompletionBinding;
+import org.controlsfx.control.textfield.TextFields;
 
 
 import static javafx.geometry.Pos.CENTER;
@@ -195,6 +199,10 @@ public class Game implements Initializable {
 
         //textarea.appendText("/------------------------------------------------------------------------------------" +
         //       "----------Chat----------------------------------------------------------------------:\n");
+
+        // Suggestion Text
+        suggestionTextFields(textFields);
+
 
         // Connect another socket for chat
         chat.connectToServer(args.get(0), Integer.parseInt(args.get(1)) + 1);
@@ -829,21 +837,41 @@ public class Game implements Initializable {
         stage.setScene(scene);
         stage.show();
         chat.sendMessage("Close");
+        chat.closeConnection();
     }
 
     @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
+    public void initialize(URL url, ResourceBundle resourceBundle)  {
 
-        // Todo : Adding suggestion to the textFields
+    }
 
-        /*
-        Platform.runLater(() -> {
-            // Add text field suggestions
-            String[] names = {"Ola", "Xau", "Queque"};
-            TextFields.bindAutoCompletion(textfield1, names);
-        });
-        */
+    void suggestionTextFields(TextField[][] textFields) {
+        String[] names = loadNames();
 
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                AutoCompletionBinding<String> autoCompletionBinding = TextFields.bindAutoCompletion(textFields[i][j], names);
+                autoCompletionBinding.setPrefWidth(textFields[i][j].getPrefWidth());
+                autoCompletionBinding.setPrefWidth(220);
+            }
+        }
+    }
+
+
+    public String[] loadNames(){
+        String[] dataArray = new String[0];
+        try {
+            // Change the file path to the location of your .txt file
+            List<String> lines = Files.readAllLines(Paths.get("src/main/resources/com/client/NamesInfo/Names.txt"));
+
+            // Convert the list to an array
+            dataArray = lines.toArray(new String[0]);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return dataArray;
     }
 }
 
