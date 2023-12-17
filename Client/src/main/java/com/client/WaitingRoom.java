@@ -23,23 +23,18 @@ import java.util.ResourceBundle;
 
 import javafx.scene.text.Text;
 
-public class WaitingRoom implements Initializable {
+public class WaitingRoom {
     List<String> args = Gui.getInstance().getParameters().getRaw();
-    private boolean host ;
+    private boolean host;
     Player p1 = new Player();
     Player p2 = new Player();
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
-
 
     @FXML
     private Text nickname1;
     @FXML
     private Text pin;
     Communication client1 = new Communication();
+
     // If host set nickname of player and pin
     public void setHost(String playerName, String pin) throws IOException {
         nickname1.setText(playerName);
@@ -62,6 +57,7 @@ public class WaitingRoom implements Initializable {
     @FXML
     private Text nickname2;
     Communication client2 = new Communication();
+
     // If hosted set nickname of player 2, pin and player 1 nickname
     public void setHosted(String playerName, String pin, Communication client2) throws IOException {
         nickname2.setText(playerName);

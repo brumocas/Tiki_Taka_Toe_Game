@@ -34,7 +34,7 @@ public class Communication {
             // You are host receive pin
             message = receiveMessage();
             System.out.println("You entered the game as host and the pin is: " + message);
-        } else if (Objects.equals(message, "Hosted")){
+        } else if (Objects.equals(message, "Hosted")) {
             host = false;
             System.out.print("Write the Pin to connect to remote game: ");
             // You are hosted send pin
@@ -43,7 +43,7 @@ public class Communication {
 
             // Receive Response
             message = receiveMessage();
-            while (!Objects.equals(message, "Correct")){
+            while (!Objects.equals(message, "Correct")) {
                 System.out.print("Invalid Pin try again: ");
                 // You are hosted send pin
                 input = scanner.nextLine();
@@ -76,7 +76,7 @@ public class Communication {
         return opponentName;
     }
 
-    public String[] getParams() throws IOException{
+    public String[] getParams() throws IOException {
         // Receive board params
         String paramsPacket = receiveMessage();
         // Get String vector with params

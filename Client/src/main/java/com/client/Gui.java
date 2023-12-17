@@ -15,7 +15,7 @@ public class Gui extends Application {
     private static Gui instance;
 
     // Instance to pass Cli args to other controllers
-    public Gui(){
+    public Gui() {
         instance = this;
     }
 
@@ -26,7 +26,7 @@ public class Gui extends Application {
 
     @Override
     public void start(Stage stage) throws IOException {
-        try{
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
             Scene scene = new Scene(root);
             Cursor.setCursor(scene);
@@ -36,7 +36,7 @@ public class Gui extends Application {
             stage.setMaximized(true);
             stage.setScene(scene);
             stage.show();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 

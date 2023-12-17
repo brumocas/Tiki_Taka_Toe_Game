@@ -37,7 +37,7 @@ public class Menu implements Initializable {
 
     // Task to handle Quit Game button
     @FXML
-    public void exitMenuScene(ActionEvent event) throws IOException{
+    public void exitMenuScene(ActionEvent event) throws IOException {
         System.exit(0);
     }
 

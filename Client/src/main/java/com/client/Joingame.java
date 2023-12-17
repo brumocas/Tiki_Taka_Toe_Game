@@ -19,13 +19,8 @@ import java.util.List;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class Joingame implements Initializable {
+public class Joingame {
     List<String> args = Gui.getInstance().getParameters().getRaw();
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
 
     @FXML
     private Button goBackButton;

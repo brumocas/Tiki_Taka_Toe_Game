@@ -145,41 +145,7 @@
 }
 
 .auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-background-color: #b3ae83; /* Change this to your desired background color */
-    -fx-background-radius: 15px;
-    -fx-border-color: #434848;
-    -fx-border-width: 2px;
-    -fx-border-radius: 15px;
-    -fx-background-insets: 2;
-    -fx-opacity: 0.9;
-    -fx-text-fill: #434848;
-    -fx-font-size: 15px;
-    -fx-font-weight: bold;
-    -fx-font-family: "Verdana";
-    -fx-alignment: center;
-}
-
-.auto-complete-popup {
-    -fx-background-color: gold;
-    -fx-background-insets: 0.0px;
-    -fx-background-radius: 0.0px;
-    -fx-border-width: 0.0px;
-    -fx-border-color: transparent;
-    -fx-border-radius: 0.0px;
-}
-
-.auto-complete-popup > .list-view {
-    -fx-background-color: #434848;
-    -fx-background-insets: 0.0px;
-    -fx-background-radius: 0.0px;
-    -fx-border-color: transparent;
-    -fx-border-width: 0.0px;
-    -fx-border-radius: 0.0px;
-    -fx-padding: 0.0px;
-}
-
-.auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell {
-    -fx-background-color: #b3ae83; /* Change this to your desired background color */
+    -fx-background-color: #b3ae83;
     -fx-background-radius: 15px;
     -fx-border-color: #434848;
     -fx-border-width: 2px;
@@ -196,13 +162,13 @@
 .auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:hover,
 .auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:focused {
     -fx-background-color: #b3ae83;
-    -fx-text-fill: white;
+    -fx-text-fill: #434848;
 }
 
 .auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected,
 .auto-complete-popup > .list-view > .virtual-flow > .clipped-container > .sheet > .list-cell:filled:selected:hover {
     -fx-background-color: #0078ce;
-    -fx-text-fill: white;
+    -fx-text-fill: #434848;
     -fx-cursor: default;
 }
 

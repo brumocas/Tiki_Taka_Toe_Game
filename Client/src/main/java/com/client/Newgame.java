@@ -18,12 +18,7 @@ import java.net.URL;
 import java.util.Objects;
 import java.util.ResourceBundle;
 
-public class Newgame implements Initializable {
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
+public class Newgame {
 
     @FXML
     private Button goBackButton;
