@@ -57,7 +57,7 @@ This document guides you through the setup and execution of the Tiki Taka Toe ga
 6. Run the `Client` main from the project
 
 
-### Option: 2 (executable jar file)
+### Option: 2 Executable jar file
 
 
 1. Clone this repository to your local machine.
