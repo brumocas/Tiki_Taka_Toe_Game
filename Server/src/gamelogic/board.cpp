@@ -4,6 +4,7 @@
 
 #include "board.h"
 #include <iostream>
+#include <iomanip>
 
 
 namespace gamelogic {
@@ -76,13 +77,18 @@ namespace gamelogic {
         return true;
     }
 
+
     void Board::printFootballers() {
-        std::cout << "/---------Footballers board---------/" << std::endl;
-        std::cout << "\t" << upParameters[0] << "\t" << upParameters[1] << "\t" << upParameters[2] << "\t" << std::endl;
+        const int columnWidth = 20;
+
+        std::cout << "/--------------------------------------------------Footballers Board----------------------------------------/" << std::endl;
+        std::cout << std::setw(columnWidth) << "" << std::setw(columnWidth) << upParameters[0]
+                  << std::setw(columnWidth) << upParameters[1] << std::setw(columnWidth) << upParameters[2] << std::endl;
+
         for (int i = 0; i < 3; ++i) {
-            std::cout << leftParameters[i] << "\t";
+            std::cout << std::setw(columnWidth) << std::left << leftParameters[i];
             for (int j = 0; j < 3; ++j) {
-                std::cout << "\t" << footballerEntry[i][j] << "\t";
+                std::cout << std::setw(columnWidth) << std::right << footballerEntry[i][j];
             }
             std::cout << std::endl;
         }
@@ -90,16 +96,20 @@ namespace gamelogic {
     }
 
     void Board::printSymbols() {
-        std::cout << "/----------Symbols board----------/" << std::endl;
+        const int columnWidth = 15;
+
+        std::cout << "/---------------------------------------------------Symbols Board-----------------------------------------/" << std::endl;
+
         for (int i = 0; i < 3; ++i) {
-            std::cout << "\t\t";
+            std::cout << std::setw(columnWidth) << "" << std::setw(columnWidth) << "" << std::setw(columnWidth) << "";
             for (int j = 0; j < 3; ++j) {
-                std::cout << symbolArray[i][j] << "\t\t";
+                std::cout << std::setw(columnWidth) << std::left << symbolArray[i][j];
             }
             std::cout << std::endl;
         }
         std::cout << std::endl;
     }
+
 
     void Board::eraseBoard() {
         //Initialize all the board parameters
