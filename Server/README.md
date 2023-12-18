@@ -20,7 +20,7 @@ It handles the task of accepting and managing connections from Clients, facilita
 The TikiTakaToe server, in addition to its role as the central hub for gameplay and connection management, serves as a robust platform for conducting unit tests, ensuring the reliability and accuracy of its intricate game logic and networking functionalities.
 
 #### 3.1 Run Unit Tests
-Information in how to run the unit tests can be found in the `/GoogleTests` directory
+Information in how to run the unit tests can be found in the `How To Run` section bellow
 
 ## Technology Stack
 
@@ -37,7 +37,9 @@ C++ is chosen for the server application due to its performance benefits. It is 
 
 
 ## Requirements
-1. Google Tests library installed in your OS for testing purposes.
+1. Git installed in the OS to clone the repository
+2. Cmake compiler installed in the OS to compile the project (Only used in How to Run option 1)
+3. Google Tests library installed in your OS for testing purposes.
 
 
 
@@ -59,7 +61,7 @@ C++ is chosen for the server application due to its performance benefits. It is 
 
    <img src="ReadMeImages/img_1.png" alt="img_1.png" width="40%" />
 
-4. Pass the 2 arguments to the application executable: 
+4. Pass the 2 needed arguments to the application executable: 
    1. `"True"` if you want to run the Unit Tests , `"False"` if not 
    2. Port number wished for the Server Client TCP/IP communication
    
