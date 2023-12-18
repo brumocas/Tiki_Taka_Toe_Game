@@ -66,7 +66,8 @@ public class Client {
 
     // Method to run the music task
     private void playMusic() {
-        playWav("src/main/resources/com/client/Music/output.wav", 0.1f);
+        while (running)
+            playWav("src/main/resources/com/client/Music/output.wav", 0.1f);
     }
 
     // Method to stop the music
