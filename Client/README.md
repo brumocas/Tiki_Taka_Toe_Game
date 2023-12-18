@@ -45,23 +45,26 @@ This document guides you through the setup and execution of the Tiki Taka Toe ga
 
 4. Create an Aplication Run/Debug configuration and add the following VM option to the project 
    configuration `--add-exports javafx.base/com.sun.javafx.event=org.controlsfx.controls`
-   <img src="ReadmeImages/img_3.png" alt="img_3.png" width="40%" />
 
+   <img src="ReadmeImages/img_3.png" alt="img_3.png" width="40%" />
 
 
 5. Change the IP and Port in the Programs Arguments for the required ones
 
    <img src="ReadmeImages/img_4.png" alt="img_4.png" width="40%" />
-
+                                                                                          
 
 6. Run the `Client` main from the project
 
+
 ### Option: 2 (executable jar file)
+
 
 1. Clone this repository to your local machine.
    ```bash
    git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
    cd a01_1/Client
+
 
 2. Create a Jar file Run/Debug configuration and the following VM option `--add-exports javafx.base/com.sun.javafx.event=org.controlsfx.controls`
 

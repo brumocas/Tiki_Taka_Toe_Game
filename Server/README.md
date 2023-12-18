@@ -69,7 +69,7 @@ C++ is chosen for the server application due to its performance benefits. It is 
 
 5. Run the compiled `Server` executable.
 
-### Option: 2 (executable file))
+### Option: 2 (executable file)
 1. Clone this repository to your local machine.
     ```bash
     git clone https://git.fe.up.pt/psw_23_24/1meec_a01/a01_1.git
