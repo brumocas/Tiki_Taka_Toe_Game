@@ -16,7 +16,7 @@ private:
     std::string gamepin;
     int argc;
     char** argv;
-
+    std::vector<int> prevGame;
 public:
     // Default constructor
     gameRunner();

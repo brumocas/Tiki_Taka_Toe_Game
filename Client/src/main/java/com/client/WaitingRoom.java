@@ -1,6 +1,6 @@
 package com.client;
 
-import com.client.communication.CommunicationGui;
+import com.client.communication.Communication;
 import com.client.gui.defs.Cursor;
 import com.client.player.Player;
 import javafx.concurrent.Task;
@@ -23,23 +23,18 @@ import java.util.ResourceBundle;
 
 import javafx.scene.text.Text;
 
-public class WaitingRoom implements Initializable {
+public class WaitingRoom {
     List<String> args = Gui.getInstance().getParameters().getRaw();
-    private boolean host ;
+    private boolean host;
     Player p1 = new Player();
     Player p2 = new Player();
-
-    @Override
-    public void initialize(URL url, ResourceBundle resourceBundle) {
-
-    }
-
 
     @FXML
     private Text nickname1;
     @FXML
     private Text pin;
-    CommunicationGui client1 = new CommunicationGui();
+    Communication client1 = new Communication();
+
     // If host set nickname of player and pin
     public void setHost(String playerName, String pin) throws IOException {
         nickname1.setText(playerName);
@@ -48,7 +43,7 @@ public class WaitingRoom implements Initializable {
         p1.setSymbol('O');
         host = true;
         // Connect Client1
-        client1.connectToServer(args.get(1), Integer.parseInt(args.get(2)));
+        client1.connectToServer(args.get(0), Integer.parseInt(args.get(1)));
 
         // Release a task to check connection from client2
         checkClient2Connection cC2c = new checkClient2Connection(client1);
@@ -61,9 +56,10 @@ public class WaitingRoom implements Initializable {
 
     @FXML
     private Text nickname2;
-    CommunicationGui client2 = new CommunicationGui();
+    Communication client2 = new Communication();
+
     // If hosted set nickname of player 2, pin and player 1 nickname
-    public void setHosted(String playerName, String pin, CommunicationGui client2) throws IOException {
+    public void setHosted(String playerName, String pin, Communication client2) throws IOException {
         nickname2.setText(playerName);
         this.pin.setText(pin);
         p2.setName(playerName);
@@ -126,9 +122,9 @@ public class WaitingRoom implements Initializable {
     // Task to check Client2 connection
     private class checkClient2Connection extends Task<Void> {
 
-        CommunicationGui client1;
+        Communication client1;
 
-        public checkClient2Connection(CommunicationGui client1) {
+        public checkClient2Connection(Communication client1) {
             this.client1 = client1;
         }
 

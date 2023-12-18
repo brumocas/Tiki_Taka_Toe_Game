@@ -45,9 +45,9 @@
                         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
                     </rowConstraints>
                      <children>
-                        <Pane prefHeight="200.0" prefWidth="200.0">
+                        <Pane prefHeight="200.0" prefWidth="200.0" styleClass="text_param">
                            <children>
-                              <Label layoutX="135.0" layoutY="-5.0" styleClass="text" text="Score :" />
+                              <Label alignment="CENTER" layoutX="3.0" layoutY="-5.0" prefHeight="49.0" prefWidth="439.0" styleClass="text_turn" stylesheets="@game.css" text="Score :" />
                               <ImageView fitHeight="90.0" fitWidth="99.0" layoutX="53.0" layoutY="43.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
                                     <Image url="@images/shirts/shirto.png" />
@@ -71,27 +71,24 @@
                                     <Insets />
                                  </opaqueInsets>
                               </HBox>
-                              <Label layoutX="189.0" layoutY="72.0" styleClass="text" text="Vs" />
+                              <Label layoutX="202.0" layoutY="86.0" styleClass="text_turn" text="Vs" />
                            </children>
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
                            <children>
-                              <Label fx:id="param4" alignment="CENTER" cacheShape="false" layoutX="4.0" layoutY="135.0" prefHeight="51.0" prefWidth="433.0" styleClass="text" stylesheets="@game.css" text="Param4" textAlignment="CENTER">
-                                 <font>
-                                    <Font size="31.0" />
-                                 </font></Label>
+                              <Label fx:id="param4" alignment="CENTER" cacheShape="false" layoutY="135.0" prefHeight="51.0" prefWidth="433.0" styleClass="text_param" stylesheets="@game.css" text="Param4" textAlignment="CENTER" />
                               <ImageView fx:id="image4" fitHeight="115.0" fitWidth="150.0" layoutX="140.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams_nations/chelsea.png" />
+                                    <Image url="@images/teams_nations/Agucadoura.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="2">
                            <children>
-                              <Label fx:id="param5" alignment="CENTER" layoutX="4.0" layoutY="135.0" prefHeight="51.0" prefWidth="433.0" styleClass="text" text="Param5" textAlignment="CENTER" />
+                              <Label fx:id="param5" alignment="CENTER" layoutY="135.0" prefHeight="51.0" prefWidth="433.0" styleClass="text_param" text="Param5" textAlignment="CENTER" />
                               <ImageView fx:id="image5" fitHeight="115.0" fitWidth="150.0" layoutX="140.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams_nations/Real_Madrid.png" />
+                                    <Image url="@images/teams_nations/Agucadoura.png" />
                                  </image>
                                  <viewport>
                                     <Rectangle2D />
@@ -100,19 +97,19 @@
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="3">
                            <children>
-                              <Label fx:id="param6" alignment="CENTER" layoutX="4.0" layoutY="135.0" prefHeight="51.0" prefWidth="429.0" styleClass="text" text="Param6" textAlignment="CENTER" />
+                              <Label fx:id="param6" alignment="CENTER" layoutY="135.0" prefHeight="51.0" prefWidth="429.0" styleClass="text_param" text="Param6" textAlignment="CENTER" />
                               <ImageView fx:id="image6" fitHeight="115.0" fitWidth="150.0" layoutX="140.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams_nations/Real_Madrid.png" />
+                                    <Image url="@images/teams_nations/Agucadoura.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
                            <children>
-                              <Label fx:id="param1" alignment="CENTER" layoutX="4.0" layoutY="135.0" prefHeight="51.0" prefWidth="435.0" styleClass="text" text="Param1" textAlignment="CENTER" />
+                              <Label fx:id="param1" alignment="CENTER" layoutY="135.0" prefHeight="51.0" prefWidth="435.0" styleClass="text_param" text="Param1" textAlignment="CENTER" />
                               <ImageView fx:id="image1" fitHeight="115.0" fitWidth="150.0" layoutX="140.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams_nations/Real_Madrid.png" />
+                                    <Image url="@images/teams_nations/Agucadoura.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
@@ -124,7 +121,7 @@
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="name1" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
+                              <Label fx:id="name1" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text_param" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" stylesheets="@game.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
                            <children>
@@ -134,7 +131,7 @@
                                  </image>
                               </ImageView>
                               <TextField fx:id="textfield4" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF4" />
-                              <Label fx:id="name4" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
+                              <Label fx:id="name4" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text_param" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="1" GridPane.rowIndex="3">
                            <children>
@@ -144,14 +141,14 @@
                                  </image>
                               </ImageView>
                               <TextField fx:id="textfield7" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF7" />
-                              <Label fx:id="name7" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
+                              <Label fx:id="name7" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text_param" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="2">
                            <children>
-                              <Label fx:id="param2" alignment="CENTER" layoutX="4.0" layoutY="135.0" prefHeight="51.0" prefWidth="439.0" styleClass="text" text="Param2" textAlignment="CENTER" />
+                              <Label fx:id="param2" alignment="CENTER" layoutY="135.0" prefHeight="51.0" prefWidth="439.0" styleClass="text_param" text="Param2" textAlignment="CENTER" />
                               <ImageView fx:id="image2" fitHeight="115.0" fitWidth="150.0" layoutX="140.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams_nations/Real_Madrid.png" />
+                                    <Image url="@images/teams_nations/Agucadoura.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
@@ -163,7 +160,7 @@
                                     <Image url="@images/shirts/shirt.png" />
                                  </image>
                               </ImageView>
-                              <Label fx:id="name2" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
+                              <Label fx:id="name2" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text_param" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="2" GridPane.rowIndex="2">
                            <children>
@@ -173,7 +170,7 @@
                                  </image>
                               </ImageView>
                               <TextField fx:id="textfield5" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF5" />
-                              <Label fx:id="name5" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
+                              <Label fx:id="name5" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text_param" text="Name1" visible="false" />
                               <Label fx:id="gameInfo" alignment="CENTER" contentDisplay="CENTER" layoutX="23.0" layoutY="31.0" prefHeight="101.0" prefWidth="394.0" styleClass="text_message" stylesheets="@game.css" text="Round Won" textAlignment="CENTER">
                                  <font>
                                     <Font size="25.0" />
@@ -188,15 +185,15 @@
                                  </image>
                               </ImageView>
                               <TextField fx:id="textfield8" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF8" />
-                              <Label fx:id="name8" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
+                              <Label fx:id="name8" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text_param" text="Name1" visible="false" />
                            </children>
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="3">
                            <children>
-                              <Label fx:id="param3" alignment="CENTER" layoutX="4.0" layoutY="135.0" prefHeight="51.0" prefWidth="443.0" styleClass="text" text="Param3" textAlignment="CENTER" />
+                              <Label fx:id="param3" alignment="CENTER" layoutY="135.0" prefHeight="51.0" prefWidth="443.0" styleClass="text_param" text="Param3" textAlignment="CENTER" />
                               <ImageView fx:id="image3" fitHeight="115.0" fitWidth="150.0" layoutX="140.0" layoutY="20.0" pickOnBounds="true" preserveRatio="true">
                                  <image>
-                                    <Image url="@images/teams_nations/Real_Madrid.png" />
+                                    <Image url="@images/teams_nations/Agucadoura.png" />
                                  </image>
                               </ImageView>
                            </children></Pane>
@@ -208,7 +205,7 @@
                                  </image>
                               </ImageView>
                               <TextField fx:id="textfield3" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF3" />
-                              <Label fx:id="name3" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
+                              <Label fx:id="name3" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text_param" text="Name1" visible="false" />
                            </children></Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_light-style" GridPane.columnIndex="3" GridPane.rowIndex="2">
                            <children>
@@ -218,7 +215,7 @@
                                  </image>
                               </ImageView>
                               <TextField fx:id="textfield6" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF6" />
-                              <Label fx:id="name6" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
+                              <Label fx:id="name6" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text_param" text="Name1" visible="false" />
                            </children>
                         </Pane>
                         <Pane prefHeight="200.0" prefWidth="200.0" styleClass="cell_dark-style" GridPane.columnIndex="3" GridPane.rowIndex="3">
@@ -229,7 +226,7 @@
                                  </image>
                               </ImageView>
                               <TextField fx:id="textfield9" alignment="CENTER" layoutX="110.0" layoutY="155.0" onKeyPressed="#makeGuessF9" />
-                              <Label fx:id="name9" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text" text="Name1" visible="false" />
+                              <Label fx:id="name9" alignment="CENTER" contentDisplay="CENTER" layoutY="140.0" prefHeight="51.0" prefWidth="444.0" styleClass="text_param" text="Name1" visible="false" />
                            </children></Pane>
                      </children>
                   </GridPane>
@@ -248,15 +245,12 @@
                         <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
                         <RowConstraints maxHeight="102.0" minHeight="10.0" prefHeight="102.0" vgrow="SOMETIMES" />
-                        <RowConstraints maxHeight="53.3333740234375" minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
-                        <RowConstraints />
                     </rowConstraints>
                      <children>
-                        <VBox prefHeight="200.0" prefWidth="100.0" styleClass="cell-style">
+                        <VBox prefHeight="200.0" prefWidth="100.0">
                            <children>
                               <Pane prefHeight="200.0" prefWidth="200.0">
                                  <children>
-                                    <Label fx:id="turn" layoutX="29.0" layoutY="25.0" styleClass="text" stylesheets="@game.css" text="Your Turn : " />
                                     <HBox fx:id="timeBox" layoutX="296.0" layoutY="25.0" prefHeight="51.0" prefWidth="114.0" styleClass="text_box" stylesheets="@game.css">
                                        <children>
                                           <Text fx:id="timer" strokeType="OUTSIDE" strokeWidth="0.0" styleClass="text_box" text="30 sec" />
@@ -272,8 +266,13 @@
                               </Pane>
                            </children>
                         </VBox>
-                        <TextArea fx:id="textarea" prefHeight="152.0" prefWidth="1172.0" stylesheets="@game.css" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="7" />
+                        <TextArea fx:id="textarea" nodeOrientation="LEFT_TO_RIGHT" prefHeight="152.0" prefWidth="1172.0" stylesheets="@game.css" GridPane.columnIndex="2" GridPane.rowIndex="1" GridPane.rowSpan="7" />
                         <TextField fx:id="prompt" onKeyPressed="#getMessage" prefHeight="33.0" prefWidth="1294.0" promptText="Write a message to your opponent..." stylesheets="@game.css" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="7" GridPane.valignment="BOTTOM" />
+                        <Label fx:id="turn" alignment="CENTER_RIGHT" contentDisplay="CENTER" prefHeight="18.0" prefWidth="284.0" stylesheets="@game.css" text="Your Turn : " GridPane.rowIndex="2">
+                           <styleClass>
+                              <String fx:value="text" />
+                              <String fx:value="text_turn" />
+                           </styleClass></Label>
                      </children>
                   </GridPane>
                </children>

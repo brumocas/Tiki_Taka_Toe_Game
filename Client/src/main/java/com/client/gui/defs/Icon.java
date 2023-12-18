@@ -5,7 +5,7 @@ import javafx.stage.Stage;
 
 public class Icon {
 
-    public static void setIcon(Stage stage){
+    public static void setIcon(Stage stage) {
 
         // Load your icon image (you should replace "icon.png" with your icon file)
         Image iconImage = new Image("file:src/main/images/iconball.png");

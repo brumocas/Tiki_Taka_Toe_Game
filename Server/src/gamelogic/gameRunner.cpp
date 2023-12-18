@@ -11,6 +11,7 @@
 #include <cstdlib>
 #include <ctime>
 
+
 void gameRunner::runCMD() {
     startGame();
     game.print();
@@ -89,11 +90,30 @@ void gameRunner::startGame() {
     player2.setSymbol('x');
     setGamePin();
 
+    // Seed the random number generator
+    std::srand(static_cast<unsigned int>(std::time(nullptr)));
 
     // TODO: Randomize teams and cups
     // Important to follow name struct "WC" , "CL", "BD", "E" for trophies
     // Important to follow teams and Nation struct --> example : Real_Madrid
-    int caseNumber = std::rand() % 10 + 1;
+    int caseNumber ;
+    bool found = true;
+
+
+    while (found){
+         caseNumber = std::rand() % 10 + 1;
+         found = false;
+
+        for (int i = 0; i < prevGame.size(); ++i) {
+            if (prevGame[i] == caseNumber){
+                found = true;
+                break;
+            }
+        }
+
+        if (!found)
+            prevGame.push_back(caseNumber);
+    }
     
     switch(caseNumber) {
         case 1:
@@ -112,7 +132,7 @@ void gameRunner::startGame() {
             game.setParams("Atletico_Madrid", "BD", "PSG", "France", "Chelsea", "Brazil");
             break;
         case 6:
-            game.setParams("Juventus", "Tottenham", "Italy", "Inter", "EC", "AC_Milan");
+            game.setParams("Juventus", "Tottenham", "Italy", "Inter", "WC", "AC_Milan");
             break;
         case 7:
             game.setParams("Liverpool", "France", "Bayern", "WC", "Arsenal", "Real_Madrid");

@@ -1,7 +1,6 @@
 package com.client.logic;
 
-import com.client.communication.CommunicationGui;
-import javafx.scene.control.TextField;
+import com.client.communication.Communication;
 
 import java.io.IOException;
 import java.util.Vector;
@@ -105,23 +104,24 @@ public class Board {
 
     }
 
-    public void setParams(CommunicationGui client) throws IOException {
+    public void setParams(Communication client) throws IOException {
 
         String[] packet = client.receiveMessage().split("-");
-        Vector<String> upparams =  new Vector<>(columns);
+        Vector<String> upparams = new Vector<>(columns);
         upparams.add(packet[0]);
         upparams.add(packet[1]);
         upparams.add(packet[2]);
         setUpparams(upparams);
 
-        Vector<String> leftparams =  new Vector<>(columns);
+        Vector<String> leftparams = new Vector<>(columns);
         leftparams.add(packet[3]);
         leftparams.add(packet[4]);
         leftparams.add(packet[5]);
         setLeftparams(leftparams);
     }
 
-    public void eraseBoard(){
+    // Remove board previous game elements
+    public void eraseBoard() {
         board = new String[rows][columns];
         board_char = new char[rows][columns];
     }

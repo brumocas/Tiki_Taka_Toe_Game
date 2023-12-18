@@ -1,6 +1,6 @@
 package com.client;
 
-import com.client.communication.CommunicationGui;
+import com.client.communication.Communication;
 import com.client.gui.defs.Cursor;
 import com.client.logic.Board;
 import com.client.player.Player;
@@ -13,11 +13,16 @@ import javafx.fxml.FXML;
 
 
 import java.io.IOException;
+import java.net.URL;
+import java.nio.file.Files;
+import java.nio.file.Paths;
 import java.util.List;
 import java.util.Objects;
+import java.util.ResourceBundle;
 
 
 import javafx.fxml.FXMLLoader;
+import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -33,6 +38,8 @@ import javafx.scene.layout.HBox;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import org.controlsfx.control.textfield.AutoCompletionBinding;
+import org.controlsfx.control.textfield.TextFields;
 
 
 import static javafx.geometry.Pos.CENTER;
@@ -135,8 +142,8 @@ public class Game {
     private ImageView[][] shirts;
     private Label[][] names;
 
-    CommunicationGui chat = new CommunicationGui();
-    CommunicationGui client;
+    Communication chat = new Communication();
+    Communication client;
     Board board = new Board();
     Player p1;
     Player p2;
@@ -145,7 +152,7 @@ public class Game {
     // Needs to be read from memory every time its accessed
     private volatile String buffer;
 
-    public void setGameLogic(boolean host, CommunicationGui client, Player p1, Player p2) throws IOException {
+    public void setGameLogic(boolean host, Communication client, Player p1, Player p2) throws IOException {
         List<String> args = Gui.getInstance().getParameters().getRaw();
         this.host = host;
         this.p1 = p1;
@@ -171,6 +178,7 @@ public class Game {
                 {name7, name8, name9}
         };
 
+        // Remove some visible buttons not needed for now
         gameInfo.setVisible(false);
         menuButton.setVisible(false);
 
@@ -190,17 +198,16 @@ public class Game {
         // Manage chat parameters
         textarea.setEditable(false);
 
-        //textarea.appendText("/------------------------------------------------------------------------------------" +
-        //       "----------Chat----------------------------------------------------------------------:\n");
+        // Suggestion Text addition
+        suggestionTextFields(textFields);
 
-
-        // Todo : Connect another socket for chat
-        chat.connectToServer(args.get(1), Integer.parseInt(args.get(2)) + 1);
+        // Connect another socket for chat
+        chat.connectToServer(args.get(0), Integer.parseInt(args.get(1)) + 1);
 
         // Create chat Thread to receive Opponent chat message
         Thread chatThread = new Thread(() -> {
 
-            while (true){
+            while (true) {
                 String message;
                 // Sleep for a while to simulate work
                 try {
@@ -209,7 +216,7 @@ public class Game {
                     throw new RuntimeException(e);
                 }
 
-                if (message!= null){
+                if (message != null) {
                     Platform.runLater(() -> {
                         receiveMessage(message);
                     });
@@ -223,7 +230,7 @@ public class Game {
             }
         });
 
-        // Create GameLogic Thread
+        // GameLogic Thread
         Thread backgroundThread = new Thread(() -> {
 
             while (!gameEnded())
@@ -232,13 +239,13 @@ public class Game {
             int hostScore = Integer.parseInt(scoreLeft.getText());
             int hostedScore = Integer.parseInt(scoreRight.getText());
 
-            if (hostScore == 2 && host){
+            if (hostScore == 2 && host) {
                 Platform.runLater(() -> setGameInfo("You Win"));
             } else if (hostScore == 2 && !host) {
                 Platform.runLater(() -> setGameInfo("You Lose"));
-            } else if (hostedScore == 2 && host){
+            } else if (hostedScore == 2 && host) {
                 Platform.runLater(() -> setGameInfo("You Lose"));
-            } else if (hostedScore == 2 && !host){
+            } else if (hostedScore == 2 && !host) {
                 Platform.runLater(() -> setGameInfo("You Win"));
             }
 
@@ -435,10 +442,10 @@ public class Game {
         }
     }
 
-    void receiveMessage(String message){
+    // Get opponent Message
+    void receiveMessage(String message) {
         textarea.appendText((!host) ? p1.getName() + " : " + message + "\n" : p2.getName() + " : " + message + "\n");
     }
-
 
     //------------------- Aux Functions----------------------//
 
@@ -455,7 +462,7 @@ public class Game {
         }
 
         // Set new play in the board
-        if (Objects.equals(play[3], "null")){
+        if (Objects.equals(play[3], "null")) {
             board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
                     play[2], (host) ? 'X' : 'O');
         } else {
@@ -511,7 +518,7 @@ public class Game {
         try {
             if (Objects.equals(client.receiveMessage(), "Correct")) {
 
-                if (Objects.equals(play[3], "null")){
+                if (Objects.equals(play[3], "null")) {
                     board.setPlay(Integer.parseInt(play[0]), Integer.parseInt(play[1]),
                             play[2], (host) ? 'O' : 'X');
                 } else {
@@ -549,8 +556,28 @@ public class Game {
 
     // Change Params from a scene
     void changeParams(Label label, String new_param) {
-        label.setText(new_param);
-        label.setAlignment(CENTER);
+        String[] params = new_param.split("_");
+
+        if (params.length == 2) {
+            label.setText(params[0] + " " + params[1]);
+            label.setAlignment(CENTER);
+        } else if (params.length == 1) {
+
+            if (new_param.equals("WC")){
+                label.setText("World Cup");
+            } else if (new_param.equals("CL")) {
+                label.setText("Champions League");
+            } else if (new_param.equals("BD")) {
+                label.setText("Ballon Dor");
+            }  else if (new_param.equals("EC")) {
+                label.setText("European Cup");
+            } else {
+                label.setText(new_param);
+            }
+
+            label.setAlignment(CENTER);
+        }
+
     }
 
     // Change images from Scene
@@ -627,7 +654,7 @@ public class Game {
         } else if (symbol == 'n') {
             Image image_aux = new Image(path + "/shirts/" + "shirt.png");
             shirt.setImage(image_aux);
-        }else {
+        } else {
             System.err.println("Invalid symbol passed to function");
         }
 
@@ -678,7 +705,7 @@ public class Game {
     }
 
     // Implements a Game turn
-    private void gameCycle(){
+    private void gameCycle() {
 
         // Receive Game Params
         try {
@@ -758,7 +785,8 @@ public class Game {
         }
     }
 
-    void resetGame(){
+    // Reset Board Game
+    void resetGame() {
         board.eraseBoard();
         Platform.runLater(() -> {
             removeGameInfo();
@@ -768,20 +796,21 @@ public class Game {
                     names[i][j].setText("");
                     names[i][j].setVisible(false);
                     textFields[i][j].setText("");
-                    changeShirt(shirts[i][j],'n');
+                    changeShirt(shirts[i][j], 'n');
                 }
             }
         });
     }
 
     // Checks if the game Ended
-    boolean gameEnded(){
+    boolean gameEnded() {
         int hostScore = Integer.parseInt(scoreLeft.getText());
         int hostedScore = Integer.parseInt(scoreRight.getText());
         return hostedScore == 2 || hostScore == 2;
     }
 
-    void delay(){
+    // Small Delay to be able to se plays
+    void delay() {
         try {
             // Sleep for 5000 milliseconds (5 second)
             Thread.sleep(5000);
@@ -791,16 +820,19 @@ public class Game {
 
     }
 
-    void setGameInfo(String message){
+    // Set Game Info Label available
+    void setGameInfo(String message) {
         gameInfo.setText(message);
         gameInfo.setVisible(true);
     }
 
-    void removeGameInfo(){
+    // Set Game Info Label invisible
+    void removeGameInfo() {
         gameInfo.setVisible(false);
     }
 
-    void setMenuButton(){
+    // Set Menu Game Button Visible
+    void setMenuButton() {
         turn.setVisible(false);
         timeBox.setVisible(false);
         menuButton.setVisible(true);
@@ -809,6 +841,7 @@ public class Game {
     private Scene scene;
     private Stage stage;
     private Parent root;
+
     // Action to set main menu scene
     @FXML
     public void setMenuScene(ActionEvent event) throws IOException {
@@ -819,6 +852,37 @@ public class Game {
         stage.setScene(scene);
         stage.show();
         chat.sendMessage("Close");
+        chat.closeConnection();
+    }
+
+    // Add Suggestion to the TextFields
+    void suggestionTextFields(TextField[][] textFields) {
+        String[] names = loadNames();
+
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                AutoCompletionBinding<String> autoCompletionBinding = TextFields.bindAutoCompletion(textFields[i][j], names);
+                autoCompletionBinding.setPrefWidth(textFields[i][j].getPrefWidth());
+                autoCompletionBinding.setPrefWidth(220);
+            }
+        }
+    }
+
+    // Load Suggestion Names available
+    public String[] loadNames() {
+        String[] dataArray = new String[0];
+        try {
+            // Change the file path to the location of your .txt file
+            List<String> lines = Files.readAllLines(Paths.get("src/main/resources/com/client/NamesInfo/Names.txt"));
+
+            // Convert the list to an array
+            dataArray = lines.toArray(new String[0]);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return dataArray;
     }
 }
 

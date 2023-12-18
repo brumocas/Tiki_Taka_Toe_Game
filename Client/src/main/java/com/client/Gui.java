@@ -14,18 +14,19 @@ import java.io.IOException;
 public class Gui extends Application {
     private static Gui instance;
 
-    public Gui(){
+    // Instance to pass Cli args to other controllers
+    public Gui() {
         instance = this;
     }
 
+    // Instance to pass Cli args to other controllers
     public static Gui getInstance() {
         return instance;
     }
 
-
     @Override
     public void start(Stage stage) throws IOException {
-        try{
+        try {
             Parent root = FXMLLoader.load(getClass().getResource("menu.fxml"));
             Scene scene = new Scene(root);
             Cursor.setCursor(scene);
@@ -35,7 +36,7 @@ public class Gui extends Application {
             stage.setMaximized(true);
             stage.setScene(scene);
             stage.show();
-        }catch (Exception e){
+        } catch (Exception e) {
             e.printStackTrace();
         }
 
