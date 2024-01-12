@@ -23,8 +23,18 @@ std::string communication::receiveMessage() {
         perror("Failed to read message");
         return "";
     }
-    buffer[bytes - 1] = '\0';
-    return std::string(buffer, bytes - 1);
+    	
+    if(buffer[bytes - 2] == '\r'){
+    	// In windows
+    	buffer[bytes - 2] = '\0';
+    	return std::string(buffer, bytes - 2);
+    } else {
+   	    // In linux
+    	buffer[bytes - 1] = '\0';
+    	return std::string(buffer, bytes - 1);
+    }
+    
+    return "";
 }
 
 void communication::closeConnection() {
